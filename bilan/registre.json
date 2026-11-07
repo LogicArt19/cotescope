@@ -33,13 +33,24 @@
    "p": 0.6356,
    "start": "2026-11-08T16:30:00+00:00",
    "hash": "ae32d308ae94270c078f08981e4fbdb6ba5acd925a050780fd52e8f492b7c82f"
+  },
+  {
+   "n": 4,
+   "uid": "0d2e199bfba0db42871696c10037bad3|h2h|Levante",
+   "recorded": "2026-11-07T18:29:35+00:00",
+   "match": "Celta Vigo - Levante",
+   "selection": "Victoire Levante",
+   "odds": 4.5,
+   "p": 0.2307,
+   "start": "2026-11-08T17:30:00+00:00",
+   "hash": "0737e45f8191c0aeba726cdb4ac353acc907d1fb42ebd843456b3be863c73694"
   }
  ],
  "summary": {
-  "updated": "2026-11-07T18:24:28+00:00",
+  "updated": "2026-11-07T18:29:35+00:00",
   "n": 0,
   "wins": 0,
   "roi": null,
-  "pending": 3
+  "pending": 4
  }
 }
