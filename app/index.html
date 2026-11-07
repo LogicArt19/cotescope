@@ -1,1479 +1,888 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; connect-src 'self' https://cdn.jsdelivr.net https://*.workers.dev https://api.cotescope.fr; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'none'; form-action 'none'">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; connect-src 'self' https://cdn.jsdelivr.net https://*.workers.dev https://api.cotescope.fr; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#060A12">
+<title>Cotescope</title>
 <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
-<script>window.__WEB__ = true;</script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta charset="utf-8">
-<title>Cotescope · Appli web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0c11; --bg2:#0f1218; --card:#141821; --card2:#1a1f2b; --line:#232a38;
-  --fg:#e8ecf3; --muted:#8a93a6; --dim:#5d6578;
-  --green:#22c55e; --green2:#34d399; --teal:#0e7490; --amber:#f59e0b; --red:#ef4444; --blue:#60a5fa;
-  --radius:16px;
+  --night:#060A12; --deck:#0C1220; --deck2:#111A2C; --rim:#1B2740; --rim2:#26355A;
+  --chalk:#E8EEF8; --fog:#8593AD; --dim:#5C6A86;
+  --home:#26E0B8; --draw:#F2B84B; --away:#9C8CFF; --bad:#FF6B7A;
+  --disp:"Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --body:"Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --r:14px; color-scheme:dark;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{background:var(--bg);color:var(--fg);font-family:"Segoe UI Variable Text","Segoe UI",Inter,system-ui,sans-serif;
-  font-size:14px;overflow:hidden;-webkit-font-smoothing:antialiased}
-button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
-input,select{font:inherit;color:var(--fg)}
-.app{display:grid;grid-template-columns:232px minmax(0,1fr);grid-template-rows:100vh;height:100vh;overflow:hidden}
+body{background:var(--night);color:var(--chalk);font:15px/1.5 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(900px 420px at 15% -8%,rgba(38,224,184,.10),transparent 60%),
+             radial-gradient(800px 420px at 90% -10%,rgba(156,140,255,.10),transparent 60%)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,select{font:inherit;color:inherit}
+a{color:var(--home)}
+:focus-visible{outline:2px solid var(--home);outline-offset:2px;border-radius:8px}
+.num{font-family:var(--disp);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+[hidden]{display:none!important}
 
-/* ---------- sidebar ---------- */
-.side{height:100vh;overflow:auto;background:var(--bg2);border-right:1px solid var(--line);display:flex;flex-direction:column;padding:20px 14px}
-.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 24px}
-.brand svg{width:40px;height:40px;filter:drop-shadow(0 6px 16px rgba(52,211,153,.25))}
-.brand b{font-size:19px;letter-spacing:-.3px;display:block}
-.brand small{color:var(--muted);font-size:11.5px}
-.nav{display:flex;flex-direction:column;gap:4px}
-.nav button{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:11px;color:var(--muted);
-  font-weight:500;text-align:left;transition:.15s}
-.nav button svg{width:19px;height:19px;flex:none}
-.nav button:hover{background:var(--card);color:var(--fg)}
-.nav button.on{background:linear-gradient(90deg,rgba(34,197,94,.16),rgba(34,197,94,.04));color:var(--fg);
-  box-shadow:inset 3px 0 0 var(--green)}
-.nav .count{margin-left:auto;background:var(--green);color:#052e16;font-size:11px;font-weight:700;
-  border-radius:20px;padding:1px 8px}
-.side .foot{margin-top:auto;font-size:11px;color:var(--dim);line-height:1.5;padding:12px 8px 0;border-top:1px solid var(--line)}
-.side .foot a{color:var(--muted)}
+/* ---------- barre 1N2 : l'élément signature ---------- */
+.spec{display:flex;height:8px;border-radius:6px;overflow:hidden;gap:2px;background:var(--rim)}
+.spec i{display:block;height:100%;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.spec .h{background:var(--home);box-shadow:0 0 12px rgba(38,224,184,.5)}
+.spec .d{background:var(--draw)}
+.spec .a{background:var(--away);box-shadow:0 0 12px rgba(156,140,255,.45)}
+.spec.big{height:14px;border-radius:8px}
+.specl{display:flex;justify-content:space-between;font-family:var(--disp);font-size:13px;margin-top:5px}
+.specl .h{color:var(--home)}.specl .d{color:var(--draw)}.specl .a{color:var(--away)}
 
-/* ---------- main ---------- */
-.main{display:flex;flex-direction:column;min-width:0;min-height:0;height:100vh}
-.top{display:flex;align-items:center;gap:14px;padding:18px 28px;border-bottom:1px solid var(--line)}
-.top h1{font-size:21px;font-weight:650;letter-spacing:-.3px}
-.pill{font-size:11px;font-weight:700;letter-spacing:.6px;padding:5px 10px;border-radius:30px;display:flex;align-items:center;gap:7px}
-.pill.live{background:rgba(34,197,94,.14);color:var(--green2)}
-.pill.live i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(34,197,94,.7);animation:pulse 1.6s infinite}
-.pill.demo{background:rgba(245,158,11,.15);color:var(--amber)}
-@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
-.top .sp{flex:1}
-.top .meta{color:var(--muted);font-size:12.5px;text-align:right;line-height:1.45}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:11px;background:var(--card2);
-  border:1px solid var(--line);font-weight:600;transition:.15s}
-.btn:hover{border-color:#334155;background:#202634}
-.btn.primary{background:linear-gradient(135deg,#22c55e,#16a34a);border:0;color:#04220f}
-.btn.primary:hover{filter:brightness(1.08)}
-.btn svg{width:16px;height:16px}
-.spin svg{animation:spin 1s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
+/* ---------- structure ---------- */
+.shell{position:relative;z-index:1;min-height:100%;display:flex;flex-direction:column}
+header.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:22px;padding:0 28px;height:64px;
+  background:rgba(6,10,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--rim)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--chalk);font-family:var(--disp);font-weight:700;font-size:19px;letter-spacing:.02em}
+.logo img{width:30px;height:30px}
+nav.tabs{display:flex;gap:4px;margin-left:12px}
+nav.tabs button{padding:9px 14px;border-radius:10px;color:var(--fog);font-weight:600;font-size:14.5px;display:flex;align-items:center;gap:8px;position:relative}
+nav.tabs button:hover{color:var(--chalk);background:var(--deck)}
+nav.tabs button.on{color:var(--chalk);background:var(--deck2)}
+nav.tabs button.on::after{content:"";position:absolute;left:14px;right:14px;bottom:-12px;height:2px;background:var(--home);border-radius:2px;box-shadow:0 0 10px var(--home)}
+nav.tabs svg{width:17px;height:17px}
+.badge{min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--home);color:#04201A;font-size:11px;font-weight:700;display:inline-grid;place-items:center}
+.sp{flex:1}
+.plan{font-family:var(--disp);font-weight:600;font-size:12.5px;padding:5px 10px;border-radius:8px;border:1px solid var(--rim2);color:var(--fog)}
+.plan.p-pro,.plan.p-elite{border-color:rgba(38,224,184,.5);color:var(--home)}
+.me{width:36px;height:36px;border-radius:50%;background:var(--deck2);border:1px solid var(--rim2);display:grid;place-items:center;font-family:var(--disp);font-weight:700;color:var(--chalk)}
+main{flex:1;width:100%;max-width:1180px;margin:0 auto;padding:26px 28px 90px}
+.bottom{display:none}
 
-.banner{margin:14px 28px 0;padding:12px 16px;border-radius:12px;display:flex;align-items:center;gap:12px;font-size:13px}
-.banner.upd{background:linear-gradient(90deg,rgba(96,165,250,.18),rgba(96,165,250,.05));border:1px solid rgba(96,165,250,.35)}
-.banner.warn{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);color:#fcd34d}
-.banner.err{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:#fca5a5}
-.banner .sp{flex:1}
-.bar{height:6px;background:var(--line);border-radius:6px;overflow:hidden;width:160px}
-.bar i{display:block;height:100%;background:var(--blue)}
+h1.t{font-family:var(--disp);font-size:28px;font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+p.lead{color:var(--fog);max-width:62ch;margin-bottom:22px}
+h2.s{font-family:var(--disp);font-size:17px;font-weight:600;margin:26px 0 12px;display:flex;align-items:center;gap:10px}
+h2.s small{font-family:var(--body);font-weight:500;font-size:13px;color:var(--dim)}
 
-.content{flex:1;min-height:0;overflow:auto;padding:22px 28px 34px}
-.content::-webkit-scrollbar{width:10px}.content::-webkit-scrollbar-thumb{background:#262d3b;border-radius:10px;border:3px solid var(--bg)}
-.page{display:none;animation:fade .25s ease}
-.page.on{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(6px)}}
-h2{font-size:15px;font-weight:650;margin:26px 0 12px;display:flex;align-items:center;gap:10px}
-h2:first-child{margin-top:0}
-h2 .link{margin-left:auto;font-size:12.5px;color:var(--green2);font-weight:600}
-.sub{color:var(--muted);font-size:13px;margin:-6px 0 14px}
+.panel{background:linear-gradient(180deg,var(--deck),rgba(12,18,32,.75));border:1px solid var(--rim);border-radius:var(--r)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:11px;font-weight:700;font-size:14.5px;border:1px solid var(--rim2);background:var(--deck2);transition:border-color .15s,background .15s}
+.btn:hover{border-color:#3A4C78}
+.btn.go{background:var(--home);border-color:var(--home);color:#032019}
+.btn.go:hover{background:#4AF0CC}
+.btn.sm{padding:6px 11px;font-size:13px;border-radius:9px}
+.btn:disabled{opacity:.5;cursor:default}
+.in{width:100%;padding:11px 13px;border-radius:11px;background:var(--night);border:1px solid var(--rim2);color:var(--chalk);font-size:15px}
+.in:focus{outline:none;border-color:var(--home)}
+label.f{display:block;font-size:13px;color:var(--fog);margin-bottom:6px;font-weight:600}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:8px 13px;border-radius:10px;border:1px solid var(--rim);background:var(--deck);color:var(--fog);font-weight:600;font-size:13.5px;white-space:nowrap}
+.chip b{font-family:var(--disp);color:var(--dim);margin-left:6px;font-weight:600}
+.chip.on{border-color:var(--home);color:var(--chalk);background:rgba(38,224,184,.08)}
+.chip.on b{color:var(--home)}
+.chip.lk{opacity:.45;border-style:dashed}
+.empty{padding:40px 24px;text-align:center;color:var(--fog)}
+.empty b{display:block;color:var(--chalk);font-size:16px;margin-bottom:6px}
+.note{font-size:13px;color:var(--fog)}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:3px 8px;border-radius:7px;background:var(--deck2);color:var(--fog)}
+.pill.ok{color:var(--home);background:rgba(38,224,184,.1)}
+.pill.warn{color:var(--draw);background:rgba(242,184,75,.1)}
+.pill.bad{color:var(--bad);background:rgba(255,107,122,.1)}
+.pill.v{color:var(--away);background:rgba(156,140,255,.12)}
 
-/* ---------- cards ---------- */
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.stat{padding:16px 18px}
-.stat .l{color:var(--muted);font-size:12px;font-weight:500}
-.stat .v{font-size:26px;font-weight:700;margin-top:6px;letter-spacing:-.5px}
-.stat .h{color:var(--dim);font-size:11.5px;margin-top:2px}
+/* ---------- jour ---------- */
+.days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -2px 14px;padding:2px}
+.days::-webkit-scrollbar{display:none}
+.day{flex:none;min-width:74px;padding:9px 10px;border-radius:12px;border:1px solid var(--rim);background:var(--deck);text-align:center}
+.day .w{font-size:12px;color:var(--fog);font-weight:600}
+.day .n{font-family:var(--disp);font-size:20px;font-weight:700;line-height:1.2}
+.day .c{font-size:11.5px;color:var(--dim)}
+.day.on{border-color:var(--home);background:rgba(38,224,184,.07)}
+.day.on .c{color:var(--home)}
 
-.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}
-.potd{padding:22px 24px;position:relative;overflow:hidden;
-  background:radial-gradient(120% 140% at 100% 0%,rgba(52,211,153,.18),transparent 55%),var(--card)}
-.potd .k{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--green2)}
-.potd .sel{font-size:26px;font-weight:700;margin:10px 0 4px;letter-spacing:-.5px}
-.potd .m{color:var(--muted)}
-.potd .row{display:flex;gap:26px;margin-top:20px;align-items:flex-end}
-.potd .row div span{display:block;color:var(--muted);font-size:11.5px;margin-bottom:3px}
-.potd .row div b{font-size:20px}
-.potd .big{font-size:34px!important;color:var(--green2)}
-.quick{padding:20px 22px;display:flex;flex-direction:column;gap:14px}
-.quick .k{font-weight:650}
-.money{display:flex;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:0 14px}
-.money input{background:none;border:0;outline:0;font-size:26px;font-weight:700;width:100%;padding:10px 0}
-.money span{font-size:22px;color:var(--muted);font-weight:600}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{padding:7px 13px;border-radius:30px;background:var(--bg2);border:1px solid var(--line);color:var(--muted);font-size:12.5px;font-weight:600}
-.chip.on{border-color:var(--green);color:var(--fg);background:rgba(34,197,94,.1)}
+/* ---------- match ---------- */
+.lg{display:flex;align-items:center;gap:10px;margin:22px 0 8px;color:var(--fog);font-size:13px;font-weight:700}
+.lg::after{content:"";flex:1;height:1px;background:var(--rim)}
+.match{display:grid;grid-template-columns:62px minmax(0,1.25fr) minmax(170px,1fr) auto 24px;gap:18px;align-items:center;padding:14px 18px;border-radius:var(--r);border:1px solid var(--rim);background:var(--deck);cursor:pointer;margin-bottom:8px;transition:border-color .15s,background .15s}
+.match:hover{border-color:var(--rim2);background:var(--deck2)}
+.match .tm{font-family:var(--disp);font-size:16px;font-weight:600}
+.match .tm small{display:block;font-family:var(--body);font-size:11.5px;color:var(--dim);font-weight:500}
+.teams div{display:flex;align-items:center;gap:8px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.teams div+div{margin-top:3px}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.dot.h{background:var(--home)}.dot.a{background:var(--away)}
+.form{display:inline-flex;gap:2px;margin-left:6px}
+.form i{width:6px;height:6px;border-radius:2px;background:var(--dim)}
+.form i.V{background:var(--home)}.form i.N{background:var(--draw)}.form i.D{background:var(--bad)}
+.odds3{display:flex;gap:6px}
+.ob{min-width:58px;padding:6px 8px;border-radius:10px;border:1px solid var(--rim2);background:var(--night);text-align:center;transition:border-color .15s}
+.ob small{display:block;font-size:10.5px;color:var(--dim);font-weight:700}
+.ob b{font-family:var(--disp);font-size:15px}
+.ob:hover{border-color:var(--home)}
+.ob.in{border-color:var(--home);background:rgba(38,224,184,.12)}
+.chev{color:var(--dim)}
 
-/* ---------- bet rows ---------- */
-.list{display:flex;flex-direction:column;gap:8px}
-.bet{display:grid;grid-template-columns:118px minmax(0,1.5fr) minmax(0,1.2fr) 150px 92px 118px;align-items:center;
-  gap:14px;padding:13px 18px;cursor:pointer;transition:.15s}
-.bet:hover{border-color:#2f3a4d;background:#171c26;transform:translateX(2px)}
-.bet .d{color:var(--muted);font-size:12.5px}
-.bet .mt b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bet .mt small{color:var(--dim);font-size:11.5px}
-.bet .s{font-weight:600}
-.bet .s small{display:block;color:var(--dim);font-weight:400;font-size:11.5px}
-.prob{font-size:12px;color:var(--muted)}
-.prob .t{height:6px;background:var(--line);border-radius:6px;margin-top:5px;overflow:hidden}
-.prob .t i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--teal),var(--green2))}
-.odds{font-size:18px;font-weight:700;text-align:center;background:var(--bg2);border:1px solid var(--line);
-  border-radius:10px;padding:6px 0}
-.odds small{display:block;font-size:10.5px;color:var(--dim);font-weight:500}
-.tag{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:8px;text-align:center;white-space:nowrap}
-.tag.v{background:rgba(34,197,94,.14);color:var(--green2)}
-.tag.n{background:#1d2330;color:var(--muted)}
-.tag.w{background:rgba(245,158,11,.14);color:var(--amber)}
-.head{display:grid;grid-template-columns:118px minmax(0,1.5fr) minmax(0,1.2fr) 150px 92px 118px;gap:14px;
-  padding:0 18px 4px;color:var(--dim);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.6px}
-
-.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
-.search{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:0 12px;width:260px}
-.search input{background:none;border:0;outline:0;padding:9px 0;width:100%}
-.search svg{width:16px;height:16px;color:var(--dim)}
-
-/* ---------- combos ---------- */
-.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
-.combo{padding:18px 20px;display:flex;flex-direction:column;gap:12px}
-.combo .hd{display:flex;align-items:center;gap:10px}
-.combo .hd b{font-size:15px}
-.combo .hd .sp{flex:1}
-.leg{display:flex;gap:12px;align-items:center;padding:10px 12px;background:var(--bg2);border-radius:11px}
-.leg .n{width:24px;height:24px;border-radius:7px;background:var(--card2);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--muted);flex:none}
-.leg .x{flex:1;min-width:0}
-.leg .x b{display:block}
-.leg .x small{color:var(--dim);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
-.leg .o{font-weight:700}
-.combo .ft{display:flex;gap:22px;padding-top:4px}
-.combo .ft div span{display:block;color:var(--muted);font-size:11.5px}
-.combo .ft div b{font-size:18px}
-.combo .ft .tot b{color:var(--green2);font-size:22px}
-
-/* ---------- budget ---------- */
-.bud{display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:start}
-.bud .form{padding:20px;display:flex;flex-direction:column;gap:16px;position:sticky;top:0}
-.mode{display:flex;flex-direction:column;gap:8px}
-.mode button{text-align:left;padding:12px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line)}
-.mode button b{display:block;font-size:14px}
-.mode button small{color:var(--muted);font-size:12px}
-.mode button.on{border-color:var(--green);background:rgba(34,197,94,.08)}
-.ticket{padding:16px 18px;display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center}
-.ticket .num{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:16px;
-  background:linear-gradient(135deg,rgba(52,211,153,.2),rgba(14,116,144,.2));color:var(--green2)}
-.ticket .x b{font-size:15px}
-.ticket .x .m{color:var(--muted);font-size:12.5px;margin-top:2px}
-.ticket .x .legs{margin-top:8px;display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:#c8cfdb}
-.ticket .x .meta{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap}
-.ticket .r{text-align:right}
-.ticket .r .stake{font-size:22px;font-weight:800}
-.ticket .r small{display:block;color:var(--muted);font-size:12px}
-.ticket .r .g{color:var(--green2);font-weight:600;font-size:12.5px;margin-top:4px}
-.sumst{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
-.note{color:var(--muted);font-size:12.5px;line-height:1.55;padding:14px 16px;margin-top:12px}
-.empty{padding:46px;text-align:center;color:var(--muted)}
-.empty b{display:block;color:var(--fg);font-size:16px;margin-bottom:6px}
-
-/* ---------- objectif ---------- */
-.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:16px}
-.seg button{padding:9px 16px;border-radius:9px;color:var(--muted);font-weight:600}
-.seg button.on{background:var(--card2);color:var(--fg);box-shadow:0 1px 0 rgba(255,255,255,.04)}
-.need{padding:14px;border-radius:12px;background:var(--bg2);border:1px dashed #2c3546;font-size:13px;color:var(--muted);line-height:1.6}
-.need b{color:var(--fg);font-size:18px}
-.opt{padding:18px 20px;display:flex;flex-direction:column;gap:12px}
-.opt .hd{display:flex;align-items:center;gap:12px}
-.opt .rank{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;background:var(--card2);color:var(--muted)}
-.opt.best{border-color:rgba(34,197,94,.5);background:radial-gradient(120% 120% at 100% 0%,rgba(52,211,153,.10),transparent 60%),var(--card)}
-.opt.best .rank{background:var(--green);color:#04220f}
-.opt .hd b{font-size:15.5px;display:block}
-.opt .hd small{color:var(--muted);font-size:12.5px}
-.opt .hd .sp{flex:1}
-.gauge{text-align:right}
-.gauge b{font-size:24px;letter-spacing:-.5px}
-.gauge small{display:block;color:var(--muted);font-size:11.5px}
-.tk{background:var(--bg2);border-radius:12px;padding:12px 14px}
-.tk .th{display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--muted);margin-bottom:8px;flex-wrap:wrap}
-.tk .th b{color:var(--fg);font-size:14px}
-.tk .th .sp{flex:1}
-.tk .ln{display:flex;gap:10px;padding:6px 0;border-top:1px solid #1d2330;font-size:13px}
-.tk .ln:first-of-type{border-top:0}
-.tk .ln span{flex:1;min-width:0}
-.tk .ln small{color:var(--dim)}
-.tk .ft{display:flex;justify-content:space-between;margin-top:8px;font-size:13px}
-.tk .ft b{color:var(--green2)}
-
-/* ---------- jours + analyse ---------- */
-.days{display:flex;gap:8px;padding:14px 28px 0;overflow-x:auto;flex:none}
-.days::-webkit-scrollbar{height:0}
-.days .chip{white-space:nowrap;display:flex;gap:7px;align-items:center}
-.days .chip i{font-style:normal;font-size:11px;background:var(--card2);border-radius:20px;padding:0 7px;color:var(--muted)}
-.days .chip.on i{background:var(--green);color:#04220f}
-.fb{display:inline-flex;gap:2px;vertical-align:middle}
-.fb b{width:16px;height:16px;border-radius:4px;font-size:9.5px;display:grid;place-items:center;color:#0a0c11;font-weight:800}
-.fb .V{background:#22c55e}.fb .N{background:#94a3b8}.fb .D{background:#ef4444}
-.bet .mini{display:flex;gap:6px;align-items:center;margin-top:4px;font-size:11px;color:var(--dim);flex-wrap:wrap}
-.conf{font-size:11px;font-weight:700;padding:2px 7px;border-radius:6px;background:#1d2330;color:var(--muted)}
-.conf.hi{background:rgba(34,197,94,.15);color:var(--green2)}
-.conf.lo{background:rgba(239,68,68,.13);color:#fca5a5}
-.vd{display:flex;flex-direction:column;gap:6px;margin:14px 0}
-.vd div{padding:8px 11px;border-radius:9px;font-size:13px;line-height:1.4}
-.vd .p{background:rgba(34,197,94,.08);color:#bbf7d0}
-.vd .c{background:rgba(239,68,68,.08);color:#fecaca}
-.cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
-.cmp .card{padding:12px}
-.cmp h4{font-size:13.5px;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cmp .r{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);padding:3px 0}
-.cmp .r b{color:var(--fg);font-weight:600}
-.l5{display:flex;flex-direction:column;gap:3px;margin-top:6px;font-size:11.5px;color:var(--muted)}
-.inj{font-size:12px;color:#fecaca;margin-top:6px;line-height:1.5}
-.sec{font-weight:650;margin:18px 0 8px;font-size:13.5px}
-.pbar{display:flex;height:26px;border-radius:8px;overflow:hidden;font-size:11px;font-weight:700}
-.pbar span{display:grid;place-items:center;color:#0a0c11}
-
-.oin{width:84px;background:var(--bg2);border:1px solid #2c3546;border-radius:7px;padding:3px 7px;font-size:12px;color:var(--fg);outline:0;margin-left:8px}
-.oin:focus{border-color:var(--green)}
-.mybox{display:flex;gap:10px;align-items:center;margin:14px 0 4px;padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
-.mybox input{width:110px;font-size:18px;font-weight:700;padding:8px 10px}
-.verdict{margin-top:8px;padding:10px 12px;border-radius:10px;font-size:13px;line-height:1.5}
-.verdict.ok{background:rgba(34,197,94,.12);color:#bbf7d0}
-.verdict.ko{background:rgba(239,68,68,.1);color:#fecaca}
-
-.nt{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px}
-.nt td,.nt th{white-space:nowrap;padding:7px 8px;text-align:center;border-bottom:1px solid var(--line)}
-.nt th{color:var(--dim);font-weight:600;font-size:11px}
-.nt td:first-child,.nt th:first-child{text-align:left;color:var(--muted)}
-.nt tr.fin td{color:var(--green2);font-weight:700}
-.nt td b{color:var(--fg)}
-.srcs div{display:flex;gap:8px;font-size:12.5px;padding:5px 0;border-bottom:1px solid #1d2330}
-.srcs .d{margin-left:auto;color:var(--dim);text-align:right}
-.rel{height:8px;border-radius:8px;background:var(--line);overflow:hidden;margin-top:6px}
+/* ---------- page match ---------- */
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--fog);font-weight:600;margin-bottom:14px}
+.mhead{padding:26px 28px}
+.mhead .meta{color:var(--fog);font-size:13.5px;margin-bottom:14px}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;margin-bottom:22px}
+.vs .tn{font-family:var(--disp);font-size:clamp(20px,3.4vw,32px);font-weight:700;line-height:1.1}
+.vs .tn.r{text-align:right}
+.vs .x{font-family:var(--disp);color:var(--dim);font-size:15px}
+.tabs2{display:flex;gap:4px;border-bottom:1px solid var(--rim);margin:22px 0 18px;overflow-x:auto;scrollbar-width:none}
+.tabs2 button{padding:11px 14px;color:var(--fog);font-weight:700;font-size:14px;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs2 button.on{color:var(--chalk);border-color:var(--home)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box{padding:18px 20px}
+.box h3{font-family:var(--disp);font-size:15px;font-weight:600;margin-bottom:12px}
+table.src{width:100%;border-collapse:collapse;font-size:14px}
+table.src td,table.src th{padding:9px 6px;border-bottom:1px solid var(--rim);text-align:right}
+table.src th{color:var(--dim);font-weight:600;font-size:12.5px}
+table.src td:first-child,table.src th:first-child{text-align:left}
+table.src tr.fin td{font-weight:700;color:var(--chalk);border-bottom:0}
+.args li{list-style:none;padding:7px 0;border-bottom:1px solid var(--rim);font-size:14px}
+.args li:last-child{border:0}
+.rel{height:6px;border-radius:4px;background:var(--rim);overflow:hidden;margin:8px 0 4px}
 .rel i{display:block;height:100%}
-.adv{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.adv .card{padding:10px 12px;font-size:12.5px;line-height:1.5}
-.adv h4{font-size:13px;margin-bottom:4px}
+.bet{display:grid;grid-template-columns:minmax(0,1fr) 120px 74px 34px;gap:12px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--rim)}
+.bet:last-child{border:0}
+.bet .sel{font-weight:600}
+.bet .sel small{display:block;color:var(--dim);font-weight:500;font-size:12px}
+.pbar{height:5px;border-radius:3px;background:var(--rim);overflow:hidden;margin-top:5px}
+.pbar i{display:block;height:100%;background:var(--home)}
+.bet .o{font-family:var(--disp);font-size:17px;font-weight:700;text-align:right}
+.bet .o small{display:block;font-family:var(--body);font-size:11px;color:var(--dim);font-weight:600}
+.add{width:32px;height:32px;border-radius:9px;border:1px solid var(--rim2);display:grid;place-items:center;font-size:18px;color:var(--fog)}
+.add:hover{border-color:var(--home);color:var(--home)}
+.add.in{background:var(--home);border-color:var(--home);color:#032019}
+.add.rm{font-size:20px;line-height:1}
+.add.rm:hover{border-color:var(--bad);color:var(--bad)}
+.lastg{display:flex;gap:6px;flex-wrap:wrap}
+.lastg span{font-size:12px;padding:4px 7px;border-radius:7px;background:var(--night);border:1px solid var(--rim)}
+.lastg span.V{border-color:rgba(38,224,184,.5)}.lastg span.D{border-color:rgba(255,107,122,.5)}.lastg span.N{border-color:rgba(242,184,75,.5)}
 
-[data-leg]{cursor:pointer;border-radius:8px;transition:.12s}
-[data-leg]:hover{background:rgba(255,255,255,.04)}
+/* ---------- verrou ---------- */
+.lock{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--r);border:1px dashed rgba(242,184,75,.45);background:rgba(242,184,75,.05);margin:12px 0}
+.lock .ic{width:34px;height:34px;border-radius:10px;background:rgba(242,184,75,.12);display:grid;place-items:center;color:var(--draw);flex:none}
+.lock b{display:block;font-size:14.5px}
+.lock small{color:var(--fog);font-size:13px}
+.lock .btn{margin-left:auto;flex:none}
 
-.addb{width:28px;height:28px;border-radius:8px;background:var(--card2);border:1px solid var(--line);font-weight:800;color:var(--green2);flex:none}
-.addb:hover{background:rgba(34,197,94,.15)}
-.addb.in{background:var(--green);color:#04220f}
-.bet{grid-template-columns:118px minmax(0,1.5fr) minmax(0,1.2fr) 150px 92px 118px 30px !important}
-.head{grid-template-columns:118px minmax(0,1.5fr) minmax(0,1.2fr) 150px 92px 118px 30px !important}
-.mleg{display:grid;grid-template-columns:1fr auto auto auto 30px;gap:12px;align-items:center;padding:12px 14px}
-.mleg.weak{border-color:rgba(239,68,68,.5)}
+/* ---------- pronostics / objectif / ticket ---------- */
+.pick{display:grid;grid-template-columns:minmax(0,1fr) 150px 80px 34px;gap:14px;align-items:center;padding:14px 18px;border:1px solid var(--rim);background:var(--deck);border-radius:var(--r);margin-bottom:8px;cursor:pointer}
+.pick:hover{border-color:var(--rim2)}
+.pick .sel{font-weight:700;font-size:15px}
+.pick .sel small{display:block;font-weight:500;color:var(--fog);font-size:13px}
+.goal{display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:start}
+.goalf{padding:20px;position:sticky;top:84px}
+.money{display:flex;align-items:center;gap:8px}
+.money .in{font-family:var(--disp);font-size:22px;font-weight:700;padding:10px 12px}
+.money span{font-family:var(--disp);font-size:20px;color:var(--fog)}
+.need{margin:14px 0;padding:12px 14px;border-radius:11px;background:var(--night);border:1px solid var(--rim);font-size:13.5px;color:var(--fog)}
+.need b{font-family:var(--disp);color:var(--chalk);font-size:18px}
+.opt{padding:18px 20px;margin-bottom:12px}
+.opt.best{border-color:rgba(38,224,184,.55);box-shadow:0 0 40px -18px rgba(38,224,184,.6)}
+.opt .oh{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px}
+.opt .oh b{font-size:16px;display:block}
+.opt .oh small{color:var(--fog);font-size:13px}
+.ring{text-align:right;flex:none}
+.ring b{font-family:var(--disp);font-size:26px;color:var(--home)}
+.ring small{display:block;font-size:11.5px;color:var(--dim)}
+.leg{display:grid;grid-template-columns:minmax(0,1fr) auto 34px;gap:12px;align-items:center;padding:9px 0;border-top:1px solid var(--rim);font-size:14px}
+.leg small{color:var(--dim)}
+.leg .o{font-family:var(--disp);font-weight:700;font-size:15.5px}
+.tot{display:flex;align-items:center;gap:10px;margin-top:10px;padding-top:12px;border-top:1px dashed var(--rim2)}
+.tot b{font-family:var(--disp);font-size:18px;color:var(--home)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{padding:16px 18px}
+.stat small{color:var(--fog);font-size:12.5px;font-weight:600}
+.stat b{display:block;font-family:var(--disp);font-size:26px;font-weight:700;margin-top:2px}
+.warn{padding:10px 14px;border-radius:11px;font-size:13.5px;margin:8px 0;background:rgba(242,184,75,.08);color:#F7D58F;border:1px solid rgba(242,184,75,.25)}
+.tip{padding:10px 14px;border-radius:11px;font-size:13.5px;margin:8px 0;background:rgba(38,224,184,.07);color:#B9F5E7;border:1px solid rgba(38,224,184,.25);display:flex;gap:10px;align-items:center}
+.tip span{flex:1}
+.weak{border-color:rgba(255,107,122,.5)!important}
+.banner{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:12px;border:1px solid var(--rim2);background:var(--deck);margin-bottom:16px;font-size:14px}
+.banner .btn{margin-left:auto;flex:none}
 
-/* ---------- settings ---------- */
-.set{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.set .card{padding:20px}
-.set h3{font-size:14px;margin-bottom:14px}
-.f{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.f label{font-size:12.5px;font-weight:600;color:#c8cfdb}
-.f small{color:var(--dim);font-size:11.5px;line-height:1.4}
-.in{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;outline:0;width:100%}
-.in:focus{border-color:var(--green)}
-.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
-.leagues{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.chk{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:9px;background:var(--bg2);border:1px solid var(--line);cursor:pointer;font-size:13px}
-.chk input{accent-color:var(--green);width:16px;height:16px}
-.est{padding:12px 14px;border-radius:11px;font-size:12.5px;margin:4px 0 14px}
-.est.ok{background:rgba(34,197,94,.1);color:var(--green2)}
-.est.ko{background:rgba(245,158,11,.1);color:var(--amber)}
+/* ---------- drawer ticket / toast ---------- */
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;z-index:80;background:var(--deck2);border:1px solid var(--rim2);padding:11px 16px;border-radius:12px;font-weight:600;transition:.25s}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.tfab{position:fixed;right:24px;bottom:24px;z-index:30;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:var(--home);color:#032019;font-weight:800;box-shadow:0 12px 40px -10px rgba(38,224,184,.7)}
 
-/* ---------- drawer ---------- */
-.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;z-index:50;backdrop-filter:blur(3px)}
-.ov.on{display:block}
-.drawer{position:fixed;top:0;right:0;bottom:0;width:440px;background:var(--bg2);border-left:1px solid var(--line);
-  z-index:60;transform:translateX(100%);transition:.25s ease;padding:24px;overflow:auto}
-.drawer.on{transform:none}
-.drawer .x{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:10px;background:var(--card)}
-.drawer h3{font-size:20px;margin:6px 0 4px;padding-right:40px}
-.pr{display:flex;justify-content:space-between;padding:9px 12px;border-radius:9px;font-size:13px}
-.pr:nth-child(odd){background:var(--card)}
-.pr.me{color:var(--green2);font-weight:700}
-.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:#1f2633;border:1px solid var(--line);
-  padding:11px 18px;border-radius:12px;transition:.25s;z-index:70;font-weight:600}
-.toast.on{transform:translateX(-50%)}
-.skel{height:64px;border-radius:14px;background:linear-gradient(90deg,var(--card) 0%,#1a1f2a 50%,var(--card) 100%);
-  background-size:200% 100%;animation:sk 1.2s infinite}
-@keyframes sk{to{background-position:-200% 0}}
+/* ---------- connexion / forfaits ---------- */
+.gate{position:fixed;inset:0;z-index:90;overflow:auto;background:radial-gradient(1000px 520px at 50% -10%,rgba(38,224,184,.14),transparent 60%),radial-gradient(800px 500px at 100% 100%,rgba(156,140,255,.10),transparent 60%),var(--night);display:grid;place-items:center;padding:24px}
+.gcard{width:min(420px,100%)}
+.gcard.wide{width:min(1060px,100%)}
+.gcard .logo{justify-content:center;margin-bottom:22px;font-size:22px}
+.gbox{padding:28px}
+.gbox h2{font-family:var(--disp);font-size:24px;font-weight:700;margin-bottom:4px}
+.gbox p{color:var(--fog);margin-bottom:20px;font-size:14.5px}
+.gbox .f{margin-bottom:14px}
+.gbox .msg{min-height:20px;font-size:13.5px;color:var(--bad);margin:4px 0 10px}
+.gbox .msg.ok{color:var(--home)}
+.gbox .alt{text-align:center;margin-top:14px;font-size:14px;color:var(--fog)}
+.gbox .alt button{color:var(--home);font-weight:700}
+.chk{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--fog);margin:6px 0 4px}
+.chk input{margin-top:3px;accent-color:#26E0B8}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pl{padding:24px;display:flex;flex-direction:column;gap:14px;position:relative}
+.pl.hot{border-color:rgba(38,224,184,.6);box-shadow:0 0 60px -25px rgba(38,224,184,.7)}
+.pl.cur{outline:2px solid var(--home)}
+.pl .tag{position:absolute;top:-11px;left:22px;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:8px;background:var(--home);color:#032019}
+.pl h3{font-family:var(--disp);font-size:20px}
+.pl .pr{font-family:var(--disp);font-size:34px;font-weight:700}
+.pl .pr small{font-family:var(--body);font-size:14px;color:var(--fog);font-weight:500}
+.pl ul{list-style:none;display:grid;gap:8px;font-size:14px;color:#CBD6EA;flex:1}
+.pl li{padding-left:22px;position:relative}
+.pl li::before{content:"";position:absolute;left:2px;top:7px;width:9px;height:9px;border-radius:3px;background:var(--home)}
+.pl li.inc{color:var(--fog)}
+.pl li.inc::before{background:var(--rim2)}
+.books{display:flex;flex-wrap:wrap;gap:8px}
+.books label{display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:11px;border:1px solid var(--rim2);cursor:pointer;font-weight:600;user-select:none}
+.books label.on{border-color:var(--home);background:rgba(38,224,184,.08)}
+.books input{accent-color:#26E0B8}
+.loader{display:grid;place-items:center;gap:16px;text-align:center;color:var(--fog)}
+.scan{width:220px}
+.scan .spec{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.55}}
 
-/* compte, forfaits, verrous */
-.authov{position:fixed;inset:0;z-index:90;background:rgba(5,8,12,.84);backdrop-filter:blur(6px);display:none;place-items:center;overflow:auto;padding:20px}
-.authc{position:relative;width:min(440px,94vw);padding:28px}
-.authc.wide{width:min(980px,96vw)}
-.authc .x{position:absolute;top:12px;right:12px;background:none;border:0;color:var(--muted);font-size:16px;cursor:pointer}
-.authc h3{font-size:21px;margin-bottom:4px;text-align:center}
-.authc .sub2{color:var(--muted);font-size:13.5px;text-align:center;margin-bottom:18px}
-.authc .f{margin-bottom:12px}
-.authc .btn.full{width:100%;justify-content:center;padding:12px}
-.authc .msg{font-size:13px;min-height:18px;margin:6px 0;color:#fca5a5;text-align:center}
-.authc .msg.ok{color:var(--green2)}
-.authc .alt{text-align:center;font-size:13px;color:var(--muted);margin-top:12px}
-.authc .alt button{background:none;border:0;color:var(--green2);cursor:pointer;font:inherit;font-weight:650;padding:0}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
-.plan{border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px;position:relative;background:rgba(255,255,255,.015)}
-.plan.hot{border-color:rgba(34,197,94,.5);box-shadow:0 0 50px -25px rgba(34,197,94,.6)}
-.plan.cur{outline:2px solid var(--green2)}
-.plan .pt{position:absolute;top:-10px;left:18px;font-size:11px;font-weight:700;background:var(--green2);color:#03140d;padding:2px 9px;border-radius:20px}
-.plan h4{font-size:17px}
-.plan .pp b{font-size:30px;font-weight:800;letter-spacing:-.02em}
-.plan .pp span{color:var(--muted);font-size:13px}
-.plan ul{list-style:none;display:grid;gap:7px;font-size:13px;color:#cbd5e1;flex:1;align-content:start}
-.plan li{padding-left:20px;position:relative}
-.plan li::before{content:"✓";position:absolute;left:0;color:var(--green2);font-weight:800}
-.plan li.inc{color:var(--muted)}
-.plan li.inc::before{content:"＋"}
-.books{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0}
-.books label{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;font-size:13.5px;user-select:none}
-.books label.on{border-color:var(--green2);background:rgba(34,197,94,.08)}
-.books input{accent-color:#22c55e}
-.lock{display:flex;gap:14px;align-items:center;padding:14px 16px;margin:12px 0;border-color:rgba(245,158,11,.35)!important;background:linear-gradient(90deg,rgba(245,158,11,.07),transparent)}
-.lock .lk{font-size:12px;font-weight:700;color:#fbbf24;white-space:nowrap}
-.lock b{display:block;font-size:14px}
-.lock small{color:var(--muted);font-size:12.5px}
-.lock .btn{margin-left:auto;white-space:nowrap}
-.chip.lockd{opacity:.5;border-style:dashed}
-.tierpill{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:rgba(34,197,94,.15);color:var(--green2);margin-left:6px;vertical-align:2px}
-.tierpill:empty{display:none}
-.accl{display:grid;gap:4px;font-size:13.5px;margin-bottom:10px}
-.accl span{color:var(--muted)}
-@media (max-width:820px){.plans{grid-template-columns:1fr}}
-
-/* ---------- téléphone ---------- */
-@media (max-width:760px){
-  .app{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;height:100dvh}
-  body{overflow-x:hidden}
-  .card,.content > section{min-width:0}
-  .side{order:2;min-width:0;width:100%;height:auto;flex-direction:row;padding:0;border-right:0;border-top:1px solid var(--line);background:rgba(13,17,23,.97);overflow:visible}
-  .side .brand,.side .foot{display:none}
-  .nav{flex-direction:row;overflow-x:auto;gap:0;width:100%;min-width:0;padding:4px 4px calc(4px + env(safe-area-inset-bottom));scrollbar-width:none}
-  .nav::-webkit-scrollbar{display:none}
-  .nav button{flex-direction:column;gap:3px;padding:7px 9px;font-size:10.5px;min-width:68px;border-radius:10px;position:relative;white-space:nowrap}
-  .nav button.on{box-shadow:none}
-  .nav .count{position:absolute;top:2px;right:8px;margin:0;font-size:9.5px;padding:0 5px}
-  .main{height:auto;min-height:0;overflow:hidden}
-  .top{padding:12px 14px;gap:8px;flex-wrap:wrap}
-  .top h1{font-size:18px}
-  .top .meta,.top .pill{display:none}
-  #btn-ref{padding:8px 11px;font-size:0;gap:0}
-  #btn-ref svg{margin:0}
-  .days{padding:10px 14px 0}
-  .content{padding:14px 14px 24px}
-  .stats{grid-template-columns:1fr 1fr;gap:10px}
-  .head{display:none!important}
-  .bet{grid-template-columns:1fr auto auto !important;grid-template-areas:"mt odds add" "s s tag" "prob prob prob";gap:6px 10px;padding:12px 14px}
-  .bet .d{display:none}
-  .bet .mt{grid-area:mt}.bet .s{grid-area:s}.bet .prob{grid-area:prob}.bet .odds{grid-area:odds}.bet .tag{grid-area:tag;justify-self:end}.bet .addb{grid-area:add}
-  .bud,.set,.nums{grid-template-columns:1fr}
-  .drawer{width:100%;max-width:100%}
-  .lock{flex-wrap:wrap}.lock .btn{margin-left:0}
-  .authc{padding:22px 18px}
-  .banner{flex-wrap:wrap;font-size:12.5px}
+@media (max-width:900px){
+  .match{grid-template-columns:52px minmax(0,1fr) auto;grid-template-areas:"tm teams odds" "spec spec spec";gap:10px 12px}
+  .match .tm{grid-area:tm}.match .teams{grid-area:teams}.match .odds3{grid-area:odds}.match .sp3{grid-area:spec}.match .chev{display:none}
+  .grid2,.goal{grid-template-columns:1fr}
+  .goalf{position:static}
+  .plans{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
 }
+@media (max-width:720px){
+  header.top{padding:0 16px;height:56px}
+  nav.tabs{display:none}
+  main{padding:18px 14px 96px}
+  .bottom{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:25;background:rgba(6,10,18,.94);backdrop-filter:blur(14px);border-top:1px solid var(--rim);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  .bottom button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;font-size:11px;font-weight:700;color:var(--dim);position:relative}
+  .bottom button svg{width:21px;height:21px}
+  .bottom button.on{color:var(--home)}
+  .bottom .badge{position:absolute;top:0;right:calc(50% - 22px)}
+  .odds3 .ob{min-width:48px;padding:5px 4px}
+  .match{padding:12px 14px}
+  .pick,.bet{grid-template-columns:minmax(0,1fr) 70px 34px}
+  .pick .pc,.bet .pc{display:none}
+  .mhead{padding:20px}
+  .tfab{bottom:84px;right:16px}
+  h1.t{font-size:23px}
+  .lock{flex-wrap:wrap}.lock .btn{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<div id="cs-load" style="position:fixed;inset:0;z-index:95;display:none;place-items:center;
-  background:radial-gradient(1200px 600px at 50% -10%,rgba(34,197,94,.16),transparent 60%),#070b10;color:#e8eef5">
-  <div style="text-align:center">
-    <img src="../img/logo.svg" alt="" style="width:60px;height:60px;margin:0 auto 14px;display:block" onerror="this.remove()">
-    <div id="cs-spin" style="width:40px;height:40px;margin:0 auto 14px;border-radius:50%;border:3px solid rgba(34,197,94,.2);
-      border-top-color:#22c55e;animation:csspin .9s linear infinite"></div>
-    <div id="cs-step" style="color:#9fb0c2;font-size:14px"></div>
-    <div id="cs-hint" style="color:#6b7c8f;font-size:12px;margin-top:8px">Le premier chargement prend quelques secondes.</div>
-    <button id="cs-retry" class="btn primary" style="display:none;margin:16px auto 0" onclick="location.reload()">Réessayer</button>
-  </div>
+<div class="shell">
+  <header class="top">
+    <a class="logo" href="../"><img src="../img/logo.svg" alt="">Cotescope</a>
+    <nav class="tabs" id="tabs"></nav>
+    <div class="sp"></div>
+    <span class="plan" id="plan" hidden></span>
+    <button class="me" id="me" title="Mon compte">?</button>
+  </header>
+  <main id="view"></main>
+  <nav class="bottom" id="bottom"></nav>
 </div>
-<style>@keyframes csspin{to{transform:rotate(360deg)}} #authov{background:radial-gradient(1200px 600px at 50% -10%,rgba(34,197,94,.14),transparent 60%),rgba(7,11,16,.97)}</style>
-
-<div class="app">
-  <aside class="side">
-    <div class="brand">
-      <svg viewBox="0 0 256 256"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs><rect x="8" y="8" width="240" height="240" rx="56" fill="url(#lg)"/><circle cx="128" cy="128" r="72" fill="none" stroke="#fff" stroke-width="16"/><g stroke="#fff" stroke-width="14" stroke-linecap="round"><line x1="128" y1="34" x2="128" y2="70"/><line x1="128" y1="186" x2="128" y2="222"/><line x1="34" y1="128" x2="70" y2="128"/><line x1="186" y1="128" x2="222" y2="128"/></g><polygon points="128,100 154.6,119.3 144.5,150.7 111.5,150.7 101.4,119.3" fill="#fff"/></svg>
-      <div><b>Cotescope<span class="tierpill" id="tierp"></span></b><small>Analyseur foot · <span id="ver"></span></small></div>
-    </div>
-    <nav class="nav" id="nav">
-      <button data-p="home" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Accueil</button>
-      <button data-p="picks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 8.5l7 1-5 4.9 1.2 7L12 18l-6.2 3.4L7 14.4 2 9.5l7-1z"/></svg>Meilleurs paris<span class="count" id="cnt-v" hidden></span></button>
-      <button data-p="combos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg>Combinés</button>
-      <button data-p="budget"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2.5"/><path d="M2 10h20M6 15h4"/></svg>Mon budget</button>
-      <button data-p="mine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4z"/><path d="M12 7v12" stroke-dasharray="2 2"/></svg>Mon ticket<span class="count" id="cnt-b" hidden></span></button>
-      <button data-p="hist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>Historique</button>
-      <button data-p="prob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.5 0 9-3.6 9-9V5l-9-3-9 3v8c0 5.4 3.5 9 9 9z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Plus probables</button>
-      <button data-p="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Paramètres</button>
-    </nav>
-    <div class="foot">18+ · Jouer comporte des risques : endettement, dépendance… Appelez le <b>09 74 75 13 13</b> (appel non surtaxé).</div>
-  </aside>
-
-  <main class="main">
-    <div class="top">
-      <h1 id="title">Accueil</h1>
-      <span class="pill live" id="pill"><i></i>EN DIRECT</span>
-      <div class="sp"></div>
-      <div class="meta" id="meta">Chargement…</div>
-      <button class="btn" id="btn-upd" title="Rechercher des mises à jour"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg></button>
-      <button class="btn primary" id="btn-ref"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4M21 3v6h-6"/></svg>Actualiser</button>
-    </div>
-    <div id="banners"></div>
-    <div class="days" id="days"></div>
-
-    <div class="content" id="content">
-      <!-- ACCUEIL -->
-      <section class="page on" id="p-home">
-        <div class="stats">
-          <div class="card stat"><div class="l">Matchs analysés</div><div class="v" id="s-an">–</div><div class="h" id="s-an-h">&nbsp;</div></div>
-          <div class="card stat"><div class="l">Paris avec value</div><div class="v" id="s-v" style="color:var(--green2)">–</div><div class="h">cotes <span class="bkn">de tes bookmakers</span> au-dessus du juste prix</div></div>
-          <div class="card stat"><div class="l">Prochaine mise à jour</div><div class="v" id="s-nx">–</div><div class="h" id="s-last">&nbsp;</div></div>
-          <div class="card stat"><div class="l">Mon forfait</div><div class="v" id="s-q" style="font-size:22px;padding-top:4px">–</div><div class="h" id="s-q-h">&nbsp;</div></div>
-        </div>
-        <h2>Si c'était mon argent</h2>
-        <div class="hero">
-          <div class="card potd" id="potd"><div class="skel"></div></div>
-          <div class="card quick">
-            <div class="k">Combien tu veux miser ?</div>
-            <div class="money"><input id="q-amount" value="10" inputmode="decimal"><span>€</span></div>
-            <div class="chips" id="q-modes">
-              <button class="chip" data-m="prudent">Prudent</button>
-              <button class="chip on" data-m="equilibre">Équilibré</button>
-              <button class="chip" data-m="agressif">Agressif</button>
-            </div>
-            <button class="btn primary" id="q-go" style="justify-content:center;padding:13px">Trouver le meilleur plan →</button>
-            <button class="btn" id="q-goal" style="justify-content:center">🎯 J'ai un objectif de gain</button>
-          </div>
-        </div>
-        <h2>Top paris <button class="link" data-goto="picks">Tout voir →</button></h2>
-        <div class="list" id="home-picks"></div>
-        <h2>Meilleurs combinés <button class="link" data-goto="combos">Tout voir →</button></h2>
-        <div class="grid2" id="home-combos"></div>
-      </section>
-
-      <!-- MEILLEURS PARIS -->
-      <section class="page" id="p-picks">
-        <p class="sub">Les paris où la cote de tes bookmakers est la plus intéressante par rapport à la vraie probabilité du match. Les paris <span class="tag v">VALUE</span> sont rentables sur la durée. Clique sur un pari pour voir le détail.</p>
-        <div class="toolbar">
-          <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="f-q" placeholder="Équipe, championnat…"></div>
-          <div class="chips" id="f-type">
-            <button class="chip on" data-t="all">Tous</button>
-            <button class="chip" data-t="mine">✔ Ce que je jouerais</button>
-            <button class="chip" data-t="value">Value seulement</button>
-
-            <button class="chip" data-t="1n2">Résultat 1N2</button>
-            <button class="chip" data-t="dc">Double chance</button>
-            <button class="chip" data-t="dnb">Remboursé si nul</button>
-            <button class="chip" data-t="total">Nombre de buts</button>
-            <button class="chip" data-t="team">Buts par équipe</button>
-            <button class="chip" data-t="btts">Les 2 marquent</button>
-            <button class="chip" data-t="hcp">Handicap</button>
-            <button class="chip" data-t="exact">Score exact</button>
-            <button class="chip" data-t="mtft">Mi-temps/Fin</button>
-            <button class="chip" data-t="scorer">Buteurs</button>
-            <button class="chip" data-t="decisive">Joueurs décisifs</button>
-          </div>
-          <div class="chips" id="f-sort" style="margin-left:auto">
-            <button class="chip on" data-s="ev">Meilleure value</button>
-            <button class="chip" data-s="p">Plus probable</button>
-            <button class="chip" data-s="ts">Date</button>
-            <button class="chip" data-s="odds">Grosse cote</button>
-          </div>
-        </div>
-        <div class="head"><span>Date</span><span>Match</span><span>Pari</span><span>Probabilité</span><span style="text-align:center">Cote</span><span style="text-align:center">Value</span></div>
-        <div class="list" id="picks"></div>
-      </section>
-
-      <!-- COMBINES -->
-      <section class="page" id="p-combos">
-        <p class="sub">Combinés sur des matchs différents, toutes les sélections chez tes bookmakers. Les combinés <span class="tag v">VALUE</span> sont faits uniquement de paris rentables.</p>
-        <div class="grid2" id="combos"></div>
-      </section>
-
-      <!-- BUDGET -->
-      <section class="page" id="p-budget">
-        <div class="seg" id="seg"><button data-v="split" class="on">💶 Répartir mon budget</button><button data-v="goal">🎯 Atteindre un objectif</button></div>
-        <div class="bud" id="v-goal" style="display:none">
-          <div class="card form">
-            <div class="k" style="font-weight:650">Je mise</div>
-            <div class="money"><input id="g-stake" value="50" inputmode="decimal"><span>€</span></div>
-            <div class="k" style="font-weight:650">Je veux gagner au moins</div>
-            <div class="money"><input id="g-target" value="200" inputmode="decimal"><span>€</span></div>
-            <div class="need" id="g-need"></div>
-            <div class="objp card" style="padding:12px 14px;background:var(--bg2)">
-              <label class="chk" style="background:none;border:0;padding:0"><input type="checkbox" class="o-on" checked><b>Priorité à l'objectivité</b></label>
-              <div style="font-size:11.5px;color:var(--dim);margin:4px 0 8px">Les favoris, la forme, les stats, les absents et l'historique passent avant l'objectif d'argent.</div>
-              <div class="nums">
-                <div class="f" style="margin:0"><label>Proba mini / sélection</label><div style="display:flex;align-items:center;gap:6px"><input class="in o-minp" value="55" style="width:70px"> %</div></div>
-                <div class="f" style="margin:0"><label>Confiance mini analyse</label><div style="display:flex;align-items:center;gap:6px"><input class="in o-conf" value="50" style="width:70px"> /100</div></div>
-              </div>
-              <label class="chk" style="background:none;border:0;padding:6px 0 0"><input type="checkbox" class="o-data" checked>Exiger des données (forme, classement, absents vérifiés)</label>
-              <label class="chk" style="background:none;border:0;padding:4px 0 0"><input type="checkbox" class="o-est">Éviter les cotes estimées (≈)</label>
-            </div>
-            <div class="k" style="font-weight:650">Nombre de matchs par ticket</div>
-            <div style="display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted)">min <input class="in lgmin" inputmode="numeric" placeholder="1" style="width:64px"> max <input class="in lgmax" inputmode="numeric" placeholder="auto" style="width:72px"><span style="font-size:11.5px">(vide = automatique, 10 max)</span></div>
-            <div class="k" style="font-weight:650">Types de paris</div>
-            <div class="chips tsel"><button class="chip on" data-cat="1n2">Résultat 1N2</button><button class="chip on" data-cat="dc">Double chance</button><button class="chip on" data-cat="dnb">Remboursé si nul</button><button class="chip on" data-cat="total">Nombre de buts</button><button class="chip on" data-cat="team">Buts par équipe</button><button class="chip on" data-cat="btts">Les 2 marquent</button><button class="chip on" data-cat="hcp">Handicap</button><button class="chip on" data-cat="exact">Score exact</button><button class="chip on" data-cat="mtft">Mi-temps/Fin</button><button class="chip on" data-cat="scorer">Buteurs</button><button class="chip on" data-cat="decisive">Joueurs décisifs</button></div>
-            <div style="display:flex;gap:8px"><button class="link" data-allcat="1" style="font-size:12px;color:var(--green2)">Tout cocher</button><button class="link" data-allcat="0" style="font-size:12px;color:var(--muted)">Tout décocher</button></div>
-            <button class="btn primary" id="g-go" style="justify-content:center;padding:13px">Trouver les meilleures options</button>
-          </div>
-          <div id="goal"><div class="card empty"><b>Tes options s'afficheront ici</b>Choisis ta mise et ton objectif de gain : Cotescope cherche les tickets qui l'atteignent avec le plus de chances de passer.</div></div>
-        </div>
-        <div class="bud" id="v-split">
-          <div class="card form">
-            <div class="k" style="font-weight:650">Je veux miser</div>
-            <div class="money"><input id="b-amount" value="10" inputmode="decimal"><span>€</span></div>
-            <div class="mode" id="b-modes">
-              <button data-m="prudent"><b>🛡️ Prudent</b><small>4 paris simples, que des favoris (≥ 55 %)</small></button>
-              <button data-m="equilibre" class="on"><b>⚖️ Équilibré</b><small>3 simples + 1 combiné de 2 matchs</small></button>
-              <button data-m="agressif"><b>🔥 Agressif</b><small>Gros combinés, gains plus gros, plus risqué</small></button>
-            </div>
-<div class="objp card" style="padding:12px 14px;background:var(--bg2)">
-              <label class="chk" style="background:none;border:0;padding:0"><input type="checkbox" class="o-on" checked><b>Priorité à l'objectivité</b></label>
-              <div style="font-size:11.5px;color:var(--dim);margin:4px 0 8px">Les favoris, la forme, les stats, les absents et l'historique passent avant l'objectif d'argent.</div>
-              <div class="nums">
-                <div class="f" style="margin:0"><label>Proba mini / sélection</label><div style="display:flex;align-items:center;gap:6px"><input class="in o-minp" value="55" style="width:70px"> %</div></div>
-                <div class="f" style="margin:0"><label>Confiance mini analyse</label><div style="display:flex;align-items:center;gap:6px"><input class="in o-conf" value="50" style="width:70px"> /100</div></div>
-              </div>
-              <label class="chk" style="background:none;border:0;padding:6px 0 0"><input type="checkbox" class="o-data" checked>Exiger des données (forme, classement, absents vérifiés)</label>
-              <label class="chk" style="background:none;border:0;padding:4px 0 0"><input type="checkbox" class="o-est">Éviter les cotes estimées (≈)</label>
-            </div>
-            <div class="k" style="font-weight:650">Nombre de matchs par ticket</div>
-            <div style="display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted)">min <input class="in lgmin" inputmode="numeric" placeholder="1" style="width:64px"> max <input class="in lgmax" inputmode="numeric" placeholder="auto" style="width:72px"><span style="font-size:11.5px">(vide = automatique, 10 max)</span></div>
-            <div class="k" style="font-weight:650">Types de paris</div>
-            <div class="chips tsel"><button class="chip on" data-cat="1n2">Résultat 1N2</button><button class="chip on" data-cat="dc">Double chance</button><button class="chip on" data-cat="dnb">Remboursé si nul</button><button class="chip on" data-cat="total">Nombre de buts</button><button class="chip on" data-cat="team">Buts par équipe</button><button class="chip on" data-cat="btts">Les 2 marquent</button><button class="chip on" data-cat="hcp">Handicap</button><button class="chip on" data-cat="exact">Score exact</button><button class="chip on" data-cat="mtft">Mi-temps/Fin</button><button class="chip on" data-cat="scorer">Buteurs</button><button class="chip on" data-cat="decisive">Joueurs décisifs</button></div>
-            <div style="display:flex;gap:8px"><button class="link" data-allcat="1" style="font-size:12px;color:var(--green2)">Tout cocher</button><button class="link" data-allcat="0" style="font-size:12px;color:var(--muted)">Tout décocher</button></div>
-            <button class="btn primary" id="b-go" style="justify-content:center;padding:13px">Trouver le meilleur plan</button>
-          </div>
-          <div id="plan"><div class="card empty"><b>Ton plan de mise s'affichera ici</b>Entre un montant, choisis un style, puis clique sur « Trouver le meilleur plan ».</div></div>
-        </div>
-      </section>
-
-      <!-- MON TICKET -->
-      <section class="page" id="p-mine">
-        <p class="sub">Construis ton ticket toi-même : clique sur <b>＋</b> à côté d'un pari (Meilleurs paris, Plus probables, fiches, tickets proposés). L'appli l'analyse en direct.</p>
-        <div id="mine"></div>
-      </section>
-
-      <!-- HISTORIQUE -->
-      <section class="page" id="p-hist">
-        <div style="display:flex;gap:10px;align-items:center;margin-bottom:14px"><p class="sub" style="margin:0;flex:1">Chaque ticket que tu marques « Je joue » et chaque pari que Cotescope jouerait lui-même (✔ JE JOUE) sont vérifiés automatiquement après le match (résultats ESPN). C'est le juge de paix de l'analyse.</p><button class="btn" id="h-check">⟳ Vérifier les résultats</button></div>
-        <div id="hist"></div>
-      </section>
-
-      <!-- PLUS PROBABLES -->
-      <section class="page" id="p-prob">
-        <p class="sub">Les issues les plus probables selon le marché. Attention : un pari qui passe souvent n'est pas forcément rentable si la cote est trop basse (value négative).</p>
-        <div class="head"><span>Date</span><span>Match</span><span>Pari</span><span>Probabilité</span><span style="text-align:center">Cote</span><span style="text-align:center">Value</span></div>
-        <div class="list" id="prob"></div>
-      </section>
-
-      <!-- PARAMETRES -->
-      <section class="page" id="p-settings">
-        <div class="set">
-          <div class="card">
-            <h3>L'essentiel</h3>
-            <div class="f"><label>Mon compte</label><div id="acc-box"></div></div>
-            <div class="f"><label>Où je parie <span style="color:var(--dim);font-weight:400">(coche tous tes bookmakers)</span></label>
-              <div class="books" id="c-books"></div><input type="hidden" id="c-bookmakers">
-              <small>Chaque pari proposé prend la meilleure cote parmi les bookmakers cochés.</small></div>
-            <h3 style="margin-top:18px">Ma bankroll (optionnel)</h3><div id="bank-lock"></div>
-            <div class="nums">
-              <div class="f"><label>Capital de départ (€)</label><input class="in" id="c-bankroll" placeholder="0 = pas de suivi"></div>
-              <div class="f"><label>Mise max par jour (% du capital)</label><input class="in" id="c-daily_max_pct"></div>
-              <div class="f"><label>Stop-loss : perte max par jour (€)</label><input class="in" id="c-stop_loss" placeholder="0 = aucune"></div>
-            </div>
-            <button class="btn primary" id="c-save">Enregistrer</button>
-          </div>
-          <div class="card">
-            <h3>Championnats affichés</h3>
-            <div class="leagues" id="c-leagues"></div>
-            <small style="color:var(--dim);display:block;margin-top:10px">Décoche un championnat pour masquer ses matchs partout dans l'appli (paris, combinés, mode objectif). Les cotes et les analyses sont mises à jour automatiquement par Cotescope.</small>
-          </div>
-        </div>
-        <details class="card" style="margin-top:16px;padding:16px 20px">
-          <summary style="cursor:pointer;font-weight:650">Réglages avancés (tu n'as pas besoin d'y toucher)</summary>
-          <div class="set" style="margin-top:16px">
-            <div>
-              <p style="color:var(--muted);font-size:13px;line-height:1.6">Ces seuils règlent ce que Cotescope considère comme un bon pari. Les valeurs par défaut conviennent à presque tout le monde.</p>
-            </div>
-            <div>
-              <div class="nums">
-                <div class="f"><label>Value mini</label><input class="in" id="c-min_ev"></div>
-                <div class="f"><label>Value max avant alerte</label><input class="in" id="c-max_ev"></div>
-                <div class="f"><label>Cote mini</label><input class="in" id="c-min_odds"></div>
-                <div class="f"><label>Cote maxi</label><input class="in" id="c-max_odds"></div>
-                <div class="f"><label>Matchs dans les (heures)</label><input class="in" id="c-horizon_hours"></div>
-                <div class="f"><label>Mise mini (€)</label><input class="in" id="c-min_stake"></div>
-                <div class="f"><label>Sélections max / combiné</label><input class="in" id="c-max_legs"></div>
-                <div class="f"><label>Nb bookmakers mini</label><input class="in" id="c-min_books"></div>
-                <div class="f"><label>Poids de l'analyse forme</label><input class="in" id="c-stats_weight"></div>
-              </div>
-              <button class="btn" id="c-reset" style="margin-top:6px">↺ Remettre les réglages par défaut</button>
-            </div>
-          </div>
-        </details>
-      </section>
-    </div>
-  </main>
-</div>
-
-<div class="ov" id="ov"></div>
-<aside class="drawer" id="drawer"><button class="x" id="dx">✕</button><div id="dbody"></div></aside>
+<button class="tfab" id="tfab" hidden></button>
 <div class="toast" id="toast"></div>
-<div id="authov" class="authov"><div class="card authc"><button class="x" id="auth-x" title="Fermer">✕</button><div id="auth-body"></div></div></div>
+<div class="gate" id="gate" hidden><div class="gcard" id="gcard"></div></div>
 
 <script>
-const $ = s => document.querySelector(s);
-const $$ = s => [...document.querySelectorAll(s)];
+"use strict";
+/* ======================================================================
+   Cotescope · appli web
+   Le moteur d'analyse (Python) tourne dans le navigateur (Pyodide).
+   Le serveur n'envoie le moteur et les données qu'aux comptes abonnés.
+   ====================================================================== */
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const book = s => String(s || "").replace(/\s*\((FR|EU|UK)\)$/, "");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const fr = (x, d=2) => Number(x).toFixed(d).replace(".", ",");
-const eur = x => (x < 0 ? "−" : "") + fr(Math.abs(x)) + " €";
-const pc = (x, d=0) => fr(x * 100, d) + " %";
-const sg = x => (x >= 0 ? "+" : "−") + fr(Math.abs(x) * 100, 1) + " %";
-let api = null, status = {}, data = {picks: [], probable: [], combos: []}, rev = -1, cfg = null;
-let nextAt = 0, page = "home";
-const TITLES = {mine:"Mon ticket", hist:"Historique & bilan", home:"Accueil", picks:"Meilleurs paris", combos:"Combinés", budget:"Mon budget", prob:"Plus probables", settings:"Paramètres"};
-
+const fr = (x, d=2) => x == null || isNaN(x) ? "–" : Number(x).toFixed(d).replace(".", ",");
+const pc = (x, d=0) => x == null ? "–" : fr(x * 100, d) + " %";
+const eur = x => fr(x) + " €";
+const sg = x => (x >= 0 ? "+" : "") + pc(x, 1);
 function toast(t){ const e=$("#toast"); e.textContent=t; e.classList.add("on"); clearTimeout(e._t); e._t=setTimeout(()=>e.classList.remove("on"),2600); }
-function go(p){ if (p==="hist") setTimeout(loadHist, 50); if (p==="mine") setTimeout(loadMine, 50); page=p; $$("#nav button").forEach(b=>b.classList.toggle("on",b.dataset.p===p)); $$(".page").forEach(s=>s.classList.toggle("on",s.id==="p-"+p)); $("#title").textContent=TITLES[p]; $("#content").scrollTop=0; if(p==="settings") loadCfg(); }
-$$("#nav button").forEach(b=>b.onclick=()=>go(b.dataset.p));
-document.addEventListener("click",e=>{ const g=e.target.closest("[data-goto]"); if(g) go(g.dataset.goto); });
-
-function tag(b){
-  if (b.estimated) return `<span class="tag n" title="Cote estimée : prends ce pari seulement si ${BK()} affiche au moins ${fr(b.min_odds)}">≈ prends si ≥ ${fr(b.min_odds)}</span>`;
-  if (b.mine) return `<span class="tag v" title="Cotescope jouerait ce pari avec son propre argent">✔ JE JOUE ${sg(b.ev)}</span>`;
-  if (b.suspect) return `<span class="tag w">⚠ ${tierRank()>=3?sg(b.ev):"cote à vérifier"}</span>`;
-  if (b.value) return `<span class="tag v">VALUE ${sg(b.ev)}</span>`;
-  if (tierRank() < 3) return `<span class="tag n">${pc(b.p)} de chances</span>`;
-  return `<span class="tag n">Sans value ${sg(b.ev)}</span>`;
-}
-function betRow(b){
-  return `<div class="card bet" data-uid="${esc(b.uid)}">
-    <div class="d">${esc(b.date)}</div>
-    <div class="mt"><b>${esc(b.match)}</b><small>${esc(b.sport)}${b.stats&&b.stats.round?" · "+esc(b.stats.round):""}</small>${mini(b)}</div>
-    <div class="s">${esc(b.selection)}<small>${esc(b.market)} · ${esc(b.book)}</small></div>
-    <div class="prob">${pc(b.p)} de chances<div class="t"><i style="width:${Math.round(b.p*100)}%"></i></div></div>
-    <div class="odds">${b.estimated?"≈":""}${fr(b.odds)}<small>${b.estimated?"cote estimée":"juste "+fr(b.fair)}</small></div>
-    ${tag(b)}<button class="addb ${inB(b.uid)?"in":""}" data-add="${esc(b.uid)}" title="Ajouter à mon ticket">${inB(b.uid)?"✓":"＋"}</button></div>`;
-}
-function comboCard(c){
-  return `<div class="card combo">
-    <div class="hd"><b>Combiné ×${c.legs.length}</b><span class="tag n">${esc(c.book)}</span><div class="sp"></div>${c.mine?`<span class="tag v">✔ JE JOUE ${sg(c.ev)}</span>`:c.value?`<span class="tag v">VALUE ${sg(c.ev)}</span>`:`<span class="tag n">Sans value ${sg(c.ev)}</span>`}</div>
-    ${c.legs.map((l,i)=>`<div class="leg" data-leg="${esc(l.uid)}" title="Clique pour voir l'analyse"><div class="n">${i+1}</div><div class="x"><b>${esc(l.selection)}</b><small>${esc(l.match)} · ${esc(l.date)}${l.estimated?" · cote estimée":""}</small></div><div class="o">${l.estimated?"≈":""}${fr(l.odds)}</div></div>`).join("")}
-    <div class="ft"><div class="tot"><span>Cote totale</span><b>${fr(c.odds)}</b></div><div><span>Chances que tout passe</span><b>${pc(c.p)}</b></div><div><span>Pour 10 €</span><b>${eur(10*c.odds)}</b></div></div>
-  </div>`;
-}
-const fbad = f => f ? `<span class="fb">${[...f].map(c=>`<b class="${c}">${c}</b>`).join("")}</span>` : "";
-function confTag(b){ if (b.conf==null || !b.stats) return ""; const c=b.conf; return `<span class="conf ${c>=60?"hi":c<40?"lo":""}" title="Indice de confiance (forme, classement, absents, modèle)">${c}/100</span>`; }
-function mini(b){
-  const st=b.stats; if(!st) return "";
-  return `<div class="mini">${b.move?`<span class="conf ${b.move<0?"hi":"lo"}" title="Mouvement de la cote Pinnacle">${b.move<0?"📉":"📈"} ${sg(b.move)}</span>`:""}${fbad(st.form_home)}<span>·</span>${fbad(st.form_away)} ${confTag(b)} ${st.contra?'<span class="conf lo">⚠ contre la forme</span>':""}</div>`;
-}
-const emptyBox = (t, s) => `<div class="card empty"><b>${t}</b>${s}</div>`;
-
-function noData(){
-  if (status.fetching) return emptyBox("Récupération des cotes…", "Quelques secondes.");
-  if (status.errors && status.errors.length) return emptyBox("Impossible de récupérer les cotes", esc(status.errors[0]));
-  if (status.n_upcoming === 0 && status.n_events === 0) return emptyBox("Aucun match à venir", "Coche d'autres championnats dans Paramètres, ou élargis « Matchs dans les (heures) ».");
-  if (status.n_events && !status.n_analyzed && status.max_books < status.min_books)
-    return emptyBox(`${status.n_events} matchs reçus, mais pas assez de bookmakers pour les analyser`, `Il faut au moins ${status.min_books} bookmakers par match (tu en as ${status.max_books}). Clique sur Actualiser : l'appli utilise maintenant automatiquement Pinnacle + 9 bookmakers.`);
-  return emptyBox("Rien à afficher pour l'instant", "Essaie d'élargir les réglages (cote maxi, nombre de bookmakers mini) dans Paramètres.");
-}
-
-function renderHome(){
-  const mine = data.picks.filter(b=>b.mine);
-  const p = mine[0] || data.picks[0];
-  const others = mine.slice(1,3);
-  $("#potd").innerHTML = p ? `
-    <div class="k">${p.mine ? "✔ JE JOUERAIS CE PARI" : "✖ AUJOURD'HUI JE NE PARIERAIS PAS · LE MOINS MAUVAIS"}</div>
-    <div class="sel">${esc(p.selection)}</div>
-    <div class="m">${esc(p.match)} · ${esc(p.sport)}${p.stats&&p.stats.round?" · "+esc(p.stats.round):""} · ${esc(p.date)}</div>
-    <div class="row">
-      <div><span>Cote ${esc(p.book)}</span><b class="big">${fr(p.odds)}</b></div>
-      <div><span>Proba réelle</span><b>${pc(p.p)}</b></div>
-      <div><span>Gain attendu</span><b style="color:${p.ev>=0?'var(--green2)':'var(--muted)'}">${sg(p.ev)}</b></div>
-      ${p.conf!=null&&p.stats?`<div><span>Confiance</span><b>${p.conf}/100</b></div>`:""}
-    </div>
-    ${p.stats&&p.stats.pros.length?`<div style="margin-top:14px;font-size:12.5px;color:#bbf7d0">✔ ${esc(p.stats.pros[0])}</div>`:""}
-    ${!p.mine?`<div style="margin-top:12px;font-size:12.5px;color:var(--muted)">Aucune cote n'est assez bonne en ce moment chez tes bookmakers. Pour jouer quand même, voici l'option la plus raisonnable.</div>`:""}
-    ${others.length?`<div style="margin-top:14px;font-size:12.5px;color:var(--muted)">Je jouerais aussi : ${others.map(o=>`<b style="color:var(--fg)">${esc(o.selection)}</b> (${esc(o.match)}) @ ${fr(o.odds)}`).join(" · ")}</div>`:""}` : noData();
-  $("#potd").onclick = p ? () => openBet(p) : null; $("#potd").style.cursor = p ? "pointer" : "";
-  $("#home-picks").innerHTML = data.picks.filter(b=>b!==p).slice(0, 5).map(betRow).join("");
-  $("#home-combos").innerHTML = data.combos.slice(0, 2).map(comboCard).join("") || emptyBox("Pas de combiné pour l'instant", "Il faut au moins 2 matchs différents avec des cotes.");
-}
-let fType="all", fSort="ev";
-$$("#f-type .chip").forEach(c=>c.onclick=()=>{ if (c.classList.contains("lockd")) return; fType=c.dataset.t; $$("#f-type .chip").forEach(x=>x.classList.toggle("on",x===c)); renderPicks();});
-$$("#f-sort .chip").forEach(c=>c.onclick=()=>{fSort=c.dataset.s; $$("#f-sort .chip").forEach(x=>x.classList.toggle("on",x===c)); renderPicks();});
-$("#f-q").oninput = () => renderPicks();
-function renderPicks(){
-  const q = $("#f-q").value.trim().toLowerCase();
-  let L = data.picks.filter(b =>
-    (fType==="all" || (fType==="mine" && b.mine) || (fType==="value" && b.value) || b.cat===fType) &&
-    (!q || (b.match+" "+b.sport+" "+b.selection).toLowerCase().includes(q)));
-  L = L.slice().sort((a,b)=> fSort==="ts" ? a.ts-b.ts : b[fSort]-a[fSort]);
-  $("#picks").innerHTML = (tierRank()<1 ? lockBox("essentiel","Plus de paris et de championnats","Double chance, nombre de buts, les 2 marquent, et les 6 grands championnats.") : tierRank()<3 ? lockBox("elite","Paris VALUE et sélection ✔ JE JOUE","Les paris où la cote est au-dessus du juste prix, et ceux que Cotescope jouerait avec son propre argent.") : "") + L.map(betRow).join("") || (data.picks.length ? emptyBox("Aucun pari avec ces filtres", "") : noData());
-  $("#prob").innerHTML = data.probable.map(betRow).join("") || noData();
-  $("#combos").innerHTML = data.combos.map(comboCard).join("") || noData();
-}
-document.addEventListener("click", e => {
-  const r = e.target.closest(".bet"); if (!r) return;
-  const uid = r.dataset.uid;
-  const b = [...data.picks, ...data.probable, ...(lastPlan?lastPlan.items:[])].find(x => x.uid === uid);
-  if (b) openBet(b);
-});
-function verdictHtml(b){
-  const ok = b.ev >= 0.01;
-  return `<div class="verdict ${ok?"ok":"ko"}">${ok?"✔ <b>À jouer</b>":"✖ <b>Cote trop basse</b>"} : avec la cote ${fr(b.odds)} et ${pc(b.p)} de chances réelles, ton gain attendu est de <b>${b.ev>=0?"+":""}${fr(b.ev*10)} € pour 10 € misés</b> sur la durée.${ok?"":` Il faudrait au moins <b>${fr(b.fair*1.02)}</b>.`}</div>`;
-}
-async function openBet(b){
-  const st=b.stats;
-  const verdict = st ? `<div class="sec">Analyse ${confTag(b)}</div><div class="vd">${st.pros.map(x=>`<div class="p">✔ ${esc(x)}</div>`).join("")}${st.cons.map(x=>`<div class="c">✖ ${esc(x)}</div>`).join("")}${!st.pros.length&&!st.cons.length?'<div class="p" style="color:var(--muted);background:var(--card)">Pas de signal fort pour ou contre ce pari.</div>':""}</div>` : "";
-  $("#dbody").innerHTML = `
-    ${tierRank()>=3?`<div class="tag ${b.value?'v':'n'}" style="display:inline-block">${b.value?'VALUE '+sg(b.ev):'Sans value '+sg(b.ev)}</div>`:""}
-    <h3>${esc(b.selection)}</h3>
-    <div style="color:var(--muted)">${esc(b.match)} · ${esc(b.sport)}${st&&st.round?" · "+esc(st.round):""} · ${esc(b.date)}</div>
-    ${tierRank()<2?lockBox("pro","Fiche complète du match","Absents pondérés, compos officielles, face-à-face, buteurs, météo, fatigue."):tierRank()<3?lockBox("elite","Actus de dernière minute","Les infos trouvées sur le web juste avant le match."):""}
-    <div class="stats" style="grid-template-columns:1fr 1fr 1fr;margin:16px 0 4px">
-      <div class="card stat"><div class="l">${b.estimated?"Cote estimée":(b.user_odds?"Ta cote":"Cote "+esc(b.book))}</div><div class="v" style="color:var(--green2)">${b.estimated?"≈":""}${fr(b.odds)}</div></div>
-      <div class="card stat"><div class="l">Proba finale</div><div class="v">${pc(b.p)}</div><div class="h">marché ${pc(b.p_market)}${st&&st.p_model!=null?" · modèle "+pc(st.p_model):""}</div></div>
-      <div class="card stat"><div class="l">Cote juste</div><div class="v">${fr(b.fair)}</div></div>
-    </div>
-    <button class="btn primary" data-add="${esc(b.uid)}" style="margin-top:12px;width:100%;justify-content:center">${inB(b.uid)?"✓ Dans mon ticket (cliquer pour retirer)":"＋ Ajouter à mon ticket"}</button>
-    <div class="mybox"><div style="flex:1"><b>Cote affichée chez ${BK()}</b><div style="font-size:12px;color:var(--muted)">Tape-la pour un verdict exact${b.estimated?` · minimum à exiger : <b style="color:var(--fg)">${fr(b.min_odds)}</b>`:""}</div></div>
-      <input class="in" id="my-odds" inputmode="decimal" placeholder="ex : 1,85" value="${b.user_odds?fr(b.odds):""}"><button class="btn primary" id="my-go">Vérifier</button></div>
-    <div id="my-verdict">${b.user_odds?verdictHtml(b):""}</div>
-    ${verdict}
-    <div id="dmatch">${b.stats||b.has_info?'<div class="skel" style="height:90px"></div>':'<div class="card note" style="margin-top:12px">💡 Ajoute ta clé <b>football-data.org</b> (gratuite) dans Paramètres pour voir la forme, les séries, le classement et les confrontations directes de ce match.</div>'}</div>
-    ${b.estimated||b.user_odds?"":`<div class="sec">Cotes de tous les bookmakers (${b.n_books})</div>`}
-    ${(b.estimated||b.user_odds?[]:b.prices).map(x=>`<div class="pr ${x.playable?'me':''}"><span>${esc(x.book)}${x.playable?' ← tu peux parier ici':''}</span><b>${fr(x.odds)}</b></div>`).join("")}`;
-  $("#drawer").classList.add("on"); $("#ov").classList.add("on");
-  const check = async () => {
-    const r = await api.set_odds(b.uid, $("#my-odds").value);
-    if (r && r.ok) { $("#my-verdict").innerHTML = r.user_odds ? verdictHtml(r) : ""; Object.assign(b, r); rev=-1; poll(); }
-  };
-  $("#my-go").onclick = check;
-  $("#my-odds").onkeydown = e => { if (e.key==="Enter") check(); };
-  if (!b.event_id) return;
-  const m = await api.get_match(b.event_id);
-  if (!m) { if (b.stats) $("#dmatch").innerHTML=""; return; }
-  const side = (name, f, t, inj, rot, stake) => `<div class="card"><h4>${esc(name)}</h4>
-    ${stake?`<div class="r"><span>Enjeu</span><b>${esc(stake)}</b></div>`:""}
-    ${rot?`<div class="r"><span>Rotation ?</span><b style="color:var(--amber)">${esc(rot.comp)} ${rot.days>0?"dans":"il y a"} ${Math.abs(Math.round(rot.days))} j</b></div>`:""}
-    ${t&&t.rank?`<div class="r"><span>Classement</span><b>${t.rank}e · ${t.points} pts</b></div>`:""}
-    ${f?`<div class="r"><span>Forme</span>${fbad(f.form)}</div>
-    ${f.streak_txt?`<div class="r"><span>Série</span><b>${esc(f.streak_txt)}</b></div>`:""}
-    <div class="r"><span>Pts/match (5 der.)</span><b>${fr(f.ppg5)}</b></div>
-    <div class="r"><span>Buts 5 der.</span><b>${f.gf5} marqués · ${f.ga5} encaissés</b></div>
-    <div class="r"><span>À domicile</span><b>${esc(f.home_rec)}</b></div>
-    <div class="r"><span>À l'extérieur</span><b>${esc(f.away_rec)}</b></div>
-    <div class="r"><span>+2,5 buts / Les 2 marquent</span><b>${pc(f.over25)} · ${pc(f.btts)}</b></div>
-    <div class="r"><span>Dernier match</span><b>il y a ${Math.round(f.rest_days)} j</b></div>
-    <div class="l5">${f.last.map(g=>`<span>${fbad(g.res)} ${g.home?"vs":"à"} ${esc(g.opp)} <b style="color:var(--fg)">${g.score}</b> · ${g.date}</span>`).join("")}</div>`:'<div class="r">Pas encore de résultats</div>'}
-    ${inj&&inj.length?`<div class="inj">🚑 ${inj.map(i=>`${i.key?"⭐ ":""}${esc(i.player)}${i.goals?` (${i.goals} buts)`:""}${/question/i.test(i.type)?" (incertain)":""}`).join(", ")}</div>`:""}
-  </div>`;
-  const md = m.model, nv = m.neutral || {};
-  const relc = nv.reliability>=70?"#22c55e":nv.reliability>=45?"#f59e0b":"#ef4444";
-  const best = (nv.rows||[]).length ? (r=>r.p.indexOf(Math.max(...r.p)))(nv.rows[nv.rows.length-1]) : -1;
-  const neutral = `
-    <div class="sec">Analyse neutre du match</div>
-    <div class="card" style="padding:12px 14px">
-      <div style="display:flex;justify-content:space-between;font-size:12.5px"><span>Fiabilité de l'analyse</span><b style="color:${relc}">${nv.reliability||"–"}/100</b></div>
-      <div class="rel"><i style="width:${nv.reliability||0}%;background:${relc}"></i></div>
-      ${(nv.rows||[]).length?`<table class="nt"><tr><th>Source</th>${nv.labels.map(l=>`<th>${esc(l)}</th>`).join("")}</tr>
-        ${nv.rows.map(r=>`<tr class="${r.final?"fin":""}"><td>${esc(r.src)}</td>${r.p.map((x,i)=>`<td>${i===best&&r.final?"<b>":""}${pc(x)}${i===best&&r.final?"</b>":""}</td>`).join("")}</tr>`).join("")}</table>`:""}
-    </div>
-    <div class="adv" style="margin-top:10px">
-      <div class="card"><h4>Pour ${esc(nv.labels?nv.labels[0]:m.home)}</h4>${(nv.adv_home||[]).map(x=>`<div>✔ ${esc(x)}</div>`).join("")||'<div style="color:var(--dim)">Pas d\'argument fort</div>'}</div>
-      <div class="card"><h4>Pour ${esc(nv.labels?nv.labels[2]:m.away)}</h4>${(nv.adv_away||[]).map(x=>`<div>✔ ${esc(x)}</div>`).join("")||'<div style="color:var(--dim)">Pas d\'argument fort</div>'}</div>
-    </div>
-    <div class="sec">Ce qui pourrait faire mentir l'analyse</div>
-    ${(nv.risks||[]).map(x=>`<div class="verdict ko" style="margin-top:6px">⚠ ${esc(x)}</div>`).join("")}
-    <div class="sec">Sources consultées</div>
-    <div class="card srcs" style="padding:8px 14px">${(m.sources||[]).map(x=>`<div><span>${x.ok?"✅":"⬜"}</span><span>${esc(x.name)}</span><span class="d">${esc(x.detail||"")}</span></div>`).join("")||'<div>Aucune source externe (mode démo ou recherche web désactivée)</div>'}</div>`;
-  $("#dmatch").innerHTML = neutral + `
-    ${md?`<div class="sec">Modèle forme · buts attendus ${fr(md.xg_home,1)} – ${fr(md.xg_away,1)}</div>
-    <div class="pbar"><span style="width:${md.home*100}%;background:#34d399">${pc(md.home)}</span><span style="width:${md.draw*100}%;background:#94a3b8">${pc(md.draw)}</span><span style="width:${md.away*100}%;background:#60a5fa">${pc(md.away)}</span></div>
-    <div style="display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:4px"><span>${esc(m.home)}</span><span>Nul</span><span>${esc(m.away)}</span></div>`:""}
-    ${m.weather?`<div class="card note" style="margin:10px 0 0">🌦️ Météo prévue à ${esc(m.weather.city)} au coup d'envoi : ${fr(m.weather.temp,0)} °C · pluie ${fr(m.weather.rain,1)} mm · vent ${fr(m.weather.wind,0)} km/h${(m.weather.rain>=3||m.weather.wind>=40)?" → conditions difficiles, souvent moins de buts":""}</div>`:""}
-    <div class="cmp">${side(m.home,m.form_home,m.table_home,m.inj_home,m.rotation_home,m.stake_home)}${side(m.away,m.form_away,m.table_away,m.inj_away,m.rotation_away,m.stake_away)}</div>
-    ${m.h2h&&m.h2h.length?`<div class="sec">Confrontations directes${m.h2h_sum?` · ${esc(m.home)} ${m.h2h_sum.w}V ${m.h2h_sum.d}N ${m.h2h_sum.l}D · ${fr(m.h2h_sum.avg_goals,1)} buts/match`:""}</div>${m.h2h.map(h=>`<div class="pr"><span>${esc(h.date)} · ${esc(h.home)} – ${esc(h.away)}${h.comp?` <small style="color:var(--dim)">${esc(h.comp)}</small>`:""}</span><b>${h.gh} - ${h.ga}</b></div>`).join("")}`:""}
-    ${m.news&&m.news.length?`<div class="sec">📰 Dernières infos (web)</div>${m.news.map(n=>`<div class="card note" style="margin:0 0 8px;cursor:${n.url?"pointer":"default"}" ${n.url?`data-url="${esc(n.url)}"`:""}><b style="color:var(--fg)">${esc(n.title)}</b>${n.date?` <small style="color:var(--dim)">· ${esc(n.date)}</small>`:""}${n.desc?`<br>${esc(n.desc)}`:""}</div>`).join("")}`:""}
-    ${m.pred&&m.pred.advice?`<div class="sec">Avis API-Football</div><div class="card note" style="margin:0">${esc(m.pred.advice)}</div>`:""}
-    ${m.lineups&&m.lineups.length?`<div class="sec">Compositions officielles</div>${m.lineups.map(l=>`<div class="card note" style="margin:0 0 8px"><b style="color:var(--fg)">${esc(l.team)}</b> · ${esc(l.formation)}<br>${l.xi.map(esc).join(", ")}</div>`).join("")}`:""}`;
-}
-$("#ov").onclick = $("#dx").onclick = () => { $("#drawer").classList.remove("on"); $("#ov").classList.remove("on"); };
-
-/* ----- budget ----- */
-let mode="equilibre", lastPlan=null;
-function setMode(m){ mode=m; $$("#b-modes button").forEach(b=>b.classList.toggle("on",b.dataset.m===m)); $$("#q-modes .chip").forEach(b=>b.classList.toggle("on",b.dataset.m===m)); }
-$$("#b-modes button").forEach(b=>b.onclick=()=>setMode(b.dataset.m));
-$$("#q-modes .chip").forEach(b=>b.onclick=()=>setMode(b.dataset.m));
-$("#q-go").onclick = () => { $("#b-amount").value=$("#q-amount").value; go("budget"); makePlan(); };
-$("#b-go").onclick = makePlan;
-$("#b-amount").onkeydown = e => { if (e.key==="Enter") makePlan(); };
-$("#q-amount").onkeydown = e => { if (e.key==="Enter") $("#q-go").click(); };
-async function makePlan(){
-  if (!api) return;
-  $("#plan").innerHTML = '<div class="skel" style="height:120px"></div>';
-  const p = await api.compute_plan($("#b-amount").value, mode, selTypes(), ...legsOf("#v-split"), objOf("#v-split"));
-  lastPlan = p;
-  if (p.error) { $("#plan").innerHTML = emptyBox(esc(p.error), "Entre un montant, par exemple 10."); return; }
-  if (!p.items || !p.items.length) { $("#plan").innerHTML = noData(); return; }
-  const pos = p.expected >= 0;
-  $("#plan").innerHTML = bankWarn(p.bank, p.staked) + `
-    <div class="sumst">
-      <div class="card stat"><div class="l">Total misé</div><div class="v">${eur(p.staked)}</div><div class="h">${p.items.length} ticket${p.items.length>1?"s":""}</div></div>
-      <div class="card stat"><div class="l">Gain max (tout passe)</div><div class="v" style="color:var(--green2)">+${eur(p.max_win)}</div></div>
-      <div class="card stat"><div class="l">Chance de finir gagnant</div><div class="v">${pc(p.p_profit)}</div><div class="h">tout perdre : ${pc(p.p_lose_all)}</div></div>
-      <div class="card stat"><div class="l">Gain moyen espéré</div><div class="v" style="color:${pos?'var(--green2)':'var(--muted)'}">${pos?'+':''}${eur(p.expected)}</div><div class="h">${p.n_mine||0}/${p.items.length} ticket(s) que je jouerais moi-même</div></div>
-    </div>
-    <div class="list">${p.items.map((it,i)=> it.type==="single" ? `
-      <div class="card ticket bet" data-uid="${esc(it.uid)}">
-        <div class="num">${i+1}</div>
-        <div class="x"><b>${esc(it.selection)}</b><div class="m">${esc(it.match)} · ${esc(it.sport)} · ${esc(it.date)}</div>
-          <div class="meta"><input class="oin" style="margin:0" data-uid="${esc(it.uid)}" placeholder="ta cote"><span class="tag n">Simple · ${esc(it.book)}</span><span class="tag n">${pc(it.p)} de chances</span>${tag(it)}</div></div>
-        <div class="r"><small>Mise</small><div class="stake">${eur(it.stake)}</div><small>cote ${fr(it.odds)}</small><div class="g">+${eur(it.gain)} si gagné</div><button class="btn" data-play="${esc(it.uid)}" data-stake="${it.stake}" style="padding:5px 9px;font-size:12px;margin-top:6px">✔ Je joue</button></div>
-      </div>` : `
-      <div class="card ticket">
-        <div class="num">${i+1}</div>
-        <div class="x"><b>Combiné ×${it.legs.length}</b>
-          <div class="legs">${it.legs.map(l=>`<div data-leg="${esc(l.uid)}" title="Clique pour voir l'analyse">• ${esc(l.selection)} <span style="color:var(--dim)">— ${esc(l.match)}, ${esc(l.date)}</span> @ ${l.estimated?"≈":""}${fr(l.odds)}${l.estimated?` <span style="color:var(--amber)">(prends si ≥ ${fr(l.min_odds)})</span>`:""}<input class="oin" data-uid="${esc(l.uid)}" placeholder="ta cote"></div>`).join("")}</div>
-          <div class="meta"><span class="tag n">Combiné · ${esc(it.book)}</span><span class="tag n">${pc(it.p)} de chances</span>${it.value?`<span class="tag v">VALUE ${sg(it.ev)}</span>`:`<span class="tag n">Sans value ${sg(it.ev)}</span>`}</div></div>
-        <div class="r"><small>Mise</small><div class="stake">${eur(it.stake)}</div><small>cote ${fr(it.odds)}</small><div class="g">+${eur(it.gain)} si gagné</div><button class="btn" data-play="${it.legs.map(l=>esc(l.uid)).join("~")}" data-stake="${it.stake}" style="padding:5px 9px;font-size:12px;margin-top:6px">✔ Je joue</button></div>
-      </div>`).join("")}</div>
-    <div class="card note">${p.n_value ? "Les tickets <b style='color:var(--green2)'>VALUE</b> sont rentables en moyenne sur la durée." : "Aucune value aujourd'hui chez tes bookmakers : ce plan prend les meilleurs paris disponibles, mais il reste légèrement perdant en moyenne (marge du bookmaker)."}
-      Même un bon plan perd souvent sur une seule journée. Vérifie que la cote n'a pas bougé avant de valider ton pari, et ne mise que ce que tu peux perdre.</div>`;
-}
-
-/* ----- clic sur une sélection d'un ticket -> sa fiche complète ----- */
-document.addEventListener("click", async e => {
-  if (e.target.closest(".oin")) return;
-  const l = e.target.closest("[data-leg]"); if (!l || !api) return;
-  e.stopPropagation();
-  const b = await api.get_bet(l.dataset.leg);
-  if (b) openBet(b); else toast("Ce match n'est plus disponible (déjà commencé ?)");
-});
-
-/* ----- cote tapée dans un ticket ----- */
-document.addEventListener("click", e => { if (e.target.closest(".oin")) e.stopPropagation(); }, true);
-document.addEventListener("keydown", async e => {
-  const i = e.target.closest(".oin"); if (!i || e.key !== "Enter") return;
-  e.preventDefault();
-  const r = await api.set_odds(i.dataset.uid, i.value);
-  if (r && r.ok) {
-    toast(r.user_odds ? (r.ev >= 0.01 ? `✔ ${fr(r.odds)} : bonne cote` : `✖ ${fr(r.odds)} : cote trop basse`) : "Cote retirée");
-    rev = -1; await poll();
-    if ($("#v-goal").style.display !== "none" && $("#goal .opt")) makeGoal();
-    else if ($("#plan .ticket")) makePlan();
-  }
-});
-
-/* ----- types de paris ----- */
-document.addEventListener("click", e => {
-  const lk = e.target.closest(".chip.lockd");
-  if (lk) { e.stopImmediatePropagation(); authOpen(status && status.account ? "plans" : "signup"); return; }
-  const c = e.target.closest(".tsel .chip");
-  if (c) { const on=!c.classList.contains("on"); $$(`.tsel [data-cat="${c.dataset.cat}"]`).forEach(x=>x.classList.toggle("on",on)); return; }
-  const a = e.target.closest("[data-allcat]");
-  if (a) $$(".tsel .chip:not(.lockd)").forEach(x=>x.classList.toggle("on", a.dataset.allcat==="1"));
-});
-const objOf = id => { const r=$(id); return {on:r.querySelector(".o-on").checked, min_p:r.querySelector(".o-minp").value, min_conf:r.querySelector(".o-conf").value, need_data:r.querySelector(".o-data").checked, no_est:r.querySelector(".o-est").checked}; };
-const legsOf = id => { const r=$(id); return [r.querySelector(".lgmin").value||null, r.querySelector(".lgmax").value||null]; };
-const selTypes = () => { const t=[...new Set($$(".tsel .chip.on").map(x=>x.dataset.cat))]; return t.length===11?null:t; };
-
-/* ----- objectif ----- */
-function seg(v){ $$("#seg button").forEach(b=>b.classList.toggle("on",b.dataset.v===v)); $("#v-goal").style.display=v==="goal"?"":"none"; $("#v-split").style.display=v==="split"?"":"none"; }
-$$("#seg button").forEach(b=>b.onclick=()=>seg(b.dataset.v));
-$("#q-goal").onclick = () => { $("#g-stake").value=$("#q-amount").value; go("budget"); seg("goal"); needInfo(); };
-const num = v => parseFloat(String(v).replace(",", ".").replace("€",""));
-function needInfo(){
-  const s=num($("#g-stake").value), t=num($("#g-target").value);
-  $("#g-need").innerHTML = (s>0 && t>0)
-    ? `Cote totale nécessaire : <b>${fr((s+t)/s)}</b><br>Si ça passe, tu touches <b style="font-size:14px">${eur(s+t)}</b> (ta mise + ${eur(t)})`
-    : "Entre une mise et un objectif.";
-}
-$("#g-stake").oninput = $("#g-target").oninput = needInfo; needInfo();
-$("#g-go").onclick = makeGoal;
-["#g-stake","#g-target"].forEach(id=>$(id).onkeydown=e=>{ if(e.key==="Enter") makeGoal(); });
-async function makeGoal(){
-  if (!api) return;
-  $("#goal").innerHTML = '<div class="skel" style="height:140px"></div>';
-  const r = await api.compute_objective($("#g-stake").value, $("#g-target").value, selTypes(), ...legsOf("#v-goal"), objOf("#v-goal"));
-  if (r.error) { $("#goal").innerHTML = emptyBox(esc(r.error), ""); return; }
-  if (!r.options.length) {
-    $("#goal").innerHTML = data.picks.length ? emptyBox("Objectif impossible avec les matchs actuels",
-      `Il faudrait une cote de ${fr(r.need_odds)}, mais la plus grosse cote possible en ce moment est ${fr(r.max_odds)}. Baisse ton objectif, augmente ta mise, ou coche plus de championnats.`) : noData();
-    return;
-  }
-  const strictOpts = r.options.filter(o=>!o.relaxed);
-  const best = strictOpts[0] || r.options[0];
-  const others = r.options.filter(o=>o!==best);
-  const warn = best.relaxed ? `<div class="banner warn" style="margin:0 0 12px">⚠ Avec tes critères d'objectivité, le maximum atteignable aujourd'hui est d'environ +${eur(r.strict_max_gain||0)}. Ce ticket les dépasse un peu pour atteindre +${eur(r.target)}.</div>` : "";
-  const optCard = (o, main) => `
-      <div class="card opt ${main?"best":""}">
-        <div class="hd"><div><b>${main?"🎯 Le ticket le plus sûr":esc(o.title)}</b><small>${main?`${esc(o.title)} · `:""}${esc(o.desc)} · ${esc(o.book)}</small></div><div class="sp"></div>
-          <div class="gauge"><b>${pc(o.p_hit, o.p_hit<0.1?1:0)}</b><small>de chances · ≈ 1 fois sur ${Math.max(1, Math.round(1/o.p_hit))}</small></div></div>
-        ${o.tickets.map((t,j)=>`<div class="tk">
-          <div class="th"><b>${o.tickets.length>1?`Ticket ${j+1}`:(t.legs.length>1?`Combiné ×${t.legs.length}`:"Pari simple")}</b><span>mise <b style="font-size:13px">${eur(t.stake)}</b></span><span>·</span><span>cote <b style="font-size:13px">${fr(t.odds)}</b></span><div class="sp"></div></div>
-          ${t.legs.map(l=>`<div class="ln" data-leg="${esc(l.uid)}" title="Clique pour voir l'analyse"><span><b>${esc(l.selection)}</b> <span class="conf ${l.p>=0.62?"hi":l.p<0.45?"lo":""}">${pc(l.p)}</span> <small>— ${esc(l.match)} · ${esc(l.date)}${l.estimated?` · <span style="color:var(--amber)">prends si ${BK()} ≥ ${fr(l.min_odds)}</span>`:""}</small></span><b>${l.estimated?"≈":""}${fr(l.odds)}</b><input class="oin" data-uid="${esc(l.uid)}" placeholder="ta cote" title="Tape la cote vue chez ${BK()}"><button class="addb ${inB(l.uid)?"in":""}" data-add="${esc(l.uid)}" title="Ajouter à mon ticket" style="margin-left:8px">${inB(l.uid)?"✓":"＋"}</button></div>`).join("")}
-          <div class="ft"><span>Si ça passe, tu touches</span><b>${eur(t.ret)} (+${eur(t.ret - r.stake)})</b></div>
-          <div style="text-align:right;margin-top:8px"><button class="btn primary" data-play="${t.legs.map(l=>esc(l.uid)).join("~")}" data-stake="${t.stake}" style="padding:7px 12px">✔ Je joue ce ticket</button></div>
-        </div>`).join("")}
-      </div>`;
-  $("#goal").innerHTML = bankWarn(r.bank, r.stake) + warn + optCard(best, true) +
-    (others.length ? `<h2>${others.length} autres tickets possibles</h2><div class="list">${others.map(o=>optCard(o,false)).join("")}</div>` : "") +
-    (r.locked_more ? lockBox("pro", `${r.locked_more} autre${r.locked_more>1?"s":""} ticket${r.locked_more>1?"s":""} possible${r.locked_more>1?"s":""} pour ton objectif`, "Toutes les alternatives classées et les réglages d'objectivité.") : "");
-}
-
-/* ----- mon ticket ----- */
-let bset = new Set();
-const inB = uid => bset.has(uid);
-async function refreshB(){ if(!api) return; const r = await api.builder_get($("#m-stake")?$("#m-stake").value:10); bset = new Set(r.legs.map(l=>l.uid)); const c=$("#cnt-b"); c.hidden=!bset.size; c.textContent=bset.size; return r; }
-document.addEventListener("click", async e => {
-  const a = e.target.closest("[data-add]"); if (!a || !api) return;
-  e.stopPropagation();
-  const uid = a.dataset.add;
-  if (inB(uid)) { await api.builder_remove(uid); toast("Retiré de ton ticket"); }
-  else { await api.builder_add(uid); toast("✓ Ajouté à ton ticket"); }
-  await refreshB();
-  $$(`[data-add="${CSS.escape(uid)}"]`).forEach(x => { const on=inB(uid); x.classList.toggle("in",on); if (x.classList.contains("addb")) x.textContent=on?"✓":"＋"; else x.textContent=on?"✓ Dans mon ticket (cliquer pour retirer)":"＋ Ajouter à mon ticket"; });
-  if (page==="mine") loadMine();
-}, true);
-async function loadMine(){
-  const stake = $("#m-stake") ? $("#m-stake").value : 10;
-  const r = await refreshB();
-  if (!r.legs.length) { $("#mine").innerHTML = emptyBox("Ton ticket est vide", "Clique sur ＋ à côté d'un pari pour l'ajouter. Tu peux mélanger tous les types de paris et tous les matchs."); return; }
-  const pos = r.ev >= 0;
-  $("#mine").innerHTML = `
-    ${bankWarn(r.bank, r.stake)}
-    ${r.removed?`<div class="banner warn" style="margin:0 0 12px">${r.removed} sélection(s) retirée(s) : match commencé ou plus disponible.</div>`:""}
-    <div class="sumst">
-      <div class="card stat"><div class="l">Cote totale</div><div class="v" style="color:var(--green2)">${fr(r.odds)}</div><div class="h">${r.legs.length} sélection${r.legs.length>1?"s":""}</div></div>
-      <div class="card stat"><div class="l">Chances réelles</div><div class="v">${pc(r.p, r.p<0.1?1:0)}</div><div class="h">≈ 1 fois sur ${Math.max(1,Math.round(1/r.p))}</div></div>
-      <div class="card stat"><div class="l">Gain attendu</div><div class="v" style="color:${pos?'var(--green2)':'#fca5a5'}">${sg(r.ev)}</div><div class="h">${pos?"rentable sur la durée":"la marge du bookmaker joue contre toi"}</div></div>
-      <div class="card stat"><div class="l">Confiance moyenne</div><div class="v">${r.conf}/100</div><div class="h">données dispo : ${pc(r.quality)}</div></div>
-    </div>
-    <div class="card" style="padding:14px 16px;display:flex;gap:14px;align-items:center;margin-bottom:12px">
-      <b>Je mise</b><div class="money" style="width:160px"><input id="m-stake" value="${r.stake}" inputmode="decimal" style="font-size:20px"><span>€</span></div>
-      <div style="flex:1">Si ça passe, tu touches <b style="color:var(--green2);font-size:18px">${eur(r.ret)}</b> (+${eur(r.gain)})</div>
-      <button class="btn primary" id="m-play">✔ Je joue ce ticket</button><button class="btn" id="m-clear">Vider</button>
-    </div>
-    ${r.warnings.map(w=>`<div class="verdict ko" style="margin:0 0 6px">⚠ ${esc(w)}</div>`).join("")}
-    ${r.locked?lockBox("pro","Maillon faible et remplacements en un clic","Cotescope repère la sélection la plus fragile et te propose mieux, à cote proche."):""}
-    ${r.tips.map(t=>`<div class="verdict ok" style="margin:0 0 6px;display:flex;gap:10px;align-items:center"><span style="flex:1">💡 ${esc(t.text)}</span><button class="btn" data-swap="${esc(t.from)}~${esc(t.to)}" style="padding:5px 10px;font-size:12px">Remplacer</button></div>`).join("")}
-    <div class="list" style="margin-top:10px">${r.legs.map(l=>`
-      <div class="card mleg ${l.uid===r.weakest&&r.legs.length>1?"weak":""}" data-leg="${esc(l.uid)}">
-        <div><b>${esc(l.selection)}</b>${l.uid===r.weakest&&r.legs.length>1?' <span class="conf lo">maillon faible</span>':""}
-          <div style="font-size:12px;color:var(--muted)">${esc(l.match)} · ${esc(l.sport)} · ${esc(l.date)}</div>
-          ${l.stats?`<div style="font-size:12px;margin-top:4px">${(l.stats.pros||[]).slice(0,2).map(x=>`<span style="color:#bbf7d0">✔ ${esc(x)}</span>`).join(" &nbsp; ")} ${(l.stats.cons||[]).slice(0,2).map(x=>`<span style="color:#fecaca">✖ ${esc(x)}</span>`).join(" &nbsp; ")}</div>`:""}</div>
-        <span class="conf ${l.p>=0.62?"hi":l.p<0.45?"lo":""}">${pc(l.p)}</span>
-        ${confTag(l)||'<span></span>'}
-        <div class="odds" style="min-width:70px">${l.estimated?"≈":""}${fr(l.odds)}<small>${l.estimated?`mini ${fr(l.min_odds)}`:esc(l.book)}</small></div>
-        <button class="addb in" data-add="${esc(l.uid)}" title="Retirer">✕</button>
-      </div>`).join("")}</div>`;
-  $("#m-stake").onchange = loadMine;
-  $("#m-stake").onkeydown = e => { if (e.key==="Enter") loadMine(); };
-  $("#m-play").onclick = async () => { const x = await api.builder_play($("#m-stake").value); toast(x.ok?"✔ Ticket ajouté à ton historique":(x.error||"Erreur")); };
-  $("#m-clear").onclick = async () => { await api.builder_clear(); loadMine(); };
-}
-document.addEventListener("click", async e => { const s=e.target.closest("[data-swap]"); if(!s) return; e.stopPropagation(); const [a,b]=s.dataset.swap.split("~"); await api.builder_swap(a,b); toast("Sélection remplacée"); loadMine(); }, true);
-
-/* ----- historique ----- */
-const ST = {won:"✅ Gagné", lost:"❌ Perdu", void:"↩ Remboursé", pending:"⏳ En attente", unknown:"❔ Non vérifiable"};
-async function loadHist(){
-  if (!api) return;
-  const h = await api.get_history();
-  if (h.locked) { $("#hist").innerHTML = lockBox("pro", "Historique et bilan automatiques", "Tes tickets sont vérifiés tout seuls après les matchs : gains, ROI, taux de réussite."); return; }
-  const u = h.user, a = h.app, bk = h.bank;
-  const rate = x => x==null ? "–" : pc(x);
-  $("#hist").innerHTML = `
-    <div class="stats">
-      <div class="card stat"><div class="l">Mes tickets</div><div class="v">${u.n}</div><div class="h">${u.wins} gagnés · ${u.pending} en attente</div></div>
-      <div class="card stat"><div class="l">Mon bilan</div><div class="v" style="color:${u.profit>=0?'var(--green2)':'#fca5a5'}">${u.profit>=0?"+":""}${eur(u.profit)}</div><div class="h">pour ${eur(u.staked)} misés · ROI ${u.roi==null?"–":sg(u.roi)}</div></div>
-      <div class="card stat"><div class="l">Propositions de Cotescope</div><div class="v">${rate(a.rate)}</div><div class="h">de réussite sur ${a.n} paris vérifiés · ${a.pending} en attente</div></div>
-      <div class="card stat"><div class="l">Rentabilité de Cotescope</div><div class="v" style="color:${(a.roi||0)>=0?'var(--green2)':'#fca5a5'}">${a.roi==null?"–":sg(a.roi)}</div><div class="h">si 1 € misé sur chaque « ✔ JE JOUE »</div></div>
-    </div>
-    ${bk.enabled?`<h2>Bankroll</h2><div class="stats">
-      <div class="card stat"><div class="l">Capital actuel</div><div class="v">${eur(bk.current)}</div><div class="h">départ ${eur(bk.start)}</div></div>
-      <div class="card stat"><div class="l">Mise max aujourd'hui</div><div class="v">${eur(bk.day_max)}</div><div class="h">reste ${eur(Math.max(0,bk.left_today))}</div></div>
-      <div class="card stat"><div class="l">Résultat du jour</div><div class="v" style="color:${bk.today_pl>=0?'var(--green2)':'#fca5a5'}">${bk.today_pl>=0?"+":""}${eur(bk.today_pl)}</div></div>
-      <div class="card stat"><div class="l">Stop-loss</div><div class="v" style="font-size:20px;padding-top:6px">${bk.stop?"⛔ Atteint":bk.stop_loss?"OK":"—"}</div><div class="h">${bk.stop_loss?`perte max ${eur(bk.stop_loss)} / jour`:"non défini"}</div></div>
-    </div>`:""}
-    ${h.app_locked?lockBox("elite","Fiabilité mesurée et suivi des « ✔ JE JOUE »","Vérifie au fil des matchs si les pourcentages de Cotescope tiennent leurs promesses."):`<h2>Fiabilité des pourcentages <span style="font-weight:400;color:var(--dim);font-size:12px">(si Cotescope dit 60 %, ça passe-t-il vraiment 6 fois sur 10 ?)</span></h2>
-    ${a.buckets.length?`<div class="card" style="padding:6px 16px"><table class="nt"><tr><th>Tranche</th><th>Paris</th><th>Prévu</th><th>Réel</th><th>Verdict</th></tr>${a.buckets.map(b=>`<tr><td>${b.label}</td><td>${b.n}</td><td>${pc(b.pred)}</td><td><b>${pc(b.real)}</b></td><td>${b.n<15?'<span style="color:var(--dim)">pas assez de paris</span>':Math.abs(b.real-b.pred)<0.07?'✅ fiable':b.real>b.pred?'👍 mieux que prévu':'⚠ trop optimiste'}</td></tr>`).join("")}</table></div>`:'<div class="card empty"><b>Pas encore de paris vérifiés</b>Le bilan se remplit tout seul après les matchs.</div>'}`}
-    <h2>Mes tickets</h2>
-    <div class="list">${h.tickets.length?h.tickets.map(t=>`<div class="card" style="padding:14px 16px">
-      <div style="display:flex;gap:10px;align-items:center"><b>${ST[t.status]||t.status}</b><span style="color:var(--muted);font-size:12.5px">${new Date(t.created*1000).toLocaleString("fr-FR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})} · mise ${eur(t.stake)} · cote ${fr(t.legs.reduce((a,l)=>a*l.odds,1))}</span><div class="sp" style="flex:1"></div>${t.status==="won"?`<b style="color:var(--green2)">+${eur(t.payout-t.stake)}</b>`:t.status==="lost"?`<b style="color:#fca5a5">−${eur(t.stake)}</b>`:""}<button class="btn" data-del="${t.id}" style="padding:5px 9px;font-size:12px">Supprimer</button></div>
-      <div class="legs" style="margin-top:8px;font-size:12.5px;display:flex;flex-direction:column;gap:3px">${t.legs.map(l=>`<div>${(ST[l.status]||"").split(" ")[0]} ${esc(l.selection)} <span style="color:var(--dim)">— ${esc(l.match)}${l.score?` · ${l.score}`:""}</span> @ ${fr(l.odds)}</div>`).join("")}</div></div>`).join(""):'<div class="card empty"><b>Aucun ticket enregistré</b>Clique sur « ✔ Je joue ce ticket » dans Mon budget pour suivre tes paris.</div>'}</div>
-    ${h.app_locked?"":`<h2>Propositions de Cotescope (✔ JE JOUE)</h2>
-    <div class="list">${h.app_list.slice(0,60).map(l=>`<div class="card" style="padding:10px 16px;display:flex;gap:12px;font-size:13px"><span style="width:120px">${ST[l.status]||l.status}</span><b style="flex:1">${esc(l.selection)}</b><span style="color:var(--dim)">${esc(l.match)}${l.score?` · ${l.score}`:""}</span><span>${pc(l.p)} · @ ${fr(l.odds)}</span></div>`).join("")||'<div class="card empty"><b>Rien pour l\'instant</b>Les paris marqués ✔ JE JOUE sont suivis automatiquement.</div>'}</div>`}`;
-}
-$("#h-check").onclick = async () => { await api.settle_now(); toast("Vérification des résultats…"); setTimeout(loadHist, 4000); };
-document.addEventListener("click", async e => { const d=e.target.closest("[data-del]"); if(d){ await api.delete_ticket(d.dataset.del); loadHist(); } });
-
-/* ----- « Je joue ce ticket » ----- */
-document.addEventListener("click", async e => {
-  const b = e.target.closest("[data-play]"); if (!b) return;
-  e.stopPropagation();
-  const r = await api.log_ticket(b.dataset.play.split("~"), b.dataset.stake, "");
-  if (r.ok) { b.textContent = "✔ Enregistré"; b.disabled = true; toast("Ticket ajouté à ton historique"); } else toast(r.error || "Erreur");
-});
-const bankWarn = (bk, amount) => !bk || !bk.enabled ? "" :
-  bk.stop ? `<div class="banner err" style="margin:0 0 12px">⛔ Stop-loss atteint aujourd'hui (${eur(bk.today_pl)}). Le plus sage : ne plus parier aujourd'hui.</div>` :
-  (amount > bk.left_today ? `<div class="banner warn" style="margin:0 0 12px">⚠ Ta bankroll conseille de ne pas miser plus de ${eur(Math.max(0,bk.left_today))} aujourd'hui (capital ${eur(bk.current)}).</div>` : "");
-
-/* ----- paramètres ----- */
-const NUMS=["bankroll","daily_max_pct","stop_loss","stats_weight","min_ev","max_ev","min_odds","max_odds","horizon_hours","min_stake","max_legs","min_books"];
-const TXT=["bookmakers"];
-async function loadCfg(){
-  if (!api) return;
-  cfg = await api.get_config();
-  TXT.concat(NUMS).forEach(k => { const el=$("#c-"+k); if (el) el.value = NUMS.includes(k) ? String(cfg[k]).replace(".", ",") : cfg[k]; });
-  const hid = new Set(cfg.hide_sports || []);
-  $("#c-leagues").innerHTML = cfg._sports.map(s=>`<label class="chk"><input type="checkbox" value="${s.key}" ${hid.has(s.key)?"":"checked"}>${esc(s.label)}${s.n?` <span style="color:var(--dim);margin-left:auto;font-size:12px">${s.n} match${s.n>1?"s":""}</span>`:""}</label>`).join("") || '<span style="color:var(--dim)">Connecte-toi pour voir les championnats couverts.</span>';
-  const bk = $("#c-books"); if (bk) delete bk.dataset.done; renderBooks();
-}
-function readCfg(){
-  const o = {};
-  TXT.concat(NUMS).forEach(k => o[k] = $("#c-"+k).value);
-  o.hide_sports = $$("#c-leagues input").filter(i=>!i.checked).map(i=>i.value);
-  return o;
-}
-$("#c-reset").onclick = async () => { await api.reset_settings(); await loadCfg(); toast("✓ Réglages par défaut remis"); };
-$("#c-save").onclick = async () => { const r = await api.save_config(readCfg()); toast(r.ok ? "✓ Paramètres enregistrés" : r.error); rev = -1; poll(); };
-
-/* ----- mise à jour, statut ----- */
-document.addEventListener("click", e => { const u=e.target.closest("[data-url]"); if(u && api) api.open_url(u.dataset.url); });
-document.addEventListener("click", async e => { const d=e.target.closest("[data-day]"); if(d){ $$("#days .chip").forEach(c=>c.classList.toggle("on",c===d)); await api.set_day(d.dataset.day); poll(); } });
-$("#btn-ref").onclick = async () => { await api.refresh(); toast("Actualisation des cotes…"); poll(); };
-$("#btn-upd").onclick = async () => { toast("Recherche de mises à jour…"); const r = await api.check_updates(); if (!r.update) toast(`✓ Tu as la dernière version (${r.version})`); poll(); };
-document.addEventListener("click", async e => { if (e.target.closest("#do-upd")) { await api.install_update(); poll(); } });
-
-function fmtLeft(s){ const h=Math.floor(s/3600), m=Math.floor(s%3600/60), x=s%60; return h ? `${h}h${String(m).padStart(2,"0")}` : `${m}:${String(x).padStart(2,"0")}`; }
-function renderStatus(){
-  $("#ver").textContent = "v" + status.version;
-  const pill = $("#pill");
-  pill.className = "pill " + (status.demo ? "demo" : "live");
-  pill.innerHTML = status.demo ? "MODE DÉMO · matchs fictifs" : "<i></i>EN DIRECT";
-  $("#btn-ref").classList.toggle("spin", !!status.fetching);
-  $("#s-an").textContent = status.n_analyzed ?? "–";
-  $("#s-an-h").textContent = `${status.n_upcoming ?? 0} matchs à venir reçus`;
-  $("#s-v").textContent = status.n_value ?? "–";
-  { const a = status.account; $("#s-q").textContent = status.demo ? "Démo" : (status.tier_name || "–");
-    $("#s-q-h").textContent = status.demo ? (a ? "aucun forfait actif" : "pas connecté") : status.tier === "gratuit" && a ? `encore ${daysLeft(a.renews)} jour(s)` : (a && a.status === "trialing" ? "essai en cours" : "actif"); }
-  $("#s-last").textContent = status.last_fetch ? "dernière : " + status.last_fetch : " ";
-  const c = $("#cnt-v"); c.hidden = !status.n_value; c.textContent = status.n_value;
-  let b = "";
-  if (status.update) {
-    const dl = status.update_state === "downloading";
-    const err = (status.update_state||"").startsWith("error:") ? status.update_state.slice(6) : "";
-    b += `<div class="banner upd"><span>🚀 <b>Nouvelle version ${esc(status.update.version)} disponible</b> (tu as la ${esc(status.version)})${err?` — échec : ${esc(err)}`:""}</span><div class="sp"></div>${dl ? `<span>Téléchargement…</span><div class="bar"><i style="width:${Math.round(status.dl_progress*100)}%"></i></div>` : `<button class="btn primary" id="do-upd">Mettre à jour</button>`}</div>`;
-  }
-  if (status.tier === "gratuit" && status.account) { const n = daysLeft(status.account.renews); b += `<div class="banner upd"><span>🎁 <b>Version gratuite</b> : encore ${n} jour${n>1?"s":""}. Ligue 1 et Premier League, résultat du match.</span><div class="sp"></div><button class="btn primary" data-auth="plans">Voir les forfaits</button></div>`; }
-  if (status.demo) b += status.account
-    ? `<div class="banner warn"><span>ℹ️ <b>Mode démo</b> (matchs fictifs) · ${esc(errMsg(status.license_state||"no_plan"))} Choisis un forfait pour les vrais matchs.</span><div class="sp"></div><button class="btn primary" data-auth="plans">Voir les forfaits</button></div>`
-    : `<div class="banner warn"><span>ℹ️ <b>Mode démo</b> (matchs fictifs). Crée ton compte pour les vrais matchs : 7 jours gratuits, sans carte bancaire.</span><div class="sp"></div><button class="btn" data-auth="login">Se connecter</button><button class="btn primary" data-auth="signup" style="margin-left:8px">Créer un compte</button></div>`;
-  renderLic();
-  if (status.stats && status.stats.error && !/api-football/i.test(status.stats.error) || (status.stats && status.stats.error && status.stats.af_set)) b += `<div class="banner err">⚠ ${esc(status.stats.error)}</div>`;
-  if (status.warning) b += `<div class="banner warn">ℹ️ ${esc(status.warning)}</div>`;
-  if (status.errors && status.errors.length) b += `<div class="banner err">⚠ ${status.errors.map(esc).join(" · ")}</div>`;
-  if ($("#banners").innerHTML !== b) $("#banners").innerHTML = b;
-  const dh = (status.days||[]).map(d=>`<button class="chip ${d.v===status.day?"on":""}" data-day="${esc(d.v)}">${esc(d.label)}<i>${d.n}</i></button>`).join("");
-  if ($("#days").innerHTML !== dh) $("#days").innerHTML = dh;
-}
-function tickClock(){
-  const left = Math.max(0, Math.round((nextAt - Date.now())/1000));
-  const t = status.fetching ? "en cours…" : fmtLeft(left);
-  $("#s-nx").textContent = t;
-  const sx = status.stats && status.stats.enabled ? (status.stats.running ? " · 📊 analyse en cours…" : ` · 📊 ${status.stats.matched} matchs analysés`) : "";
-  $("#meta").innerHTML = status.fetching ? "Mise à jour des cotes…" : `Prochaine mise à jour dans <b>${t}</b>` + (status.last_fetch ? `<br>Cotes du ${esc(status.last_fetch)}${sx}` : "");
-}
-async function poll(){
-  try {
-    status = await api.get_status();
-    nextAt = Date.now() + status.next_in * 1000;
-    renderStatus();
-    if (status.rev !== rev) { rev = status.rev; data = await api.get_data(); renderHome(); renderPicks(); }
-  } catch (e) { console.error(e); }
-}
-/* ----- compte & forfaits ----- */
-const PLANS = [
-  {id:"essentiel", name:"Essentiel", price:"9,99", feats:["Tous les matchs des 6 grands championnats","Paris principaux : 1N2, double chance, buts, les 2 marquent","Mode objectif : le ticket le plus sûr","Mon ticket : cote, chances, gain","Forme récente et classement","Appli web + logiciel Windows"]},
-  {id:"pro", name:"Pro", price:"19,99", hot:"Le plus choisi", feats:["Tout Essentiel","Tous les paris : buteurs, handicaps, score exact, mi-temps…","Fiche complète : absents, compos, face-à-face, météo, fatigue","Mode objectif : toutes les alternatives + réglages","Mon ticket : maillon faible et remplacements","Historique et bilan automatiques"]},
-  {id:"elite", name:"Elite", price:"49,99", hot:"Analyse maximale", feats:["Tout Pro","Paris VALUE : cote au-dessus du juste prix","Sélection ✔ JE JOUE de Cotescope","Mouvement des cotes (argent des parieurs pros)","Actus de dernière minute sur chaque match","Fiabilité mesurée et bankroll avec stop-loss"]},
-];
-const PLAN_NAME = {gratuit:"Gratuit", essentiel:"Essentiel", pro:"Pro", elite:"Elite"};
-const BOOKS = [["betclic_fr","Betclic"],["winamax_fr","Winamax"],["unibet_fr","Unibet"],["pmu_fr","PMU"],["parionssport_fr","Parions Sport"],["netbet_fr","NetBet"]];
-const BK = () => (status && status.book_name) || "ton bookmaker";
-const tierRank = () => { const r = ({gratuit:0, essentiel:1, pro:2, elite:3})[status && status.tier]; return r === undefined ? 3 : r; };
-const daysLeft = x => x ? Math.max(0, Math.ceil((new Date(x) - Date.now()) / 864e5)) : 0;
-function lockBox(need, title, text){
-  return `<div class="card lock"><span class="lk">🔒 ${PLAN_NAME[need]}</span><div><b>${esc(title)}</b><small>${esc(text||"")} Inclus dans ${need==="essentiel"?"tous les forfaits payants":need==="pro"?"Pro et Elite":"Elite"}.</small></div><button class="btn primary" data-auth="plans">Voir les forfaits</button></div>`;
-}
-const ERR = {bad_login:"E-mail ou mot de passe incorrect.", email_taken:"Un compte existe déjà avec cet e-mail : connecte-toi.",
-  bad_email:"Adresse e-mail invalide.", weak_password:"Mot de passe trop court (8 caractères minimum).", too_many:"Trop d'essais. Réessaie dans 15 minutes.", too_many_accounts:"Trop de comptes créés depuis cette connexion aujourd'hui. Connecte-toi avec ton compte existant.",
-  session:"Session expirée, reconnecte-toi.", free_over:"Ta version gratuite de 7 jours est terminée. Choisis un forfait pour continuer.", no_plan:"Aucun forfait actif sur ce compte.", inactive:"Ton abonnement est terminé.",
-  whop_unreachable:"Le service de paiement ne répond pas, réessaie dans un instant.", plans_not_configured:"Les abonnements ouvrent très bientôt.",
-  server_not_configured:"Le serveur Cotescope n'est pas encore prêt.", mail_not_configured:"Écris-nous pour réinitialiser ton mot de passe.",
-  bad_code:"Ce lien a expiré. Redemande un e-mail.", network:"Pas de connexion au serveur Cotescope.", no_data_yet:"Les données du jour arrivent, réessaie dans quelques minutes."};
-const errMsg = r => ERR[r] || (/introuvable|urlopen|timed out|Errno|Failed to fetch/i.test(String(r)) ? ERR.network : "Erreur : " + r);
-let AUTH = null;   // fourni par l'appli web ; sinon, celui du logiciel
-const auth = () => AUTH || {
-  login: (e,p) => api.login(e,p), signup: (e,p) => api.signup(e,p), forgot: e => api.forgot(e),
-  checkout: t => api.checkout(t), account: f => api.account(f), logout: () => api.logout(),
-  canSkip: true, done: () => { authClose(); rev = -1; poll(); setTimeout(maybeBooks, 1500); },
+const ICON = {
+  matchs:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>',
+  picks:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg>',
+  goal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>',
+  ticket:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 6h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4z"/></svg>',
+  bilan:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+  lock:'<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>',
 };
-let authTimer = null;
-function authOpen(view, extra){ $("#authov").style.display = "grid"; authView(view || "login", extra || {}); }
-function authClose(){ $("#authov").style.display = "none"; clearInterval(authTimer); try { sessionStorage.setItem("authSkip","1"); } catch(e){} }
-$("#auth-x").onclick = () => authClose();
-const field = (id, label, type, ph) => `<div class="f"><label>${label}</label><input class="in" id="${id}" type="${type||"text"}" placeholder="${ph||""}" autocomplete="${type==="password"?(id==="a-pw2"?"new-password":"current-password"):"email"}"></div>`;
-function authView(v, x){
+const VIEWS = [["matchs","Matchs"],["picks","Pronostics"],["goal","Objectif"],["ticket","Mon ticket"],["bilan","Bilan"]];
+const PLAN_NAME = {gratuit:"Gratuit", essentiel:"Essentiel", pro:"Pro", elite:"Elite"};
+const RANK = {gratuit:0, essentiel:1, pro:2, elite:3};
+const PLANS = [
+  {id:"essentiel", name:"Essentiel", price:"9,99", feats:["Les 6 grands championnats","Paris principaux : 1N2, double chance, buts, les 2 marquent","Objectif : le ticket le plus sûr","Mon ticket : cote, chances, gain","Forme et classement"]},
+  {id:"pro", name:"Pro", price:"19,99", hot:"Le plus choisi", feats:["Tout Essentiel","Tous les paris : buteurs, handicaps, score exact…","Page match complète : absents, compos, face-à-face, météo","Objectif : toutes les alternatives","Bilan de tes tickets"]},
+  {id:"elite", name:"Elite", price:"49,99", feats:["Tout Pro","Paris value et sélection de Cotescope","Mouvement des cotes","Actus de dernière minute","Fiabilité mesurée et bankroll"]},
+];
+const BOOKS = [["betclic_fr","Betclic"],["winamax_fr","Winamax"],["unibet_fr","Unibet"],["pmu_fr","PMU"],["parionssport_fr","Parions Sport"],["netbet_fr","NetBet"]];
+const ERR = {bad_login:"E-mail ou mot de passe incorrect.", email_taken:"Un compte existe déjà avec cet e-mail : connecte-toi.",
+  bad_email:"Adresse e-mail invalide.", weak_password:"Mot de passe trop court : 8 caractères minimum.", too_many:"Trop d'essais. Réessaie dans 15 minutes.",
+  too_many_accounts:"Trop de comptes créés depuis cette connexion aujourd'hui.", session:"Session expirée : reconnecte-toi.",
+  no_plan:"Aucun forfait actif sur ce compte.", free_over:"Ta version gratuite de 7 jours est terminée.", inactive:"Ton abonnement est terminé.",
+  whop_unreachable:"Le service de paiement ne répond pas. Réessaie dans un instant.", plans_not_configured:"Les abonnements ouvrent très bientôt.",
+  server_not_configured:"Le serveur Cotescope n'est pas encore prêt.", mail_not_configured:"Écris-nous pour réinitialiser ton mot de passe.",
+  bad_code:"Ce lien a expiré : redemande un e-mail.", network:"Pas de connexion au serveur Cotescope.", no_data_yet:"Les données du jour arrivent. Réessaie dans quelques minutes."};
+const errMsg = r => ERR[r] || ("Erreur : " + r);
+
+/* ======================================================================
+   Connexion au serveur + moteur
+   ====================================================================== */
+const PYODIDE = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/";
+const LS = "cotescope_session";
+let CFG = {}, SESSION = "", ACCOUNT = null, py = null, web = null, nextSnap = 0, saveT = null;
+const lsGet = () => { try { return localStorage.getItem(LS) || ""; } catch(e) { return ""; } };
+const lsSet = v => { try { v ? localStorage.setItem(LS, v) : localStorage.removeItem(LS); } catch(e) {} };
+
+async function server(path, method, body, raw){
+  if (!CFG.api) return {ok:false, reason:"server_not_configured"};
+  let r;
+  try {
+    r = await fetch(CFG.api.replace(/\/$/, "") + path, {method: method||"GET", cache:"no-store",
+      headers: Object.assign(SESSION ? {Authorization:"Bearer " + SESSION} : {}, body ? {"Content-Type":"application/json"} : {}),
+      body: body ? JSON.stringify(body) : undefined});
+  } catch(e) { return {ok:false, reason:"network"}; }
+  if (raw && r.ok) return r;
+  let j = {}; try { j = await r.json(); } catch(e) { j = {ok:false, reason:"http_" + r.status}; }
+  if (!r.ok && j.ok === undefined) j.ok = false;
+  if (j.reason === "session") { lsSet(""); SESSION = ""; }
+  return j;
+}
+function keep(r){
+  if (r && r.session) { SESSION = r.session; lsSet(SESSION); }
+  if (r && r.ok && r.email) ACCOUNT = {email:r.email, tier:r.tier, status:r.status, renews:r.renews, cancel:r.cancel, manage:r.manage};
+  return r;
+}
+const Auth = {
+  login: async (e,p) => keep(await server("/api/login","POST",{email:e,password:p})),
+  signup: async (e,p) => keep(await server("/api/signup","POST",{email:e,password:p})),
+  forgot: e => server("/api/forgot","POST",{email:e}),
+  reset: async (c,p) => keep(await server("/api/reset","POST",{code:c,password:p})),
+  me: async fresh => keep(await server("/api/me" + (fresh ? "?fresh=1" : ""))),
+  checkout: async tier => {
+    const r = await server("/api/checkout","POST",{tier, return: location.origin + location.pathname + "#paid"});
+    if (r.ok && r.url) location.href = r.url;
+    return r;
+  },
+  logout: () => { lsSet(""); SESSION = ""; ACCOUNT = null; location.hash = ""; location.reload(); },
+};
+function loadScript(src){ return new Promise((ok, ko) => { const s=document.createElement("script"); s.src=src; s.crossOrigin="anonymous"; s.onload=ok; s.onerror=()=>ko(Object.assign(new Error("network"),{reason:"network"})); document.head.appendChild(s); }); }
+function persist(){ clearTimeout(saveT); saveT = setTimeout(() => { try { py.FS.syncfs(false, () => {}); } catch(e) {} }, 400); }
+const READ_ONLY = /^(get_|builder_get|estimate|compute_)/;
+function call(name, ...args){
+  if (window.__BRIDGE__) return window.__BRIDGE__(name, args);
+  const out = JSON.parse(web.call(name, JSON.stringify(args)));
+  if (!READ_ONLY.test(name)) persist();
+  return out;
+}
+async function loadSnapshot(){
+  const r = await server("/api/snapshot","GET",null,true);
+  if (!(r instanceof Response)) throw Object.assign(new Error(r.reason), {reason:r.reason});
+  web.load_snapshot(await r.text()); nextSnap = Date.now() + 10*60*1000;
+}
+async function boot(){
+  gate("loading", {text:"Téléchargement des données du jour…"});
+  const [eng, snap] = await Promise.all([
+    server("/api/engine","GET",null,true), server("/api/snapshot","GET",null,true),
+    window.loadPyodide ? null : loadScript(PYODIDE + "pyodide.js")]);
+  for (const r of [eng, snap]) if (!(r instanceof Response)) throw Object.assign(new Error(r.reason), {reason:r.reason});
+  const files = (await eng.json()).files || {}, snapText = await snap.text();
+  gate("loading", {text:"Démarrage du moteur d'analyse…"});
+  if (!py) {
+    py = await window.loadPyodide({indexURL: PYODIDE});
+    py.FS.mkdirTree("/data"); py.FS.mount(py.FS.filesystems.IDBFS, {}, "/data");
+    await new Promise(ok => py.FS.syncfs(true, () => ok()));
+    py.FS.mkdirTree("/engine");
+  }
+  for (const [n, c] of Object.entries(files)) py.FS.writeFile("/engine/" + n, c);
+  py.runPython("import sys\nif '/engine' not in sys.path: sys.path.insert(0, '/engine')\nimport webapi\nwebapi.boot()");
+  web = py.pyimport("webapi");
+  call("set_account", ACCOUNT);
+  gate("loading", {text:"Analyse de tous les matchs…"});
+  await new Promise(r => setTimeout(r, 30));
+  web.load_snapshot(snapText); nextSnap = Date.now() + 10*60*1000; persist();
+  setInterval(tick, 60*1000);
+}
+async function tick(){
+  if (window.__BRIDGE__) return;
+  try {
+    if (Date.now() >= nextSnap) { await loadSnapshot(); render(); }
+    call("tick");
+    if (Math.random() < .1) { const a = await Auth.me(); if (a.ok) { call("set_account", ACCOUNT); } else if (a.reason === "session") location.reload(); }
+  } catch(e) { if (["session","no_plan","inactive","free_over"].includes(e.reason)) location.reload(); }
+}
+
+/* ======================================================================
+   État + routes
+   ====================================================================== */
+let ST = {}, MATCHES = [], DATA = {picks:[], probable:[], combos:[]}, BSET = new Set(), DAY = null, LEAGUE = "all";
+const tier = () => ST.tier || (ACCOUNT && ACCOUNT.tier) || "elite";
+const rank = () => RANK[tier()] ?? 3;
+function refreshState(){
+  ST = call("get_status") || {};
+  MATCHES = call("get_matches") || [];
+  DATA = call("get_data") || DATA;
+  const b = call("builder_get", 10) || {legs:[]};
+  BSET = new Set(b.legs.map(l => l.uid));
+}
+function route(){ const h = location.hash.replace(/^#\/?/, "").split("/"); return {v: h[0] || "matchs", a: h[1] ? decodeURIComponent(h[1]) : null}; }
+const go = (v, a) => { location.hash = "/" + v + (a ? "/" + encodeURIComponent(a) : ""); };
+window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
+
+function chrome(){
+  const r = route().v, n = BSET.size;
+  const tab = ([k, l]) => `<button class="${r===k||(r==="match"&&k==="matchs")?"on":""}" data-go="${k}">${ICON[k]}${l}${k==="ticket"&&n?`<span class="badge">${n}</span>`:""}</button>`;
+  $("#tabs").innerHTML = VIEWS.map(tab).join("");
+  $("#bottom").innerHTML = VIEWS.map(tab).join("");
+  const p = $("#plan"); p.hidden = !tier(); p.textContent = PLAN_NAME[tier()] || ""; p.className = "plan p-" + tier();
+  $("#me").textContent = ACCOUNT && ACCOUNT.email ? ACCOUNT.email[0].toUpperCase() : "?";
+  const f = $("#tfab"); f.hidden = !n || r === "ticket"; f.innerHTML = `${ICON.ticket.replace('<svg','<svg width="18" height="18"')} Mon ticket · ${n}`;
+}
+document.addEventListener("click", e => {
+  const g = e.target.closest("[data-go]"); if (g) { e.preventDefault(); go(g.dataset.go, g.dataset.arg); }
+});
+$("#me").onclick = () => go("compte");
+$("#tfab").onclick = () => go("ticket");
+
+function lockBox(need, title, text){
+  return `<div class="lock"><span class="ic">${ICON.lock}</span><div><b>${esc(title)}</b><small>${esc(text)} Inclus dans ${need==="essentiel"?"tous les forfaits payants":need==="pro"?"Pro et Elite":"Elite"}.</small></div><button class="btn sm go" data-plans>Voir les forfaits</button></div>`;
+}
+document.addEventListener("click", e => { if (e.target.closest("[data-plans]")) gate("plans"); });
+
+function spec(p, big){
+  if (!p || p.some(x => x == null)) return `<div class="spec${big?" big":""}"></div>`;
+  return `<div class="spec${big?" big":""}"><i class="h" style="width:${p[0]*100}%"></i><i class="d" style="width:${p[1]*100}%"></i><i class="a" style="width:${p[2]*100}%"></i></div>`;
+}
+const formDots = f => f ? `<span class="form">${[...f].slice(0,5).map(c=>`<i class="${c}"></i>`).join("")}</span>` : "";
+
+/* ---------- ajout au ticket ---------- */
+async function toggleBet(uid){
+  if (!uid) return;
+  if (BSET.has(uid)) { call("builder_remove", uid); BSET.delete(uid); toast("Retiré de ton ticket"); }
+  else { call("builder_add", uid); BSET.add(uid); toast("Ajouté à ton ticket"); }
+  if (route().v === "ticket") { render(); return; }
+  $$(`[data-add="${CSS.escape(uid)}"]`).forEach(b => { b.classList.toggle("in", BSET.has(uid)); if (b.classList.contains("add")) b.textContent = BSET.has(uid) ? "✓" : "+"; });
+  chrome();
+}
+document.addEventListener("click", e => { const a = e.target.closest("[data-add]"); if (a) { e.stopPropagation(); e.preventDefault(); toggleBet(a.dataset.add); } }, true);
+
+/* ======================================================================
+   Vue : Matchs
+   ====================================================================== */
+const JOURS = ["dim.","lun.","mar.","mer.","jeu.","ven.","sam."];
+function vMatchs(){
+  const days = {};
+  MATCHES.forEach(m => { days[m.day] = (days[m.day] || 0) + 1; });
+  const keys = Object.keys(days).sort();
+  if (!DAY || !days[DAY]) DAY = keys[0] || null;
+  const leagues = [...new Set(MATCHES.filter(m => m.day === DAY).map(m => m.league))];
+  if (LEAGUE !== "all" && !leagues.includes(LEAGUE)) LEAGUE = "all";
+  const today = new Date().toISOString().slice(0,10);
+  const tomorrow = new Date(Date.now() + 864e5).toISOString().slice(0,10);
+  const dayChip = k => { const d = new Date(k + "T12:00:00"); const w = k === today ? "Auj." : k === tomorrow ? "Demain" : JOURS[d.getDay()];
+    return `<button class="day ${k===DAY?"on":""}" data-day="${k}"><div class="w">${w}</div><div class="n">${d.getDate()}</div><div class="c">${days[k]} match${days[k]>1?"s":""}</div></button>`; };
+  const list = MATCHES.filter(m => m.day === DAY && (LEAGUE === "all" || m.league === LEAGUE));
+  const groups = {}; list.forEach(m => (groups[m.league] = groups[m.league] || []).push(m));
+  const row = m => `
+    <div class="match" data-go="match" data-arg="${esc(m.id)}">
+      <div class="tm">${esc(m.time)}<small>${esc(m.round || "")}</small></div>
+      <div class="teams"><div><span class="dot h"></span>${esc(m.home)}${formDots(m.form_home)}</div><div><span class="dot a"></span>${esc(m.away)}${formDots(m.form_away)}</div></div>
+      <div class="sp3">${spec(m.probs)}<div class="specl"><span class="h">${pc(m.probs[0])}</span><span class="d">${pc(m.probs[1])}</span><span class="a">${pc(m.probs[2])}</span></div></div>
+      <div class="odds3">${["1","N","2"].map((l,i) => { const o = m.odds[i]; return o ? `<button class="ob ${BSET.has(o.uid)?"in":""}" data-add="${esc(o.uid)}" title="${esc(book(o.book))}"><small>${l}</small><b>${fr(o.odds)}</b></button>` : `<span class="ob"><small>${l}</small><b>–</b></span>`; }).join("")}</div>
+      <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </div>`;
+  const banner = ST.tier === "gratuit" && ACCOUNT ? `<div class="banner">Version gratuite : Ligue 1 et Premier League, résultat du match. Encore ${daysLeft(ACCOUNT.renews)} jour(s).<button class="btn sm go" data-plans>Voir les forfaits</button></div>` : "";
+  return `
+    ${banner}
+    <h1 class="t">Matchs</h1>
+    <p class="lead">Les vraies chances de chaque issue, calculées à partir des cotes de 10 bookmakers et de la forme des équipes. Touche une cote pour l'ajouter à ton ticket.</p>
+    <div class="days">${keys.map(dayChip).join("") || ""}</div>
+    ${leagues.length > 1 ? `<div class="chips" style="margin-bottom:6px"><button class="chip ${LEAGUE==="all"?"on":""}" data-lg="all">Tous<b>${MATCHES.filter(m=>m.day===DAY).length}</b></button>${leagues.map(l => `<button class="chip ${LEAGUE===l?"on":""}" data-lg="${esc(l)}">${esc(l)}<b>${MATCHES.filter(m=>m.day===DAY&&m.league===l).length}</b></button>`).join("")}</div>` : ""}
+    ${Object.entries(groups).map(([lg, ms]) => `<div class="lg">${esc(lg)}</div>${ms.map(row).join("")}`).join("") ||
+      `<div class="panel empty"><b>Aucun match à venir</b>Les cotes arrivent dès que les bookmakers les publient.</div>`}
+    ${rank() < 1 ? lockBox("essentiel", "Plus de championnats et de paris", "LaLiga, Serie A, Bundesliga, Ligue des champions, double chance, nombre de buts…") : ""}`;
+}
+document.addEventListener("click", e => {
+  const d = e.target.closest("[data-day]"); if (d) { DAY = d.dataset.day; render(); }
+  const l = e.target.closest("[data-lg]"); if (l) { LEAGUE = l.dataset.lg; render(); }
+});
+const daysLeft = x => x ? Math.max(0, Math.ceil((new Date(x) - Date.now()) / 864e5)) : 0;
+
+/* ======================================================================
+   Vue : page d'un match
+   ====================================================================== */
+let MTAB = "analyse";
+function vMatch(id){
+  const e = call("get_event", id);
+  if (!e) return `<button class="back" data-go="matchs">← Matchs</button><div class="panel empty"><b>Match introuvable</b>Il a peut-être déjà commencé.</div>`;
+  const info = e.info || {}, nv = info.neutral || {}, m = MATCHES.find(x => x.id === id) || {};
+  const fin = (nv.rows || []).find(r => r.final), p = fin ? fin.p : m.probs;
+  const t = [["analyse","Analyse"],["paris","Tous les paris"],["equipes","Équipes"],["h2h","Face-à-face"],["infos","Infos du match"]];
+  let body = "";
+  if (MTAB === "analyse") body = tabAnalyse(e, nv);
+  else if (MTAB === "paris") body = tabParis(e);
+  else if (MTAB === "equipes") body = tabEquipes(e, info);
+  else if (MTAB === "h2h") body = tabH2H(e, info);
+  else body = tabInfos(e, info);
+  return `
+    <button class="back" data-go="matchs">← Matchs</button>
+    <section class="panel mhead">
+      <div class="meta">${esc(e.league)} · ${esc(e.date)}${info.round_label?" · "+esc(info.round_label):""}</div>
+      <div class="vs"><div class="tn">${esc(e.home)}</div><div class="x">contre</div><div class="tn r">${esc(e.away)}</div></div>
+      ${spec(p, true)}
+      <div class="specl" style="font-size:15px"><span class="h">${esc(e.home)} ${pc(p&&p[0])}</span><span class="d">Nul ${pc(p&&p[1])}</span><span class="a">${pc(p&&p[2])} ${esc(e.away)}</span></div>
+    </section>
+    <div class="tabs2">${t.map(([k,l]) => `<button class="${MTAB===k?"on":""}" data-mtab="${k}">${l}</button>`).join("")}</div>
+    ${body}`;
+}
+document.addEventListener("click", e => { const t = e.target.closest("[data-mtab]"); if (t) { MTAB = t.dataset.mtab; render(); } });
+function tabAnalyse(e, nv){
+  const rows = nv.rows || [], lab = nv.labels || [e.home, "Nul", e.away];
+  const rel = nv.reliability ?? 25, rc = rel >= 70 ? "var(--home)" : rel >= 45 ? "var(--draw)" : "var(--bad)";
+  return `
+    <div class="grid2">
+      <div class="panel box"><h3>Ce que dit chaque source</h3>
+        <table class="src"><tr><th>Source</th><th>${esc(lab[0])}</th><th>Nul</th><th>${esc(lab[2])}</th></tr>
+        ${rows.map(r => `<tr class="${r.final?"fin":""}"><td>${esc(r.src)}</td>${r.p.map(x=>`<td class="num">${pc(x)}</td>`).join("")}</tr>`).join("")}</table>
+        <div style="margin-top:16px;font-size:13.5px;display:flex;justify-content:space-between"><span class="note">Fiabilité de l'analyse</span><b class="num" style="color:${rc}">${rel}/100</b></div>
+        <div class="rel"><i style="width:${rel}%;background:${rc}"></i></div>
+      </div>
+      <div class="panel box"><h3>Ce qui pourrait faire mentir le pronostic</h3>
+        <ul class="args">${(nv.risks||[]).map(x=>`<li>${esc(x)}</li>`).join("") || "<li>Rien de particulier.</li>"}</ul>
+      </div>
+      <div class="panel box"><h3>Pour ${esc(e.home)}</h3><ul class="args">${(nv.adv_home||[]).map(x=>`<li>${esc(x)}</li>`).join("") || '<li class="note">Pas d\'argument fort.</li>'}</ul></div>
+      <div class="panel box"><h3>Pour ${esc(e.away)}</h3><ul class="args">${(nv.adv_away||[]).map(x=>`<li>${esc(x)}</li>`).join("") || '<li class="note">Pas d\'argument fort.</li>'}</ul></div>
+    </div>
+    ${rank() < 2 ? lockBox("pro", "Analyse complète du match", "Absents pondérés, compos officielles, face-à-face, buteurs, météo et fatigue.") : ""}`;
+}
+function betLine(b){
+  return `<div class="bet">
+    <div class="sel">${esc(b.selection)}<small>${b.estimated?`cote estimée · prends si ≥ ${fr(b.min_odds)}`:esc(book(b.book))}${b.value?` · <span class="pill v">value ${sg(b.ev)}</span>`:""}</small></div>
+    <div class="pc"><span class="num" style="font-size:13px">${pc(b.p)} de chances</span><div class="pbar"><i style="width:${b.p*100}%"></i></div></div>
+    <div class="o">${b.estimated?"≈":""}${fr(b.odds)}<small>juste ${fr(b.fair)}</small></div>
+    <button class="add ${BSET.has(b.uid)?"in":""}" data-add="${esc(b.uid)}" title="Ajouter à mon ticket">${BSET.has(b.uid)?"✓":"+"}</button></div>`;
+}
+function tabParis(e){
+  return (e.groups||[]).map(g => `<h2 class="s">${esc(g.label)} <small>${g.bets.length} pari${g.bets.length>1?"s":""}</small></h2><div class="panel">${g.bets.map(betLine).join("")}</div>`).join("") +
+    (rank() < 2 ? lockBox("pro", "Tous les types de paris", "Buteurs, handicaps, score exact, mi-temps / fin de match, buts par équipe.") : "");
+}
+function formBox(name, f, tbl){
+  if (!f) return `<div class="panel box"><h3>${esc(name)}</h3><p class="note">Forme indisponible.</p></div>`;
+  return `<div class="panel box"><h3>${esc(name)}${tbl&&tbl.rank?` <span class="pill">${tbl.rank}e · ${tbl.points} pts</span>`:""}</h3>
+    <div class="lastg">${(f.last||[]).map(g => `<span class="${g.res}">${g.res} ${esc(g.score)} ${g.home?"vs":"à"} ${esc(g.opp)}</span>`).join("")}</div>
+    <p class="note" style="margin-top:10px">${esc(f.streak_txt||"")}${f.home_rec?` · domicile ${esc(f.home_rec)} · extérieur ${esc(f.away_rec)}`:""}</p></div>`;
+}
+const injList = l => (l && l.length) ? `<ul class="args">${l.map(i => `<li>${esc(i.player)} <span class="pill ${i.type==="out"?"bad":"warn"}">${esc(i.status||i.type||"")}</span> <span class="note">${esc(i.reason||"")}</span></li>`).join("")}</ul>` : `<p class="note">Aucun absent signalé.</p>`;
+function tabEquipes(e, i){
+  if (rank() < 2) return `<div class="grid2">${formBox(e.home, i.form_home, i.table_home)}${formBox(e.away, i.form_away, i.table_away)}</div>` + lockBox("pro", "Absents et compositions", "Les blessés et suspendus pondérés par leur importance, et les compos officielles environ 1 h avant le match.");
+  const lu = (i.lineups||[]);
+  return `<div class="grid2">${formBox(e.home, i.form_home, i.table_home)}${formBox(e.away, i.form_away, i.table_away)}
+    <div class="panel box"><h3>Absents · ${esc(e.home)}</h3>${injList(i.inj_home)}</div>
+    <div class="panel box"><h3>Absents · ${esc(e.away)}</h3>${injList(i.inj_away)}</div></div>
+    <h2 class="s">Compositions</h2>${lu.length ? `<div class="grid2">${lu.map(l => `<div class="panel box"><h3>${esc(l.team)} <span class="pill">${esc(l.formation||"")}</span></h3><p class="note">${(l.xi||[]).map(esc).join(", ")}</p></div>`).join("")}</div>` : `<div class="panel empty"><b>Pas encore publiées</b>Les compos officielles arrivent environ une heure avant le coup d'envoi.</div>`}`;
+}
+function tabH2H(e, i){
+  if (rank() < 2) return lockBox("pro", "Face-à-face", "Les 10 dernières confrontations, toutes compétitions, et leur moyenne de buts.");
+  const h = i.h2h || [], s = i.h2h_sum;
+  if (!h.length) return `<div class="panel empty"><b>Pas de confrontation récente trouvée</b>Les deux équipes ne se sont pas affrontées ces dernières saisons.</div>`;
+  return `${s?`<div class="stats" style="margin-bottom:14px"><div class="panel stat"><small>Victoires ${esc(e.home)}</small><b>${s.w}</b></div><div class="panel stat"><small>Nuls</small><b>${s.d}</b></div><div class="panel stat"><small>Victoires ${esc(e.away)}</small><b>${s.l}</b></div><div class="panel stat"><small>Buts par match</small><b>${fr(s.avg_goals,1)}</b></div></div>`:""}
+    <div class="panel">${h.map(g => `<div class="bet" style="grid-template-columns:90px 1fr auto"><span class="note">${esc(g.date)}</span><span>${esc(g.home)} – ${esc(g.away)}</span><b class="num">${g.gh} – ${g.ga}</b></div>`).join("")}</div>`;
+}
+function tabInfos(e, i){
+  const w = i.weather;
+  return `<div class="grid2">
+    <div class="panel box"><h3>Météo au coup d'envoi</h3>${rank() < 2 ? '<p class="note">Disponible avec Pro.</p>' : w ? `<div class="stats" style="grid-template-columns:repeat(3,1fr)"><div><small class="note">Température</small><b class="num" style="display:block;font-size:22px">${w.temp}°</b></div><div><small class="note">Pluie</small><b class="num" style="display:block;font-size:22px">${w.rain} mm</b></div><div><small class="note">Vent</small><b class="num" style="display:block;font-size:22px">${w.wind} km/h</b></div></div><p class="note" style="margin-top:8px">${esc(w.city||"")}</p>` : '<p class="note">Pas encore disponible.</p>'}</div>
+    <div class="panel box"><h3>Enjeu</h3><p class="note">${esc([i.stake_home, i.stake_away].filter(Boolean).map(s => s.label || s).join(" · ") || "Pas d'enjeu particulier détecté.")}</p></div></div>
+    <h2 class="s">Actus de dernière minute</h2>
+    ${rank() < 3 ? lockBox("elite", "Actus de dernière minute", "Les infos trouvées sur le web juste avant le match.") :
+      (i.news||[]).length ? `<div class="panel">${i.news.map(n => `<div class="bet" style="grid-template-columns:1fr"><div class="sel">${esc(n.title)}<small>${esc(n.desc||"")}</small></div></div>`).join("")}</div>` : `<div class="panel empty"><b>Rien de neuf pour l'instant</b>Les actus sont vérifiées plusieurs fois avant le match.</div>`}`;
+}
+
+/* ======================================================================
+   Vue : Pronostics
+   ====================================================================== */
+function pickRow(b){
+  return `<div class="pick" data-go="match" data-arg="${esc(b.event_id)}">
+    <div class="sel">${esc(b.selection)}<small>${esc(b.match)} · ${esc(b.date)}${b.mine?` · <span class="pill ok">Cotescope jouerait</span>`:""}${b.value?` <span class="pill v">value ${sg(b.ev)}</span>`:""}</small></div>
+    <div class="pc"><span class="num" style="font-size:13px">${pc(b.p)} de chances</span><div class="pbar"><i style="width:${b.p*100}%"></i></div></div>
+    <div class="o num" style="font-size:18px;font-weight:700;text-align:right">${b.estimated?"≈":""}${fr(b.odds)}</div>
+    <button class="add ${BSET.has(b.uid)?"in":""}" data-add="${esc(b.uid)}">${BSET.has(b.uid)?"✓":"+"}</button></div>`;
+}
+let PTAB = "sure";
+function vPicks(){
+  const t = [["sure","Les plus sûrs"],["best","Meilleurs paris"],["combos","Combinés"]];
+  let body;
+  if (PTAB === "sure") body = DATA.probable.slice(0, 40).map(pickRow).join("");
+  else if (PTAB === "best") body = (rank() < 3 ? lockBox("elite", "Paris value et sélection de Cotescope", "Les paris où la cote est au-dessus du juste prix, et ceux que Cotescope jouerait avec son propre argent.") : "") + DATA.picks.slice(0, 40).map(pickRow).join("");
+  else body = DATA.combos.slice(0, 20).map(c => `<div class="panel opt"><div class="oh"><div style="flex:1"><b>Combiné ×${c.legs.length}</b><small>cote ${fr(c.odds)}${c.value?` · <span class="pill v">value</span>`:""}</small></div><div class="ring"><b>${pc(c.p)}</b><small>de chances</small></div></div>
+      ${c.legs.map(l => `<div class="leg"><div>${esc(l.selection)} <small>· ${esc(l.match)}</small></div><span class="o">${l.estimated?"≈":""}${fr(l.odds)}</span><button class="add ${BSET.has(l.uid)?"in":""}" data-add="${esc(l.uid)}">${BSET.has(l.uid)?"✓":"+"}</button></div>`).join("")}</div>`).join("");
+  return `<h1 class="t">Pronostics</h1><p class="lead">Les paris les plus solides de tous les matchs à venir, triés par Cotescope.</p>
+    <div class="chips" style="margin-bottom:16px">${t.map(([k,l]) => `<button class="chip ${PTAB===k?"on":""}" data-ptab="${k}">${l}</button>`).join("")}</div>
+    ${body || `<div class="panel empty"><b>Rien pour l'instant</b>Reviens quand les cotes des prochains matchs seront publiées.</div>`}`;
+}
+document.addEventListener("click", e => { const t = e.target.closest("[data-ptab]"); if (t) { PTAB = t.dataset.ptab; render(); } });
+
+/* ======================================================================
+   Vue : Objectif
+   ====================================================================== */
+let GOAL = {stake:"10", target:"40", res:null};
+function vGoal(){
+  const need = (parseFloat(String(GOAL.target).replace(",", ".")) + parseFloat(String(GOAL.stake).replace(",", "."))) / parseFloat(String(GOAL.stake).replace(",", "."));
+  const r = GOAL.res;
+  let out = "";
+  if (r) {
+    if (r.error) out = `<div class="panel empty"><b>${esc(r.error)}</b></div>`;
+    else if (!r.options.length) out = `<div class="panel empty"><b>Objectif impossible avec les matchs actuels</b>Il faudrait une cote de ${fr(r.need_odds)}, la plus grosse possible aujourd'hui est ${fr(r.max_odds)}. Baisse ton objectif ou augmente ta mise.</div>`;
+    else out = r.options.map((o, i) => `<div class="panel opt ${i===0?"best":""}">
+        <div class="oh"><div style="flex:1"><b>${i===0?"Le ticket le plus sûr":esc(o.title)}</b><small>${esc(o.desc)}</small></div><div class="ring"><b>${pc(o.p_hit, o.p_hit<.1?1:0)}</b><small>de chances</small></div></div>
+        ${o.tickets.map(t => `${t.legs.map(l => `<div class="leg"><div>${esc(l.selection)} <small>· ${esc(l.match)} · ${esc(l.date)} · ${pc(l.p)}</small></div><span class="o">${l.estimated?"≈":""}${fr(l.odds)}</span><button class="add ${BSET.has(l.uid)?"in":""}" data-add="${esc(l.uid)}">${BSET.has(l.uid)?"✓":"+"}</button></div>`).join("")}
+          <div class="tot"><span class="note">Mise ${eur(t.stake)} · cote ${fr(t.odds)}</span><div class="sp"></div><b>${eur(t.ret)}</b><button class="btn sm" data-play="${t.legs.map(l=>esc(l.uid)).join("~")}" data-stake="${t.stake}">Je le joue</button></div>`).join("")}
+      </div>`).join("") + (r.locked_more ? lockBox("pro", `${r.locked_more} autre${r.locked_more>1?"s":""} ticket${r.locked_more>1?"s":""} possible${r.locked_more>1?"s":""}`, "Toutes les alternatives classées pour ton objectif.") : "");
+  } else out = `<div class="panel empty"><b>Donne ta mise et ce que tu veux gagner</b>Cotescope cherche parmi tous les paris de tous les matchs le ticket qui a le plus de chances d'y arriver.</div>`;
+  return `<h1 class="t">Objectif</h1><p class="lead">« Je mise 10 €, je veux gagner 40 € » : Cotescope te sort le ticket le plus sûr pour y arriver.</p>
+    <div class="goal">
+      <div class="panel goalf">
+        <label class="f" for="gl-s">Je mise</label><div class="money"><input class="in" id="gl-s" inputmode="decimal" value="${esc(GOAL.stake)}"><span>€</span></div>
+        <label class="f" for="gl-t" style="margin-top:14px">Je veux gagner</label><div class="money"><input class="in" id="gl-t" inputmode="decimal" value="${esc(GOAL.target)}"><span>€</span></div>
+        <div class="need">Cote à atteindre : <b>${isFinite(need)?fr(need):"–"}</b></div>
+        <button class="btn go" id="gl-go" style="width:100%">Trouver le meilleur ticket</button>
+      </div>
+      <div id="g-out">${out}</div>
+    </div>`;
+}
+document.addEventListener("click", e => {
+  if (e.target.closest("#gl-go")) {
+    GOAL.stake = $("#gl-s").value; GOAL.target = $("#gl-t").value;
+    $("#g-out").innerHTML = `<div class="panel loader" style="padding:40px"><div class="scan">${spec([.45,.27,.28])}</div>Recherche parmi tous les paris…</div>`;
+    setTimeout(() => { GOAL.res = call("compute_objective", GOAL.stake, GOAL.target, null, null, null, null); render(); }, 30);
+  }
+  const p = e.target.closest("[data-play]");
+  if (p) { const r = call("log_ticket", p.dataset.play.split("~"), p.dataset.stake, ""); toast(r.ok ? "Ticket ajouté à ton bilan" : (r.error || "Erreur")); if (r.ok) { p.textContent = "Enregistré"; p.disabled = true; } }
+});
+document.addEventListener("keydown", e => { if (e.key === "Enter" && (e.target.id === "gl-s" || e.target.id === "gl-t")) $("#gl-go").click(); });
+
+/* ======================================================================
+   Vue : Mon ticket
+   ====================================================================== */
+let TSTAKE = "10";
+function vTicket(){
+  const r = call("builder_get", TSTAKE);
+  if (!r.legs.length) return `<h1 class="t">Mon ticket</h1><p class="lead">Ajoute des paris avec + depuis les matchs ou les pronostics : Cotescope calcule tes vraies chances.</p><div class="panel empty"><b>Ton ticket est vide</b><button class="btn go" data-go="matchs" style="margin-top:14px">Voir les matchs</button></div>`;
+  return `<h1 class="t">Mon ticket</h1><p class="lead">Tes vraies chances de gagner, sélection par sélection.</p>
+    <div class="stats">
+      <div class="panel stat"><small>Cote totale</small><b>${fr(r.odds)}</b></div>
+      <div class="panel stat"><small>Vraies chances</small><b style="color:var(--home)">${pc(r.p, r.p<.1?1:0)}</b></div>
+      <div class="panel stat"><small>Si ça passe</small><b>${eur(r.ret)}</b></div>
+      <div class="panel stat"><small>Mise</small><div class="money" style="margin-top:4px"><input class="in" id="t-s" inputmode="decimal" value="${esc(TSTAKE)}" style="font-size:20px;padding:6px 10px"><span>€</span></div></div>
+    </div>
+    ${(r.warnings||[]).map(w => `<div class="warn">${esc(w)}</div>`).join("")}
+    ${r.locked ? lockBox("pro", "Maillon faible et remplacements", "Cotescope repère la sélection la plus fragile et te propose mieux, à cote proche.") : ""}
+    ${(r.tips||[]).map(t => `<div class="tip"><span>${esc(t.text)}</span><button class="btn sm" data-swap="${esc(t.from)}~${esc(t.to)}">Remplacer</button></div>`).join("")}
+    <div class="panel" style="margin-top:12px">${r.legs.map(l => `<div class="bet ${l.uid===r.weakest&&r.legs.length>1?"weak":""}">
+        <div class="sel">${esc(l.selection)}${l.uid===r.weakest&&r.legs.length>1?' <span class="pill bad">maillon faible</span>':""}<small>${esc(l.match)} · ${esc(l.date)}</small></div>
+        <div class="pc"><span class="num" style="font-size:13px">${pc(l.p)}</span><div class="pbar"><i style="width:${l.p*100}%"></i></div></div>
+        <div class="o">${l.estimated?"≈":""}${fr(l.odds)}<small>${l.estimated?"mini "+fr(l.min_odds):esc(book(l.book))}</small></div>
+        <button class="add rm" data-add="${esc(l.uid)}" title="Retirer">×</button></div>`).join("")}</div>
+    <div style="display:flex;gap:10px;margin-top:16px"><button class="btn go" id="t-play">Je joue ce ticket</button><button class="btn" id="t-clear">Vider</button></div>`;
+}
+document.addEventListener("click", e => {
+  const s = e.target.closest("[data-swap]"); if (s) { const [a,b] = s.dataset.swap.split("~"); call("builder_swap", a, b); BSET.delete(a); BSET.add(b); toast("Sélection remplacée"); render(); }
+  if (e.target.closest("#t-play")) { const r = call("builder_play", TSTAKE); toast(r.ok ? "Ticket ajouté à ton bilan" : (r.error || "Erreur")); }
+  if (e.target.closest("#t-clear")) { call("builder_clear"); BSET.clear(); render(); }
+});
+document.addEventListener("change", e => { if (e.target.id === "t-s") { TSTAKE = e.target.value; render(); } });
+
+/* ======================================================================
+   Vue : Bilan
+   ====================================================================== */
+const STATUS = {won:["Gagné","ok"], lost:["Perdu","bad"], void:["Remboursé",""], pending:["En attente","warn"], unknown:["Non vérifiable",""]};
+function vBilan(){
+  const h = call("get_history");
+  if (h.locked) return `<h1 class="t">Bilan</h1>` + lockBox("pro", "Bilan automatique de tes tickets", "Chaque ticket est vérifié tout seul après les matchs : gains, rentabilité, taux de réussite.");
+  const u = h.user, a = h.app;
+  return `<h1 class="t">Bilan</h1><p class="lead">Tes tickets sont vérifiés automatiquement avec les résultats officiels.</p>
+    <div class="stats">
+      <div class="panel stat"><small>Tickets joués</small><b>${u.n}</b></div>
+      <div class="panel stat"><small>Gagnés</small><b>${u.wins}</b></div>
+      <div class="panel stat"><small>Résultat</small><b style="color:${u.profit>=0?"var(--home)":"var(--bad)"}">${u.profit>=0?"+":""}${eur(u.profit)}</b></div>
+      <div class="panel stat"><small>Rentabilité</small><b>${u.roi==null?"–":sg(u.roi)}</b></div>
+    </div>
+    <h2 class="s">Mes tickets</h2>
+    ${h.tickets.length ? `<div class="panel">${h.tickets.map(t => { const s = STATUS[t.status] || [t.status,""]; return `<div class="bet" style="grid-template-columns:minmax(0,1fr) auto auto">
+      <div class="sel">${t.legs.map(l => esc(l.selection)).join(" + ")}<small>${new Date(t.created*1000).toLocaleDateString("fr-FR",{day:"numeric",month:"short"})} · mise ${eur(t.stake)} · cote ${fr(t.legs.reduce((x,l)=>x*l.odds,1))}</small></div>
+      <span class="pill ${s[1]}">${s[0]}</span><button class="btn sm" data-del="${t.id}">Supprimer</button></div>`; }).join("")}</div>` : `<div class="panel empty"><b>Aucun ticket enregistré</b>Clique sur « Je le joue » sur un ticket pour le suivre ici.</div>`}
+    <h2 class="s">Fiabilité de Cotescope</h2>
+    ${h.app_locked ? lockBox("elite", "Fiabilité mesurée", "Quand Cotescope annonce 60 %, est-ce que ça passe vraiment 6 fois sur 10 ? Vérifié match après match.") :
+      (a.buckets||[]).length ? `<div class="panel box"><table class="src"><tr><th>Annoncé</th><th>Paris</th><th>Prévu</th><th>Réel</th></tr>${a.buckets.map(b => `<tr><td>${esc(b.label)}</td><td class="num">${b.n}</td><td class="num">${pc(b.pred)}</td><td class="num"><b>${pc(b.real)}</b></td></tr>`).join("")}</table></div>` : `<div class="panel empty"><b>Pas encore assez de matchs vérifiés</b>Le tableau se remplit au fil des journées.</div>`}`;
+}
+document.addEventListener("click", e => { const d = e.target.closest("[data-del]"); if (d) { call("delete_ticket", d.dataset.del); render(); } });
+
+/* ======================================================================
+   Vue : Compte
+   ====================================================================== */
+function vCompte(){
+  const a = ACCOUNT || {}, cfg = call("get_config") || {};
+  const books = new Set((cfg.bookmakers || "").split(",").filter(Boolean)), hid = new Set(cfg.hide_sports || []);
+  const d = x => x ? new Date(x).toLocaleDateString("fr-FR", {day:"numeric", month:"long"}) : "";
+  const st = a.status === "free" ? `Version gratuite jusqu'au ${d(a.renews)}` : a.status === "owner" ? "Accès propriétaire" : a.cancel ? `Se termine le ${d(a.renews)}` : a.renews ? `Renouvellement le ${d(a.renews)}` : "";
+  return `<h1 class="t">Mon compte</h1><p class="lead">${esc(a.email || "")}</p>
+    <div class="grid2">
+      <div class="panel box"><h3>Forfait</h3><div class="pr num" style="font-size:26px;font-weight:700">${PLAN_NAME[a.tier] || "Aucun"}</div><p class="note" style="margin:4px 0 14px">${esc(st)}</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn ${a.tier && a.tier!=="gratuit"?"":"go"}" data-plans>${a.tier && a.tier!=="gratuit"?"Changer de forfait":"Choisir un forfait"}</button>${a.manage?`<a class="btn" href="${esc(a.manage)}" target="_blank" rel="noopener">Gérer mon abonnement</a>`:""}</div></div>
+      <div class="panel box"><h3>Où je parie</h3><p class="note" style="margin-bottom:12px">Chaque pari prend la meilleure cote parmi les bookmakers cochés.</p>
+        <div class="books" id="c-books">${BOOKS.map(([k,n]) => `<label class="${books.has(k)?"on":""}"><input type="checkbox" value="${k}" ${books.has(k)?"checked":""}>${n}</label>`).join("")}</div></div>
+      <div class="panel box"><h3>Championnats affichés</h3><div class="books" id="c-lg">${(cfg._sports||[]).map(s => `<label class="${hid.has(s.key)?"":"on"}"><input type="checkbox" value="${s.key}" ${hid.has(s.key)?"":"checked"}>${esc(s.label)}</label>`).join("") || '<p class="note">Aucun championnat couvert pour l\'instant.</p>'}</div></div>
+      <div class="panel box"><h3>Session</h3><p class="note" style="margin-bottom:12px">Tes réglages et tes tickets sont gardés sur cet appareil.</p><button class="btn" id="c-out">Se déconnecter</button></div>
+    </div>`;
+}
+document.addEventListener("change", e => {
+  if (e.target.closest("#c-books")) {
+    e.target.parentNode.classList.toggle("on", e.target.checked);
+    const L = $$("#c-books input").filter(i => i.checked).map(i => i.value);
+    if (!L.length) { e.target.checked = true; e.target.parentNode.classList.add("on"); toast("Garde au moins un bookmaker"); return; }
+    call("set_books", L); refreshState(); toast("Bookmakers enregistrés");
+  }
+  if (e.target.closest("#c-lg")) {
+    e.target.parentNode.classList.toggle("on", e.target.checked);
+    call("save_config", {hide_sports: $$("#c-lg input").filter(i => !i.checked).map(i => i.value)}); refreshState(); toast("Championnats enregistrés");
+  }
+});
+document.addEventListener("click", e => { if (e.target.closest("#c-out")) Auth.logout(); });
+
+/* ======================================================================
+   Rendu
+   ====================================================================== */
+function render(){
+  if (!web && !window.__BRIDGE__) return;
+  refreshState();
+  const r = route();
+  const V = {matchs:vMatchs, match:() => vMatch(r.a), picks:vPicks, goal:vGoal, ticket:vTicket, bilan:vBilan, compte:vCompte};
+  $("#view").innerHTML = (V[r.v] || vMatchs)();
+  chrome();
+}
+
+/* ======================================================================
+   Écrans de connexion, forfaits, choix des bookmakers
+   ====================================================================== */
+const field = (id, label, type, ph) => `<div class="f"><label class="f" for="${id}">${label}</label><input class="in" id="${id}" type="${type||"text"}" placeholder="${ph||""}" autocomplete="${type==="password"?(id==="g-pw2"?"new-password":"current-password"):"email"}"></div>`;
+function gate(v, x){
   x = x || {};
-  const b = $("#auth-body"), A = auth();
-  $(".authc").classList.toggle("wide", v === "plans");
-  $("#auth-x").style.display = (A.canSkip || (status && status.tier)) ? "" : "none";
-  clearInterval(authTimer);
-  const skip = A.canSkip ? `<div class="alt"><button data-av="skip" style="color:var(--muted);font-weight:400">Continuer en mode démo</button></div>` : "";
-  if (v === "login") b.innerHTML = `<h3>Connexion</h3><div class="sub2">Connecte-toi à ton compte Cotescope.</div>
-      ${field("a-em","E-mail","email","toi@exemple.fr")}${field("a-pw","Mot de passe","password")}
-      <div class="msg" id="a-msg"></div><button class="btn primary full" id="a-go">Se connecter</button>
-      <div class="alt"><button data-av="forgot">Mot de passe oublié ?</button></div>
-      <div class="alt">Pas encore de compte ? <button data-av="signup">Créer un compte</button></div>${skip}`;
-  else if (v === "signup") b.innerHTML = `<h3>Créer mon compte</h3><div class="sub2">Version gratuite pendant 7 jours, sans carte bancaire.</div>
-      ${field("a-em","E-mail","email","toi@exemple.fr")}${field("a-pw2","Mot de passe (8 caractères minimum)","password")}
-      <label class="chk" style="font-size:12.5px"><input type="checkbox" id="a-ok">J'ai 18 ans ou plus et j'accepte les&nbsp;<a href="#" data-url="https://cotescope.fr/cgv.html" style="color:var(--green2)">CGV</a></label>
-      <div class="msg" id="a-msg"></div><button class="btn primary full" id="a-go">Créer mon compte</button>
-      <div class="alt">Déjà un compte ? <button data-av="login">Se connecter</button></div>${skip}`;
-  else if (v === "forgot") b.innerHTML = `<h3>Mot de passe oublié</h3><div class="sub2">On t'envoie un lien pour en choisir un nouveau.</div>
-      ${field("a-em","E-mail","email","toi@exemple.fr")}<div class="msg" id="a-msg"></div><button class="btn primary full" id="a-go">Envoyer le lien</button>
-      <div class="alt"><button data-av="login">Retour</button></div>`;
-  else if (v === "reset") b.innerHTML = `<h3>Nouveau mot de passe</h3><div class="sub2">Choisis ton nouveau mot de passe.</div>
-      ${field("a-pw2","Nouveau mot de passe (8 caractères minimum)","password")}<div class="msg" id="a-msg"></div><button class="btn primary full" id="a-go">Enregistrer</button>`;
+  const g = $("#gate"), c = $("#gcard");
+  if (!v) { g.hidden = true; return; }
+  g.hidden = false; c.className = "gcard" + (v === "plans" ? " wide" : "");
+  const logo = `<a class="logo" href="../"><img src="../img/logo.svg" alt="">Cotescope</a>`;
+  if (v === "loading") { c.innerHTML = logo + `<div class="loader"><div class="scan">${spec([.47,.26,.27])}</div><div>${esc(x.text||"")}</div><small class="note">Le premier chargement prend quelques secondes.</small></div>`; return; }
+  if (v === "error") { c.innerHTML = logo + `<div class="panel gbox" style="text-align:center"><h2>Oups</h2><p>${esc(errMsg(x.reason))}</p><button class="btn go" onclick="location.reload()">Réessayer</button></div>`; return; }
+  if (v === "login") c.innerHTML = logo + `<div class="panel gbox"><h2>Connexion</h2><p>Content de te revoir.</p>
+      ${field("g-em","E-mail","email","toi@exemple.fr")}${field("g-pw","Mot de passe","password")}
+      <div class="msg" id="g-msg"></div><button class="btn go" id="g-go" style="width:100%">Se connecter</button>
+      <div class="alt"><button data-gv="forgot">Mot de passe oublié ?</button></div>
+      <div class="alt">Pas encore de compte ? <button data-gv="signup">Créer un compte gratuit</button></div></div>`;
+  else if (v === "signup") c.innerHTML = logo + `<div class="panel gbox"><h2>Créer mon compte</h2><p>7 jours gratuits, sans carte bancaire.</p>
+      ${field("g-em","E-mail","email","toi@exemple.fr")}${field("g-pw2","Mot de passe","password","8 caractères minimum")}
+      <label class="chk"><input type="checkbox" id="g-ok"><span>J'ai 18 ans ou plus et j'accepte les <a href="../cgv.html" target="_blank">conditions de vente</a>.</span></label>
+      <div class="msg" id="g-msg"></div><button class="btn go" id="g-go" style="width:100%">Créer mon compte</button>
+      <div class="alt">Déjà un compte ? <button data-gv="login">Se connecter</button></div></div>`;
+  else if (v === "forgot") c.innerHTML = logo + `<div class="panel gbox"><h2>Mot de passe oublié</h2><p>On t'envoie un lien pour en choisir un nouveau.</p>
+      ${field("g-em","E-mail","email","toi@exemple.fr")}<div class="msg" id="g-msg"></div><button class="btn go" id="g-go" style="width:100%">Envoyer le lien</button>
+      <div class="alt"><button data-gv="login">Retour à la connexion</button></div></div>`;
+  else if (v === "reset") c.innerHTML = logo + `<div class="panel gbox"><h2>Nouveau mot de passe</h2><p>Choisis un nouveau mot de passe.</p>
+      ${field("g-pw2","Nouveau mot de passe","password","8 caractères minimum")}<div class="msg" id="g-msg"></div><button class="btn go" id="g-go" style="width:100%">Enregistrer</button></div>`;
+  else if (v === "wait") c.innerHTML = logo + `<div class="panel gbox" style="text-align:center"><h2>Activation du forfait</h2><p>Ton paiement est en cours de validation. Ton forfait s'active tout seul.</p>
+      <div class="scan" style="margin:0 auto 18px">${spec([.47,.26,.27])}</div><div class="msg ok" id="g-msg"></div><button class="btn go" id="g-go">Vérifier maintenant</button></div>`;
   else if (v === "plans") {
-    const acc = status && status.account, free = acc && acc.tier === "gratuit";
-    const cur = acc && !free ? acc.tier : null;
-    const over = acc && !acc.tier;
-    b.innerHTML = `<h3>${over ? "Ta version gratuite est terminée" : "Choisis ton forfait"}</h3><div class="sub2">${free ? `Version gratuite : encore ${daysLeft(acc.renews)} jour${daysLeft(acc.renews)>1?"s":""}. ` : over ? "Merci d'avoir testé Cotescope ! " : ""}Paiement mensuel, sans engagement, annulable à tout moment.</div>
-      <div class="plans">${PLANS.map(p => `<div class="plan ${p.hot?"hot":""} ${cur===p.id?"cur":""}">${p.hot?`<span class="pt">${p.hot}</span>`:""}
-        <h4>${p.name}</h4><div class="pp"><b>${p.price} €</b><span> / mois</span></div>
+    const cur = ACCOUNT && ACCOUNT.tier && ACCOUNT.tier !== "gratuit" ? ACCOUNT.tier : null;
+    const free = ACCOUNT && ACCOUNT.tier === "gratuit", over = ACCOUNT && !ACCOUNT.tier;
+    c.innerHTML = logo + `<div style="text-align:center;margin-bottom:22px"><h2 style="font-family:var(--disp);font-size:28px">${over?"Ta version gratuite est terminée":"Choisis ton forfait"}</h2>
+      <p class="note" style="font-size:15px">${free?`Version gratuite : encore ${daysLeft(ACCOUNT.renews)} jour(s). `:""}Paiement mensuel par carte, sans engagement, annulable en un clic.</p></div>
+      <div class="plans">${PLANS.map(p => `<div class="panel pl ${p.hot?"hot":""} ${cur===p.id?"cur":""}">${p.hot?`<span class="tag">${p.hot}</span>`:""}
+        <h3>${p.name}</h3><div class="pr">${p.price} €<small> / mois</small></div>
         <ul>${p.feats.map(f => `<li class="${/^Tout /.test(f)?"inc":""}">${esc(f)}</li>`).join("")}</ul>
-        ${cur===p.id ? `<button class="btn full" disabled>Ton forfait actuel</button>` : `<button class="btn ${p.hot?"primary":""} full" data-plan="${p.id}">${cur?"Passer à "+p.name:"Choisir "+p.name}</button>`}</div>`).join("")}</div>
-      ${cur?`<div class="alt">Pour changer de forfait, annule d'abord l'actuel dans « Gérer mon abonnement ».</div>`:""}
-      <div class="msg" id="a-msg"></div>
-      <div class="alt" style="font-size:12px">Paiement sécurisé par carte bancaire via Whop. Cotescope ne voit jamais tes coordonnées bancaires.</div>
-      ${free ? `<div class="alt"><button data-av="skip">Continuer avec la version gratuite</button></div>` : A.canSkip && !cur ? skip : ""}${!A.canSkip && !cur ? `<div class="alt"><button data-av="logout" style="color:var(--muted);font-weight:400">Se déconnecter</button></div>` : ""}`;
+        ${cur===p.id ? `<button class="btn" disabled>Ton forfait actuel</button>` : `<button class="btn ${p.hot?"go":""}" data-buy="${p.id}">Choisir ${p.name}</button>`}</div>`).join("")}</div>
+      <div class="msg" id="g-msg" style="text-align:center;color:var(--bad);margin-top:14px"></div>
+      <p class="note" style="text-align:center;margin-top:8px">Paiement sécurisé par Whop : Cotescope ne voit jamais tes coordonnées bancaires.${cur?" Pour changer de forfait, annule d'abord l'actuel dans « Gérer mon abonnement ».":""}</p>
+      <div style="text-align:center;margin-top:14px">${web || window.__BRIDGE__ ? `<button class="btn" data-gv="close">Retour</button>` : `<button class="btn" id="g-out">Se déconnecter</button>`}</div>`;
   }
-  else if (v === "wait") {
-    b.innerHTML = `<h3>Paiement en cours</h3><div class="sub2">Termine le paiement dans la page qui s'est ouverte.<br>Ton forfait s'active tout seul sur ton compte.</div>
-      <div class="msg ok" id="a-msg">En attente du paiement…</div><button class="btn primary full" id="a-go">J'ai payé, vérifier</button>
-      <div class="alt"><button data-av="plans">Revenir aux forfaits</button></div>`;
-    let n = 0;
-    authTimer = setInterval(async () => {
-      if (++n > 120) return clearInterval(authTimer);
-      const r = await A.account(true);
-      if (r && r.tier) { clearInterval(authTimer); toast("✔ Forfait " + PLAN_NAME[r.tier] + " activé"); A.done(r); }
-    }, 5000);
-  }
-  else if (v === "books") {
-    const sel = new Set(status.books_chosen ? (status.books || []) : []);
-    b.innerHTML = `<h3>Où paries-tu ?</h3><div class="sub2">Coche tous tes bookmakers : chaque pari prendra la meilleure cote parmi eux.</div>
-      <div class="books" id="a-books">${BOOKS.map(([k,n]) => `<label class="${sel.has(k)?"on":""}"><input type="checkbox" value="${k}" ${sel.has(k)?"checked":""}>${n}</label>`).join("")}</div>
-      <div class="msg" id="a-msg"></div><button class="btn primary full" id="a-go">Valider</button>`;
-    $$("#a-books input").forEach(i => i.onchange = () => i.parentNode.classList.toggle("on", i.checked));
-  }
-  const go = $("#a-go"), msg = $("#a-msg");
+  else if (v === "books") c.innerHTML = logo + `<div class="panel gbox"><h2>Où paries-tu ?</h2><p>Coche tous tes bookmakers : chaque pari prendra la meilleure cote parmi eux.</p>
+      <div class="books" id="g-books">${BOOKS.map(([k,n]) => `<label><input type="checkbox" value="${k}">${n}</label>`).join("")}</div>
+      <div class="msg" id="g-msg"></div><button class="btn go" id="g-go" style="width:100%">Valider</button></div>`;
+  const go = $("#g-go"), msg = $("#g-msg");
   const busy = t => { if (!go) return; if (t) { go.dataset.t = go.dataset.t || go.textContent; go.textContent = t; go.disabled = true; } else { if (go.dataset.t) go.textContent = go.dataset.t; go.disabled = false; } };
-  const after = r => {
-    if (r && r.ok) {
-      if (r.tier) { toast(r.tier === "gratuit" ? `✔ Version gratuite activée (${daysLeft(r.renews)} jours)` : "✔ Connecté · forfait " + PLAN_NAME[r.tier]); A.done(r); }
-      else { if (status) status.account = {email: r.email, tier: null, status: r.status}; authView("plans"); }
-    }
-    else msg.textContent = errMsg((r && r.reason) || "network");
+  const after = async r => {
+    if (!r || !r.ok) { msg.textContent = errMsg((r && r.reason) || "network"); return; }
+    if (!r.tier) { gate("plans"); return; }
+    await start();
   };
+  if (v === "books") $$("#g-books input").forEach(i => i.onchange = () => i.parentNode.classList.toggle("on", i.checked));
   if (go) go.onclick = async () => {
     msg.textContent = ""; msg.classList.remove("ok");
     try {
-      if (v === "login") { busy("Connexion…"); after(await A.login($("#a-em").value.trim(), $("#a-pw").value)); }
-      else if (v === "signup") { if (!$("#a-ok").checked) { msg.textContent = "Coche la case pour continuer."; return; } busy("Création…"); after(await A.signup($("#a-em").value.trim(), $("#a-pw2").value)); }
-      else if (v === "forgot") { busy("Envoi…"); const r = await A.forgot($("#a-em").value.trim()); if (r.ok) { msg.classList.add("ok"); msg.textContent = "Si un compte existe, un e-mail vient de partir. Pense à regarder tes spams."; } else msg.textContent = errMsg(r.reason); }
-      else if (v === "reset") { busy("Enregistrement…"); after(await A.reset(x.code, $("#a-pw2").value)); }
-      else if (v === "wait") { busy("Vérification…"); const r = await A.account(true); if (r && r.tier) { toast("✔ Forfait " + PLAN_NAME[r.tier] + " activé"); A.done(r); } else msg.textContent = "Paiement pas encore reçu. Ça peut prendre une minute."; }
-      else if (v === "books") {
-        const L = $$("#a-books input").filter(i => i.checked).map(i => i.value);
-        if (!L.length) { msg.textContent = "Coche au moins un bookmaker."; return; }
-        await api.set_books(L); authClose(); rev = -1; const el = $("#c-books"); if (el) delete el.dataset.done; poll(); toast("✔ Bookmakers enregistrés");
-      }
+      if (v === "login") { busy("Connexion…"); await after(await Auth.login($("#g-em").value.trim(), $("#g-pw").value)); }
+      else if (v === "signup") { if (!$("#g-ok").checked) { msg.textContent = "Coche la case pour continuer."; return; } busy("Création…"); await after(await Auth.signup($("#g-em").value.trim(), $("#g-pw2").value)); }
+      else if (v === "forgot") { busy("Envoi…"); const r = await Auth.forgot($("#g-em").value.trim()); if (r.ok) { msg.classList.add("ok"); msg.textContent = "Si un compte existe, un e-mail vient de partir. Regarde aussi tes spams."; } else msg.textContent = errMsg(r.reason); }
+      else if (v === "reset") { busy("Enregistrement…"); const r = await Auth.reset(x.code, $("#g-pw2").value); if (r.ok) history.replaceState(null, "", location.pathname); await after(r); }
+      else if (v === "wait") { busy("Vérification…"); const r = await Auth.me(true); if (r.ok && r.tier && r.tier !== "gratuit") await start(); else { msg.classList.add("ok"); msg.textContent = "Paiement pas encore reçu, ça peut prendre une minute."; } }
+      else if (v === "books") { const L = $$("#g-books input").filter(i => i.checked).map(i => i.value); if (!L.length) { msg.textContent = "Coche au moins un bookmaker."; return; } call("set_books", L); gate(null); render(); toast("C'est parti !"); }
     } finally { busy(""); }
   };
-  b.querySelectorAll("input").forEach(i => i.onkeydown = e => { if (e.key === "Enter" && go) go.click(); });
-  const f = b.querySelector("input.in"); if (f) setTimeout(() => f.focus(), 50);
+  if (v === "wait") { let n = 0; const t = setInterval(async () => { if (++n > 60 || $("#gate").hidden) return clearInterval(t); const r = await Auth.me(true); if (r.ok && r.tier && r.tier !== "gratuit") { clearInterval(t); await start(); } }, 5000); }
+  c.querySelectorAll("input.in").forEach(i => i.onkeydown = e => { if (e.key === "Enter" && go) go.click(); });
+  const f = c.querySelector("input.in"); if (f) setTimeout(() => f.focus(), 50);
+  const o = $("#g-out"); if (o) o.onclick = Auth.logout;
 }
 document.addEventListener("click", async e => {
-  const av = e.target.closest("[data-av]");
-  if (av) { const v = av.dataset.av; if (v === "skip") authClose(); else if (v === "logout") await auth().logout(); else authView(v); return; }
-  const pl = e.target.closest("[data-plan]");
-  if (pl) {
-    const m = $("#a-msg"); pl.disabled = true;
-    const r = await auth().checkout(pl.dataset.plan); pl.disabled = false;
-    if (r && r.ok) { if (!r.redirect) authView("wait"); } else if (m) m.textContent = errMsg((r && r.reason) || "network");
-    return;
-  }
-  const au = e.target.closest("[data-auth]");
-  if (au) authOpen(au.dataset.auth === "plans" && !(status && status.account) ? "signup" : au.dataset.auth);
+  const v = e.target.closest("[data-gv]");
+  if (v) { if (v.dataset.gv === "close") gate(null); else gate(v.dataset.gv); }
+  const b = e.target.closest("[data-buy]");
+  if (b) { b.disabled = true; const r = await Auth.checkout(b.dataset.buy); b.disabled = false; if (!r.ok) { const m = $("#g-msg"); if (m) m.textContent = errMsg(r.reason); } }
 });
-function renderAcc(){
-  const el = $("#acc-box"); if (!el) return;
-  const a = status.account;
-  const d = x => x ? new Date(x).toLocaleDateString("fr-FR", {day:"numeric", month:"long"}) : "";
-  const key = JSON.stringify(a || null); if (el.dataset.k === key) return; el.dataset.k = key;
-  if (!a) { el.innerHTML = `<div class="accl"><span>Pas connecté : mode démo (matchs fictifs).</span></div><div style="display:flex;gap:8px"><button class="btn primary" data-auth="login">Se connecter</button><button class="btn" data-auth="signup">Créer un compte</button></div>`; return; }
-  const st = a.status === "free" ? `version gratuite jusqu'au ${d(a.renews)}` : a.status === "trialing" ? `essai gratuit jusqu'au ${d(a.renews)}` : a.status === "owner" ? "accès propriétaire" : a.cancel ? `se termine le ${d(a.renews)}` : a.renews ? `renouvellement le ${d(a.renews)}` : "";
-  el.innerHTML = `<div class="accl"><div>${esc(a.email)}</div><div>Forfait : <b>${a.tier ? PLAN_NAME[a.tier] : "aucun"}</b> ${st ? `<span>· ${esc(st)}</span>` : ""}</div></div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn ${a.tier && a.tier!=="gratuit"?"":"primary"}" data-auth="plans">${a.tier && a.tier!=="gratuit" ? "Changer de forfait" : "Choisir un forfait"}</button>
-    ${a.manage ? `<button class="btn" data-url="${esc(a.manage)}">Gérer mon abonnement</button>` : ""}<button class="btn" id="acc-out">Se déconnecter</button></div>`;
-  $("#acc-out").onclick = async () => { await auth().logout(); toast("Déconnecté"); rev = -1; poll(); };
+
+async function start(){
+  try {
+    if (!window.__BRIDGE__) await boot();
+    gate(null);
+    if (!location.hash.startsWith("#/")) location.hash = "/matchs";
+    render();
+    const cfg = call("get_config") || {};
+    if (!cfg.books_chosen) gate("books");
+  } catch(e) {
+    const r = e.reason || e.message;
+    if (["no_plan","inactive","free_over"].includes(r)) gate("plans");
+    else if (r === "session") gate("login");
+    else gate("error", {reason: r});
+  }
 }
-function renderBooks(){
-  const el = $("#c-books"); if (!el || el.dataset.done) return;
-  const sel = new Set(status.books || []);
-  el.innerHTML = BOOKS.map(([k,n]) => `<label class="${sel.has(k)?"on":""}"><input type="checkbox" value="${k}" ${sel.has(k)?"checked":""}>${n}</label>`).join("");
-  el.dataset.done = 1;
-  const sync = () => { $("#c-bookmakers").value = $$("#c-books input").filter(i => i.checked).map(i => i.value).join(",") || "betclic_fr"; };
-  $$("#c-books input").forEach(i => i.onchange = () => { i.parentNode.classList.toggle("on", i.checked); sync(); });
-  sync();
+
+async function init(){
+  if (window.__BRIDGE__) { ACCOUNT = window.__BRIDGE_ACCOUNT__ || {email:"test@cotescope.fr", tier:"elite"}; return start(); }
+  try { CFG = await (await fetch("../config.json", {cache:"no-store"})).json(); } catch(e) { CFG = {}; }
+  const h = new URLSearchParams(location.hash.slice(1));
+  if (h.get("reset")) return gate("reset", {code: h.get("reset")});
+  const paid = location.hash === "#paid";
+  if (paid) history.replaceState(null, "", location.pathname);
+  SESSION = lsGet();
+  if (!SESSION) return gate(h.has("signup") || location.hash === "#signup" ? "signup" : "login");
+  gate("loading", {text:"Connexion à ton compte…"});
+  const me = await Auth.me(true);
+  if (!me.ok) return gate(me.reason === "network" ? "error" : "login", {reason: me.reason});
+  if (!me.tier) return gate(paid ? "wait" : "plans");
+  if (paid && me.tier === "gratuit") return gate("wait");
+  await start();
 }
-const CATS_OF = {0: ["1n2"], 1: ["1n2","dc","total","btts"]};
-function lockChips(){
-  const allow = CATS_OF[tierRank()], elite = tierRank() >= 3, key = tierRank();
-  if (lockChips.k === key) return; lockChips.k = key;
-  $$(".tsel .chip, #f-type .chip").forEach(c => {
-    const cat = c.dataset.cat || c.dataset.t;
-    const locked = (cat === "mine" || cat === "value") ? !elite : !!(allow && cat && cat !== "all" && !allow.includes(cat));
-    if (!c.dataset.lbl) c.dataset.lbl = c.textContent;
-    c.classList.toggle("lockd", locked);
-    c.textContent = (locked ? "🔒 " : "") + c.dataset.lbl;
-    c.title = locked ? "Disponible avec un forfait supérieur" : "";
-    if (locked && c.closest(".tsel")) c.classList.remove("on");
-    if (!locked && c.closest(".tsel") && c.dataset.wasLocked) c.classList.add("on");
-    if (locked) c.dataset.wasLocked = 1;
-  });
-}
-function renderLic(){
-  renderAcc(); renderBooks(); lockChips();
-  $$(".bkn").forEach(x => x.textContent = status.book_name && status.book_name !== "ton bookmaker" ? status.book_name : "de tes bookmakers");
-  const tp = $("#tierp"); if (tp) tp.textContent = status.tier_name || "";
-  const bl = $("#bank-lock");
-  if (bl) { const lk = tierRank() < 3; if (bl.dataset.lk !== String(lk)) { bl.dataset.lk = lk; bl.innerHTML = lk ? lockBox("elite", "Bankroll et stop-loss", "Mise max par jour et arrêt automatique en cas de mauvaise journée.") : ""; if (bl.nextElementSibling) bl.nextElementSibling.style.display = lk ? "none" : ""; } }
-}
-let authShown = false;
-function maybeAuth(){
-  if (authShown || AUTH) return; authShown = true;
-  let skip = false; try { skip = sessionStorage.getItem("authSkip"); } catch(e){}
-  if (!status.license && !skip) authOpen("login");
-  else if ((status.license_state === "no_plan" || status.license_state === "free_over") && !skip) authOpen("plans");
-  else maybeBooks();
-}
-function maybeBooks(){ if (status && status.account && !status.books_chosen && $("#authov").style.display !== "grid") authOpen("books"); }
-window.CotescopeAuth = { open: authOpen, close: authClose, set: impl => { AUTH = impl; }, books: maybeBooks };
-if (window.__WEB__) { const u = $("#btn-upd"); if (u) u.style.display = "none"; }
-
-function start(a){ api = a; setTimeout(maybeAuth, 1200); poll(); setTimeout(refreshB, 300); setInterval(poll, 1500); setInterval(tickClock, 500); }
-window.addEventListener("pywebviewready", () => start(window.pywebview.api));
-window.addEventListener("cotescope-api-ready", e => start(e.detail));
-if (window.pywebview && window.pywebview.api) start(window.pywebview.api);
-if (window.__MOCK_API__) start(window.__MOCK_API__);
-</script>
-<script>
-/* Cotescope – appli web.
-   Même moteur d'analyse que le logiciel (Python), exécuté dans le navigateur avec Pyodide.
-   Le moteur et les données ne sont envoyés par le serveur qu'aux comptes abonnés,
-   et chaque forfait ne reçoit que les données qu'il a payées. */
-(function () {
-  "use strict";
-  const PYODIDE = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/";
-  const LS = "cotescope_session";
-  const SNAP_EVERY = 10 * 60 * 1000;
-  const $ = s => document.querySelector(s);
-  let CFG = {}, SESSION = "", ACCOUNT = null, py = null, web = null, nextSnap = 0, saveT = null, booted = false;
-
-  function lsGet() { try { return localStorage.getItem(LS) || ""; } catch (e) { return ""; } }
-  function lsSet(v) { try { v ? localStorage.setItem(LS, v) : localStorage.removeItem(LS); } catch (e) { /* navigation privée */ } }
-
-  async function server(path, method, body, raw) {
-    if (!CFG.api) return { ok: false, reason: "server_not_configured" };
-    let r;
-    try {
-      r = await fetch(CFG.api.replace(/\/$/, "") + path, {
-        method: method || "GET", cache: "no-store",
-        headers: Object.assign(SESSION ? { Authorization: "Bearer " + SESSION } : {}, body ? { "Content-Type": "application/json" } : {}),
-        body: body ? JSON.stringify(body) : undefined,
-      });
-    } catch (e) { return { ok: false, reason: "network" }; }
-    if (raw && r.ok) return r;
-    let j = {};
-    try { j = await r.json(); } catch (e) { j = { ok: false, reason: "http_" + r.status }; }
-    if (!r.ok && j.ok === undefined) j.ok = false;
-    if (j.reason === "session") { lsSet(""); SESSION = ""; }
-    return j;
-  }
-  function keep(r) {
-    if (r && r.session) { SESSION = r.session; lsSet(SESSION); }
-    if (r && r.ok && r.email) ACCOUNT = { email: r.email, name: r.name, tier: r.tier, status: r.status, renews: r.renews, cancel: r.cancel, manage: r.manage };
-    return r;
-  }
-
-  /* ---------- écran de chargement ---------- */
-  function loading(text, error) {
-    const g = $("#cs-load"); g.style.display = text ? "grid" : "none";
-    if (!text) return;
-    $("#cs-step").textContent = text;
-    $("#cs-retry").style.display = error ? "" : "none";
-    $("#cs-hint").style.display = error ? "none" : "";
-    $("#cs-spin").style.display = error ? "none" : "";
-  }
-
-  /* ---------- compte : l'interface de Cotescope s'occupe des écrans ---------- */
-  const AUTH = {
-    canSkip: false,
-    login: async (e, p) => keep(await server("/api/login", "POST", { email: e, password: p })),
-    signup: async (e, p) => keep(await server("/api/signup", "POST", { email: e, password: p })),
-    forgot: e => server("/api/forgot", "POST", { email: e }),
-    reset: async (code, p) => { const r = keep(await server("/api/reset", "POST", { code, password: p })); if (r.ok) history.replaceState(null, "", location.pathname); return r; },
-    account: async fresh => keep(await server("/api/me" + (fresh ? "?fresh=1" : ""))),
-    checkout: async tier => {
-      const r = await server("/api/checkout", "POST", { tier, return: location.origin + location.pathname + "#paid" });
-      if (r.ok && r.url) { location.href = r.url; r.redirect = true; }
-      return r;
-    },
-    logout: async () => { lsSet(""); SESSION = ""; ACCOUNT = null; try { call("logout", []); } catch (e) { /* pas encore démarré */ } location.reload(); },
-    done: async r => {
-      window.CotescopeAuth.close();
-      if (!booted) await start();
-      else { call("set_account", [ACCOUNT]); await loadSnapshot(); }
-    },
-  };
-
-  /* ---------- moteur ---------- */
-  function loadScript(src) {
-    return new Promise((ok, ko) => {
-      const s = document.createElement("script");
-      s.src = src; s.crossOrigin = "anonymous"; s.onload = ok; s.onerror = () => ko(new Error("network"));
-      document.head.appendChild(s);
-    });
-  }
-  function persist() {
-    clearTimeout(saveT);
-    saveT = setTimeout(() => { try { py.FS.syncfs(false, () => {}); } catch (e) { /* ignore */ } }, 400);
-  }
-  async function loadSnapshot() {
-    const r = await server("/api/snapshot", "GET", null, true);
-    if (!(r instanceof Response)) throw Object.assign(new Error(r.reason || "network"), { reason: r.reason });
-    web.load_snapshot(await r.text());
-    nextSnap = Date.now() + SNAP_EVERY;
-  }
-
-  async function start() {
-    try {
-      loading("Téléchargement des données du jour…");
-      const [eng, snap] = await Promise.all([
-        server("/api/engine", "GET", null, true),
-        server("/api/snapshot", "GET", null, true),
-        window.loadPyodide ? null : loadScript(PYODIDE + "pyodide.js"),
-      ]);
-      for (const r of [eng, snap]) if (!(r instanceof Response)) throw Object.assign(new Error(r.reason), { reason: r.reason });
-      const files = (await eng.json()).files || {}, snapText = await snap.text();
-      loading("Démarrage du moteur d'analyse…");
-      if (!py) {
-        py = await window.loadPyodide({ indexURL: PYODIDE });
-        py.FS.mkdirTree("/data");
-        py.FS.mount(py.FS.filesystems.IDBFS, {}, "/data");
-        await new Promise(ok => py.FS.syncfs(true, () => ok()));
-        py.FS.mkdirTree("/engine");
-      }
-      for (const [name, code] of Object.entries(files)) py.FS.writeFile("/engine/" + name, code);
-      py.runPython("import sys\nif '/engine' not in sys.path: sys.path.insert(0, '/engine')\nimport webapi\nwebapi.boot()");
-      web = py.pyimport("webapi");
-      call("set_account", [ACCOUNT]);
-      loading("Analyse de tous les matchs…");
-      await new Promise(r => setTimeout(r, 30));
-      web.load_snapshot(snapText);
-      nextSnap = Date.now() + SNAP_EVERY;
-      persist();
-      loading("");
-      booted = true;
-      window.dispatchEvent(new CustomEvent("cotescope-api-ready", { detail: API }));
-      setInterval(tick, 60 * 1000);
-      setTimeout(() => window.CotescopeAuth.books(), 1500);
-    } catch (e) {
-      loading("");
-      const r = e.reason || e.message;
-      if (r === "no_plan" || r === "inactive" || r === "free_over") window.CotescopeAuth.open("plans");
-      else if (r === "session") window.CotescopeAuth.open("login");
-      else loading(({ no_data_yet: "Les données du jour arrivent, réessaie dans quelques minutes.", network: "Pas de connexion au serveur Cotescope.", whop_unreachable: "Le service de paiement ne répond pas, réessaie dans un instant." })[r] || ("Erreur : " + r), true);
-    }
-  }
-
-  const READ_ONLY = /^(get_|builder_get|estimate|compute_)/;
-  function call(name, args) {
-    const out = JSON.parse(web.call(name, JSON.stringify(args || [])));
-    if (!READ_ONLY.test(name)) persist();
-    return out;
-  }
-  async function tick() {
-    try {
-      if (Date.now() >= nextSnap) await loadSnapshot();
-      call("tick", []);
-      if (Math.random() < 0.1) { const a = await AUTH.account(); if (a && a.ok) call("set_account", [ACCOUNT]); else if (a && a.reason === "session") location.reload(); }
-    } catch (e) {
-      if (["session", "no_plan", "inactive", "free_over"].includes(e.reason)) location.reload();
-    }
-  }
-
-  /* ---------- objet « api » utilisé par l'interface ---------- */
-  const SPECIAL = {
-    login: AUTH.login, signup: AUTH.signup, forgot: AUTH.forgot, account: AUTH.account,
-    checkout: AUTH.checkout, logout: AUTH.logout,
-    async refresh() { try { await loadSnapshot(); return true; } catch (e) { return false; } },
-    async open_url(u) { if (/^https:\/\//.test(u)) window.open(u, "_blank", "noopener"); return true; },
-    async get_status() {
-      const s = call("get_status", []);
-      s.next_in = Math.max(0, Math.round((nextSnap - Date.now()) / 1000));
-      s.license = true; s.frozen = false;
-      return s;
-    },
-    async check_updates() { return { update: null, version: (call("get_status", []) || {}).version }; },
-    async install_update() { return false; },
-  };
-  const API = new Proxy({}, {
-    get(_, name) {
-      if (typeof name !== "string") return undefined;
-      if (SPECIAL[name]) return SPECIAL[name];
-      return async (...args) => call(name, args);
-    },
-  });
-
-  /* ---------- démarrage ---------- */
-  async function init() {
-    try { CFG = await (await fetch("../config.json", { cache: "no-store" })).json(); } catch (e) { CFG = {}; }
-    window.CotescopeAuth.set(AUTH);
-    const h = new URLSearchParams(location.hash.slice(1));
-    if (h.get("reset")) { window.CotescopeAuth.open("reset", { code: h.get("reset") }); return; }
-    const paid = location.hash === "#paid";
-    if (paid) history.replaceState(null, "", location.pathname);
-    SESSION = lsGet();
-    if (!SESSION) { window.CotescopeAuth.open(h.has("signup") ? "signup" : "login"); return; }
-    loading("Connexion à ton compte…");
-    const me = await AUTH.account(true);
-    loading("");
-    if (!me.ok) { window.CotescopeAuth.open("login"); return; }
-    if (!me.tier) { window.CotescopeAuth.open(paid ? "wait" : "plans"); return; }
-    await start();
-  }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
-})();
-
+init();
 </script>
 </body>
 </html>
