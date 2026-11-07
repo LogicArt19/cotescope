@@ -34,7 +34,7 @@ body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:1
 img{max-width:100%;display:block}
 a{color:inherit}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;letter-spacing:-.02em;line-height:1.08}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
 :focus-visible{outline:2px solid var(--mint);outline-offset:3px;border-radius:6px}
 
@@ -201,8 +201,9 @@ footer .legal{display:flex;gap:16px;flex-wrap:wrap}
 footer .legal a{color:var(--mute);text-decoration:none}
 footer .legal a:hover{color:var(--text)}
 
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;text-align:left;align-items:stretch}
-.tier{position:relative;background:linear-gradient(180deg,var(--deck),#0b0f17);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;text-align:left;align-items:stretch}
+.tier{position:relative;background:linear-gradient(180deg,var(--deck),#0b0f17);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.tier.free{background:transparent;border-style:dashed}
 .tier.hot{border-color:rgba(52,211,153,.5);box-shadow:0 30px 90px -40px rgba(52,211,153,.55);transform:translateY(-8px)}
 .tier h3{font-size:22px;font-weight:600}
 .t-amt{display:flex;align-items:baseline;gap:8px}
@@ -212,7 +213,7 @@ footer .legal a:hover{color:var(--text)}
 .tier .ticks{flex:1;align-content:start}
 .tier .ticks li.inc{color:var(--mute)}
 .tier .ticks li.inc::before{content:"+"}
-.tier .btn{justify-content:center}
+.tier .btn{justify-content:center;text-align:center;padding:12px 14px}
 .badge.alt{background:#7dd3fc}
 
 @media (max-width:920px){
@@ -270,11 +271,11 @@ footer .legal a:hover{color:var(--text)}
       <div class="cta">
         <a class="btn go" href="app/#signup">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          Essayer 7 jours gratuits
+          Commencer gratuitement
         </a>
         <a class="btn" href="#partout">Web ou Windows ?</a>
       </div>
-      <div class="meta"><span>7 jours offerts</span><span>Dès 9,99 €/mois</span><span>Sans engagement</span><span>Navigateur &amp; Windows</span></div>
+      <div class="meta"><span>7 jours gratuits, sans carte</span><span>Puis dès 9,99 €/mois</span><span>Sans engagement</span><span>Navigateur &amp; Windows</span></div>
     </div>
 
     <div class="ticket" aria-label="Exemple de ticket proposé par Cotescope">
@@ -450,9 +451,22 @@ footer .legal a:hover{color:var(--text)}
 <section id="tarifs">
   <div class="wrap" style="text-align:center">
     <span class="kicker">Tarifs</span>
-    <h2 class="sec-h" style="margin-left:auto;margin-right:auto">Trois forfaits. Choisis ton niveau d'analyse.</h2>
-    <p class="sec-p" style="margin:0 auto">Crée ton compte, choisis ton forfait et profite de 7 jours gratuits. Tu peux changer ou annuler quand tu veux.</p>
+    <h2 class="sec-h" style="margin-left:auto;margin-right:auto">Commence gratuitement. Passe à la vitesse supérieure quand tu veux.</h2>
+    <p class="sec-p" style="margin:0 auto">Crée ton compte : la version gratuite marche tout de suite, pendant 7 jours. Ensuite, choisis le forfait qui te va.</p>
     <div class="tiers">
+      <div class="tier free">
+        <h3>Gratuit</h3><div class="t-amt"><b>0 €</b><span>/ 7 jours</span></div>
+        <p class="t-sub">Pour découvrir Cotescope, sans carte bancaire.</p>
+        <ul class="ticks">
+          <li>Ligue 1 et Premier League</li>
+          <li>Résultat du match (1N2) : vraies chances et cote juste</li>
+          <li>Mode objectif : le ticket le plus sûr</li>
+          <li>Mon ticket : cote, chances, gain</li>
+          <li>Appli web + logiciel Windows</li>
+          <li>S'arrête tout seul au bout de 7 jours</li>
+        </ul>
+        <a class="btn" href="app/#signup">Commencer gratuitement</a>
+      </div>
       <div class="tier">
         <h3>Essentiel</h3><div class="t-amt"><b>9,99 €</b><span>/ mois</span></div>
         <p class="t-sub">L'analyse de base pour parier malin.</p>
@@ -464,7 +478,7 @@ footer .legal a:hover{color:var(--text)}
           <li>Forme récente et classement</li>
           <li>Appli web + logiciel Windows</li>
         </ul>
-        <a class="btn" href="app/#signup">Essayer 7 jours gratuits</a>
+        <a class="btn" href="app/#signup">Choisir Essentiel</a>
       </div>
       <div class="tier hot"><span class="badge">Le plus choisi</span>
         <h3>Pro</h3><div class="t-amt"><b>19,99 €</b><span>/ mois</span></div>
@@ -477,7 +491,7 @@ footer .legal a:hover{color:var(--text)}
           <li>Mon ticket : maillon faible et remplacements</li>
           <li>Historique et bilan automatiques</li>
         </ul>
-        <a class="btn go" href="app/#signup">Essayer 7 jours gratuits</a>
+        <a class="btn go" href="app/#signup">Choisir Pro</a>
       </div>
       <div class="tier">
         <span class="badge alt">Analyse maximale</span>
@@ -491,10 +505,10 @@ footer .legal a:hover{color:var(--text)}
           <li>Actus de dernière minute sur chaque match</li>
           <li>Fiabilité mesurée et bankroll avec stop-loss</li>
         </ul>
-        <a class="btn" href="app/#signup">Essayer 7 jours gratuits</a>
+        <a class="btn" href="app/#signup">Choisir Elite</a>
       </div>
     </div>
-    <p class="pay" style="margin-top:22px">7 jours d'essai gratuit sur tous les forfaits · sans engagement · annulable en un clic. Paiement sécurisé par carte bancaire via Whop : Cotescope ne voit jamais tes coordonnées bancaires.</p>
+    <p class="pay" style="margin-top:22px">Version gratuite de 7 jours sans carte bancaire · forfaits sans engagement, annulables en un clic. Paiement sécurisé par carte bancaire via Whop : Cotescope ne voit jamais tes coordonnées bancaires.</p>
   </div>
 </section>
 
@@ -504,7 +518,7 @@ footer .legal a:hover{color:var(--text)}
     <h2 class="sec-h">Prêt en deux minutes.</h2>
     <div class="start">
       <div class="card"><span class="n">01</span><h3>Crée ton compte</h3><p>Une adresse e-mail et un mot de passe, sur le site, dans l'appli web ou dans le logiciel.</p><a class="lnk" href="app/#signup">Créer mon compte →</a></div>
-      <div class="card"><span class="n">02</span><h3>Choisis ton forfait</h3><p>Essentiel, Pro ou Elite, avec 7 jours gratuits. Ton forfait s'active tout seul sur ton compte dès le paiement validé.</p></div>
+      <div class="card"><span class="n">02</span><h3>Teste, puis choisis</h3><p>La version gratuite marche tout de suite pendant 7 jours. Quand tu veux plus, choisis Essentiel, Pro ou Elite : le forfait s'active tout seul dès le paiement validé.</p></div>
       <div class="card"><span class="n">03</span><h3>Coche tes bookmakers</h3><p>Betclic, Winamax, Unibet, PMU, Parions Sport, NetBet : coche ceux où tu paries. Toutes les données sont déjà là, rien d'autre à faire.</p></div>
     </div>
   </div>
@@ -516,7 +530,7 @@ footer .legal a:hover{color:var(--text)}
     <h2 class="sec-h">Les questions qu'on pose souvent.</h2>
     <div class="faq">
       <details><summary>Cotescope garantit-il des gains ?</summary><p>Non. Aucun logiciel ne le peut. Cotescope estime les vraies chances de chaque pari et t'aide à éviter les mauvais tickets. Un pari à 70 % perd quand même 3 fois sur 10. L'historique intégré te montre la fiabilité réelle de l'analyse au fil des matchs.</p></details>
-      <details><summary>Combien ça coûte ?</summary><p>Trois forfaits : Essentiel à 9,99 €, Pro à 19,99 € et Elite à 49,99 € par mois, tous avec 7 jours d'essai gratuit et sans engagement. Tu gères ou annules ton abonnement depuis ton compte, en un clic.</p></details>
+      <details><summary>Combien ça coûte ?</summary><p>La version gratuite dure 7 jours, sans carte bancaire. Ensuite, trois forfaits : Essentiel à 9,99 €, Pro à 19,99 € et Elite à 49,99 € par mois, sans engagement. Tu gères ou annules ton abonnement depuis ton compte, en un clic.</p></details>
       <details><summary>Je dois créer des clés API ?</summary><p>Non. Nos serveurs collectent toutes les données (cotes, résultats, classements, absents, météo) et les analysent pour toi. Tu te connectes simplement avec ton compte Cotescope.</p></details>
       <details><summary>Quelle différence entre l'appli web et le logiciel ?</summary><p>Aucune côté analyse : c'est le même moteur et le même abonnement. Le logiciel Windows est simplement plus pratique : il s'ouvre depuis ton bureau, reste actif en fond et se met à jour tout seul.</p></details>
       <details><summary>Pourquoi certaines cotes sont marquées ≈ ?</summary><p>Pour les marchés secondaires (double chance, buteurs, buts par équipe…), les cotes des bookmakers ne sont pas toutes publiées. Cotescope calcule la vraie probabilité, estime la cote et t'indique le minimum à exiger. Tape la vraie cote vue chez ton bookmaker pour obtenir un verdict exact.</p></details>
@@ -533,9 +547,9 @@ footer .legal a:hover{color:var(--text)}
 <section class="final">
   <div class="wrap">
     <h2>Arrête de parier au feeling.</h2>
-    <p>Essaie Cotescope 7 jours gratuitement et regarde chaque match avec les vraies probabilités sous les yeux.</p>
+    <p>Essaie Cotescope gratuitement pendant 7 jours et regarde chaque match avec les vraies probabilités sous les yeux.</p>
     <div class="cta">
-      <a class="btn go" href="app/#signup">Démarrer l'essai gratuit</a>
+      <a class="btn go" href="app/#signup">Commencer gratuitement</a>
       <a class="btn" href="https://github.com/LogicArt19/cotescope/releases/latest/download/Cotescope.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg> Logiciel Windows</a>
     </div>
   </div>
