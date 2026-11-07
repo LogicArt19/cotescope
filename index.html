@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cotescope-api.cotescope.workers.dev https://api.cotescope.fr; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="description" content="Cotescope calcule les vraies chances de chaque match de foot à partir des cotes de 10 bookmakers, de la forme et des absents, et te construit les tickets les plus sûrs pour ton objectif. 7 jours gratuits.">
+<meta name="description" content="Cotescope calcule les vraies chances de chaque match de foot à partir des cotes de 10 bookmakers, de la forme et des absents, et te construit les tickets les plus sûrs pour ton objectif. Version gratuite sans limite de durée.">
 <meta name="theme-color" content="#060A12">
 <link rel="icon" href="img/logo.svg" type="image/svg+xml">
 <title>Cotescope · Le foot en vraies probabilités</title>
@@ -232,7 +232,7 @@ footer nav a{text-decoration:none}footer nav a:hover{color:var(--chalk)}
       <h1>Chaque match, lu en vraies probabilités.</h1>
       <p class="lead">Cotescope retire la marge des bookmakers, recoupe la forme, les absents et les confrontations, puis te dit qui a vraiment le plus de chances de gagner. Et il construit les tickets les plus sûrs pour ton objectif.</p>
       <div class="cta">
-        <a class="btn go" href="app/#signup">Essayer 7 jours gratuits</a>
+        <a class="btn go" href="app/#signup">Commencer gratuitement</a>
         <a class="btn" href="#match">Voir une page match</a>
       </div>
       <p class="trust">Sans carte bancaire. Marche avec <b>Betclic, Winamax et FDJ (Parions Sport, Unibet)</b>.</p>
@@ -342,20 +342,17 @@ footer nav a{text-decoration:none}footer nav a:hover{color:var(--chalk)}
 
 <section id="tarifs">
   <div class="wrap">
-    <div class="sh" style="margin-left:auto;margin-right:auto;text-align:center"><h2>Commence gratuitement</h2><p>La version gratuite marche tout de suite, pendant 7 jours. Ensuite, choisis le niveau d'analyse qui te va.</p></div>
-    <div class="tiers">
-      <div class="tier free"><h3>Gratuit</h3><div class="pr">0 €<small> 7 jours</small></div><p class="sub">Pour découvrir, sans carte.</p>
-        <ul><li>Tous les matchs des 6 grands championnats</li><li>Résultat du match : vraies chances et cote juste</li><li>Page de chaque match</li><li>Mon ticket : tes vraies chances</li></ul>
+    <div class="sh" style="margin-left:auto;margin-right:auto;text-align:center"><h2>Commence gratuitement</h2><p>La version gratuite marche tout de suite, sans limite de durée. Passe à Essentiel ou Pro quand tu veux plus d'analyse.</p></div>
+    <div class="tiers" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div class="tier free"><h3>Gratuit</h3><div class="pr">0 €<small> pour toujours</small></div><p class="sub">Pour découvrir, sans carte.</p>
+        <ul><li>Ligue 1, Premier League et Liga</li><li>Vraies chances 1N2 de chaque match</li><li>Forme, classement, face-à-face</li><li>1 ticket Objectif par jour</li><li>Coach anti-tilt et pause</li></ul>
         <a class="btn" href="app/#signup">Commencer gratuitement</a></div>
-      <div class="tier"><h3>Essentiel</h3><div class="pr">9,99 €<small> / mois</small></div><p class="sub">L'analyse de base.</p>
-        <ul><li>Les 6 grands championnats</li><li>1N2, double chance, buts, les 2 marquent</li><li>Objectif : les 5 meilleurs tickets</li><li>Forme et classement</li></ul>
-        <a class="btn" href="app/#signup">Choisir Essentiel</a></div>
-      <div class="tier hot"><span class="tag">Le plus choisi</span><h3>Pro</h3><div class="pr">19,99 €<small> / mois</small></div><p class="sub">L'analyse complète.</p>
-        <ul><li class="inc">Tout Essentiel</li><li>Tous les paris : buteurs, handicaps, score exact…</li><li>Page match complète : absents, compos, face-à-face, météo</li><li>Objectif : des dizaines de tickets, triés et filtrés</li><li>Bilan de tes tickets</li></ul>
-        <a class="btn go" href="app/#signup">Choisir Pro</a></div>
-      <div class="tier"><h3>Elite</h3><div class="pr">49,99 €<small> / mois</small></div><p class="sub">Comme un parieur pro.</p>
-        <ul><li class="inc">Tout Pro</li><li>Paris value et sélection de Cotescope</li><li>Mouvement des cotes</li><li>Actus de dernière minute</li><li>Simulateur de stratégies sur 5 saisons</li><li>Fiabilité mesurée et bankroll</li></ul>
-        <a class="btn" href="app/#signup">Choisir Elite</a></div>
+      <div class="tier hot"><span class="tag">Le plus choisi</span><h3>Essentiel</h3><div class="pr">9,99 €<small> / mois</small></div><p class="sub">Toute l'analyse.</p>
+        <ul><li>Tous les championnats, tous les paris</li><li>Objectif illimité : des dizaines de tickets</li><li>Absents, compos sur le terrain, cartons et arbitre</li><li>Cotes boostées, Loto Foot, combiné express</li><li>Bilan automatique, appli sur ton téléphone</li></ul>
+        <a class="btn go" href="app/#signup">Choisir Essentiel</a></div>
+      <div class="tier"><h3>Pro</h3><div class="pr">19,99 €<small> / mois</small></div><p class="sub">Pour gagner sur la durée.</p>
+        <ul><li class="inc">Tout Essentiel</li><li>Alertes Telegram en temps réel</li><li>Paris value et sélection Cotescope</li><li>Simulateur de stratégies sur 5 saisons</li><li>Capital et mise conseillée</li><li>Mouvement des cotes, actus de dernière minute</li></ul>
+        <a class="btn" href="app/#signup">Choisir Pro</a></div>
     </div>
     <p class="pay">Sans engagement, annulable en un clic. Paiement sécurisé par carte via Whop : Cotescope ne voit jamais tes coordonnées bancaires.</p>
   </div>
@@ -366,7 +363,7 @@ footer nav a{text-decoration:none}footer nav a:hover{color:var(--chalk)}
     <div class="sh"><h2>Questions fréquentes</h2></div>
     <div class="faq">
       <details><summary>Cotescope garantit-il des gains ?</summary><p>Non, et aucun outil ne le peut. Cotescope estime les vraies chances de chaque pari pour t'éviter les mauvais tickets. Un pari à 70 % perd quand même 3 fois sur 10 : le bilan public te montre la fiabilité réelle, match après match.</p></details>
-      <details><summary>Comment marche la version gratuite ?</summary><p>Elle démarre dès la création de ton compte, sans carte bancaire, et s'arrête toute seule au bout de 7 jours. Ensuite, tu choisis un forfait si tu veux continuer.</p></details>
+      <details><summary>Comment marche la version gratuite ?</summary><p>Elle est sans limite de durée et sans carte bancaire : Ligue 1, Premier League et Liga, les vraies chances 1N2, la forme et le face-à-face, et 1 ticket Objectif par jour. Tu passes à Essentiel ou Pro quand tu veux plus.</p></details>
       <details><summary>Sur quels bookmakers ça marche ?</summary><p>Betclic, Winamax et FDJ (Parions Sport et Unibet). Les cotes de Pinnacle servent de référence pour calculer les vraies chances. Tu coches ceux où tu as un compte : chaque pari proposé prend la meilleure cote parmi eux.</p></details>
       <details><summary>Je dois installer quelque chose ?</summary><p>Non. Cotescope marche dans ton navigateur, sur ordinateur comme sur téléphone. Tu te connectes avec ton e-mail et ton mot de passe.</p></details>
       <details><summary>Pourquoi certaines cotes sont marquées ≈ ?</summary><p>Pour les paris secondaires (double chance, buteurs, buts par équipe…), toutes les cotes ne sont pas publiées. Cotescope calcule la vraie probabilité, estime la cote et t'indique le minimum à exiger.</p></details>
@@ -380,7 +377,7 @@ footer nav a{text-decoration:none}footer nav a:hover{color:var(--chalk)}
   <div class="wrap" style="position:relative">
     <h2>Arrête de parier au feeling.</h2>
     <p>Crée ton compte en 30 secondes et regarde les matchs de ce soir avec les vraies probabilités sous les yeux.</p>
-    <div class="cta"><a class="btn go" href="app/#signup">Essayer 7 jours gratuits</a><a class="btn" href="app/">Se connecter</a></div>
+    <div class="cta"><a class="btn go" href="app/#signup">Commencer gratuitement</a><a class="btn" href="app/">Se connecter</a></div>
   </div>
 </section>
 

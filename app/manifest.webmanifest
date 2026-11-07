@@ -1,0 +1,12 @@
+{
+  "name": "Cotescope",
+  "short_name": "Cotescope",
+  "description": "Les vraies chances de chaque match de foot.",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "background_color": "#060A12",
+  "theme_color": "#060A12",
+  "lang": "fr",
+  "icons": [{"src": "/img/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}
