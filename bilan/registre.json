@@ -572,13 +572,35 @@
    "p": 0.7211,
    "start": "2026-11-08T14:00:00+00:00",
    "hash": "5df6fc5842d386be9d80210d921ac29c0d8abdfdddce4287265107b327c4a6c4"
+  },
+  {
+   "n": 53,
+   "uid": "5b386dfdf6f76705116fbb4120ee8493|x|dc1N",
+   "recorded": "2026-11-07T19:57:19+00:00",
+   "match": "Valencia - Real Madrid",
+   "selection": "Valencia ou nul (1N)",
+   "odds": 4.0,
+   "p": 0.3231,
+   "start": "2026-11-07T20:00:00+00:00",
+   "hash": "5626221e07e28770553aab50d0f3453b6a96599471de3bbe50307b049b4d8f8b"
+  },
+  {
+   "n": 54,
+   "uid": "5b386dfdf6f76705116fbb4120ee8493|x|u3.5",
+   "recorded": "2026-11-07T19:57:19+00:00",
+   "match": "Valencia - Real Madrid",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.69,
+   "p": 0.747,
+   "start": "2026-11-07T20:00:00+00:00",
+   "hash": "e60ee65d0d548f19579d9323f357d00f2f58feb6705e1e7d0c4a097ba3542cb5"
   }
  ],
  "summary": {
-  "updated": "2026-11-07T19:56:03+00:00",
+  "updated": "2026-11-07T19:57:19+00:00",
   "n": 0,
   "wins": 0,
   "roi": null,
-  "pending": 52
+  "pending": 54
  }
 }
