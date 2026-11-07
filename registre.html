@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<title>Registre public des pronostics · Cotescope</title>
+<style>
+body{margin:0;background:#070a10;color:#e9eef6;font:16px/1.6 "Segoe UI",system-ui,sans-serif}
+.w{max-width:980px;margin:0 auto;padding:40px 24px 80px}
+a{color:#34d399}
+h1{font-size:34px;letter-spacing:-.02em;margin:28px 0 6px}
+p,li{color:#b9c3d3}
+.back{display:inline-flex;gap:10px;align-items:center;text-decoration:none;color:#e9eef6;font-weight:700}
+.back img{width:30px;height:30px}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.kp div{background:#0c1220;border:1px solid #1b2740;border-radius:14px;padding:14px 16px}
+.kp small{color:#8792a5;font-size:12.5px;display:block}.kp b{font-size:24px}
+.chain{padding:12px 14px;border-radius:12px;margin:12px 0;font-size:14.5px}
+.ok{background:rgba(38,224,184,.08);border:1px solid rgba(38,224,184,.35)}.ko{background:rgba(255,107,122,.08);border:1px solid rgba(255,107,122,.35)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+td,th{padding:9px 6px;border-top:1px solid #1b2740;text-align:left;vertical-align:top}
+th{color:#8792a5;font-weight:600;font-size:12px}
+td.r{text-align:right;white-space:nowrap}
+.won{color:#26E0B8}.lost{color:#FF6B7A}.pend{color:#8792a5}
+code{font-size:11px;color:#5c6a86;word-break:break-all}
+@media (max-width:700px){.kp{grid-template-columns:repeat(2,1fr)}.hide{display:none}}
+</style>
+</head>
+<body><div class="w">
+<a class="back" href="./"><img src="img/logo.svg" alt="">Cotescope</a>
+<h1>Registre public des pronostics</h1>
+<p>Chaque pronostic de la sélection Cotescope est inscrit ici <b>avant le coup d'envoi</b>, puis le résultat officiel est ajouté après le match. Rien n'est jamais effacé.</p>
+<p><b>Comment vérifier ?</b> Ce registre est un fichier du dépôt public <a href="https://github.com/LogicArt19/cotescope/commits/main/bilan/registre.json" rel="noopener">GitHub de Cotescope</a> : l'historique daté de GitHub montre quand chaque ligne a été ajoutée, et il ne peut pas être réécrit sans que ça se voie. Chaque ligne porte aussi une empreinte SHA-256 qui dépend de la ligne précédente : modifier un ancien pronostic casserait toute la chaîne. Ton navigateur la recalcule ci-dessous.</p>
+<div id="chain" class="chain">Vérification de la chaîne d'empreintes…</div>
+<div class="kp"><div><small>Pronostics vérifiés</small><b id="k-n">–</b></div><div><small>Gagnés</small><b id="k-w">–</b></div><div><small>Rentabilité (1 € par pari)</small><b id="k-roi">–</b></div><div><small>En attente</small><b id="k-p">–</b></div></div>
+<table><thead><tr><th>#</th><th>Inscrit le</th><th>Match</th><th>Pronostic</th><th class="r">Cote</th><th class="r">Chances</th><th>Résultat</th><th class="hide">Empreinte</th></tr></thead><tbody id="rows"><tr><td colspan="8">Chargement…</td></tr></tbody></table>
+<p><small>Aucun pronostic n'est sûr : un pari à 70 % perd quand même 3 fois sur 10. Ce registre est là pour que tu juges sur pièces. Joueurs Info Service : 09 74 75 13 13.</small></p>
+</div>
+<script src="js/registre.js" defer></script>
+</body>
+</html>
