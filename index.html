@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.workers.dev https://api.cotescope.fr; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cotescope-api.cotescope.workers.dev https://api.cotescope.fr; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="Cotescope calcule les vraies chances de chaque match de foot à partir des cotes de 10 bookmakers, de la forme et des absents, et te construit les tickets les plus sûrs pour ton objectif. 7 jours gratuits.">
 <meta name="theme-color" content="#060A12">
@@ -391,32 +391,6 @@ footer nav a{text-decoration:none}footer nav a:hover{color:var(--chalk)}
   </div>
 </footer>
 
-<script>
-/* Les barres de probabilités se remplissent une fois, au chargement */
-requestAnimationFrame(() => setTimeout(() => {
-  document.querySelectorAll(".spec[data-p]").forEach(s => {
-    const p = s.dataset.p.split(",").map(Number), t = p.reduce((a, b) => a + b, 0);
-    s.querySelectorAll("i").forEach((i, k) => { i.style.width = (p[k] / t * 100) + "%"; });
-  });
-}, 150));
-
-/* Bilan public, en direct depuis le serveur */
-const pc = x => x == null ? "–" : (x * 100).toFixed(0) + " %";
-const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-fetch("config.json", {cache: "no-store"}).then(r => r.json()).then(c => c.api ? fetch(c.api + "/api/public/stats") : null)
-  .then(r => r && r.ok ? r.json() : null).then(d => {
-    if (!d) return;
-    document.getElementById("k-n").textContent = d.n || 0;
-    document.getElementById("k-rate").textContent = d.n ? pc(d.rate) : "–";
-    const roi = document.getElementById("k-roi");
-    roi.textContent = d.n ? (d.roi >= 0 ? "+" : "") + (d.roi * 100).toFixed(1).replace(".", ",") + " %" : "–";
-    if (d.n) roi.style.color = d.roi >= 0 ? "var(--home)" : "var(--bad)";
-    document.getElementById("k-p").textContent = d.pending || 0;
-    const rows = [...(d.upcoming || []).slice(0, 4).map(e => ({...e, status: "pending"})), ...(d.last || []).slice(0, 8)];
-    if (!rows.length) return;
-    const lab = {won: "Gagné", lost: "Perdu", pending: "À venir"};
-    document.getElementById("k-list").innerHTML = rows.map(e => `<div><span>${esc(e.selection)}<small>${esc(e.match)} · ${pc(e.p)} de chances</small></span><b class="num">${String(Number(e.odds).toFixed(2)).replace(".", ",")}</b><span class="st ${e.status}">${lab[e.status] || ""}</span></div>`).join("");
-  }).catch(() => {});
-</script>
+<script src="/js/site.js" defer></script>
 </body>
 </html>
