@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="description" content="Cotescope compare les cotes de 10 bookmakers, analyse la forme, les absents et les confrontations, et construit le ticket le plus sûr pour ton objectif.">
+<meta name="description" content="Cotescope analyse tous les matchs de foot (cotes de 10 bookmakers, forme, absents, face-à-face) et construit le ticket Betclic le plus sûr pour ton objectif. Sur le web et sur Windows. 7 jours gratuits.">
 <link rel="icon" href="img/logo.svg" type="image/svg+xml">
 <title>Cotescope</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +53,8 @@ nav .wrap{display:flex;align-items:center;gap:28px;height:68px}
 .btn.go:hover{box-shadow:0 14px 50px -8px rgba(52,211,153,.7)}
 .btn svg{width:18px;height:18px}
 nav .btn{padding:9px 16px;font-size:14px}
+nav .ghost-sm{background:transparent;border-color:transparent;color:var(--mute)}
+nav .ghost-sm:hover{color:var(--text);border-color:var(--line)}
 
 /* ---------- hero ---------- */
 .hero{position:relative;padding:84px 0 40px;overflow:hidden}
@@ -167,21 +169,57 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-si
 footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;align-items:center}
 .resp{border:1px solid rgba(245,165,36,.3);background:rgba(245,165,36,.06);color:#f3d7a3;border-radius:12px;padding:12px 16px;font-size:13.5px}
 
+/* couverture */
+.leagues{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:34px}
+.lg{background:var(--deck);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.lg b{display:block;font-family:var(--display);font-weight:600;font-size:15px}
+.lg span{color:var(--mute);font-size:13px}
+/* web & windows */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.plan-card{position:relative;background:linear-gradient(180deg,var(--deck),#0b0f17);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.plan-card.hot{border-color:rgba(52,211,153,.4);box-shadow:0 0 70px -30px rgba(52,211,153,.45)}
+.plan-card .btn{align-self:flex-start;margin-top:auto}
+.pc-hd{display:flex;gap:14px;align-items:center}
+.pc-hd h3{font-size:21px;font-weight:600}
+.pc-hd small{color:var(--mute);font-size:13.5px}
+.pc-ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(52,211,153,.1);color:var(--mint);flex:none}
+.pc-ic svg{width:24px;height:24px}
+.badge{position:absolute;top:-11px;right:22px;font-family:var(--mono);font-size:11.5px;background:var(--mint);color:#03140d;padding:3px 10px;border-radius:20px;font-weight:700}
+.ticks{list-style:none;display:grid;gap:10px;text-align:left}
+.ticks li{padding-left:28px;position:relative;color:#c9d2df;font-size:15.5px}
+.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--mint);font-weight:800}
+/* tarifs */
+.price{max-width:520px;margin:40px auto 0;background:linear-gradient(180deg,rgba(20,27,39,.95),rgba(11,15,23,.95));border:1px solid rgba(52,211,153,.4);border-radius:24px;padding:34px;box-shadow:0 40px 100px -40px rgba(52,211,153,.4);display:grid;gap:24px}
+.pr-tag{display:inline-block;font-family:var(--mono);font-size:12.5px;color:var(--mint);border:1px solid rgba(52,211,153,.35);background:rgba(52,211,153,.08);padding:5px 12px;border-radius:30px}
+.pr-amt{margin:14px 0 4px;display:flex;align-items:baseline;justify-content:center;gap:10px}
+.pr-amt b{font-family:var(--display);font-size:60px;font-weight:800;letter-spacing:-.03em}
+.pr-amt span{color:var(--mute)}
+.price small{color:var(--mute);font-size:13.5px}
+.btn.big{justify-content:center;padding:15px 20px;font-size:16px}
+.pay{color:#6f7b90;font-size:12.5px}
+footer .legal{display:flex;gap:16px;flex-wrap:wrap}
+footer .legal a{color:var(--mute);text-decoration:none}
+footer .legal a:hover{color:var(--text)}
+
 @media (max-width:920px){
   .hero .wrap,.feat,.feat:nth-child(even){grid-template-columns:1fr}
   .feat:nth-child(even) .txt{order:0}
   .ticket,.tilt,.feat:nth-child(even) .tilt{transform:none;animation:none}
   .pipe,.grid,.start{grid-template-columns:1fr 1fr}
+  .leagues{grid-template-columns:repeat(3,1fr)}
+  .duo{grid-template-columns:1fr}
   .pipe::before{display:none}
   .pipe{gap:30px}
   .stats{grid-template-columns:1fr 1fr}
   .stats div:nth-child(3){border-left:0}
   .stats div:nth-child(n+3){border-top:1px solid var(--line)}
   .links{display:none}
-  nav .btn{margin-left:auto}
+  nav .btn.go{margin-left:auto}
+  nav .ghost-sm{display:none}
 }
 @media (max-width:560px){
   .pipe,.grid,.start{grid-template-columns:1fr}
+  .leagues{grid-template-columns:1fr 1fr}
   section{padding:64px 0}
 }
 @media (prefers-reduced-motion:reduce){
@@ -198,10 +236,12 @@ footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;
       <a href="#fonctionnement">Fonctionnement</a>
       <a href="#fonctions">Fonctions</a>
       <a href="#analyse">Analyse</a>
-      <a href="#demarrer">Démarrer</a>
+      <a href="#partout">Web &amp; Windows</a>
+      <a href="#tarifs">Tarifs</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="btn go" href="https://github.com/LogicArt19/cotescope/releases/latest/download/Cotescope.exe">Télécharger</a>
+    <a class="btn ghost-sm" href="app/">Se connecter</a>
+    <a class="btn go" href="app/" data-trial>Essai gratuit</a>
   </div>
 </nav>
 
@@ -213,13 +253,13 @@ footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;
       <h1>Le foot,<br>lu en <em>probabilités</em>.</h1>
       <p class="lead">Cotescope compare les cotes de 10 bookmakers, recoupe la forme, les absents, le classement et les confrontations directes, puis te construit le ticket Betclic qui a le plus de chances d'atteindre ton objectif.</p>
       <div class="cta">
-        <a class="btn go" href="https://github.com/LogicArt19/cotescope/releases/latest/download/Cotescope.exe">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>
-          Télécharger pour Windows
+        <a class="btn go" href="app/" data-trial>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          Essayer 7 jours gratuits
         </a>
-        <a class="btn" href="#fonctions">Voir l'appli</a>
+        <a class="btn" href="#partout">Web ou Windows ?</a>
       </div>
-      <div class="meta"><span>Gratuit</span><span>Mises à jour automatiques</span><span>Sans inscription</span></div>
+      <div class="meta"><span>7 jours offerts</span><span>Puis 10 €/mois</span><span>Sans engagement</span><span>Navigateur &amp; Windows</span></div>
     </div>
 
     <div class="ticket" aria-label="Exemple de ticket proposé par Cotescope">
@@ -240,8 +280,8 @@ footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;
     <div class="stats">
       <div><b>10</b><span>bookmakers comparés pour chaque cote</span></div>
       <div><b>11</b><span>types de paris Betclic analysés</span></div>
-      <div><b>14</b><span>championnats suivis</span></div>
-      <div><b>0 €</b><span>sources 100 % gratuites</span></div>
+      <div><b>6</b><span>grands championnats + Ligue des champions</span></div>
+      <div><b>24/7</b><span>données collectées et analysées en continu</span></div>
     </div>
   </div>
 </header>
@@ -345,14 +385,87 @@ footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;
   </div>
 </section>
 
-<section id="demarrer">
+<section id="couverture" style="padding:40px 0 60px">
+  <div class="wrap">
+    <span class="kicker">Couverture</span>
+    <h2 class="sec-h">Tous les matchs qui comptent, toute la semaine.</h2>
+    <p class="sec-p">Nos serveurs récupèrent les cotes, les résultats, les classements, les absents et la météo toutes les heures. Quand tu ouvres Cotescope, tout est déjà analysé.</p>
+    <div class="leagues">
+      <div class="lg"><b>Ligue 1</b><span>France</span></div>
+      <div class="lg"><b>Premier League</b><span>Angleterre</span></div>
+      <div class="lg"><b>LaLiga</b><span>Espagne</span></div>
+      <div class="lg"><b>Serie A</b><span>Italie</span></div>
+      <div class="lg"><b>Bundesliga</b><span>Allemagne</span></div>
+      <div class="lg"><b>Ligue des champions</b><span>Europe</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="partout" style="background:linear-gradient(180deg,transparent,rgba(52,211,153,.04),transparent)">
+  <div class="wrap">
+    <span class="kicker">Web &amp; Windows</span>
+    <h2 class="sec-h">Le même Cotescope, partout.</h2>
+    <p class="sec-p">Ton abonnement marche sur le site et dans le logiciel Windows, avec la même clé. Même moteur d'analyse, mêmes tickets, mêmes fiches de match. Le logiciel, c'est juste plus pratique au quotidien.</p>
+    <div class="duo">
+      <div class="plan-card">
+        <div class="pc-hd"><span class="pc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div><h3>Appli web</h3><small>Dans ton navigateur, sur PC, Mac ou téléphone</small></div></div>
+        <ul class="ticks">
+          <li>Toutes les analyses et tous les matchs</li>
+          <li>Mode objectif, Mon ticket, Meilleurs paris</li>
+          <li>Historique et bilan réglés après chaque match</li>
+          <li>Rien à installer</li>
+        </ul>
+        <a class="btn" href="app/">Ouvrir l'appli web →</a>
+      </div>
+      <div class="plan-card hot">
+        <span class="badge">Plus simple</span>
+        <div class="pc-hd"><span class="pc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><h3>Logiciel Windows</h3><small>Inclus dans l'abonnement</small></div></div>
+        <ul class="ticks">
+          <li>Tout ce que fait l'appli web</li>
+          <li>Une icône sur ton bureau, ouvert en un clic</li>
+          <li>Reste actif en fond et se rafraîchit tout seul</li>
+          <li>Se met à jour automatiquement, version vérifiée</li>
+        </ul>
+        <a class="btn go" href="https://github.com/LogicArt19/cotescope/releases/latest/download/Cotescope.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg> Télécharger pour Windows</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tarifs">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker">Tarifs</span>
+    <h2 class="sec-h" style="margin-left:auto;margin-right:auto">Un seul abonnement. Tout est inclus.</h2>
+    <p class="sec-p" style="margin:0 auto">Essaie tout pendant 7 jours. Si ça ne te sert pas, tu annules en un clic avant la fin de l'essai.</p>
+    <div class="price">
+      <div class="pr-top">
+        <span class="pr-tag">7 jours gratuits</span>
+        <div class="pr-amt"><b>10 €</b><span>/ mois ensuite</span></div>
+        <small>Sans engagement · annulable à tout moment</small>
+      </div>
+      <ul class="ticks">
+        <li>Analyse complète de tous les matchs couverts</li>
+        <li>Mode objectif : le meilleur ticket pour ta mise et ton gain visé</li>
+        <li>Mon ticket : probabilités, maillon faible, remplacements</li>
+        <li>Fiche détaillée par match : forme, absents, face-à-face, météo…</li>
+        <li>Tous les paris Betclic : 1N2, double chance, buts, buteurs, handicaps…</li>
+        <li>Historique, bilan et bankroll</li>
+        <li>Appli web + logiciel Windows</li>
+      </ul>
+      <a class="btn go big" href="app/" data-trial>Démarrer mon essai gratuit</a>
+      <div class="pay">Paiement sécurisé par carte bancaire via Whop. Cotescope ne voit jamais tes coordonnées bancaires.</div>
+    </div>
+  </div>
+</section>
+
+<section id="demarrer" style="padding-top:20px">
   <div class="wrap">
     <span class="kicker">Démarrer</span>
-    <h2 class="sec-h">Prêt en trois minutes.</h2>
+    <h2 class="sec-h">Prêt en deux minutes.</h2>
     <div class="start">
-      <div class="card"><span class="n">01</span><h3>Télécharge Cotescope</h3><p>Un seul fichier, rien à installer. Si Windows affiche « a protégé votre ordinateur », clique sur Informations complémentaires puis Exécuter quand même.</p><a class="lnk" href="https://github.com/LogicArt19/cotescope/releases/latest/download/Cotescope.exe">Cotescope.exe →</a></div>
-      <div class="card"><span class="n">02</span><h3>Ajoute la clé des cotes</h3><p>Crée une clé gratuite sur The Odds API (500 requêtes par mois) et colle-la dans Paramètres. Cotescope règle tout seul la fréquence pour rester gratuit.</p><a class="lnk" href="https://the-odds-api.com">the-odds-api.com →</a></div>
-      <div class="card"><span class="n">03</span><h3>Active l'analyse complète</h3><p>Une clé gratuite football-data.org ajoute le modèle de saison, le classement, les buteurs et les journées. Elle arrive par e-mail.</p><a class="lnk" href="https://www.football-data.org/client/register">football-data.org →</a></div>
+      <div class="card"><span class="n">01</span><h3>Lance ton essai</h3><p>Choisis l'essai gratuit de 7 jours. Rien n'est prélevé avant la fin de l'essai, et tu peux annuler avant.</p><a class="lnk" href="app/" data-trial>Démarrer l'essai →</a></div>
+      <div class="card"><span class="n">02</span><h3>Reçois ta clé</h3><p>Ta clé de licence arrive tout de suite par e-mail et reste visible dans ton espace client.</p></div>
+      <div class="card"><span class="n">03</span><h3>Ouvre Cotescope</h3><p>Colle ta clé dans l'appli web ou dans le logiciel Windows. Toutes les données sont déjà là : aucune clé API à créer.</p><a class="lnk" href="app/">Appli web →</a></div>
     </div>
   </div>
 </section>
@@ -363,11 +476,14 @@ footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;
     <h2 class="sec-h">Les questions qu'on pose souvent.</h2>
     <div class="faq">
       <details><summary>Cotescope garantit-il des gains ?</summary><p>Non. Aucun logiciel ne le peut. Cotescope estime les vraies chances de chaque pari et t'aide à éviter les mauvais tickets. Un pari à 70 % perd quand même 3 fois sur 10. L'historique intégré te montre la fiabilité réelle de l'analyse au fil des matchs.</p></details>
-      <details><summary>C'est vraiment gratuit ?</summary><p>Oui. Le logiciel est gratuit et toutes ses sources ont une offre gratuite : The Odds API, football-data.org, ESPN et Open-Meteo. Cotescope adapte la fréquence des mises à jour pour ne jamais dépasser les quotas gratuits.</p></details>
+      <details><summary>Combien ça coûte ?</summary><p>Les 7 premiers jours sont gratuits. Ensuite c'est 10 € par mois, sans engagement. Tu peux annuler à tout moment depuis ton espace client Whop : si tu annules pendant l'essai, rien n'est prélevé.</p></details>
+      <details><summary>Je dois créer des clés API ?</summary><p>Non. Nos serveurs collectent toutes les données (cotes, résultats, classements, absents, météo) et les analysent pour toi. Tu colles seulement ta clé de licence, reçue par e-mail.</p></details>
+      <details><summary>Quelle différence entre l'appli web et le logiciel ?</summary><p>Aucune côté analyse : c'est le même moteur et le même abonnement. Le logiciel Windows est simplement plus pratique : il s'ouvre depuis ton bureau, reste actif en fond et se met à jour tout seul.</p></details>
       <details><summary>Pourquoi certaines cotes sont marquées ≈ ?</summary><p>Betclic ne publie pas ses cotes pour les marchés secondaires (double chance, buteurs, buts par équipe…). Cotescope calcule la vraie probabilité et estime la cote, puis t'indique le minimum à exiger. Tape la vraie cote vue sur Betclic pour obtenir un verdict exact.</p></details>
-      <details><summary>Comment se font les mises à jour ?</summary><p>Automatiquement. Cotescope vérifie les nouvelles versions toutes les 30 minutes, te propose la mise à jour, l'installe et redémarre. Tes réglages et tes clés sont conservés.</p></details>
+      <details><summary>Comment se font les mises à jour ?</summary><p>Automatiquement. L'appli web est toujours à jour. Le logiciel vérifie les nouvelles versions régulièrement, te propose la mise à jour, l'installe et redémarre. Tes réglages et ton historique sont conservés.</p></details>
       <details><summary>Je peux parier ailleurs que chez Betclic ?</summary><p>Oui. Dans Paramètres, « Où je parie » accepte aussi Winamax, Unibet, PMU, Parions Sport ou NetBet. Les propositions s'adaptent aux bookmakers choisis.</p></details>
-      <details><summary>Sur quel système ça marche ?</summary><p>Windows 10 et 11.</p></details>
+      <details><summary>Sur quel appareil ça marche ?</summary><p>L'appli web marche dans tout navigateur récent (Chrome, Edge, Firefox, Safari), sur ordinateur comme sur téléphone. Le logiciel est pour Windows 10 et 11.</p></details>
+      <details><summary>Le paiement est-il sécurisé ?</summary><p>Oui. Le paiement passe par Whop, une plateforme de paiement spécialisée. Tu paies avec ta carte bancaire, et Cotescope ne voit jamais tes coordonnées bancaires.</p></details>
       <details><summary>Le téléchargement est-il sûr ?</summary><p>Oui. Chaque version est fabriquée automatiquement, testée, puis publiée avec son empreinte numérique (SHA-256). Les mises à jour automatiques vérifient cette empreinte avant de s'installer : un fichier modifié est refusé.</p></details>
     </div>
   </div>
@@ -376,12 +492,10 @@ footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;
 <section class="final">
   <div class="wrap">
     <h2>Arrête de parier au feeling.</h2>
-    <p>Télécharge Cotescope et regarde chaque match avec les vraies probabilités sous les yeux.</p>
+    <p>Essaie Cotescope 7 jours gratuitement et regarde chaque match avec les vraies probabilités sous les yeux.</p>
     <div class="cta">
-      <a class="btn go" href="https://github.com/LogicArt19/cotescope/releases/latest/download/Cotescope.exe">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>
-        Télécharger Cotescope
-      </a>
+      <a class="btn go" href="app/" data-trial>Démarrer l'essai gratuit</a>
+      <a class="btn" href="https://github.com/LogicArt19/cotescope/releases/latest/download/Cotescope.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg> Logiciel Windows</a>
     </div>
   </div>
 </section>
@@ -390,7 +504,7 @@ footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;
   <div class="wrap">
     <a class="brand" href="#top"><img src="img/logo.svg" alt=""><b>Cotescope</b></a>
     <div class="resp"><b>18+</b> · Jouer comporte des risques : endettement, dépendance… Appelez le <b>09 74 75 13 13</b> (appel non surtaxé).</div>
-    <span>Outil d'aide à la décision. Ne mise que ce que tu peux perdre.</span>
+    <div class="legal"><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">CGV</a><a href="confidentialite.html">Confidentialité</a><span>Outil d'aide à la décision. Ne mise que ce que tu peux perdre.</span></div>
   </div>
 </footer>
 
@@ -447,6 +561,10 @@ footer .wrap{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;
 })();
 </script>
 <script>
+/* lien d'essai gratuit (page de paiement Whop), publié dans config.json */
+fetch("config.json", {cache: "no-store"}).then(r => r.ok ? r.json() : null).then(c => {
+  if (c && /^https:\/\//.test(c.whop || "")) document.querySelectorAll("[data-trial]").forEach(a => { a.href = c.whop; a.target = "_blank"; a.rel = "noopener"; });
+}).catch(() => {});
 /* version affichée = dernière version publiée sur GitHub (mise à jour toute seule) */
 fetch("version.json", {cache: "no-store"})
   .then(r => r.ok ? r.json() : null)
