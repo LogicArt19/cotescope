@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.workers.dev https://api.cotescope.fr; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="description" content="Cotescope calcule les vraies chances de chaque match de foot à partir des cotes de 10 bookmakers, de la forme et des absents, et te construit le ticket le plus sûr pour ton objectif. 7 jours gratuits.">
+<meta name="description" content="Cotescope calcule les vraies chances de chaque match de foot à partir des cotes de 10 bookmakers, de la forme et des absents, et te construit les tickets les plus sûrs pour ton objectif. 7 jours gratuits.">
 <meta name="theme-color" content="#060A12">
 <link rel="icon" href="img/logo.svg" type="image/svg+xml">
 <title>Cotescope · Le foot en vraies probabilités</title>
@@ -124,6 +124,19 @@ table.src tr.fin td{font-weight:700;border:0}
 .goalin b{font-family:var(--disp);font-size:22px}
 .chance{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
 .chance b{font-family:var(--disp);color:var(--home);font-size:28px}
+.found{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--fog);margin-bottom:12px}
+.found b{font-family:var(--disp);color:var(--chalk);font-size:18px}
+.tk{border:1px solid var(--rim);border-radius:14px;padding:12px 14px;background:var(--night)}
+.tk.top{border-color:rgba(38,224,184,.5);box-shadow:0 0 40px -20px rgba(38,224,184,.6)}
+.tk .hd{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:10px;align-items:center}
+.tk .hd i{font-style:normal;font-family:var(--disp);color:var(--dim);font-weight:700}
+.tk .hd span{font-weight:700;font-size:14.5px}
+.tk .hd span small{display:block;font-weight:500;color:var(--fog);font-size:12.5px}
+.tk .hd b{font-family:var(--disp);color:var(--home);font-size:20px;text-align:right}
+.tk .hd b small{display:block;font-family:inherit;font-size:12px;color:var(--fog);font-weight:500}
+.tk .leg{font-size:14px;padding:9px 0}
+.tk + .tk{margin-top:8px}
+.rk{margin-top:10px;font-size:12.5px;color:#F3C4CA;background:rgba(255,107,122,.06);border:1px solid rgba(255,107,122,.2);border-radius:10px;padding:8px 10px}
 
 /* bilan */
 .proof{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
@@ -217,7 +230,7 @@ footer nav a{text-decoration:none}footer nav a:hover{color:var(--chalk)}
   <div class="wrap">
     <div>
       <h1>Chaque match, lu en vraies probabilités.</h1>
-      <p class="lead">Cotescope retire la marge des bookmakers, recoupe la forme, les absents et les confrontations, puis te dit qui a vraiment le plus de chances de gagner. Et il construit le ticket le plus sûr pour ton objectif.</p>
+      <p class="lead">Cotescope retire la marge des bookmakers, recoupe la forme, les absents et les confrontations, puis te dit qui a vraiment le plus de chances de gagner. Et il construit les tickets les plus sûrs pour ton objectif.</p>
       <div class="cta">
         <a class="btn go" href="app/#signup">Essayer 7 jours gratuits</a>
         <a class="btn" href="#match">Voir une page match</a>
@@ -284,22 +297,30 @@ footer nav a{text-decoration:none}footer nav a:hover{color:var(--chalk)}
 <section>
   <div class="wrap split rev">
     <div class="txt">
-      <h2>« Je mise 10 €, je veux gagner 40 € »</h2>
-      <p>Tu donnes ta mise et ton gain visé. Cotescope calcule la cote à atteindre et te sort le ticket le plus sûr, puis les alternatives classées.</p>
+      <h2>« Je mise 10 €, je veux gagner 50 € »</h2>
+      <p>Pour gagner 50 € avec 10 €, il faut une cote de 6. Cotescope passe en revue tous les paris de tous les matchs et te sort des dizaines de tickets qui l'atteignent, du plus solide au moins solide.</p>
       <ul class="ticks">
-        <li>Recherche parmi tous les paris de tous les matchs</li>
-        <li>Les vraies chances du ticket, pas seulement la cote</li>
-        <li>Le maillon faible repéré, avec un remplacement proposé</li>
+        <li>Des dizaines de tickets différents, pas un seul</li>
+        <li>Classés uniquement par leurs vraies chances de passer</li>
+        <li>Les risques de chaque ticket, écrits en clair</li>
+        <li>Tri par nombre de matchs, heure de fin ou gain</li>
       </ul>
     </div>
-    <div class="mock" aria-label="Exemple de ticket objectif">
-      <div class="goalin"><div><small>Je mise</small><b>10 €</b></div><div><small>Je veux gagner</small><b>40 €</b></div><div><small>Cote à atteindre</small><b>5,00</b></div></div>
-      <div class="chance"><span style="font-weight:700">Le ticket le plus sûr</span><b>31 %</b></div>
-      <div class="leg"><div>Arsenal gagne<small>Arsenal – Newcastle · 61 % de chances</small></div><b>1,62</b></div>
-      <div class="leg"><div>Inter ou nul<small>Torino – Inter · 81 % de chances</small></div><b>1,22</b></div>
-      <div class="leg"><div>Plus de 1,5 but<small>Lens – Brest · 76 % de chances</small></div><b>1,31</b></div>
-      <div class="leg"><div>Real Madrid gagne<small>Real Madrid – Getafe · 79 % de chances</small></div><b>1,95</b></div>
-      <div class="tot"><span>Cote 5,05 · si ça passe</span><b>50,50 €</b></div>
+    <div class="mock" aria-label="Exemple du mode Objectif">
+      <div class="goalin"><div><small>Je mise</small><b>10 €</b></div><div><small>Je veux gagner</small><b>50 €</b></div><div><small>Cote à atteindre</small><b>6,00</b></div></div>
+      <div class="found"><span><b>48</b> tickets trouvés</span><span>classés par chances réelles</span></div>
+      <div class="tk top">
+        <div class="hd"><i>#1</i><span>Le plus de chances<small>5 matchs · fini dimanche 22:45</small></span><b>13,3 %<small>cote 6,11</small></b></div>
+        <div class="leg"><div>PSG gagne<small>PSG – Angers · 74 % de chances</small></div><b>1,30</b></div>
+        <div class="leg"><div>Real Madrid gagne<small>Real Madrid – Valence · 70 % de chances</small></div><b>1,38</b></div>
+        <div class="leg"><div>Inter gagne<small>Inter – Lecce · 66 % de chances</small></div><b>1,45</b></div>
+        <div class="leg"><div>Bayern gagne<small>Leverkusen – Bayern · 66 % de chances</small></div><b>1,45</b></div>
+        <div class="leg"><div>Plus de 2,5 buts<small>Liverpool – Brighton · 59 % de chances</small></div><b>1,62</b></div>
+        <div class="tot"><span>Si ça passe</span><b>61,10 €</b></div>
+        <div class="rk">5 matchs : une seule surprise suffit à tout perdre. Avec 13 % de chances, joue une petite mise.</div>
+      </div>
+      <div class="tk"><div class="hd"><i>#2</i><span>Autre combinaison<small>4 matchs · Ligue 1, Liga, Serie A</small></span><b>12,9 %<small>cote 6,04</small></b></div></div>
+      <div class="tk"><div class="hd"><i>#3</i><span>Uniquement la Premier League<small>4 matchs · fini samedi 20:30</small></span><b>11,8 %<small>cote 6,22</small></b></div></div>
     </div>
   </div>
 </section>
@@ -326,10 +347,10 @@ footer nav a{text-decoration:none}footer nav a:hover{color:var(--chalk)}
         <ul><li>Tous les matchs des 6 grands championnats</li><li>Résultat du match : vraies chances et cote juste</li><li>Page de chaque match</li><li>Mon ticket : tes vraies chances</li></ul>
         <a class="btn" href="app/#signup">Commencer gratuitement</a></div>
       <div class="tier"><h3>Essentiel</h3><div class="pr">9,99 €<small> / mois</small></div><p class="sub">L'analyse de base.</p>
-        <ul><li>Les 6 grands championnats</li><li>1N2, double chance, buts, les 2 marquent</li><li>Objectif : le ticket le plus sûr</li><li>Forme et classement</li></ul>
+        <ul><li>Les 6 grands championnats</li><li>1N2, double chance, buts, les 2 marquent</li><li>Objectif : les 5 meilleurs tickets</li><li>Forme et classement</li></ul>
         <a class="btn" href="app/#signup">Choisir Essentiel</a></div>
       <div class="tier hot"><span class="tag">Le plus choisi</span><h3>Pro</h3><div class="pr">19,99 €<small> / mois</small></div><p class="sub">L'analyse complète.</p>
-        <ul><li class="inc">Tout Essentiel</li><li>Tous les paris : buteurs, handicaps, score exact…</li><li>Page match complète : absents, compos, face-à-face, météo</li><li>Objectif : toutes les alternatives</li><li>Bilan de tes tickets</li></ul>
+        <ul><li class="inc">Tout Essentiel</li><li>Tous les paris : buteurs, handicaps, score exact…</li><li>Page match complète : absents, compos, face-à-face, météo</li><li>Objectif : des dizaines de tickets, triés et filtrés</li><li>Bilan de tes tickets</li></ul>
         <a class="btn go" href="app/#signup">Choisir Pro</a></div>
       <div class="tier"><h3>Elite</h3><div class="pr">49,99 €<small> / mois</small></div><p class="sub">Comme un parieur pro.</p>
         <ul><li class="inc">Tout Pro</li><li>Paris value et sélection de Cotescope</li><li>Mouvement des cotes</li><li>Actus de dernière minute</li><li>Fiabilité mesurée et bankroll</li></ul>
