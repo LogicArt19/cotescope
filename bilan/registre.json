@@ -44,13 +44,167 @@
    "p": 0.2307,
    "start": "2026-11-08T17:30:00+00:00",
    "hash": "0737e45f8191c0aeba726cdb4ac353acc907d1fb42ebd843456b3be863c73694"
+  },
+  {
+   "n": 5,
+   "uid": "c35673eb1e889309d6985c091a43a3f5|h2h|Elche CF",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Elche CF - Real Betis",
+   "selection": "Victoire Elche CF",
+   "odds": 3.5,
+   "p": 0.3534,
+   "start": "2026-11-08T13:00:00+00:00",
+   "hash": "06dfc0f4c0209dffbbdc1cf2307c47e0c0eebe4989943ace458d6eef38a42cd6"
+  },
+  {
+   "n": 6,
+   "uid": "a529e5762f18d97981194ec3668dc3d3|h2h|Le Mans FC",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Le Mans FC - AS Monaco",
+   "selection": "Victoire Le Mans FC",
+   "odds": 4.75,
+   "p": 0.2602,
+   "start": "2026-11-08T16:15:00+00:00",
+   "hash": "3b0eb94cf1d21276a49e3b65cb36be779ba7a12bcd44ce5e579d3630f933cc88"
+  },
+  {
+   "n": 7,
+   "uid": "c70f9f21f48464daa93973147502e183|h2h|1. FC Köln",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "1. FC Köln - Bayer Leverkusen",
+   "selection": "Victoire 1. FC Köln",
+   "odds": 3.63,
+   "p": 0.3353,
+   "start": "2026-11-08T14:30:00+00:00",
+   "hash": "fb096f58e5528b573422500955f49f49eb7a4fbe2144a963c08968a46b85e30f"
+  },
+  {
+   "n": 8,
+   "uid": "dd247b356d8fc53e4b4f9bfcfe09c924|h2h|Atlético Madrid",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Atlético Madrid - Barcelona",
+   "selection": "Victoire Atlético Madrid",
+   "odds": 3.75,
+   "p": 0.3237,
+   "start": "2026-11-08T20:00:00+00:00",
+   "hash": "086954b19d6114d50222a7864110f9ce75163a3e907879f70c3629195ac1035d"
+  },
+  {
+   "n": 9,
+   "uid": "5ea6b7050b00fcc1832f7938794dd755|h2h|Monza",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Monza - Atalanta BC",
+   "selection": "Victoire Monza",
+   "odds": 3.4,
+   "p": 0.337,
+   "start": "2026-11-08T14:00:00+00:00",
+   "hash": "b19a8e627cefb39d33469975bfa99a664d033008cc0277a34ca38c0e4b0024de"
+  },
+  {
+   "n": 10,
+   "uid": "79ed3df594d7b352ef027128b1ba5d0a|h2h|Ipswich Town",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Ipswich Town - Bournemouth",
+   "selection": "Victoire Ipswich Town",
+   "odds": 3.8,
+   "p": 0.2955,
+   "start": "2026-11-08T14:00:00+00:00",
+   "hash": "5893ddaa3c796c2da6a6413df51086a0d64ee77b66e8294ca6087d94756fef99"
+  },
+  {
+   "n": 11,
+   "uid": "23bf8ea47358ef82f65aa7398a2b3921|h2h|Lazio",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Napoli - Lazio",
+   "selection": "Victoire Lazio",
+   "odds": 2.78,
+   "p": 0.3929,
+   "start": "2026-11-08T11:30:00+00:00",
+   "hash": "1e977755644887898c19daa42abf5a400094b518a395b849e932c3e54bfb55c1"
+  },
+  {
+   "n": 12,
+   "uid": "657fd1ac35832f65fcc6feba93970e10|h2h|Como",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Inter Milan - Como",
+   "selection": "Victoire Como",
+   "odds": 3.35,
+   "p": 0.3291,
+   "start": "2026-11-08T17:00:00+00:00",
+   "hash": "70da44e5228a91b8b0a042c76a3e95db5646dc07db6bc1207c1dd85fa243065f"
+  },
+  {
+   "n": 13,
+   "uid": "b0a4b5448a7e02d9ad1eaa817599fff0|h2h|Aston Villa",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Manchester United - Aston Villa",
+   "selection": "Victoire Aston Villa",
+   "odds": 3.1,
+   "p": 0.3415,
+   "start": "2026-11-08T16:30:00+00:00",
+   "hash": "da7972b186629f97f236e70ae0fe68a9c58f6670e6bb9a568650c22127600f82"
+  },
+  {
+   "n": 14,
+   "uid": "7a68b099b47ed7724062b661cd9af464|h2h|Genoa",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Genoa - AC Milan",
+   "selection": "Victoire Genoa",
+   "odds": 4.2,
+   "p": 0.2543,
+   "start": "2026-11-08T14:00:00+00:00",
+   "hash": "d3d0ecb7363c676fbecce335cd5cefa59ef981c35191214a80a09d5598e1fab5"
+  },
+  {
+   "n": 15,
+   "uid": "81ad04996f63fb60b494d243b13ac586|h2h|Draw",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Villarreal - Getafe",
+   "selection": "Match nul",
+   "odds": 4.5,
+   "p": 0.2366,
+   "start": "2026-11-08T17:30:00+00:00",
+   "hash": "3597529d0872ed65553ff749e4eaff1ae35c4b0aaec998b685dc90d06b8c0b58"
+  },
+  {
+   "n": 16,
+   "uid": "8e3ca98e29be84dd4a882ed05f50fa79|h2h|Brighton and Hove Albion",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Brighton and Hove Albion - Brentford",
+   "selection": "Victoire Brighton and Hove Albion",
+   "odds": 1.87,
+   "p": 0.553,
+   "start": "2026-11-08T14:00:00+00:00",
+   "hash": "8c687d136cf22ab1fd86359578e9e46be1311833406d3f59432693cc765024b7"
+  },
+  {
+   "n": 17,
+   "uid": "8963081c3457212ee238b498bbc33a03|h2h|Draw",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "TSG Hoffenheim - FC Schalke 04",
+   "selection": "Match nul",
+   "odds": 4.33,
+   "p": 0.2422,
+   "start": "2026-11-08T18:30:00+00:00",
+   "hash": "8e8563be7fc065e6e36287e9528cd752288b15740de5396fb9f514b68d07a6c7"
+  },
+  {
+   "n": 18,
+   "uid": "cc9731ee7796fe0d532f11ca2aa522c9|h2h|Brest",
+   "recorded": "2026-11-07T18:42:55+00:00",
+   "match": "Brest - Lyon",
+   "selection": "Victoire Brest",
+   "odds": 2.75,
+   "p": 0.3742,
+   "start": "2026-11-08T16:15:00+00:00",
+   "hash": "11442dcece6989fb1d8627ae91e0543dbabbd17595c346b6aa700923b4f0d101"
   }
  ],
  "summary": {
-  "updated": "2026-11-07T18:29:35+00:00",
+  "updated": "2026-11-07T18:42:55+00:00",
   "n": 0,
   "wins": 0,
   "roi": null,
-  "pending": 4
+  "pending": 18
  }
 }
