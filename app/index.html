@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-GTbZgAK+qvpirKJT80Y2h+JYVOwedAQvCxnWTPmmVAo=' 'unsafe-eval' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; connect-src 'self' https://cdn.jsdelivr.net https://*.workers.dev https://api.cotescope.fr; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-h/1v/8+ifdKIja9k4FtWil/kiEE0MnNJKkmwzdEn1OY=' 'unsafe-eval' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; connect-src 'self' https://cdn.jsdelivr.net https://*.workers.dev https://api.cotescope.fr; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#060A12">
@@ -731,7 +731,7 @@ function tabParis(e){
 }
 function formBox(name, f, tbl){
   if (!f) return `<div class="panel box"><h3>${esc(name)}</h3><p class="note">Forme indisponible.</p></div>`;
-  return `<div class="panel box"><h3>${esc(name)}${tbl&&tbl.rank?` <span class="pill">${tbl.rank}e · ${tbl.points} pts</span>`:""}</h3>
+  return `<div class="panel box"><h3>${esc(name)}${tbl&&tbl.rank?` <span class="pill">${tbl.rank}e · ${tbl.points} pts${tbl.league?" · "+esc(tbl.league):""}</span>`:""}</h3>
     <div class="flist">${(f.last||[]).map(g => `<div class="fg"><span class="fr ${g.res}">${g.res}</span><div class="fm"><b>${{V:"Victoire",N:"Nul",D:"Défaite"}[g.res]||""} ${esc(g.score)}</b> ${g.home?"contre":"chez"} ${esc(g.opp)}<small>${esc(g.date||"")}${g.comp?" · "+esc(g.comp):""} · ${g.home?"domicile":"extérieur"}</small></div></div>`).join("")}</div>
     <p class="note" style="margin-top:10px">${esc(f.streak_txt||"")}${f.home_rec?` · domicile ${esc(f.home_rec)} · extérieur ${esc(f.away_rec)}`:""}</p></div>`;
 }
