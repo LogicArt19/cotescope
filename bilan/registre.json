@@ -22,13 +22,24 @@
    "p": 0.6635,
    "start": "2026-11-08T17:30:00+00:00",
    "hash": "9c090d5929ef989ec50552433e02e9513dd11882b8492a1b5d6e383caf191590"
+  },
+  {
+   "n": 3,
+   "uid": "c1b9696d88719cb8832d794b986cdd68|h2h|SC Freiburg",
+   "recorded": "2026-11-07T17:39:00+00:00",
+   "match": "SC Freiburg - Union Berlin",
+   "selection": "Victoire SC Freiburg",
+   "odds": 1.44,
+   "p": 0.6356,
+   "start": "2026-11-08T16:30:00+00:00",
+   "hash": "ae32d308ae94270c078f08981e4fbdb6ba5acd925a050780fd52e8f492b7c82f"
   }
  ],
  "summary": {
-  "updated": "2026-11-07T17:24:53+00:00",
+  "updated": "2026-11-07T17:39:00+00:00",
   "n": 0,
   "wins": 0,
   "roi": null,
-  "pending": 2
+  "pending": 3
  }
 }
