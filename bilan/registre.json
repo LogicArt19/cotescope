@@ -1610,13 +1610,24 @@
    "p": 0.2179,
    "start": "2026-11-21T12:30:00+00:00",
    "hash": "95144b6fd0f3a23fc0d3676cfa2b8e8eedfe11f0b737584d72a8383ab7a66c6a"
+  },
+  {
+   "n": 143,
+   "uid": "st8597768|h2h|Rio Ave",
+   "recorded": "2026-11-08T17:37:20+00:00",
+   "match": "Rio Ave - Sporting Braga",
+   "selection": "Victoire Rio Ave",
+   "odds": 5.9,
+   "p": 0.2092,
+   "start": "2026-11-08T20:30:00+00:00",
+   "hash": "db07fe1f5bd08456ceccda09c27237bb327a2642268d177e52f707539a3c3fbd"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T17:20:47+00:00",
+  "updated": "2026-11-08T17:37:20+00:00",
   "n": 24,
   "wins": 6,
   "roi": -0.5717,
-  "pending": 118
+  "pending": 119
  }
 }
