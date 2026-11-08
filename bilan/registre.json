@@ -684,13 +684,167 @@
    "p": 0.7162,
    "start": "2026-11-08T20:00:00+00:00",
    "hash": "e8d482e44d271b57d4d3ffce01f8a32bc7d3fc1ca53fb85834f023e186713256"
+  },
+  {
+   "n": 59,
+   "uid": "st8586524|x|bttsN",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Atlético Madrid - Barcelone",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.9,
+   "p": 0.4838,
+   "start": "2026-11-08T20:00:00+00:00",
+   "hash": "cb20a9707971cb0ba56b988dfef70ab838e1dedad91769a403880eb3cb4c65fd"
+  },
+  {
+   "n": 60,
+   "uid": "st8586524|x|u3.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Atlético Madrid - Barcelone",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.84,
+   "p": 0.736,
+   "start": "2026-11-08T20:00:00+00:00",
+   "hash": "8b3bc839a94f3c7a769a5110065f19c7ca87bc9be13e7e2c61d44bd23d5031aa"
+  },
+  {
+   "n": 61,
+   "uid": "st8628396|x|dcN2",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Besiktas - Genclerbirligi SK",
+   "selection": "Nul ou Genclerbirligi SK (N2)",
+   "odds": 4.22,
+   "p": 0.3006,
+   "start": "2026-11-08T18:00:00+00:00",
+   "hash": "0f230d7d66e24b6d4e7cb042b373cc03791d3c6ee754fe2efaf7ea7ee90f5300"
+  },
+  {
+   "n": 62,
+   "uid": "st8533102|x|u1.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Utrecht - Nec Nimègue",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.7,
+   "p": 0.2674,
+   "start": "2026-11-08T19:00:00+00:00",
+   "hash": "f3500f61f71006833fb364eb7e864f6c15d7fa02e060c51424a9c87a732c0c2c"
+  },
+  {
+   "n": 63,
+   "uid": "st8533102|x|bttsN",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Utrecht - Nec Nimègue",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.6,
+   "p": 0.4713,
+   "start": "2026-11-08T19:00:00+00:00",
+   "hash": "af1746b4c222cd26068ad5c363d9ff17feadf1eb10f5a84d7f017fbbec68fa14"
+  },
+  {
+   "n": 64,
+   "uid": "st8522196|x|bttsN",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Inter Milan - Côme",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.54,
+   "p": 0.4781,
+   "start": "2026-11-08T17:00:00+00:00",
+   "hash": "3f4cfd6210cb06ab6e13f1c796a5ced132f280188c08c9ddd6bf560dfd68c051"
+  },
+  {
+   "n": 65,
+   "uid": "st8522196|x|u3.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Inter Milan - Côme",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.6,
+   "p": 0.736,
+   "start": "2026-11-08T17:00:00+00:00",
+   "hash": "fcd5f25828deba11af4032686aa91c71d4dc74ff32322ae678434d7fb9680e68"
+  },
+  {
+   "n": 66,
+   "uid": "st8533102|x|u3.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Utrecht - Nec Nimègue",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.6,
+   "p": 0.736,
+   "start": "2026-11-08T19:00:00+00:00",
+   "hash": "8feb8575d3351cfe141bf79abae90f375df0753feaaf17f96b9ac796589bc89c"
+  },
+  {
+   "n": 67,
+   "uid": "st8586524|x|u4.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Atlético Madrid - Barcelone",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.34,
+   "p": 0.8774,
+   "start": "2026-11-08T20:00:00+00:00",
+   "hash": "ccb3a202365e5f34205a31118c4f3e69b1538b4bf4b1e12a98836e7897217f8f"
+  },
+  {
+   "n": 68,
+   "uid": "st8577746|x|u3.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Saint-Trond - Zulte Waregem",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.51,
+   "p": 0.736,
+   "start": "2026-11-08T18:15:00+00:00",
+   "hash": "bc41e35a6043c3e8053cbd56168e5b2813856564a37a6af309eff45b494deb6c"
+  },
+  {
+   "n": 69,
+   "uid": "st8577746|x|bttsN",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Saint-Trond - Zulte Waregem",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.22,
+   "p": 0.4955,
+   "start": "2026-11-08T18:15:00+00:00",
+   "hash": "d55be4330b35688af54a3ce7e8401c3a1d8a89bb5c17cfe48a11d2b4cf02546a"
+  },
+  {
+   "n": 70,
+   "uid": "st8522196|x|u1.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Inter Milan - Côme",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-08T17:00:00+00:00",
+   "hash": "9c5c9e1b51d9aad7b1d5860d46c209ee36fa815118ea11fbcca7521f159003af"
+  },
+  {
+   "n": 71,
+   "uid": "st8628396|x|u4.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Besiktas - Genclerbirligi SK",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.3,
+   "p": 0.8247,
+   "start": "2026-11-08T18:00:00+00:00",
+   "hash": "be000ff4d60c8e9a20d947515cef67333c2727042a1b1c3507f2e36994ffe1e2"
+  },
+  {
+   "n": 72,
+   "uid": "st8597764|x|u4.5",
+   "recorded": "2026-11-08T16:36:09+00:00",
+   "match": "Estrela Amadora - Benfica",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.3,
+   "p": 0.8,
+   "start": "2026-11-08T20:30:00+00:00",
+   "hash": "dbf1bbbfb2ec54f793764e8f5a7a96fde4313eb8eb8ec3ef0ee61e323171d1f9"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T16:19:21+00:00",
+  "updated": "2026-11-08T16:36:09+00:00",
   "n": 23,
   "wins": 6,
   "roi": -0.553,
-  "pending": 35
+  "pending": 49
  }
 }
