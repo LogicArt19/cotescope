@@ -1632,13 +1632,57 @@
    "p": 0.2425,
    "start": "2026-11-24T17:45:00+00:00",
    "hash": "36a335396622ca9b369d65009349238122bb9819e3ab9b6e191276ffcb81ced4"
+  },
+  {
+   "n": 145,
+   "uid": "651c1847b5cdcc85e60a140edd2282c4|h2h|Nice",
+   "recorded": "2026-11-08T18:02:05+00:00",
+   "match": "Nice - Paris Saint Germain",
+   "selection": "Victoire Nice",
+   "odds": 5.25,
+   "p": 0.2253,
+   "start": "2026-11-21T16:15:00+00:00",
+   "hash": "4bd77b36fbb3a8c3fbfb0cf7ab6eec89e367b28eacde43ee1ade3e62c59c40c4"
+  },
+  {
+   "n": 146,
+   "uid": "st8522210|h2h|Torino",
+   "recorded": "2026-11-08T18:02:05+00:00",
+   "match": "Naples - Torino",
+   "selection": "Victoire Torino",
+   "odds": 6.0,
+   "p": 0.1949,
+   "start": "2026-11-21T19:45:00+00:00",
+   "hash": "46594b7fec4d62583c5fee86b1b62d903d9491dd6d72045610cd68d41d68e2cc"
+  },
+  {
+   "n": 147,
+   "uid": "st8533171|h2h|Nec Nimègue",
+   "recorded": "2026-11-08T18:02:05+00:00",
+   "match": "Nec Nimègue - PSV Eindhoven",
+   "selection": "Victoire Nec Nimègue",
+   "odds": 4.7,
+   "p": 0.245,
+   "start": "2026-11-21T15:30:00+00:00",
+   "hash": "8775c9b6f1f822983b74b5662b38a01d5b95e1a74b3b3a7d73156d6ac316bdf3"
+  },
+  {
+   "n": 148,
+   "uid": "e67ee3a6f93bb90b8aefcf3dd204477c|h2h|Ipswich Town",
+   "recorded": "2026-11-08T18:02:05+00:00",
+   "match": "Tottenham Hotspur - Ipswich Town",
+   "selection": "Victoire Ipswich Town",
+   "odds": 5.85,
+   "p": 0.1929,
+   "start": "2026-11-21T15:00:00+00:00",
+   "hash": "2a76f3b8423d0e948bf951ecf23d24cf6a918385e4f785e438d4ef47446f7929"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T17:51:04+00:00",
+  "updated": "2026-11-08T18:02:05+00:00",
   "n": 24,
   "wins": 6,
   "roi": -0.5717,
-  "pending": 120
+  "pending": 124
  }
 }
