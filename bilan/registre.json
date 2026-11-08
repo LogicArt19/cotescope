@@ -2038,13 +2038,178 @@
    "p": 0.3524,
    "start": "2026-11-09T12:00:00+00:00",
    "hash": "2bbe82bdc5db1556de8f1415a39e83e3dd4e29755c97a163944b105dcc128cb0"
+  },
+  {
+   "n": 173,
+   "uid": "3fb5e4a792cf34a0459efcb79a11a785|x|bttsN",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Real Madrid - PSV Eindhoven",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.42,
+   "p": 0.6696,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "638d78847a5a3673e1848129891f6831e47296b3d7000e656ea0c0d6ba648927"
+  },
+  {
+   "n": 174,
+   "uid": "aea973c122c91837c15e066c757c747f|x|bttsN",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "RB Leipzig - RC Lens",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.54,
+   "p": 0.5635,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "d04a129df5f45e9fcdd5bd98684e29709a63429485ef7a15770f974f8e16fa5f"
+  },
+  {
+   "n": 175,
+   "uid": "aea973c122c91837c15e066c757c747f|x|u3.5",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "RB Leipzig - RC Lens",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.94,
+   "p": 0.736,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "c8a447e260e3be389361d95aed0e5d264cb9c5bce669991096ff9039c0b2fd6b"
+  },
+  {
+   "n": 176,
+   "uid": "3fb5e4a792cf34a0459efcb79a11a785|x|u4.5",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Real Madrid - PSV Eindhoven",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.6,
+   "p": 0.8774,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "e3e398acd5121ccd975300ce47f499de284c716ddef133af7fc027126f47edcc"
+  },
+  {
+   "n": 177,
+   "uid": "st8786667|x|u3.5",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Manchester City - Naples",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.84,
+   "p": 0.736,
+   "start": "2026-11-24T23:00:00+00:00",
+   "hash": "e35318aa091ab85e579db92500ed5bfb8a014d4210f35b98908fc00af917b866"
+  },
+  {
+   "n": 178,
+   "uid": "8e93849b4c1ccbf1c207836d5c470150|x|u3.5",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "ŠK Slovan Bratislava - Real Betis",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.84,
+   "p": 0.736,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "db9e25a78c64f86301c9c2a115e4770f12b27ba68148c65bd8916ee6975fed39"
+  },
+  {
+   "n": 179,
+   "uid": "st8786665|x|u3.5",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Côme - AEK Athènes",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.74,
+   "p": 0.736,
+   "start": "2026-11-24T23:00:00+00:00",
+   "hash": "1aa80bc230688d13ec17e1dd4d34b4fb0f1de2268d5f6e4255f55373a6880259"
+  },
+  {
+   "n": 180,
+   "uid": "8e93849b4c1ccbf1c207836d5c470150|x|bttsN",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "ŠK Slovan Bratislava - Real Betis",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.0,
+   "p": 0.6211,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "929c51361abfed4b402d4c1760ae8a07ad3814431a74f81a5437e8deb8359fe7"
+  },
+  {
+   "n": 181,
+   "uid": "st8786667|x|bttsN",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Manchester City - Naples",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 1.94,
+   "p": 0.6313,
+   "start": "2026-11-24T23:00:00+00:00",
+   "hash": "d4d6c76c7a626fcd6da29d88b09b62840c09db1eb77660c522cf6ac36f2b64df"
+  },
+  {
+   "n": 182,
+   "uid": "st8786665|x|bttsN",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Côme - AEK Athènes",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.05,
+   "p": 0.5966,
+   "start": "2026-11-24T23:00:00+00:00",
+   "hash": "0f4b085b129d2caf910b5ef95500152047596c33bfdca83183a7f72d41fa663f"
+  },
+  {
+   "n": 183,
+   "uid": "st8786667|x|dcN2",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Manchester City - Naples",
+   "selection": "Nul ou Naples (N2)",
+   "odds": 4.2,
+   "p": 0.2728,
+   "start": "2026-11-24T23:00:00+00:00",
+   "hash": "d2d84adbf49f30647d7140954193ff8dc31a7b0dd879846e8e0a3a9c9b2e9483"
+  },
+  {
+   "n": 184,
+   "uid": "st8786665|h2h|Draw",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Côme - AEK Athènes",
+   "selection": "Match nul",
+   "odds": 5.7,
+   "p": 0.1935,
+   "start": "2026-11-24T23:00:00+00:00",
+   "hash": "18a0ee5f39a617bca50cdf2e2ee70705f44d289c98907795576da8983fbc53ab"
+  },
+  {
+   "n": 185,
+   "uid": "3fb5e4a792cf34a0459efcb79a11a785|x|dcN2",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Real Madrid - PSV Eindhoven",
+   "selection": "Nul ou PSV Eindhoven (N2)",
+   "odds": 4.5,
+   "p": 0.2381,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "376833034bf043164d3fd0714d5a3fb8232675dca6780a5c94d667bb7fb07e8b"
+  },
+  {
+   "n": 186,
+   "uid": "st8786665|x|dcN2",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "Côme - AEK Athènes",
+   "selection": "Nul ou AEK Athènes (N2)",
+   "odds": 3.45,
+   "p": 0.3099,
+   "start": "2026-11-24T23:00:00+00:00",
+   "hash": "ca084a4f9b7f6bd517c8068b8ddedca78b871f12367c4f0cac9daef94922cc84"
+  },
+  {
+   "n": 187,
+   "uid": "8e93849b4c1ccbf1c207836d5c470150|x|dc1N",
+   "recorded": "2026-11-08T23:11:52+00:00",
+   "match": "ŠK Slovan Bratislava - Real Betis",
+   "selection": "ŠK Slovan Bratislava ou nul (1N)",
+   "odds": 3.75,
+   "p": 0.283,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "9906188683c4dd71ea4aa455fb7a7c52b5eedfc0f4a154e98108d890ed3d353b"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T22:54:58+00:00",
+  "updated": "2026-11-08T23:11:52+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 99
+  "pending": 114
  }
 }
