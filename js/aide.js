@@ -11,7 +11,7 @@
 
   // ---------- base de réponses ----------
   var A = [
-    { k: ["prix", "tarif", "forfait", "abonnement", "combien", "coute", "payer", "essentiel", "pro ", "offre"], q: "Combien ça coûte ?",
+    { k: ["prix", "tarif", "forfait", "combien", "coute", "payer", "essentiel", "pro ", "offre"], q: "Combien ça coûte ?",
       a: "Il y a 3 formules :<br>• <b>Gratuit</b> (sans limite de durée) : Ligue 1, Premier League et Liga, pari « résultat du match », forme, classement, face-à-face, 1 ticket Objectif par jour.<br>• <b>Essentiel, 9,99 €/mois</b> : tous les championnats, la NBA, le tennis, tous les types de paris, Objectif illimité, absents, compos, cartons, cotes boostées, Loto Foot.<br>• <b>Pro, 19,99 €/mois</b> : tout Essentiel + alertes Telegram, paris value, simulateur de stratégies, gestion du capital, mouvements de cotes et actus de dernière minute.<br>Sans engagement, résiliable en 2 clics." },
     { k: ["resili", "annul", "desabonn", "arreter mon abonnement", "stop abonnement", "engagement"], q: "Comment résilier ?",
       a: "Va dans <b>Mon compte</b> (le rond avec ton initiale, en haut à droite) puis <b>Gérer mon abonnement</b>. Tu résilies en 2 clics, sans justificatif. Ton forfait reste actif jusqu'à la fin de la période déjà payée, puis ton compte repasse en gratuit." },
@@ -19,7 +19,7 @@
       a: "Les paiements sont gérés par Whop (paiement sécurisé, Cotescope ne voit jamais ta carte). Ta facture et l'historique sont dans <b>Mon compte → Gérer mon abonnement</b>. Pour un souci de débit ou une demande de remboursement, écris-nous ci-dessous en donnant l'e-mail de ton compte : on répond vite." },
     { k: ["bookmaker", "betclic", "winamax", "unibet", "fdj", "parions", "bet365", "pinnacle", "site de pari"], q: "Quels bookmakers ?",
       a: "Cotescope suit les vraies cotes de <b>Betclic, Winamax, Unibet (groupe FDJ, Parions Sport en fait partie) et Bet365</b>, tous agréés ANJ en France. Pinnacle sert seulement de référence pour calculer les vraies chances. Coche ceux où tu as un compte dans <b>Mon compte → Mes bookmakers</b> : chaque pari prend la meilleure cote parmi eux." },
-    { k: ["cote fausse", "pas la bonne cote", "cote differente", "cote pas bonne", "pas la meme cote", "cote a change", "mauvaise cote", "cote"], q: "La cote n'est pas la même chez mon bookmaker",
+    { k: ["fausse", "fausses", "faux", "cote fausse", "pas la bonne cote", "cote differente", "cote pas bonne", "pas la meme cote", "cote a change", "mauvaise cote", "cote"], q: "La cote n'est pas la même chez mon bookmaker",
       a: "Les cotes bougent en permanence. Cotescope les relève plusieurs fois par jour (l'heure du relevé et le bookmaker sont écrits sous chaque cote, avec « à vérifier » au-delà de 6 h). Avant de parier, ouvre le match et <b>tape la cote que tu vois chez ton bookmaker</b> : le verdict est recalculé avec la vraie cote." },
     { k: ["objectif", "ticket", "combine", "combiné", "cote visee", "propositions"], q: "Comment marche l'Objectif ?",
       a: "Dans <b>Objectif</b>, tu indiques ta mise et ce que tu veux gagner (par exemple 10 € pour viser 40 €). Cotescope cherche parmi tous les matchs les combinaisons qui atteignent cette cote <b>avec le plus de chances de passer</b>, uniquement avec de vraies cotes. Tu peux filtrer par jour, championnat, type de pari et nombre de matchs, et trier par chances, cote ou fiabilité." },
@@ -41,7 +41,7 @@
       a: "En haut de l'appli, choisis ton sport : <b>Football</b>, <b>Basket · NBA</b> ou <b>Tennis</b> (avec Hommes · ATP et Femmes · WTA séparés). NBA : vainqueur et total de points, blessés, classement, derniers matchs. Tennis : vainqueur et nombre de jeux, classement, 10 derniers matchs, série, fatigue, tie-breaks. Inclus dans Essentiel et Pro." },
     { k: ["fiable", "marche vraiment", "arnaque", "garanti", "sur a 100", "resultat", "bilan", "registre"], q: "Est-ce que c'est fiable ?",
       a: "Aucun outil ne gagne à tous les coups, et personne d'honnête ne le promet. Cotescope calcule des probabilités à partir des cotes de plusieurs bookmakers et des statistiques, sans cœur ni intuition. Tous les pronostics sont enregistrés et horodatés dans le <a href=\"/registre.html\">registre certifié</a> : impossible de les modifier après coup. Le bilan réel est consultable par tout le monde." },
-    { k: ["addict", "dependance", "trop parier", "perdu beaucoup", "dette", "pause", "arreter de parier", "jeu responsable"], q: "Je joue trop / jeu responsable",
+    { k: ["joue trop", "parie trop", "trop parier", "addict", "dependance", "trop parier", "perdu beaucoup", "dette", "pause", "arreter de parier", "jeu responsable"], q: "Je joue trop / jeu responsable",
       a: "Merci d'en parler, c'est important. Dans l'appli, <b>Mon compte → Faire une pause</b> bloque les pronostics pendant la durée que tu choisis. Tu peux aussi demander l'interdiction de jeu auprès de l'ANJ. Aide gratuite et anonyme : <b>Joueurs Info Service, 09 74 75 13 13</b> (appel non surtaxé, 7j/7) ou joueurs-info-service.fr." },
     { k: ["humain", "contact", "parler", "support", "equipe", "quelqu'un", "conseiller", "probleme", "bug", "marche pas", "erreur"], q: "Parler à quelqu'un",
       a: "Pas de souci : écris ton message juste en dessous (avec l'e-mail de ton compte si tu en as un) et il part directement à l'équipe. On répond par e-mail, en général dans la journée.", contact: true },
@@ -55,7 +55,7 @@
     var t = " " + norm(q) + " ", best = null, score = 0;
     A.forEach(function (x) {
       var s = 0;
-      x.k.forEach(function (k) { if (t.indexOf(norm(k)) >= 0) s += k.length > 6 ? 2 : 1; });
+      x.k.forEach(function (k) { if (t.indexOf(norm(k)) >= 0) s += k.length >= 6 ? 2 : 1; });
       if (s > score) { score = s; best = x; }
     });
     return score ? best : null;
