@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cotescope-api.cotescope.workers.dev; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="img/logo.svg" type="image/svg+xml">
 <title>Politique de confidentialité · Cotescope</title>
@@ -26,6 +26,9 @@ small{color:#8792a5}
 
 <h2>Ce que nous collectons</h2>
 <p>Le strict minimum : ton adresse e-mail et ton mot de passe (stocké sous forme chiffrée, jamais en clair) pour ton compte, et le lien vers ton abonnement. Le paiement est traité par Whop, selon sa propre politique de confidentialité.</p>
+<p>Pour la sécurité du compte, nous gardons aussi la liste de tes appareils connectés (type d'appareil, pays et date de connexion, 5 au maximum) et, si tu relies Telegram pour les alertes, l'identifiant de ta conversation avec le bot. Si tu écris à l'assistant d'aide, ton message et ton e-mail sont conservés pour te répondre (200 derniers messages au maximum).</p>
+<h2>E-mails</h2>
+<p>Nous t'envoyons uniquement des e-mails utiles à ton compte : confirmation de ton adresse, mot de passe oublié, alerte de connexion depuis un nouveau pays. Jamais de publicité. L'envoi passe par le service Resend.</p>
 <h2>Ce qui reste sur ton appareil</h2>
 <p>Tes réglages, tes tickets et ton historique sont enregistrés uniquement sur ton appareil (stockage de ton navigateur). Ils ne sont pas envoyés sur nos serveurs.</p>
 <h2>Cookies et suivi</h2>
@@ -36,4 +39,5 @@ small{color:#8792a5}
 <p><span class="todo">[Prénom Nom, adresse]</span></p>
 
 <p style="margin-top:40px"><small>18+ · Jouer comporte des risques : endettement, dépendance… Appelez le 09 74 75 13 13 (appel non surtaxé).</small></p>
-</div></body></html>
+</div><script src="/js/aide.js" defer></script>
+</body></html>
