@@ -933,7 +933,9 @@
    "odds": 1.3,
    "p": 0.8,
    "start": "2026-11-08T20:30:00+00:00",
-   "hash": "dbf1bbbfb2ec54f793764e8f5a7a96fde4313eb8eb8ec3ef0ee61e323171d1f9"
+   "hash": "dbf1bbbfb2ec54f793764e8f5a7a96fde4313eb8eb8ec3ef0ee61e323171d1f9",
+   "status": "lost",
+   "score": "2-3"
   },
   {
    "n": 73,
@@ -1714,7 +1716,9 @@
    "odds": 5.9,
    "p": 0.2092,
    "start": "2026-11-08T20:30:00+00:00",
-   "hash": "db07fe1f5bd08456ceccda09c27237bb327a2642268d177e52f707539a3c3fbd"
+   "hash": "db07fe1f5bd08456ceccda09c27237bb327a2642268d177e52f707539a3c3fbd",
+   "status": "lost",
+   "score": "0-1"
   },
   {
    "n": 144,
@@ -1990,13 +1994,57 @@
    "p": 0.736,
    "start": "2026-11-24T17:45:00+00:00",
    "hash": "c8e9673167c7ccb80baee91700a44070b8e1d459fb8ecf150328b09cb37a96ed"
+  },
+  {
+   "n": 169,
+   "uid": "st8968171|h2h|Yannick Hanfmann",
+   "recorded": "2026-11-08T22:54:58+00:00",
+   "match": "Alex Michelsen - Yannick Hanfmann",
+   "selection": "Victoire Yannick Hanfmann",
+   "odds": 3.4,
+   "p": 0.3135,
+   "start": "2026-11-09T12:00:00+00:00",
+   "hash": "220298d0516b5f9df6e85a44516610052459d1cb54b48f3cc6e6af7069763f54"
+  },
+  {
+   "n": 170,
+   "uid": "st8968172|h2h|Adolfo Daniel Vallejo",
+   "recorded": "2026-11-08T22:54:58+00:00",
+   "match": "Adolfo Daniel Vallejo - Ugo Humbert",
+   "selection": "Victoire Adolfo Daniel Vallejo",
+   "odds": 2.92,
+   "p": 0.3627,
+   "start": "2026-11-09T12:00:00+00:00",
+   "hash": "4b12523ba7c856b5c671f56efbc6d8fb8982f1a3900508e3b098d5af5d283b54"
+  },
+  {
+   "n": 171,
+   "uid": "st8968174|h2h|Miomir Kecmanovic",
+   "recorded": "2026-11-08T22:54:58+00:00",
+   "match": "Arthur Rinderknech - Miomir Kecmanovic",
+   "selection": "Victoire Miomir Kecmanovic",
+   "odds": 2.68,
+   "p": 0.3856,
+   "start": "2026-11-09T12:00:00+00:00",
+   "hash": "c61ff42924d3374d181a08490b56d63807caf9d2715019e348129a708ab6864c"
+  },
+  {
+   "n": 172,
+   "uid": "st8968175|h2h|James Duckworth",
+   "recorded": "2026-11-08T22:54:58+00:00",
+   "match": "James Duckworth - Cameron Norrie",
+   "selection": "Victoire James Duckworth",
+   "odds": 2.92,
+   "p": 0.3524,
+   "start": "2026-11-09T12:00:00+00:00",
+   "hash": "2bbe82bdc5db1556de8f1415a39e83e3dd4e29755c97a163944b105dcc128cb0"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T22:28:43+00:00",
-  "n": 68,
+  "updated": "2026-11-08T22:54:58+00:00",
+  "n": 70,
   "wins": 22,
-  "roi": -0.4113,
-  "pending": 97
+  "roi": -0.4281,
+  "pending": 99
  }
 }
