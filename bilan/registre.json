@@ -1621,13 +1621,24 @@
    "p": 0.2092,
    "start": "2026-11-08T20:30:00+00:00",
    "hash": "db07fe1f5bd08456ceccda09c27237bb327a2642268d177e52f707539a3c3fbd"
+  },
+  {
+   "n": 144,
+   "uid": "50b80f3ebd38bf63663b11ae0afc575b|h2h|LASK",
+   "recorded": "2026-11-08T17:51:04+00:00",
+   "match": "Bodø/Glimt - LASK",
+   "selection": "Victoire LASK",
+   "odds": 4.6,
+   "p": 0.2425,
+   "start": "2026-11-24T17:45:00+00:00",
+   "hash": "36a335396622ca9b369d65009349238122bb9819e3ab9b6e191276ffcb81ced4"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T17:41:44+00:00",
+  "updated": "2026-11-08T17:51:04+00:00",
   "n": 24,
   "wins": 6,
   "roi": -0.5717,
-  "pending": 119
+  "pending": 120
  }
 }
