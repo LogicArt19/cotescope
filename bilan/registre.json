@@ -600,13 +600,24 @@
    "hash": "e60ee65d0d548f19579d9323f357d00f2f58feb6705e1e7d0c4a097ba3542cb5",
    "status": "won",
    "score": "0-3"
+  },
+  {
+   "n": 55,
+   "uid": "dd247b356d8fc53e4b4f9bfcfe09c924|x|dc1N",
+   "recorded": "2026-11-08T09:05:14+00:00",
+   "match": "Atlético Madrid - Barcelona",
+   "selection": "Atlético Madrid ou nul (1N)",
+   "odds": 1.84,
+   "p": 0.57,
+   "start": "2026-11-08T20:00:00+00:00",
+   "hash": "a6e2e8d9f1d6572bc229662a4606143782924b4ed56eb447b8fcb3382faa6344"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T01:30:30+00:00",
+  "updated": "2026-11-08T09:05:14+00:00",
   "n": 3,
   "wins": 2,
   "roi": -0.0033,
-  "pending": 51
+  "pending": 52
  }
 }
