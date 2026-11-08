@@ -23,7 +23,9 @@
    "odds": 1.4,
    "p": 0.6635,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "9c090d5929ef989ec50552433e02e9513dd11882b8492a1b5d6e383caf191590"
+   "hash": "9c090d5929ef989ec50552433e02e9513dd11882b8492a1b5d6e383caf191590",
+   "status": "won",
+   "score": "2-0"
   },
   {
    "n": 3,
@@ -34,7 +36,9 @@
    "odds": 1.44,
    "p": 0.6356,
    "start": "2026-11-08T16:30:00+00:00",
-   "hash": "ae32d308ae94270c078f08981e4fbdb6ba5acd925a050780fd52e8f492b7c82f"
+   "hash": "ae32d308ae94270c078f08981e4fbdb6ba5acd925a050780fd52e8f492b7c82f",
+   "status": "won",
+   "score": "2-0"
   },
   {
    "n": 4,
@@ -45,7 +49,9 @@
    "odds": 4.5,
    "p": 0.2307,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "0737e45f8191c0aeba726cdb4ac353acc907d1fb42ebd843456b3be863c73694"
+   "hash": "0737e45f8191c0aeba726cdb4ac353acc907d1fb42ebd843456b3be863c73694",
+   "status": "lost",
+   "score": "0-0"
   },
   {
    "n": 5,
@@ -69,7 +75,9 @@
    "odds": 4.75,
    "p": 0.2602,
    "start": "2026-11-08T16:15:00+00:00",
-   "hash": "3b0eb94cf1d21276a49e3b65cb36be779ba7a12bcd44ce5e579d3630f933cc88"
+   "hash": "3b0eb94cf1d21276a49e3b65cb36be779ba7a12bcd44ce5e579d3630f933cc88",
+   "status": "lost",
+   "score": "1-1"
   },
   {
    "n": 7,
@@ -143,7 +151,9 @@
    "odds": 3.35,
    "p": 0.3291,
    "start": "2026-11-08T17:00:00+00:00",
-   "hash": "70da44e5228a91b8b0a042c76a3e95db5646dc07db6bc1207c1dd85fa243065f"
+   "hash": "70da44e5228a91b8b0a042c76a3e95db5646dc07db6bc1207c1dd85fa243065f",
+   "status": "lost",
+   "score": "2-0"
   },
   {
    "n": 13,
@@ -154,7 +164,9 @@
    "odds": 3.1,
    "p": 0.3415,
    "start": "2026-11-08T16:30:00+00:00",
-   "hash": "da7972b186629f97f236e70ae0fe68a9c58f6670e6bb9a568650c22127600f82"
+   "hash": "da7972b186629f97f236e70ae0fe68a9c58f6670e6bb9a568650c22127600f82",
+   "status": "lost",
+   "score": "4-4"
   },
   {
    "n": 14,
@@ -178,7 +190,9 @@
    "odds": 4.5,
    "p": 0.2366,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "3597529d0872ed65553ff749e4eaff1ae35c4b0aaec998b685dc90d06b8c0b58"
+   "hash": "3597529d0872ed65553ff749e4eaff1ae35c4b0aaec998b685dc90d06b8c0b58",
+   "status": "lost",
+   "score": "2-0"
   },
   {
    "n": 16,
@@ -213,7 +227,9 @@
    "odds": 2.75,
    "p": 0.3742,
    "start": "2026-11-08T16:15:00+00:00",
-   "hash": "11442dcece6989fb1d8627ae91e0543dbabbd17595c346b6aa700923b4f0d101"
+   "hash": "11442dcece6989fb1d8627ae91e0543dbabbd17595c346b6aa700923b4f0d101",
+   "status": "won",
+   "score": "2-0"
   },
   {
    "n": 19,
@@ -270,7 +286,9 @@
    "odds": 3.5,
    "p": 0.3417,
    "start": "2026-11-08T16:15:00+00:00",
-   "hash": "c46924bcda6f7c16e61b225c17808d738f8caeb61a0396cc1478f129cbde944e"
+   "hash": "c46924bcda6f7c16e61b225c17808d738f8caeb61a0396cc1478f129cbde944e",
+   "status": "void",
+   "score": "1-1"
   },
   {
    "n": 24,
@@ -305,7 +323,9 @@
    "odds": 5.5,
    "p": 0.2049,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "3654b2f09880f73cb513019a56efc79da7c1c1a1a213f2ac971f78d26124e0e3"
+   "hash": "3654b2f09880f73cb513019a56efc79da7c1c1a1a213f2ac971f78d26124e0e3",
+   "status": "lost",
+   "score": "2-0"
   },
   {
    "n": 27,
@@ -327,7 +347,9 @@
    "odds": 5.0,
    "p": 0.2199,
    "start": "2026-11-08T16:30:00+00:00",
-   "hash": "141a8b2a47b2e43b029f7b41505a2de8ac3606699b8698069b93bf3cc755686d"
+   "hash": "141a8b2a47b2e43b029f7b41505a2de8ac3606699b8698069b93bf3cc755686d",
+   "status": "lost",
+   "score": "4-4"
   },
   {
    "n": 29,
@@ -364,7 +386,9 @@
    "odds": 4.0,
    "p": 0.2725,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "68cf0394e116ba39012a6178a6b6ef14686f9273999b042a82ffe79c5a3df953"
+   "hash": "68cf0394e116ba39012a6178a6b6ef14686f9273999b042a82ffe79c5a3df953",
+   "status": "lost",
+   "score": "2-0"
   },
   {
    "n": 32,
@@ -388,7 +412,9 @@
    "odds": 3.0,
    "p": 0.3593,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "fe4d140619f6b81a63efe521ba6f6e8c036130f05f7c62228af7978d1379588c"
+   "hash": "fe4d140619f6b81a63efe521ba6f6e8c036130f05f7c62228af7978d1379588c",
+   "status": "void",
+   "score": "0-0"
   },
   {
    "n": 34,
@@ -399,7 +425,9 @@
    "odds": 2.32,
    "p": 0.4555,
    "start": "2026-11-08T16:30:00+00:00",
-   "hash": "6205af4a236fa1c81b30a6ffcc510ac5e1fe71aac1418a0deae42b26833688cb"
+   "hash": "6205af4a236fa1c81b30a6ffcc510ac5e1fe71aac1418a0deae42b26833688cb",
+   "status": "lost",
+   "score": "4-4"
   },
   {
    "n": 35,
@@ -486,7 +514,9 @@
    "odds": 1.96,
    "p": 0.5265,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "026933120f7ab78e2dd870fb7ae48a3c13df3a173995e73e22259b64d491476a"
+   "hash": "026933120f7ab78e2dd870fb7ae48a3c13df3a173995e73e22259b64d491476a",
+   "status": "won",
+   "score": "2-0"
   },
   {
    "n": 42,
@@ -510,7 +540,9 @@
    "odds": 2.5,
    "p": 0.421,
    "start": "2026-11-08T16:30:00+00:00",
-   "hash": "7e8596b63907cca3fbd460bd9916ebacff01332bdbe497a23630716d3532e0a8"
+   "hash": "7e8596b63907cca3fbd460bd9916ebacff01332bdbe497a23630716d3532e0a8",
+   "status": "lost",
+   "score": "4-4"
   },
   {
    "n": 44,
@@ -521,7 +553,9 @@
    "odds": 2.25,
    "p": 0.4627,
    "start": "2026-11-08T16:30:00+00:00",
-   "hash": "8067b4edc3d7d33bd57951e537a9ab546d8b9ed2b9389ba0b5f7cfeaaf08fd8e"
+   "hash": "8067b4edc3d7d33bd57951e537a9ab546d8b9ed2b9389ba0b5f7cfeaaf08fd8e",
+   "status": "void",
+   "score": "4-4"
   },
   {
    "n": 45,
@@ -532,7 +566,9 @@
    "odds": 3.75,
    "p": 0.2781,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "4bc6cc301c64c0d2467a8ea7cdcfa6194fbad4e3cd41e5a11f8484010a28cbed"
+   "hash": "4bc6cc301c64c0d2467a8ea7cdcfa6194fbad4e3cd41e5a11f8484010a28cbed",
+   "status": "won",
+   "score": "0-0"
   },
   {
    "n": 46,
@@ -543,7 +579,9 @@
    "odds": 1.53,
    "p": 0.677,
    "start": "2026-11-08T16:30:00+00:00",
-   "hash": "3f93907d2f478744b1ae30ba4cb58546411b1a54e18650a460799f671808c4af"
+   "hash": "3f93907d2f478744b1ae30ba4cb58546411b1a54e18650a460799f671808c4af",
+   "status": "lost",
+   "score": "4-4"
   },
   {
    "n": 47,
@@ -580,7 +618,9 @@
    "odds": 3.5,
    "p": 0.2916,
    "start": "2026-11-08T16:15:00+00:00",
-   "hash": "1e55aea7c7b13e3d7e039e039d5ca14e27c299ad0d28fdb105ea3558c25de13e"
+   "hash": "1e55aea7c7b13e3d7e039e039d5ca14e27c299ad0d28fdb105ea3558c25de13e",
+   "status": "lost",
+   "score": "0-2"
   },
   {
    "n": 50,
@@ -591,7 +631,9 @@
    "odds": 1.33,
    "p": 0.7478,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "2955b2977d944c88cb5956838ccd198deddb6a98114b0e22fdf324bbeefddc42"
+   "hash": "2955b2977d944c88cb5956838ccd198deddb6a98114b0e22fdf324bbeefddc42",
+   "status": "won",
+   "score": "0-0"
   },
   {
    "n": 51,
@@ -602,7 +644,9 @@
    "odds": 1.37,
    "p": 0.7417,
    "start": "2026-11-08T17:30:00+00:00",
-   "hash": "39730b7e8743e54e1716047a7e7e2b357a72f4b434d3a8de337ff16f02dd66b6"
+   "hash": "39730b7e8743e54e1716047a7e7e2b357a72f4b434d3a8de337ff16f02dd66b6",
+   "status": "won",
+   "score": "2-0"
   },
   {
    "n": 52,
@@ -663,7 +707,9 @@
    "odds": 2.23,
    "p": 0.4629,
    "start": "2026-11-08T16:15:00+00:00",
-   "hash": "4c111e9300a41f168dfbd7644c8cdbd73dcc205b621e0ef9f186b1f2247621cb"
+   "hash": "4c111e9300a41f168dfbd7644c8cdbd73dcc205b621e0ef9f186b1f2247621cb",
+   "status": "won",
+   "score": "1-1"
   },
   {
    "n": 57,
@@ -718,7 +764,9 @@
    "odds": 4.22,
    "p": 0.3006,
    "start": "2026-11-08T18:00:00+00:00",
-   "hash": "0f230d7d66e24b6d4e7cb042b373cc03791d3c6ee754fe2efaf7ea7ee90f5300"
+   "hash": "0f230d7d66e24b6d4e7cb042b373cc03791d3c6ee754fe2efaf7ea7ee90f5300",
+   "status": "lost",
+   "score": "3-0"
   },
   {
    "n": 62,
@@ -751,7 +799,9 @@
    "odds": 2.54,
    "p": 0.4781,
    "start": "2026-11-08T17:00:00+00:00",
-   "hash": "3f4cfd6210cb06ab6e13f1c796a5ced132f280188c08c9ddd6bf560dfd68c051"
+   "hash": "3f4cfd6210cb06ab6e13f1c796a5ced132f280188c08c9ddd6bf560dfd68c051",
+   "status": "won",
+   "score": "2-0"
   },
   {
    "n": 65,
@@ -762,7 +812,9 @@
    "odds": 1.6,
    "p": 0.736,
    "start": "2026-11-08T17:00:00+00:00",
-   "hash": "fcd5f25828deba11af4032686aa91c71d4dc74ff32322ae678434d7fb9680e68"
+   "hash": "fcd5f25828deba11af4032686aa91c71d4dc74ff32322ae678434d7fb9680e68",
+   "status": "won",
+   "score": "2-0"
   },
   {
    "n": 66,
@@ -795,7 +847,9 @@
    "odds": 1.51,
    "p": 0.736,
    "start": "2026-11-08T18:15:00+00:00",
-   "hash": "bc41e35a6043c3e8053cbd56168e5b2813856564a37a6af309eff45b494deb6c"
+   "hash": "bc41e35a6043c3e8053cbd56168e5b2813856564a37a6af309eff45b494deb6c",
+   "status": "lost",
+   "score": "4-1"
   },
   {
    "n": 69,
@@ -806,7 +860,9 @@
    "odds": 2.22,
    "p": 0.4955,
    "start": "2026-11-08T18:15:00+00:00",
-   "hash": "d55be4330b35688af54a3ce7e8401c3a1d8a89bb5c17cfe48a11d2b4cf02546a"
+   "hash": "d55be4330b35688af54a3ce7e8401c3a1d8a89bb5c17cfe48a11d2b4cf02546a",
+   "status": "lost",
+   "score": "4-1"
   },
   {
    "n": 70,
@@ -817,7 +873,9 @@
    "odds": 4.0,
    "p": 0.2674,
    "start": "2026-11-08T17:00:00+00:00",
-   "hash": "9c5c9e1b51d9aad7b1d5860d46c209ee36fa815118ea11fbcca7521f159003af"
+   "hash": "9c5c9e1b51d9aad7b1d5860d46c209ee36fa815118ea11fbcca7521f159003af",
+   "status": "lost",
+   "score": "2-0"
   },
   {
    "n": 71,
@@ -828,7 +886,9 @@
    "odds": 1.3,
    "p": 0.8247,
    "start": "2026-11-08T18:00:00+00:00",
-   "hash": "be000ff4d60c8e9a20d947515cef67333c2727042a1b1c3507f2e36994ffe1e2"
+   "hash": "be000ff4d60c8e9a20d947515cef67333c2727042a1b1c3507f2e36994ffe1e2",
+   "status": "won",
+   "score": "3-0"
   },
   {
    "n": 72,
@@ -1676,13 +1736,167 @@
    "p": 0.1929,
    "start": "2026-11-21T15:00:00+00:00",
    "hash": "2a76f3b8423d0e948bf951ecf23d24cf6a918385e4f785e438d4ef47446f7929"
+  },
+  {
+   "n": 149,
+   "uid": "st8533168|h2h|Cambuur",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Utrecht - Cambuur",
+   "selection": "Victoire Cambuur",
+   "odds": 3.68,
+   "p": 0.4176,
+   "start": "2026-11-21T17:45:00+00:00",
+   "hash": "303cca165fc273edbef7d00b23a76af64bb5872b2103277eee7d3fa21f9c261a"
+  },
+  {
+   "n": 150,
+   "uid": "st8533168|x|dcN2",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Utrecht - Cambuur",
+   "selection": "Nul ou Cambuur (N2)",
+   "odds": 1.9,
+   "p": 0.6564,
+   "start": "2026-11-21T17:45:00+00:00",
+   "hash": "a3ce1f26bfc512f051574c5858c73a1d6ab88d2f180a3d485269fac6032ed7e2"
+  },
+  {
+   "n": 151,
+   "uid": "st8596026|x|dcN2",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Bayer Leverkusen - SC Paderborn 07",
+   "selection": "Nul ou SC Paderborn 07 (N2)",
+   "odds": 3.5,
+   "p": 0.3591,
+   "start": "2026-11-21T14:30:00+00:00",
+   "hash": "d7537e161b755005d756aef5729c56f6da341da5c12bbb60816fd1a9099c96a6"
+  },
+  {
+   "n": 152,
+   "uid": "st8533170|x|u3.5",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Go Ahead Eagles - Fortuna Sittard",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.7,
+   "p": 0.736,
+   "start": "2026-11-22T15:45:00+00:00",
+   "hash": "3004a33e569d23d7f0871440686cb7cc572d3e974ea0a2217008f7b19fe80f60"
+  },
+  {
+   "n": 153,
+   "uid": "st8533166|h2h|Heerenveen",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Groningen - Heerenveen",
+   "selection": "Victoire Heerenveen",
+   "odds": 2.75,
+   "p": 0.4057,
+   "start": "2026-11-21T20:00:00+00:00",
+   "hash": "4115b24aa0c5e5efc1d3740d39629eff9bd9473f82f6d3c948df6e1d98d48a81"
+  },
+  {
+   "n": 154,
+   "uid": "ba719e378ac366262013bdb51a06aa6f|h2h|Draw",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Como - AEK Athens",
+   "selection": "Match nul",
+   "odds": 5.6,
+   "p": 0.1964,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "798c9192840411c1a4453c0cbe0cc3debba42694bd964b326ecd720a6e4adc8b"
+  },
+  {
+   "n": 155,
+   "uid": "8e93849b4c1ccbf1c207836d5c470150|h2h|Draw",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "ŠK Slovan Bratislava - Real Betis",
+   "selection": "Match nul",
+   "odds": 5.8,
+   "p": 0.1851,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "855e12c423df777235ea1072836d6a445bee3302d757b694ef44bc739603b1f8"
+  },
+  {
+   "n": 156,
+   "uid": "st8522211|x|dc1N",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Parme - AS Roma",
+   "selection": "Parme ou nul (1N)",
+   "odds": 3.5,
+   "p": 0.3111,
+   "start": "2026-11-21T17:00:00+00:00",
+   "hash": "2a1cdfc278f1158eb7e9144e20de4d0b9cee56e859a7c15282a316dc3a51b6a0"
+  },
+  {
+   "n": 157,
+   "uid": "67846fc0359aeff2d0b6f3f8a2a674f4|x|dc1N",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "FC Schalke 04 - VfB Stuttgart",
+   "selection": "FC Schalke 04 ou nul (1N)",
+   "odds": 1.9,
+   "p": 0.5471,
+   "start": "2026-11-21T17:30:00+00:00",
+   "hash": "f18cb3a39c1017dc7f4dc378a329458d4c7699aedabe7c3c16371e10c93d39f6"
+  },
+  {
+   "n": 158,
+   "uid": "aa77e2a08a1a003b0bbb62a5f8e8ae42|totals|Under|2.5",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Brentford - Everton",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.03,
+   "p": 0.51,
+   "start": "2026-11-23T20:00:00+00:00",
+   "hash": "0bb70056785b4f311947f89722e3416b7e136e9f8ed489a01af484b3a8e834c3"
+  },
+  {
+   "n": 159,
+   "uid": "aea973c122c91837c15e066c757c747f|h2h|Draw",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "RB Leipzig - RC Lens",
+   "selection": "Match nul",
+   "odds": 5.1,
+   "p": 0.2026,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "612db907c951ce4135b1236726c920842bf0b849eb89fa2f18aebdcbe5d8604f"
+  },
+  {
+   "n": 160,
+   "uid": "dcee36f9b8a9989972b6d4ddde76c4c7|h2h|Draw",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Athletic Bilbao - Espanyol",
+   "selection": "Match nul",
+   "odds": 4.2,
+   "p": 0.2458,
+   "start": "2026-11-20T20:00:00+00:00",
+   "hash": "68d541e59bc8104d2f94b4074f89d1ce1d668b1ce25dbc229650460d3a691563"
+  },
+  {
+   "n": 161,
+   "uid": "dcee36f9b8a9989972b6d4ddde76c4c7|totals|Under|2.5",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Athletic Bilbao - Espanyol",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.94,
+   "p": 0.5316,
+   "start": "2026-11-20T20:00:00+00:00",
+   "hash": "d4b9918cbce687e635b253334b504ee0182de47d003505f964c3c90ab35fc30a"
+  },
+  {
+   "n": 162,
+   "uid": "6ef39b0fd8839f6e93a3de32523e9807|h2h|Fulham",
+   "recorded": "2026-11-08T20:32:55+00:00",
+   "match": "Manchester City - Fulham",
+   "selection": "Victoire Fulham",
+   "odds": 6.0,
+   "p": 0.1702,
+   "start": "2026-11-21T12:30:00+00:00",
+   "hash": "aaef5ee83b6d825fb371c75a62c0c1a20b118c5823862286fb167f785a274b26"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T18:02:05+00:00",
-  "n": 24,
-  "wins": 6,
-  "roi": -0.5717,
-  "pending": 124
+  "updated": "2026-11-08T20:32:55+00:00",
+  "n": 51,
+  "wins": 17,
+  "roi": -0.3735,
+  "pending": 108
  }
 }
