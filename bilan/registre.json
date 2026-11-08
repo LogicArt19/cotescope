@@ -216,7 +216,9 @@
    "odds": 4.33,
    "p": 0.2422,
    "start": "2026-11-08T18:30:00+00:00",
-   "hash": "8e8563be7fc065e6e36287e9528cd752288b15740de5396fb9f514b68d07a6c7"
+   "hash": "8e8563be7fc065e6e36287e9528cd752288b15740de5396fb9f514b68d07a6c7",
+   "status": "lost",
+   "score": "2-1"
   },
   {
    "n": 18,
@@ -253,7 +255,9 @@
    "odds": 5.5,
    "p": 0.2289,
    "start": "2026-11-08T18:30:00+00:00",
-   "hash": "2124571ac80cdcf3d49ef8848a104a2b6282e93831713d0b298d352c3a6a1b0d"
+   "hash": "2124571ac80cdcf3d49ef8848a104a2b6282e93831713d0b298d352c3a6a1b0d",
+   "status": "lost",
+   "score": "2-1"
   },
   {
    "n": 21,
@@ -275,7 +279,9 @@
    "odds": 2.57,
    "p": 0.4741,
    "start": "2026-11-08T18:30:00+00:00",
-   "hash": "a2ba3fa7e6e7d31c975a94b0e8770ba40821f42e14717634b15f2a775f2bce0c"
+   "hash": "a2ba3fa7e6e7d31c975a94b0e8770ba40821f42e14717634b15f2a775f2bce0c",
+   "status": "lost",
+   "score": "2-1"
   },
   {
    "n": 23,
@@ -312,7 +318,9 @@
    "odds": 2.37,
    "p": 0.476,
    "start": "2026-11-08T18:30:00+00:00",
-   "hash": "988337d8d3503a348620bfe58b12241f7a75f286e19e94471fe46d853095dd59"
+   "hash": "988337d8d3503a348620bfe58b12241f7a75f286e19e94471fe46d853095dd59",
+   "status": "lost",
+   "score": "2-1"
   },
   {
    "n": 26,
@@ -336,7 +344,9 @@
    "odds": 1.57,
    "p": 0.6891,
    "start": "2026-11-08T18:30:00+00:00",
-   "hash": "ca419d4a85218b24ce7616398ce506bc82af45a58437b4cf4ad768635683ccc6"
+   "hash": "ca419d4a85218b24ce7616398ce506bc82af45a58437b4cf4ad768635683ccc6",
+   "status": "won",
+   "score": "2-1"
   },
   {
    "n": 28,
@@ -777,7 +787,9 @@
    "odds": 4.7,
    "p": 0.2674,
    "start": "2026-11-08T19:00:00+00:00",
-   "hash": "f3500f61f71006833fb364eb7e864f6c15d7fa02e060c51424a9c87a732c0c2c"
+   "hash": "f3500f61f71006833fb364eb7e864f6c15d7fa02e060c51424a9c87a732c0c2c",
+   "status": "lost",
+   "score": "2-3"
   },
   {
    "n": 63,
@@ -788,7 +800,9 @@
    "odds": 2.6,
    "p": 0.4713,
    "start": "2026-11-08T19:00:00+00:00",
-   "hash": "af1746b4c222cd26068ad5c363d9ff17feadf1eb10f5a84d7f017fbbec68fa14"
+   "hash": "af1746b4c222cd26068ad5c363d9ff17feadf1eb10f5a84d7f017fbbec68fa14",
+   "status": "lost",
+   "score": "2-3"
   },
   {
    "n": 64,
@@ -825,7 +839,9 @@
    "odds": 1.6,
    "p": 0.736,
    "start": "2026-11-08T19:00:00+00:00",
-   "hash": "8feb8575d3351cfe141bf79abae90f375df0753feaaf17f96b9ac796589bc89c"
+   "hash": "8feb8575d3351cfe141bf79abae90f375df0753feaaf17f96b9ac796589bc89c",
+   "status": "lost",
+   "score": "2-3"
   },
   {
    "n": 67,
@@ -1890,13 +1906,79 @@
    "p": 0.1702,
    "start": "2026-11-21T12:30:00+00:00",
    "hash": "aaef5ee83b6d825fb371c75a62c0c1a20b118c5823862286fb167f785a274b26"
+  },
+  {
+   "n": 163,
+   "uid": "st8786662|x|u3.5",
+   "recorded": "2026-11-08T21:55:21+00:00",
+   "match": "Bodo/Glimt - LASK Linz",
+   "selection": "Moins de 3,5 buts",
+   "odds": 2.03,
+   "p": 0.736,
+   "start": "2026-11-24T20:45:00+00:00",
+   "hash": "8c719e683a505224050ca9b2eb78b32b967fe0eef5fa7bd7eb585af093dd2378"
+  },
+  {
+   "n": 164,
+   "uid": "st8786662|x|bttsN",
+   "recorded": "2026-11-08T21:55:21+00:00",
+   "match": "Bodo/Glimt - LASK Linz",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.8,
+   "p": 0.5334,
+   "start": "2026-11-24T20:45:00+00:00",
+   "hash": "855af30bc7a0847eb53cc4d4ad12f181c2e7f4b4568beacc372dad4fc9622839"
+  },
+  {
+   "n": 165,
+   "uid": "st8786662|h2h|LASK Linz",
+   "recorded": "2026-11-08T21:55:21+00:00",
+   "match": "Bodo/Glimt - LASK Linz",
+   "selection": "Victoire LASK Linz",
+   "odds": 5.0,
+   "p": 0.2448,
+   "start": "2026-11-24T20:45:00+00:00",
+   "hash": "1cd65d2f9973059f40b60dca22a0b493eb4a2e9d4e4701c2d5697556dd0c51c5"
+  },
+  {
+   "n": 166,
+   "uid": "e422af92d1fc06c0a330838c1c2f2e08|x|bttsN",
+   "recorded": "2026-11-08T21:55:21+00:00",
+   "match": "Galatasaray - Aston Villa",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.7,
+   "p": 0.471,
+   "start": "2026-11-24T17:45:00+00:00",
+   "hash": "5b877dd7e9892a398f06194e6e9fac150ca3532a68cd652ec02ea41c13c729a1"
+  },
+  {
+   "n": 167,
+   "uid": "st8786662|x|u4.5",
+   "recorded": "2026-11-08T21:55:21+00:00",
+   "match": "Bodo/Glimt - LASK Linz",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.41,
+   "p": 0.8774,
+   "start": "2026-11-24T20:45:00+00:00",
+   "hash": "5e792e30693aa04752d7902effed0d3a557750b977c04d113eecd598fb21dc5b"
+  },
+  {
+   "n": 168,
+   "uid": "e422af92d1fc06c0a330838c1c2f2e08|x|u3.5",
+   "recorded": "2026-11-08T21:55:21+00:00",
+   "match": "Galatasaray - Aston Villa",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.66,
+   "p": 0.736,
+   "start": "2026-11-24T17:45:00+00:00",
+   "hash": "c8e9673167c7ccb80baee91700a44070b8e1d459fb8ecf150328b09cb37a96ed"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T20:32:55+00:00",
-  "n": 51,
-  "wins": 17,
-  "roi": -0.3735,
-  "pending": 108
+  "updated": "2026-11-08T21:55:21+00:00",
+  "n": 59,
+  "wins": 18,
+  "roi": -0.4319,
+  "pending": 106
  }
 }
