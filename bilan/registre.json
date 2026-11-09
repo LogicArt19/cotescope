@@ -4172,13 +4172,156 @@
    "p": 0.4602,
    "start": "2026-11-28T17:00:00+00:00",
    "hash": "69af876a94b8847d740eee81f1d27abf5a236bba6440ef6843b7e10812a138ca"
+  },
+  {
+   "n": 367,
+   "uid": "st8318416|h2h|Draw",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Slovaquie - Iles Féroé",
+   "selection": "Match nul",
+   "odds": 4.8,
+   "p": 0.2425,
+   "start": "2026-11-13T21:45:00+00:00",
+   "hash": "24a0359389a93afea0cac046e7b3885b89cf49cfd0233ebdce20ff605922b048"
+  },
+  {
+   "n": 368,
+   "uid": "st8318327|h2h|Draw",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Pays-Bas - Grèce",
+   "selection": "Match nul",
+   "odds": 4.55,
+   "p": 0.2518,
+   "start": "2026-11-13T21:45:00+00:00",
+   "hash": "2b96ba3045e82daa85e958f020c5992bc0e2c0bc706a1b960740876845b12e8c"
+  },
+  {
+   "n": 369,
+   "uid": "st8318439|h2h|Finlande",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Albanie - Finlande",
+   "selection": "Victoire Finlande",
+   "odds": 4.2,
+   "p": 0.2695,
+   "start": "2026-11-12T21:45:00+00:00",
+   "hash": "fc4227767d93f63c0503f94e48090f9e2876d8550d9c9eaedb3fdd19fb9537ee"
+  },
+  {
+   "n": 370,
+   "uid": "st8318452|h2h|Draw",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Suède - Bosnie-Herzégovine",
+   "selection": "Match nul",
+   "odds": 4.1,
+   "p": 0.2659,
+   "start": "2026-11-14T21:45:00+00:00",
+   "hash": "bed5c0bba7193ed4204f770a988ac1ec8626a0e39deb256a0094e448856bf799"
+  },
+  {
+   "n": 371,
+   "uid": "st8318415|h2h|Moldavie",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Moldavie - Kazakhstan",
+   "selection": "Victoire Moldavie",
+   "odds": 2.5,
+   "p": 0.4288,
+   "start": "2026-11-13T19:00:00+00:00",
+   "hash": "5d629e6b03fc2fe7435d1ce6241021d6668130e26be18825ad9eb90c4923ac33"
+  },
+  {
+   "n": 372,
+   "uid": "st8318404|h2h|Estonie",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Luxembourg - Estonie",
+   "selection": "Victoire Estonie",
+   "odds": 3.4,
+   "p": 0.3113,
+   "start": "2026-11-13T21:45:00+00:00",
+   "hash": "6e40beaf730984c1fab286a9e4f303432f58c58ce2ffcea900754409129e48c8"
+  },
+  {
+   "n": 373,
+   "uid": "st8742011|h2h|New Orleans Pelicans",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Golden State Warriors - New Orleans Pelicans",
+   "selection": "Victoire New Orleans Pelicans",
+   "odds": 3.92,
+   "p": 0.2733,
+   "start": "2026-11-10T04:00:00+00:00",
+   "hash": "2539ba70a0f20e39d124ad923593096d82a9ba9694a63b0dd3d19fe8f1f34dbc"
+  },
+  {
+   "n": 374,
+   "uid": "st8318364|h2h|Draw",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Autriche - Irlande",
+   "selection": "Match nul",
+   "odds": 3.85,
+   "p": 0.2729,
+   "start": "2026-11-14T21:45:00+00:00",
+   "hash": "15f75b9e435f2b7759a96aa9a28743e622d3d91b2fd04f4e96e41d95e0621f21"
+  },
+  {
+   "n": 375,
+   "uid": "st8318388|totals|Over|2.5",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Slovénie - Suisse",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.97,
+   "p": 0.5251,
+   "start": "2026-11-13T21:45:00+00:00",
+   "hash": "47dea795709de9b2320e708cec382949739790e8c4e78bc939706c2c3dfe6716"
+  },
+  {
+   "n": 376,
+   "uid": "st8786679|h2h|Sporting Portugal",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Sporting Portugal - Manchester United",
+   "selection": "Victoire Sporting Portugal",
+   "odds": 2.47,
+   "p": 0.4164,
+   "start": "2026-11-25T23:00:00+00:00",
+   "hash": "6ad409a3e3cb6ade041f8163795236a0dc6076b6fb9937edb793642d5465c846"
+  },
+  {
+   "n": 377,
+   "uid": "st8787019|h2h|Nec Nimègue",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Nec Nimègue - Rennes",
+   "selection": "Victoire Nec Nimègue",
+   "odds": 2.77,
+   "p": 0.3701,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "8dae7d11c0d793b5d7b7eda3a528d25350922923e7215c424aee1fbe8b972446"
+  },
+  {
+   "n": 378,
+   "uid": "st8787023|h2h|Draw",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Sunderland - Jagiellonia Białystok",
+   "selection": "Match nul",
+   "odds": 5.2,
+   "p": 0.1981,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "693099641cec262317e16c0671247850aa36abdc85a8e2052d9fcdab0e08c2e7"
+  },
+  {
+   "n": 379,
+   "uid": "st8596031|h2h|Hambourg",
+   "recorded": "2026-11-09T16:42:15+00:00",
+   "match": "Werder Brême - Hambourg",
+   "selection": "Victoire Hambourg",
+   "odds": 4.3,
+   "p": 0.2393,
+   "start": "2026-11-22T16:30:00+00:00",
+   "hash": "73a416cfe0b5f6d43a2822af1f9112381509a84616130adade6a96c4ad1ace54"
   }
  ],
  "summary": {
-  "updated": "2026-11-09T16:36:41+00:00",
+  "updated": "2026-11-09T16:42:15+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 293
+  "pending": 306
  }
 }
