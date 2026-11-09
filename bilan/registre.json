@@ -4315,13 +4315,24 @@
    "p": 0.2393,
    "start": "2026-11-22T16:30:00+00:00",
    "hash": "73a416cfe0b5f6d43a2822af1f9112381509a84616130adade6a96c4ad1ace54"
+  },
+  {
+   "n": 380,
+   "uid": "st8596081|h2h|Draw",
+   "recorded": "2026-11-09T17:07:28+00:00",
+   "match": "SC Paderborn 07 - Schalke 04",
+   "selection": "Match nul",
+   "odds": 3.35,
+   "p": 0.3069,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "c98ef6a4c530844d81e56856ce85fd0c1ebd1f9559e715f54fd3cd2ce483c939"
   }
  ],
  "summary": {
-  "updated": "2026-11-09T16:47:57+00:00",
+  "updated": "2026-11-09T17:07:28+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 306
+  "pending": 307
  }
 }
