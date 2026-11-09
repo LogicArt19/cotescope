@@ -2203,13 +2203,35 @@
    "p": 0.283,
    "start": "2026-11-24T20:00:00+00:00",
    "hash": "9906188683c4dd71ea4aa455fb7a7c52b5eedfc0f4a154e98108d890ed3d353b"
+  },
+  {
+   "n": 188,
+   "uid": "e422af92d1fc06c0a330838c1c2f2e08|h2h|Galatasaray",
+   "recorded": "2026-11-09T01:02:13+00:00",
+   "match": "Galatasaray - Aston Villa",
+   "selection": "Victoire Galatasaray",
+   "odds": 2.5,
+   "p": 0.413,
+   "start": "2026-11-24T17:45:00+00:00",
+   "hash": "db82c83d6613eb0e2e9eb982e07c889be409e6e30ffb0d64fdcf68dc99b76cd3"
+  },
+  {
+   "n": 189,
+   "uid": "st8971568|h2h|Borna Gojo",
+   "recorded": "2026-11-09T01:02:13+00:00",
+   "match": "Tomas Machac - Borna Gojo",
+   "selection": "Victoire Borna Gojo",
+   "odds": 3.3,
+   "p": 0.3163,
+   "start": "2026-11-09T13:20:00+00:00",
+   "hash": "08cc41ff0d1a49c10c7beab846884e363aec5165b00ea175b84120c4ae935a5a"
   }
  ],
  "summary": {
-  "updated": "2026-11-08T23:11:52+00:00",
+  "updated": "2026-11-09T01:02:13+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 114
+  "pending": 116
  }
 }
