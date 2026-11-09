@@ -44,7 +44,7 @@
     { k: ["joue trop", "parie trop", "trop parier", "addict", "dependance", "trop parier", "perdu beaucoup", "dette", "pause", "arreter de parier", "jeu responsable"], q: "Je joue trop / jeu responsable",
       a: "Merci d'en parler, c'est important. Dans l'appli, <b>Mon compte → Faire une pause</b> bloque les pronostics pendant la durée que tu choisis. Tu peux aussi demander l'interdiction de jeu auprès de l'ANJ. Aide gratuite et anonyme : <b>Joueurs Info Service, 09 74 75 13 13</b> (appel non surtaxé, 7j/7) ou joueurs-info-service.fr." },
     { k: ["humain", "contact", "parler", "support", "equipe", "quelqu'un", "conseiller", "probleme", "bug", "marche pas", "erreur"], q: "Parler à quelqu'un",
-      a: "Pas de souci : écris ton message juste en dessous (avec l'e-mail de ton compte si tu en as un) et il part directement à l'équipe. On répond par e-mail, en général dans la journée.", contact: true },
+      a: "Pas de souci : écris ton message juste en dessous (avec l'e-mail de ton compte si tu en as un) et il part directement à l'équipe. Tu peux aussi écrire à <a href=\"mailto:cotescopeofficial@gmail.com\">cotescopeofficial@gmail.com</a>. On répond par e-mail, en général dans la journée.", contact: true },
   ];
   var QUICK = [0, 5, 4, 7, 9, 16];
 
@@ -147,7 +147,7 @@
           c.remove();
           bubble(r.ok ? "✅ Message envoyé à l'équipe. On te répond par e-mail à <b>" + esc(em.value) + "</b>, en général dans la journée."
             : r.reason === "too_many" ? "Tu as envoyé beaucoup de messages : réessaie dans un quart d'heure."
-            : "L'envoi a échoué. Réessaie dans un instant.");
+            : "L'envoi a échoué. Écris-nous directement à <a href=\"mailto:cotescopeofficial@gmail.com\">cotescopeofficial@gmail.com</a>.");
         })
         .catch(function () { bt.disabled = false; bt.textContent = "Réessayer"; });
     };
