@@ -6625,13 +6625,134 @@
    "p": 0.4936,
    "start": "2026-11-11T05:00:00+00:00",
    "hash": "c224193ebcfa736fccc8e2a73dd5fb1deb5659d9daa892e9ffcde6565a224709"
+  },
+  {
+   "n": 590,
+   "uid": "st8522216|h2h|Draw",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Inter Milan - Genoa",
+   "selection": "Match nul",
+   "odds": 5.45,
+   "p": 0.2266,
+   "start": "2026-11-28T22:45:00+00:00",
+   "hash": "1dc3a9a2c18d9bef8c6e0ec05a46f0d06d7e4038a91080c5596cc607aaec7308"
+  },
+  {
+   "n": 591,
+   "uid": "st8558924|x|bttsN",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Brighton - Newcastle",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.13,
+   "p": 0.5688,
+   "start": "2026-11-29T16:05:00+00:00",
+   "hash": "4c46c0cd721e35b636c03431ca210c2ef1d3bc64021d97d68f7ab98fde105ffc"
+  },
+  {
+   "n": 592,
+   "uid": "st8522217|h2h|Lecce",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Lecce - Atalanta Bergame",
+   "selection": "Victoire Lecce",
+   "odds": 3.75,
+   "p": 0.3049,
+   "start": "2026-11-30T20:30:00+00:00",
+   "hash": "044a2d66571d7a67a8817240b8d5bdc860d13d942cd899423fc79b2036c0b002"
+  },
+  {
+   "n": 593,
+   "uid": "st8522219|x|u3.5",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Sassuolo - Naples",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.55,
+   "p": 0.736,
+   "start": "2026-11-29T17:00:00+00:00",
+   "hash": "9f692a5ed8e004b2e2d37703221f77874319ba27d71c441a5a81d6080bf2d6e8"
+  },
+  {
+   "n": 594,
+   "uid": "st8975820|h2h|Toby Samuel",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Lorenzo Musetti - Toby Samuel",
+   "selection": "Victoire Toby Samuel",
+   "odds": 4.0,
+   "p": 0.273,
+   "start": "2026-11-10T21:10:00+00:00",
+   "hash": "12d518af4eb6b90622882a732e82ec3bd6b1826d4020934086274a7436214d07"
+  },
+  {
+   "n": 595,
+   "uid": "st8522216|x|bttsY",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Inter Milan - Genoa",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.94,
+   "p": 0.5421,
+   "start": "2026-11-28T22:45:00+00:00",
+   "hash": "8a079f25c2c4d30c94fb7ba7e9bbf41d745254c2d864b02f469fef3eac6e432e"
+  },
+  {
+   "n": 596,
+   "uid": "st8532733|x|bttsY",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Le Havre - Strasbourg",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.44,
+   "p": 0.7255,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "c6ec5b455255d522bd06b133dcf16f5fa8813101c6edb4d2c9ffafd9a6c1a837"
+  },
+  {
+   "n": 597,
+   "uid": "st8532731|h2h|Marseille",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Auxerre - Marseille",
+   "selection": "Victoire Marseille",
+   "odds": 1.77,
+   "p": 0.5859,
+   "start": "2026-11-29T14:00:00+00:00",
+   "hash": "65832c49625e4d87659904ebd02b5ced4fe5c3d1de2a5ccd12b673d74378cbf6"
+  },
+  {
+   "n": 598,
+   "uid": "afae1c9d986e4ab2200dc9bd44b6b6c4|h2h|Draw",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Levante - Elche CF",
+   "selection": "Match nul",
+   "odds": 4.0,
+   "p": 0.2657,
+   "start": "2026-11-23T20:00:00+00:00",
+   "hash": "36d81c0ab219542af3cc22bcff6630e2fbfcbd72ec5d8a64e64161fc1724e952"
+  },
+  {
+   "n": 599,
+   "uid": "st8532504|x|bttsY",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Toulouse - Rennes",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.44,
+   "p": 0.7131,
+   "start": "2026-11-29T16:15:00+00:00",
+   "hash": "db76f6ef6c7911fc2c48197849fa27dc2a6a275beb3c28438a39dcf1addb1813"
+  },
+  {
+   "n": 600,
+   "uid": "st8558927|h2h|Draw",
+   "recorded": "2026-11-10T18:10:10+00:00",
+   "match": "Fulham - Bournemouth",
+   "selection": "Match nul",
+   "odds": 3.35,
+   "p": 0.3056,
+   "start": "2026-11-29T16:05:00+00:00",
+   "hash": "6c7f3671ff02770777c4b8153d763f1bbec1966778f1a51b34eac59c465972df"
   }
  ],
  "summary": {
-  "updated": "2026-11-10T10:07:49+00:00",
+  "updated": "2026-11-10T18:10:10+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 516
+  "pending": 527
  }
 }
