@@ -6746,13 +6746,24 @@
    "p": 0.3056,
    "start": "2026-11-29T16:05:00+00:00",
    "hash": "6c7f3671ff02770777c4b8153d763f1bbec1966778f1a51b34eac59c465972df"
+  },
+  {
+   "n": 601,
+   "uid": "st8318428|x|bttsY",
+   "recorded": "2026-11-10T23:38:42+00:00",
+   "match": "Monténégro - Lettonie",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 2.47,
+   "p": 0.4215,
+   "start": "2026-11-12T21:45:00+00:00",
+   "hash": "306491875f2563b42db40a4d67850b4d3008a8a95715d821b59afd61f998d4ad"
   }
  ],
  "summary": {
-  "updated": "2026-11-10T18:10:10+00:00",
+  "updated": "2026-11-10T23:38:42+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 527
+  "pending": 528
  }
 }
