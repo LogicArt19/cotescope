@@ -6823,13 +6823,57 @@
    "p": 0.2962,
    "start": "2026-11-21T15:15:00+00:00",
    "hash": "dd0162e520bdfd3b1b1997c1cf96d1755e73019a2e4dcb54a841a1e72b236d67"
+  },
+  {
+   "n": 608,
+   "uid": "st8742027|h2h|Portland Trail Blazers",
+   "recorded": "2026-11-11T15:30:47+00:00",
+   "match": "Portland Trail Blazers - Oklahoma City Thunder",
+   "selection": "Victoire Portland Trail Blazers",
+   "odds": 1.93,
+   "p": 0.6103,
+   "start": "2026-11-12T04:00:00+00:00",
+   "hash": "e8d1e985eb3d07af1606ace9365c3a94cda1210cd2cb06f54933e3620c4b3f09"
+  },
+  {
+   "n": 609,
+   "uid": "st8586547|x|u3.5",
+   "recorded": "2026-11-11T15:30:47+00:00",
+   "match": "Elche - Atlético Madrid",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.51,
+   "p": 0.789,
+   "start": "2026-11-28T19:30:00+00:00",
+   "hash": "874901cdfe7ed9bd882d4c4c2510cbfc71859970754629e4b3f4c4a50eadfe56"
+  },
+  {
+   "n": 610,
+   "uid": "st8787023|x|u3.5",
+   "recorded": "2026-11-11T15:30:47+00:00",
+   "match": "Sunderland - Jagiellonia Białystok",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.43,
+   "p": 0.736,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "4991ebcb07a15c04c6b2d342b074a52ca45f02ecebfd269b2a40dc8d074067b7"
+  },
+  {
+   "n": 611,
+   "uid": "d2113ca19873218496f8b2fe6c7e7c41|x|dnb1",
+   "recorded": "2026-11-11T15:30:47+00:00",
+   "match": "Lille - Lyon",
+   "selection": "Lille (remboursé si nul)",
+   "odds": 1.56,
+   "p": 0.6547,
+   "start": "2026-11-21T19:45:00+00:00",
+   "hash": "0c7bbee4c212dfe30779f833e3edc5d4de41abe12e57e0b3d45e07e3185f2344"
   }
  ],
  "summary": {
-  "updated": "2026-11-11T06:46:37+00:00",
+  "updated": "2026-11-11T15:30:47+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 534
+  "pending": 538
  }
 }
