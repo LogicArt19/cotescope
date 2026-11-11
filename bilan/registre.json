@@ -6867,13 +6867,57 @@
    "p": 0.6547,
    "start": "2026-11-21T19:45:00+00:00",
    "hash": "0c7bbee4c212dfe30779f833e3edc5d4de41abe12e57e0b3d45e07e3185f2344"
+  },
+  {
+   "n": 612,
+   "uid": "st8532503|h2h|Draw",
+   "recorded": "2026-11-11T22:20:30+00:00",
+   "match": "PSG - Lorient",
+   "selection": "Match nul",
+   "odds": 5.75,
+   "p": 0.2623,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "109c7b801b001650da64bc2e1b90ccb0d7a7dfffc3dbe5189e2b2fa0e7284771"
+  },
+  {
+   "n": 613,
+   "uid": "8e93849b4c1ccbf1c207836d5c470150|totals|Under|2.5",
+   "recorded": "2026-11-11T22:20:30+00:00",
+   "match": "ŠK Slovan Bratislava - Real Betis",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.85,
+   "p": 0.38,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "5cfe52a13b4f42535854d5d7665174d6c2aa3cd8383fec08bea91d3a7cf00964"
+  },
+  {
+   "n": 614,
+   "uid": "st8558928|x|dc1N",
+   "recorded": "2026-11-11T22:20:30+00:00",
+   "match": "Ipswich Town - Aston Villa",
+   "selection": "Ipswich Town ou nul (1N)",
+   "odds": 1.7,
+   "p": 0.6201,
+   "start": "2026-11-28T19:30:00+00:00",
+   "hash": "6d35dd191c72fb99cad4ad795569a7d77eb37649ae4a5796779daab13b141c8f"
+  },
+  {
+   "n": 615,
+   "uid": "aea973c122c91837c15e066c757c747f|totals|Under|2.5",
+   "recorded": "2026-11-11T22:20:30+00:00",
+   "match": "RB Leipzig - RC Lens",
+   "selection": "Moins de 2,5 buts",
+   "odds": 3.25,
+   "p": 0.32,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "34947cdaf23c22cf9332f5bf7ff43a23ee4066428ea95b2324d6fec82e0e6487"
   }
  ],
  "summary": {
-  "updated": "2026-11-11T15:30:47+00:00",
+  "updated": "2026-11-11T22:20:30+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 538
+  "pending": 542
  }
 }
