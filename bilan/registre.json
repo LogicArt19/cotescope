@@ -6757,13 +6757,79 @@
    "p": 0.4215,
    "start": "2026-11-12T21:45:00+00:00",
    "hash": "306491875f2563b42db40a4d67850b4d3008a8a95715d821b59afd61f998d4ad"
+  },
+  {
+   "n": 602,
+   "uid": "st8979868|h2h|Alejandro Tabilo",
+   "recorded": "2026-11-11T06:46:37+00:00",
+   "match": "Lorenzo Sonego - Alejandro Tabilo",
+   "selection": "Victoire Alejandro Tabilo",
+   "odds": 2.24,
+   "p": 0.652,
+   "start": "2026-11-11T12:00:00+00:00",
+   "hash": "27b24875e3766585d63e3e07acbf7f0dfaf682823b94b10b6a12b72d6002df9d"
+  },
+  {
+   "n": 603,
+   "uid": "st8742020|h2h|Toronto Raptors",
+   "recorded": "2026-11-11T06:46:37+00:00",
+   "match": "Toronto Raptors - Boston Celtics",
+   "selection": "Victoire Toronto Raptors",
+   "odds": 3.1,
+   "p": 0.4554,
+   "start": "2026-11-12T00:00:00+00:00",
+   "hash": "00948edb4d24191dc0fce83e17d7b640751f81cb747ae2511c4804e503b5f089"
+  },
+  {
+   "n": 604,
+   "uid": "st8742026|h2h|Golden State Warriors",
+   "recorded": "2026-11-11T06:46:37+00:00",
+   "match": "Houston Rockets - Golden State Warriors",
+   "selection": "Victoire Golden State Warriors",
+   "odds": 2.72,
+   "p": 0.4904,
+   "start": "2026-11-12T03:30:00+00:00",
+   "hash": "11d16d7cfbf1c4d4adb60301f9578e2636b1c4ec64c0549033ec411fb943a13f"
+  },
+  {
+   "n": 605,
+   "uid": "st8742025|h2h|Utah Jazz",
+   "recorded": "2026-11-11T06:46:37+00:00",
+   "match": "Utah Jazz - Orlando Magic",
+   "selection": "Victoire Utah Jazz",
+   "odds": 2.36,
+   "p": 0.5351,
+   "start": "2026-11-12T02:00:00+00:00",
+   "hash": "7f5d92700538f6da25b0506de1a9dc08a2e55b6491376b72f7b162333bc064d9"
+  },
+  {
+   "n": 606,
+   "uid": "st8742023|h2h|Milwaukee Bucks",
+   "recorded": "2026-11-11T06:46:37+00:00",
+   "match": "Milwaukee Bucks - Los Angeles Lakers",
+   "selection": "Victoire Milwaukee Bucks",
+   "odds": 4.95,
+   "p": 0.2533,
+   "start": "2026-11-12T01:00:00+00:00",
+   "hash": "1e482579a13b5e29dbe6266b92f44dd8fd145f77598f45d721585c76ed76d8f7"
+  },
+  {
+   "n": 607,
+   "uid": "st8586541|h2h|Valence",
+   "recorded": "2026-11-11T06:46:37+00:00",
+   "match": "Rayo Vallecano - Valence",
+   "selection": "Victoire Valence",
+   "odds": 3.75,
+   "p": 0.2962,
+   "start": "2026-11-21T15:15:00+00:00",
+   "hash": "dd0162e520bdfd3b1b1997c1cf96d1755e73019a2e4dcb54a841a1e72b236d67"
   }
  ],
  "summary": {
-  "updated": "2026-11-10T23:38:42+00:00",
+  "updated": "2026-11-11T06:46:37+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 528
+  "pending": 534
  }
 }
