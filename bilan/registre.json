@@ -7054,13 +7054,90 @@
    "p": 0.2178,
    "start": "2026-11-12T21:45:00+00:00",
    "hash": "ed916fa9ca65166b8708df081b7549a1aa6ee1025f1993da1eb3aa0a9b309c5a"
+  },
+  {
+   "n": 629,
+   "uid": "b1af6789fe6db7aab18a2945ce56f035|totals|Under|2.5",
+   "recorded": "2026-11-12T20:09:41+00:00",
+   "match": "Atlético Madrid - Viking FK",
+   "selection": "Moins de 2,5 buts",
+   "odds": 3.45,
+   "p": 0.44,
+   "start": "2026-11-25T20:00:00+00:00",
+   "hash": "946c81bb7704a75c8859c59db7bec7505f06e2a5288a2882a8b9388dd3373ac4"
+  },
+  {
+   "n": 630,
+   "uid": "0ee2cfddf20153779cd2cc3e1f1f879f|totals|Under|2.5",
+   "recorded": "2026-11-12T20:09:41+00:00",
+   "match": "Lille - Bayern Munich",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.95,
+   "p": 0.44,
+   "start": "2026-11-25T20:00:00+00:00",
+   "hash": "3300499424672f23e50df60482d9cd884e9328c1e72badc80db8f8667f010e18"
+  },
+  {
+   "n": 631,
+   "uid": "st8596034|x|dc1N",
+   "recorded": "2026-11-12T20:09:41+00:00",
+   "match": "Borussia Dortmund - Bayer Leverkusen",
+   "selection": "Borussia Dortmund ou nul (1N)",
+   "odds": 1.3,
+   "p": 0.8306,
+   "start": "2026-11-29T21:30:00+00:00",
+   "hash": "ad8d9ebcbab16590e5992e7c229a81eb5e8f9d1fcd3d0264bacfe1df5957a2e0"
+  },
+  {
+   "n": 632,
+   "uid": "71bf9fe98c3e3be39cd1d059f8d71ae8|x|dc1N",
+   "recorded": "2026-11-12T20:09:41+00:00",
+   "match": "Newcastle United - Arsenal",
+   "selection": "Newcastle United ou nul (1N)",
+   "odds": 2.22,
+   "p": 0.4731,
+   "start": "2026-11-21T17:30:00+00:00",
+   "hash": "cb501830b9bd94b3ec35f199b50c1050a57772e85eaf01850a60ffcb776d10e6"
+  },
+  {
+   "n": 633,
+   "uid": "st8318376|x|o3.5",
+   "recorded": "2026-11-12T20:09:41+00:00",
+   "match": "Irlande Du Nord - Ukraine",
+   "selection": "Plus de 3,5 buts",
+   "odds": 4.0,
+   "p": 0.264,
+   "start": "2026-11-14T21:45:00+00:00",
+   "hash": "bf3efdd0b000e4c1be796a96442d89ab3fe0a2ce596e570e3a4544ee20abdbaf"
+  },
+  {
+   "n": 634,
+   "uid": "st8318376|x|bttsY",
+   "recorded": "2026-11-12T20:09:41+00:00",
+   "match": "Irlande Du Nord - Ukraine",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.98,
+   "p": 0.5272,
+   "start": "2026-11-14T21:45:00+00:00",
+   "hash": "f2a5b75c21c15fb64834720634c5c054dc298f68faa15342dbe90de221e883c7"
+  },
+  {
+   "n": 635,
+   "uid": "st8318376|x|o1.5",
+   "recorded": "2026-11-12T20:09:41+00:00",
+   "match": "Irlande Du Nord - Ukraine",
+   "selection": "Plus de 1,5 buts",
+   "odds": 1.42,
+   "p": 0.7326,
+   "start": "2026-11-14T21:45:00+00:00",
+   "hash": "c8c7592d83d7c8ee797f96cc3a1332931a0f7606111271aa23d1751eab0dc099"
   }
  ],
  "summary": {
-  "updated": "2026-11-12T11:36:47+00:00",
+  "updated": "2026-11-12T20:09:41+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 555
+  "pending": 562
  }
 }
