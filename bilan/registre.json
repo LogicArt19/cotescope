@@ -6933,13 +6933,134 @@
    "p": 0.5857,
    "start": "2026-11-27T22:00:00+00:00",
    "hash": "c4b9c4efb353c5fac81f15b4b026e37e95458157ad025609f9d27507e7105a02"
+  },
+  {
+   "n": 618,
+   "uid": "st8984061|h2h|Alejandro Tabilo",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Alex Michelsen - Alejandro Tabilo",
+   "selection": "Victoire Alejandro Tabilo",
+   "odds": 4.0,
+   "p": 0.463,
+   "start": "2026-11-12T12:00:00+00:00",
+   "hash": "ca81e5b2b97f71b4f5b44e1f0984c4afb229275b5b8a9b2c6078c8aee982a9b1"
+  },
+  {
+   "n": 619,
+   "uid": "st8742028|h2h|Toronto Raptors",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Philadelphie 76ers - Toronto Raptors",
+   "selection": "Victoire Toronto Raptors",
+   "odds": 4.22,
+   "p": 0.4021,
+   "start": "2026-11-13T00:00:00+00:00",
+   "hash": "87d886667945e59572f6b9fd3589524da88360aaeb79b9eff6442b1ea48062b1"
+  },
+  {
+   "n": 620,
+   "uid": "st8596040|h2h|SpVgg 07 Elversberg",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Cologne - SpVgg 07 Elversberg",
+   "selection": "Victoire SpVgg 07 Elversberg",
+   "odds": 3.45,
+   "p": 0.3515,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "8c7f6855774a9d25db42c047c265ba50fd09e77c3d9d453f52a73ef35dfaca52"
+  },
+  {
+   "n": 621,
+   "uid": "st8318316|totals|Under|2.5",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Italie - France",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.13,
+   "p": 0.56,
+   "start": "2026-11-12T21:45:00+00:00",
+   "hash": "211d82861c74730120ca1ea95eba868d6a7a595bb038ef54da466669b588e8c8"
+  },
+  {
+   "n": 622,
+   "uid": "st8984065|h2h|Thiago Agustin Tirante",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Thiago Agustin Tirante - Alexander Shevchenko",
+   "selection": "Victoire Thiago Agustin Tirante",
+   "odds": 1.95,
+   "p": 0.596,
+   "start": "2026-11-12T14:00:00+00:00",
+   "hash": "0296ef5fc810d6f021ea014428b3d39bd4fc57174027151594279f9bee0df645"
+  },
+  {
+   "n": 623,
+   "uid": "st8596040|x|bttsN",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Cologne - SpVgg 07 Elversberg",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.42,
+   "p": 0.4869,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "75b9891918efa6ad3018e8a1b33b7f0d541b4ec4d2e2169e3cec2ccdb334b691"
+  },
+  {
+   "n": 624,
+   "uid": "st8596040|x|u3.5",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Cologne - SpVgg 07 Elversberg",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.55,
+   "p": 0.736,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "ffba44fd75d561b01a50b7cc66b01652870ca35ec4be9ff87fba6a71b51d2558"
+  },
+  {
+   "n": 625,
+   "uid": "st8318439|x|o3.5",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Albanie - Finlande",
+   "selection": "Plus de 3,5 buts",
+   "odds": 4.3,
+   "p": 0.264,
+   "start": "2026-11-12T21:45:00+00:00",
+   "hash": "91fa6526d6b0ec450e8133c9e5dd723dc3893c3b92ec19def97bf8fc199c7661"
+  },
+  {
+   "n": 626,
+   "uid": "st8318439|x|o1.5",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Albanie - Finlande",
+   "selection": "Plus de 1,5 buts",
+   "odds": 1.49,
+   "p": 0.7326,
+   "start": "2026-11-12T21:45:00+00:00",
+   "hash": "ec80843c9a15a7d16b7b8407ba15d954b6c801e151112ac86168f60acd67df80"
+  },
+  {
+   "n": 627,
+   "uid": "st8318439|x|bttsY",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "Albanie - Finlande",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 2.08,
+   "p": 0.5186,
+   "start": "2026-11-12T21:45:00+00:00",
+   "hash": "d501eb846d76ca04578542e0764210b54e2c21d1a5e819e91b1c1b25c8e9c8c0"
+  },
+  {
+   "n": 628,
+   "uid": "st8318339|x|dc1N",
+   "recorded": "2026-11-12T11:36:47+00:00",
+   "match": "République tchèque - Espagne",
+   "selection": "République tchèque ou nul (1N)",
+   "odds": 4.7,
+   "p": 0.2178,
+   "start": "2026-11-12T21:45:00+00:00",
+   "hash": "ed916fa9ca65166b8708df081b7549a1aa6ee1025f1993da1eb3aa0a9b309c5a"
   }
  ],
  "summary": {
-  "updated": "2026-11-12T03:15:22+00:00",
+  "updated": "2026-11-12T11:36:47+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 544
+  "pending": 555
  }
 }
