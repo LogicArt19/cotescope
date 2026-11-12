@@ -6911,13 +6911,35 @@
    "p": 0.32,
    "start": "2026-11-24T20:00:00+00:00",
    "hash": "34947cdaf23c22cf9332f5bf7ff43a23ee4066428ea95b2324d6fec82e0e6487"
+  },
+  {
+   "n": 616,
+   "uid": "st8742029|h2h|Washington Wizards",
+   "recorded": "2026-11-12T03:15:22+00:00",
+   "match": "Washington Wizards - Detroit Pistons",
+   "selection": "Victoire Washington Wizards",
+   "odds": 3.65,
+   "p": 0.3387,
+   "start": "2026-11-13T00:00:00+00:00",
+   "hash": "80d0d83d9bbddfb201e97a12f378abfd117c78edded5f94a2be049ae0922d766"
+  },
+  {
+   "n": 617,
+   "uid": "st8586549|h2h|Levante",
+   "recorded": "2026-11-12T03:15:22+00:00",
+   "match": "Levante - Racing Santander",
+   "selection": "Victoire Levante",
+   "odds": 1.94,
+   "p": 0.5857,
+   "start": "2026-11-27T22:00:00+00:00",
+   "hash": "c4b9c4efb353c5fac81f15b4b026e37e95458157ad025609f9d27507e7105a02"
   }
  ],
  "summary": {
-  "updated": "2026-11-11T22:20:30+00:00",
+  "updated": "2026-11-12T03:15:22+00:00",
   "n": 70,
   "wins": 22,
   "roi": -0.4281,
-  "pending": 542
+  "pending": 544
  }
 }
