@@ -7318,13 +7318,68 @@
    "p": 0.5183,
    "start": "2026-11-15T21:45:00+00:00",
    "hash": "339517f25746dff50ae19d86df4bf656dc271404d6a506b74b773ffbb75df34a"
+  },
+  {
+   "n": 649,
+   "uid": "st8318318|x|u3.5",
+   "recorded": "2026-11-13T16:44:28+00:00",
+   "match": "France - Turquie",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.76,
+   "p": 0.736,
+   "start": "2026-11-15T21:45:00+00:00",
+   "hash": "50ac4bed3d548d9a174167873e79f60d018536d4baed135819a66e5241e1e7f3"
+  },
+  {
+   "n": 650,
+   "uid": "st8318429|totals|Over|2.5",
+   "recorded": "2026-11-13T16:44:28+00:00",
+   "match": "Chypre - Monténégro",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.98,
+   "p": 0.56,
+   "start": "2026-11-15T16:00:00+00:00",
+   "hash": "4f08d3a7852e1316113673f6a3640a1549651f57e67716d12e3281eb2c6813c5"
+  },
+  {
+   "n": 651,
+   "uid": "st8318429|h2h|Monténégro",
+   "recorded": "2026-11-13T16:44:28+00:00",
+   "match": "Chypre - Monténégro",
+   "selection": "Victoire Monténégro",
+   "odds": 2.2,
+   "p": 0.491,
+   "start": "2026-11-15T16:00:00+00:00",
+   "hash": "e1d1e70babcf73501c796b626c93189a379cc0f3c8b50e4f127c6e66b9723000"
+  },
+  {
+   "n": 652,
+   "uid": "st8318304|x|dnb2",
+   "recorded": "2026-11-13T16:44:28+00:00",
+   "match": "Andorre - Gibraltar",
+   "selection": "Gibraltar (remboursé si nul)",
+   "odds": 4.6,
+   "p": 0.2259,
+   "start": "2026-11-13T21:45:00+00:00",
+   "hash": "59be90c6007b6129586157271383a695fb2c0589fb711ccbd1dbb19599e27b8a"
+  },
+  {
+   "n": 653,
+   "uid": "71bf9fe98c3e3be39cd1d059f8d71ae8|x|dnb1",
+   "recorded": "2026-11-13T16:44:28+00:00",
+   "match": "Newcastle United - Arsenal",
+   "selection": "Newcastle United (remboursé si nul)",
+   "odds": 3.72,
+   "p": 0.2748,
+   "start": "2026-11-21T17:30:00+00:00",
+   "hash": "f01cb38d8593dca2717283f017862c817c2b42fbe04c5f1123c6e2db827470ba"
   }
  ],
  "summary": {
-  "updated": "2026-11-13T08:16:42+00:00",
+  "updated": "2026-11-13T16:44:28+00:00",
   "n": 92,
   "wins": 29,
   "roi": -0.411,
-  "pending": 553
+  "pending": 558
  }
 }
