@@ -4252,7 +4252,9 @@
    "odds": 2.5,
    "p": 0.4288,
    "start": "2026-11-13T19:00:00+00:00",
-   "hash": "5d629e6b03fc2fe7435d1ce6241021d6668130e26be18825ad9eb90c4923ac33"
+   "hash": "5d629e6b03fc2fe7435d1ce6241021d6668130e26be18825ad9eb90c4923ac33",
+   "status": "won",
+   "score": "2-1"
   },
   {
    "n": 372,
@@ -4494,7 +4496,9 @@
    "odds": 2.25,
    "p": 0.56,
    "start": "2026-11-13T19:00:00+00:00",
-   "hash": "aad551c46be9a62f4860114204ed25deb172c01dc3370327919e55bd6b1fa7d9"
+   "hash": "aad551c46be9a62f4860114204ed25deb172c01dc3370327919e55bd6b1fa7d9",
+   "status": "won",
+   "score": "2-1"
   },
   {
    "n": 394,
@@ -7373,13 +7377,431 @@
    "p": 0.2748,
    "start": "2026-11-21T17:30:00+00:00",
    "hash": "f01cb38d8593dca2717283f017862c817c2b42fbe04c5f1123c6e2db827470ba"
+  },
+  {
+   "n": 654,
+   "uid": "12002f6f804a122db48271ff05be03c0|x|dcN2",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Paris Saint Germain - Lorient",
+   "selection": "Nul ou Lorient (N2)",
+   "odds": 3.72,
+   "p": 0.4142,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "6993e78252caa2008464fe692cf2c3521939fe8376ad7004418c2e03a61abc5f"
+  },
+  {
+   "n": 655,
+   "uid": "12002f6f804a122db48271ff05be03c0|h2h|Draw",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Paris Saint Germain - Lorient",
+   "selection": "Match nul",
+   "odds": 5.75,
+   "p": 0.262,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "2255cd4a0a8e923d57a7ab05aa2105a6fc53b6cec570a70155160b34356a885a"
+  },
+  {
+   "n": 656,
+   "uid": "20c78c2ef75c4a6d7f4af81dd32e97cd|x|bttsN",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Celta Vigo - Villarreal",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.13,
+   "p": 0.6322,
+   "start": "2026-11-29T17:30:00+00:00",
+   "hash": "165a442080795e97065d71c7c561a3d94726015fa6586fab2952d645d9b8252d"
+  },
+  {
+   "n": 657,
+   "uid": "20c78c2ef75c4a6d7f4af81dd32e97cd|totals|Under|2.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Celta Vigo - Villarreal",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.86,
+   "p": 0.7126,
+   "start": "2026-11-29T17:30:00+00:00",
+   "hash": "957f22dd408686bd4e2e873cbfcd68f21af28796fb4c3feed0d696949eba68e5"
+  },
+  {
+   "n": 658,
+   "uid": "02ff879cf54f6d1fec2664efee0431db|h2h|Brest",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Brest - Paris FC",
+   "selection": "Victoire Brest",
+   "odds": 2.92,
+   "p": 0.4449,
+   "start": "2026-11-27T19:45:00+00:00",
+   "hash": "325b03162bc23a5a89a574e66797293033435a06b69172f1a57e3312800cf399"
+  },
+  {
+   "n": 659,
+   "uid": "71c08940a73e9f42d503449f052a1bdf|h2h|Toulouse",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Toulouse - Rennes",
+   "selection": "Victoire Toulouse",
+   "odds": 2.52,
+   "p": 0.5093,
+   "start": "2026-11-29T16:15:00+00:00",
+   "hash": "bdbc2e57cd062f0d78e93340bd3a712e4bd9e2aeb20cf6aba4dba655b9966b68"
+  },
+  {
+   "n": 660,
+   "uid": "12002f6f804a122db48271ff05be03c0|x|u3.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Paris Saint Germain - Lorient",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.6,
+   "p": 0.8044,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "43ab8986bc3af7a0f8b964c12c9d7b03f022fed4de0c2cbafaf69a115f619a4e"
+  },
+  {
+   "n": 661,
+   "uid": "98415e21c147d701bd81e70b1af0f3a7|h2h|Borussia Dortmund",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Borussia Dortmund - Bayer Leverkusen",
+   "selection": "Victoire Borussia Dortmund",
+   "odds": 1.99,
+   "p": 0.6276,
+   "start": "2026-11-29T18:30:00+00:00",
+   "hash": "a0520553852d610b860aea8c9bab64377c0a69cddea5044168048fac02907bb9"
+  },
+  {
+   "n": 662,
+   "uid": "698f4a7967ead89e10205a68ceb4bda4|h2h|Werder Bremen",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Werder Bremen - Borussia Monchengladbach",
+   "selection": "Victoire Werder Bremen",
+   "odds": 1.69,
+   "p": 0.7083,
+   "start": "2026-11-27T19:30:00+00:00",
+   "hash": "b9e2754172a8fdb49e4e4ea5732767ba5d79c1e7b0280514ad90782b44d0501f"
+  },
+  {
+   "n": 663,
+   "uid": "40236ab976955345ebd1edb72abf6b22|x|u3.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Elche CF - Atlético Madrid",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.51,
+   "p": 0.7882,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "7f0e776358a08cfe1b3a56ed027be8722bec1628e0efaeec058bb5ceb14b7440"
+  },
+  {
+   "n": 664,
+   "uid": "aaa86a483888836242da663a46957894|totals|Under|2.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Le Mans FC - Lille",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.84,
+   "p": 0.6137,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "5303475549d6f93a5ef77eaf8dfcbeef91cf78c86526f547ace4c22c967c0e2b"
+  },
+  {
+   "n": 665,
+   "uid": "80c92a163a81b69fef76530221e2edd0|h2h|Levante",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Levante - Real Racing Club de Santander",
+   "selection": "Victoire Levante",
+   "odds": 1.94,
+   "p": 0.5843,
+   "start": "2026-11-27T20:00:00+00:00",
+   "hash": "914321372f2203070859b429105ae3ec1f67cd6293eb9c8cd1719e0a4246171a"
+  },
+  {
+   "n": 666,
+   "uid": "40236ab976955345ebd1edb72abf6b22|x|bttsN",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Elche CF - Atlético Madrid",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.13,
+   "p": 0.5458,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "98cb0c720412448c4cef1eda61709691b80c3b13385ba8c9f3af5f2cc84e03f5"
+  },
+  {
+   "n": 667,
+   "uid": "40236ab976955345ebd1edb72abf6b22|h2h|Elche CF",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Elche CF - Atlético Madrid",
+   "selection": "Victoire Elche CF",
+   "odds": 5.0,
+   "p": 0.2281,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "5690164b92f7430024894b9c75a83c3bb37edd36624da46209e7c342bbe5834e"
+  },
+  {
+   "n": 668,
+   "uid": "2aa9aa95157eb36fed45135c995cdd80|h2h|SC Freiburg",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "SC Freiburg - RB Leipzig",
+   "selection": "Victoire SC Freiburg",
+   "odds": 2.4,
+   "p": 0.465,
+   "start": "2026-11-29T14:30:00+00:00",
+   "hash": "7934de553756cf45c6db9b713ce6b65a84411c3455714e59e1ed2c71e51a557b"
+  },
+  {
+   "n": 669,
+   "uid": "ca8aa566e27e1d05b47e8151b2066f9a|totals|Under|2.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Lyon - AS Monaco",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.94,
+   "p": 0.5694,
+   "start": "2026-11-29T19:45:00+00:00",
+   "hash": "7ef78c2424346dc30f905456969a0b33c07f86667d375bb0790f40be249677bd"
+  },
+  {
+   "n": 670,
+   "uid": "c81520b9a9794749cfdab57f89bdeb16|h2h|Rayo Vallecano",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Real Betis - Rayo Vallecano",
+   "selection": "Victoire Rayo Vallecano",
+   "odds": 5.6,
+   "p": 0.2019,
+   "start": "2026-11-28T13:00:00+00:00",
+   "hash": "d61e3c6c0f3ec7ace7268457ddc309b68bde1979ed11d0d11a2d3a20a5c4e39d"
+  },
+  {
+   "n": 671,
+   "uid": "2c30e2ebaf6c30aaa4e3fb56cffa6a29|h2h|Elversberg",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "1. FC Köln - Elversberg",
+   "selection": "Victoire Elversberg",
+   "odds": 3.2,
+   "p": 0.3471,
+   "start": "2026-11-28T14:30:00+00:00",
+   "hash": "94566f7a4ad01df386450d23620336fd6db3bbc34572d1cabcaac2cd65c7a040"
+  },
+  {
+   "n": 672,
+   "uid": "f96c1137c9d3f7e2e691275a2988fa1d|h2h|Strasbourg",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Le Havre - Strasbourg",
+   "selection": "Victoire Strasbourg",
+   "odds": 2.18,
+   "p": 0.5021,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "14b7083b0d9db3e78a8940b4a92ff38223f2cf0e86a2358998baf1ce87e475d4"
+  },
+  {
+   "n": 673,
+   "uid": "f892ea6d5eca105c36ca9468b12857f2|h2h|Real Sociedad",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Real Sociedad - Sevilla",
+   "selection": "Victoire Real Sociedad",
+   "odds": 1.98,
+   "p": 0.5507,
+   "start": "2026-11-29T20:00:00+00:00",
+   "hash": "58dd1ddd27a128e30a614afa2c26e8b21282e0169263b8d6aa7831080972a91c"
+  },
+  {
+   "n": 674,
+   "uid": "ca8aa566e27e1d05b47e8151b2066f9a|x|bttsN",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Lyon - AS Monaco",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.13,
+   "p": 0.5232,
+   "start": "2026-11-29T19:45:00+00:00",
+   "hash": "5dc77ffdf96e55b4e94f5188e79c8d252ce73f2a359e60ec70d5ea725928dc78"
+  },
+  {
+   "n": 675,
+   "uid": "40236ab976955345ebd1edb72abf6b22|h2h|Draw",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Elche CF - Atlético Madrid",
+   "selection": "Match nul",
+   "odds": 3.93,
+   "p": 0.2776,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "964885528c248fbc57c53d90e253627af7baa775ac387e4f0128c2384c0ca338"
+  },
+  {
+   "n": 676,
+   "uid": "98415e21c147d701bd81e70b1af0f3a7|x|dc1N",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Borussia Dortmund - Bayer Leverkusen",
+   "selection": "Borussia Dortmund ou nul (1N)",
+   "odds": 1.3,
+   "p": 0.83,
+   "start": "2026-11-29T18:30:00+00:00",
+   "hash": "dff4813bdb92b0e80a14366c1395bb296d44b9c44f3e1b14b18cface0059c43d"
+  },
+  {
+   "n": 677,
+   "uid": "20c78c2ef75c4a6d7f4af81dd32e97cd|h2h|Draw",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Celta Vigo - Villarreal",
+   "selection": "Match nul",
+   "odds": 3.25,
+   "p": 0.3342,
+   "start": "2026-11-29T17:30:00+00:00",
+   "hash": "f0be1c13fe968c074d94ac93f48c0f8ef175d8079f6696fb780d2bc7a5c9d2b4"
+  },
+  {
+   "n": 678,
+   "uid": "aaa86a483888836242da663a46957894|x|bttsN",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Le Mans FC - Lille",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 1.89,
+   "p": 0.5737,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "3b09a528fa91a96e930676d1170cb78dd6bbcad9bb5c3df198db8a0d01f89959"
+  },
+  {
+   "n": 679,
+   "uid": "40236ab976955345ebd1edb72abf6b22|x|dc1N",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Elche CF - Atlético Madrid",
+   "selection": "Elche CF ou nul (1N)",
+   "odds": 2.15,
+   "p": 0.4978,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "af6ee4de8879be1f1eb2e6cad6d9d81414fc92394647c3c0abf0cb7c95999165"
+  },
+  {
+   "n": 680,
+   "uid": "f96c1137c9d3f7e2e691275a2988fa1d|x|bttsY",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Le Havre - Strasbourg",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.44,
+   "p": 0.724,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "acaa2519c3a26bb16a57611ee32ce77c3fff375069a8145ad7dda53ed2fdcaa0"
+  },
+  {
+   "n": 681,
+   "uid": "02ff879cf54f6d1fec2664efee0431db|x|dc1N",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Brest - Paris FC",
+   "selection": "Brest ou nul (1N)",
+   "odds": 1.52,
+   "p": 0.6964,
+   "start": "2026-11-27T19:45:00+00:00",
+   "hash": "d7fe9300250615e8c6136b642bdae80dec111edff4bbc39ebcd9a3a5bce75193"
+  },
+  {
+   "n": 682,
+   "uid": "698f4a7967ead89e10205a68ceb4bda4|x|o3.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Werder Bremen - Borussia Monchengladbach",
+   "selection": "Plus de 3,5 buts",
+   "odds": 2.03,
+   "p": 0.5135,
+   "start": "2026-11-27T19:30:00+00:00",
+   "hash": "b05ce75e0d4f6c2843008f7bdbe04f31081ac0b4f18a69bacbd0850456a17216"
+  },
+  {
+   "n": 683,
+   "uid": "f84a9da7eedd0ca11a28a1a7a8edddc7|h2h|SC Paderborn",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "SC Paderborn - FC Schalke 04",
+   "selection": "Victoire SC Paderborn",
+   "odds": 2.22,
+   "p": 0.4728,
+   "start": "2026-11-28T14:30:00+00:00",
+   "hash": "111b96f488e449039a0cb323c782bb394040c526fe8c2f3431814ef90277cd64"
+  },
+  {
+   "n": 684,
+   "uid": "b648a7246af1d3a839b0fcd212849a7c|x|bttsN",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Espanyol - Getafe",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 1.64,
+   "p": 0.6447,
+   "start": "2026-11-30T20:00:00+00:00",
+   "hash": "19dc594766705e6342994dfe036c43eca86b4196136c53de3f9fb1d2ac502ad1"
+  },
+  {
+   "n": 685,
+   "uid": "a370db12aaff183a94f8e9a6acb6d4c9|h2h|Marseille",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Auxerre - Marseille",
+   "selection": "Victoire Marseille",
+   "odds": 1.77,
+   "p": 0.5818,
+   "start": "2026-11-29T14:00:00+00:00",
+   "hash": "cbf5c9a9f5697fc4b3fe3de5ae6c2c5ba8c7edd7534bf3e3784852241ef99c84"
+  },
+  {
+   "n": 686,
+   "uid": "71c08940a73e9f42d503449f052a1bdf|x|bttsY",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Toulouse - Rennes",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.44,
+   "p": 0.7112,
+   "start": "2026-11-29T16:15:00+00:00",
+   "hash": "03935a27fbcde6a4d30bd2e0776b9664e1ca7a5a22803e6a6ea528d529285011"
+  },
+  {
+   "n": 687,
+   "uid": "9718f9ea901236855faf57f77a0bd5b3|totals|Over|2.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Real Racing Club de Santander - Real Sociedad",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.34,
+   "p": 0.7726,
+   "start": "2026-11-22T15:15:00+00:00",
+   "hash": "1adfd30650407b1da67e36efe6dd7918fd9972e0e9522366eb7e2ee43fb9cc51"
+  },
+  {
+   "n": 688,
+   "uid": "71c08940a73e9f42d503449f052a1bdf|x|dc1N",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Toulouse - Rennes",
+   "selection": "Toulouse ou nul (1N)",
+   "odds": 1.44,
+   "p": 0.7195,
+   "start": "2026-11-29T16:15:00+00:00",
+   "hash": "7ef6ebd014a475a618b639d625986cc4b7b2e5c3ce6c15bbaec7124d178b98da"
+  },
+  {
+   "n": 689,
+   "uid": "f84a9da7eedd0ca11a28a1a7a8edddc7|h2h|Draw",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "SC Paderborn - FC Schalke 04",
+   "selection": "Match nul",
+   "odds": 3.22,
+   "p": 0.325,
+   "start": "2026-11-28T14:30:00+00:00",
+   "hash": "a62f3419ff7e410be5fb53dc684404fd6d9f168d807aecc912f6d440984f7609"
+  },
+  {
+   "n": 690,
+   "uid": "b648a7246af1d3a839b0fcd212849a7c|totals|Under|2.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Espanyol - Getafe",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.47,
+   "p": 0.6994,
+   "start": "2026-11-30T20:00:00+00:00",
+   "hash": "0cd24b0b1f1fc58df3a7c4ca0adf6150963e1234eb6659911b073eb4db96f5b5"
+  },
+  {
+   "n": 691,
+   "uid": "33d92dabbd2606dfe9d31058f7b20cc8|totals|Under|2.5",
+   "recorded": "2026-11-13T22:51:02+00:00",
+   "match": "Málaga - Athletic Bilbao",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.94,
+   "p": 0.5275,
+   "start": "2026-11-28T15:15:00+00:00",
+   "hash": "2749f4fd88155a55cbcda37f6da36d9eaf032dd4e191b62563b84181516bc7d0"
   }
  ],
  "summary": {
-  "updated": "2026-11-13T16:44:28+00:00",
-  "n": 92,
-  "wins": 29,
-  "roi": -0.411,
-  "pending": 558
+  "updated": "2026-11-13T22:51:02+00:00",
+  "n": 94,
+  "wins": 31,
+  "roi": -0.373,
+  "pending": 594
  }
 }
