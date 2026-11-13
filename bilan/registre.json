@@ -7219,13 +7219,112 @@
    "p": 0.1762,
    "start": "2026-11-24T20:00:00+00:00",
    "hash": "22382a4b0df661e6cb2016b03b38714680400687b77a00f2dfceefc43c7cf713"
+  },
+  {
+   "n": 640,
+   "uid": "st8739139|h2h|Sacramento Kings",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "Sacramento Kings - Portland Trail Blazers",
+   "selection": "Victoire Sacramento Kings",
+   "odds": 4.7,
+   "p": 0.3358,
+   "start": "2026-11-14T06:00:00+00:00",
+   "hash": "d4766139c4fb0d429a9e2aa8d0a8b395827dfbb8f6beef14f5f0dea3f31bd9bf"
+  },
+  {
+   "n": 641,
+   "uid": "st8739140|h2h|LA Clippers",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "LA Clippers - Oklahoma City Thunder",
+   "selection": "Victoire LA Clippers",
+   "odds": 3.15,
+   "p": 0.4396,
+   "start": "2026-11-14T06:30:00+00:00",
+   "hash": "167fce2d5f76c5021c21825ea2d2f7f03b104c1b8344cda81f11e511becb7662"
+  },
+  {
+   "n": 642,
+   "uid": "st8318342|h2h|Angleterre",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "Espagne - Angleterre",
+   "selection": "Victoire Angleterre",
+   "odds": 4.65,
+   "p": 0.2697,
+   "start": "2026-11-15T21:45:00+00:00",
+   "hash": "2ecd64103a2f99264152d9b0912f69e79c72392553c9a5c68e9603809adcdcc5"
+  },
+  {
+   "n": 643,
+   "uid": "st8318318|x|bttsN",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "France - Turquie",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 1.84,
+   "p": 0.6604,
+   "start": "2026-11-15T21:45:00+00:00",
+   "hash": "f0c44d0984b98429d59efe9882692c5ccef264ffc818f4ef085b8e2ffcc3638f"
+  },
+  {
+   "n": 644,
+   "uid": "st8318318|x|u4.5",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "France - Turquie",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.38,
+   "p": 0.8774,
+   "start": "2026-11-15T21:45:00+00:00",
+   "hash": "a02ebc227bc86891d564b837a907dc8e29f3336b6016172a495d0f8fb3e2a1e1"
+  },
+  {
+   "n": 645,
+   "uid": "st8318342|x|u3.5",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "Espagne - Angleterre",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.5,
+   "p": 0.736,
+   "start": "2026-11-15T21:45:00+00:00",
+   "hash": "06d8f0bdcdc0f9693cc9ada062b8cfc69db80ab5fbeb495f2ad3dfed58062792"
+  },
+  {
+   "n": 646,
+   "uid": "st8739133|h2h|Milwaukee Bucks",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "Orlando Magic - Milwaukee Bucks",
+   "selection": "Victoire Milwaukee Bucks",
+   "odds": 3.92,
+   "p": 0.2743,
+   "start": "2026-11-14T03:00:00+00:00",
+   "hash": "42c50de081d724465c387405e04bba29c618d6489691a602263073d61113a2aa"
+  },
+  {
+   "n": 647,
+   "uid": "st8739134|h2h|Cleveland Cavaliers",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "Miami Heat - Cleveland Cavaliers",
+   "selection": "Victoire Cleveland Cavaliers",
+   "odds": 2.1,
+   "p": 0.5032,
+   "start": "2026-11-14T04:00:00+00:00",
+   "hash": "15f08d26c7c5a0baed41b1d3647cd0c0a05af6a45f56852d8bcb57e47dd6608c"
+  },
+  {
+   "n": 648,
+   "uid": "st8318342|x|bttsN",
+   "recorded": "2026-11-13T08:16:42+00:00",
+   "match": "Espagne - Angleterre",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.0,
+   "p": 0.5183,
+   "start": "2026-11-15T21:45:00+00:00",
+   "hash": "339517f25746dff50ae19d86df4bf656dc271404d6a506b74b773ffbb75df34a"
   }
  ],
  "summary": {
-  "updated": "2026-11-13T01:29:40+00:00",
+  "updated": "2026-11-13T08:16:42+00:00",
   "n": 92,
   "wins": 29,
   "roi": -0.411,
-  "pending": 544
+  "pending": 553
  }
 }
