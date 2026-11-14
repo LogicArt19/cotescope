@@ -7838,13 +7838,189 @@
    "p": 0.436,
    "start": "2026-11-14T22:00:00+00:00",
    "hash": "bde24529754926353fb235c166fc92fb97083ab934341edf7013796c268dbf32"
+  },
+  {
+   "n": 693,
+   "uid": "st8318366|h2h|Kosovo",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Irlande - Kosovo",
+   "selection": "Victoire Kosovo",
+   "odds": 4.25,
+   "p": 0.4564,
+   "start": "2026-11-17T22:45:00+00:00",
+   "hash": "9a8024797bfbc224028c1044fa8a3e48de7084439c7c0ca8df076c698410113f"
+  },
+  {
+   "n": 694,
+   "uid": "st8742032|h2h|New Orleans Pelicans",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "New Orleans Pelicans - Denver Nuggets",
+   "selection": "Victoire New Orleans Pelicans",
+   "odds": 4.95,
+   "p": 0.3867,
+   "start": "2026-11-15T02:00:00+00:00",
+   "hash": "fc4ff168de365cbd32dc41d9599c1d1a62cbeb3a3a740e36e8c113d31a8c1d16"
+  },
+  {
+   "n": 695,
+   "uid": "st8318378|h2h|Draw",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Ukraine - Géorgie",
+   "selection": "Match nul",
+   "odds": 3.3,
+   "p": 0.3893,
+   "start": "2026-11-17T20:45:00+00:00",
+   "hash": "e0932ea679b58dc60c2de0931ac7d9f9c039baa80c5ffe06ed89851ff840eeb0"
+  },
+  {
+   "n": 696,
+   "uid": "st8993972|h2h|Elina Svitolina",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Linda Noskova - Elina Svitolina",
+   "selection": "Victoire Elina Svitolina",
+   "odds": 2.3,
+   "p": 0.539,
+   "start": "2026-11-14T23:10:00+00:00",
+   "hash": "c15d4dca011103c336c1d1fa2e9e7b8719b67c90fc277de0f2ec2be4e2807ee1"
+  },
+  {
+   "n": 697,
+   "uid": "st8318442|x|u4.5",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Finlande - Saint-Marin",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.45,
+   "p": 0.8775,
+   "start": "2026-11-15T19:00:00+00:00",
+   "hash": "5e52ecc91117255d564a1e288700eb779f845437e2c46f8961ab2dd42e1c4c73"
+  },
+  {
+   "n": 698,
+   "uid": "st8993098|h2h|Thiago Agustin Tirante",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Taylor Fritz - Thiago Agustin Tirante",
+   "selection": "Victoire Thiago Agustin Tirante",
+   "odds": 5.3,
+   "p": 0.229,
+   "start": "2026-11-14T14:00:00+00:00",
+   "hash": "69f2b4653250e5ac107a9041e59f4e5b1d84b486389cdd44748cb5b52b7f8a07"
+  },
+  {
+   "n": 699,
+   "uid": "st8522221|x|o3.5",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Udinese - Fiorentina",
+   "selection": "Plus de 3,5 buts",
+   "odds": 2.35,
+   "p": 0.4906,
+   "start": "2026-11-29T14:30:00+00:00",
+   "hash": "be21aa8cbe0dd2667227d4c605bc062a36e436f467354af5f4d981de0502b6d9"
+  },
+  {
+   "n": 700,
+   "uid": "st8742034|h2h|Miami Heat",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Miami Heat - Detroit Pistons",
+   "selection": "Victoire Miami Heat",
+   "odds": 2.45,
+   "p": 0.4649,
+   "start": "2026-11-15T03:00:00+00:00",
+   "hash": "0d94dd343206db3b06227eec819339cd6b77c30b260c6484e4549e5c889b05cf"
+  },
+  {
+   "n": 701,
+   "uid": "st8522219|x|bttsN",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Sassuolo - Naples",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.3,
+   "p": 0.5059,
+   "start": "2026-11-29T17:00:00+00:00",
+   "hash": "886f0872e3846976a308a90480d6a9e38f80aa66cf51f09eba1c572f1f75f1fd"
+  },
+  {
+   "n": 702,
+   "uid": "st8318406|h2h|Draw",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Islande - Luxembourg",
+   "selection": "Match nul",
+   "odds": 4.7,
+   "p": 0.2382,
+   "start": "2026-11-16T19:00:00+00:00",
+   "hash": "2631f6c7fbabfc485acaa7a8173a3d87bc268563b04a968541c896d276b158bd"
+  },
+  {
+   "n": 703,
+   "uid": "st8318418|totals|Over|2.5",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Kazakhstan - Slovaquie",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.76,
+   "p": 0.62,
+   "start": "2026-11-16T17:00:00+00:00",
+   "hash": "f6cfbd1f99555b64b6d0a1d1f4292302a17126cad2405befc4e055e104e141aa"
+  },
+  {
+   "n": 704,
+   "uid": "st8742035|h2h|Memphis Grizzlies",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Memphis Grizzlies - Brooklyn Nets",
+   "selection": "Victoire Memphis Grizzlies",
+   "odds": 1.46,
+   "p": 0.7543,
+   "start": "2026-11-15T03:00:00+00:00",
+   "hash": "913819dd90b768553abffe52ab2fa07268a5111df3333635d8f08cd1bff9de5c"
+  },
+  {
+   "n": 705,
+   "uid": "st8318378|totals|Under|2.5",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Ukraine - Géorgie",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.72,
+   "p": 0.62,
+   "start": "2026-11-17T20:45:00+00:00",
+   "hash": "dbca47ce524c2aacb41309392604599987d7a8237a8bc8e25439d42ac0184e33"
+  },
+  {
+   "n": 706,
+   "uid": "st8522217|x|dnb1",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Lecce - Atalanta Bergame",
+   "selection": "Lecce (remboursé si nul)",
+   "odds": 2.6,
+   "p": 0.4025,
+   "start": "2026-11-30T20:30:00+00:00",
+   "hash": "261aa42cececfd8cb979429c961fdccd055838982a45c4517ea040ebf16fdd58"
+  },
+  {
+   "n": 707,
+   "uid": "st8787015|x|u3.5",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Sparta Prague - AZ Alkmaar",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.42,
+   "p": 0.736,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "e5170755128dbc035de76368d25dc23c70d8a8fe79f9ad22d24e3a9a5835cff1"
+  },
+  {
+   "n": 708,
+   "uid": "st8318363|h2h|Israël",
+   "recorded": "2026-11-14T11:46:36+00:00",
+   "match": "Kosovo - Israël",
+   "selection": "Victoire Israël",
+   "odds": 4.5,
+   "p": 0.2294,
+   "start": "2026-11-14T16:00:00+00:00",
+   "hash": "945da5c6d17e8f279355c3b24d2e3ed1c0d79c9eefe32155f3f8da4158c85250"
   }
  ],
  "summary": {
-  "updated": "2026-11-14T03:29:56+00:00",
+  "updated": "2026-11-14T11:46:36+00:00",
   "n": 110,
   "wins": 36,
   "roi": -0.3531,
-  "pending": 579
+  "pending": 595
  }
 }
