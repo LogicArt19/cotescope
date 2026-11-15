@@ -8553,13 +8553,101 @@
    "p": 0.3107,
    "start": "2026-11-16T19:00:00+00:00",
    "hash": "01310a74a829a2c983364fb04929dec22a000e7bb3cc8e04598141497f5bd4ca"
+  },
+  {
+   "n": 754,
+   "uid": "st8742045|h2h|Sacramento Kings",
+   "recorded": "2026-11-15T11:09:47+00:00",
+   "match": "Sacramento Kings - Oklahoma City Thunder",
+   "selection": "Victoire Sacramento Kings",
+   "odds": 4.37,
+   "p": 0.3624,
+   "start": "2026-11-16T02:00:00+00:00",
+   "hash": "973d83ee22bc085fa72742e926d8bad7b3270e8bc86facf9391fd379861aaf3b"
+  },
+  {
+   "n": 755,
+   "uid": "st8742041|h2h|Dallas Mavericks",
+   "recorded": "2026-11-15T11:09:47+00:00",
+   "match": "Boston Celtics - Dallas Mavericks",
+   "selection": "Victoire Dallas Mavericks",
+   "odds": 5.9,
+   "p": 0.2457,
+   "start": "2026-11-15T23:00:00+00:00",
+   "hash": "b13989fd2a586f361f176b2bbb174902ba08ef57026416781907eefc6a3f8009"
+  },
+  {
+   "n": 756,
+   "uid": "st8998232|h2h|Elina Svitolina",
+   "recorded": "2026-11-15T11:09:47+00:00",
+   "match": "Elina Svitolina - Mirra Andreeva",
+   "selection": "Victoire Elina Svitolina",
+   "odds": 3.1,
+   "p": 0.426,
+   "start": "2026-11-15T20:00:00+00:00",
+   "hash": "3438a1d992c7e0a43469f11d92b9e5bf155d7c6e18faf293cca8d372bc0aa5f7"
+  },
+  {
+   "n": 757,
+   "uid": "st8742044|h2h|Milwaukee Bucks",
+   "recorded": "2026-11-15T11:09:47+00:00",
+   "match": "Milwaukee Bucks - Atlanta Hawks",
+   "selection": "Victoire Milwaukee Bucks",
+   "odds": 3.3,
+   "p": 0.3836,
+   "start": "2026-11-16T01:00:00+00:00",
+   "hash": "1dbf55972b8cc88ad6bdf769f2bb4583d5e07f15a19c0ee3c724f9003be90748"
+  },
+  {
+   "n": 758,
+   "uid": "st8742043|h2h|Washington Wizards",
+   "recorded": "2026-11-15T11:09:47+00:00",
+   "match": "Washington Wizards - Houston Rockets",
+   "selection": "Victoire Washington Wizards",
+   "odds": 3.97,
+   "p": 0.3185,
+   "start": "2026-11-16T00:00:00+00:00",
+   "hash": "39dd0730a01f4a1c38358e136806546bae28aee434e76feae5739a8f6ff8f28e"
+  },
+  {
+   "n": 759,
+   "uid": "st8742037|h2h|Indiana Pacers",
+   "recorded": "2026-11-15T11:09:47+00:00",
+   "match": "Philadelphie 76ers - Indiana Pacers",
+   "selection": "Victoire Indiana Pacers",
+   "odds": 3.15,
+   "p": 0.3624,
+   "start": "2026-11-15T20:00:00+00:00",
+   "hash": "f325d05d9021b85d351bb4e63278e0639d3e19c870f7dd78de1fc66b5d7d5049"
+  },
+  {
+   "n": 760,
+   "uid": "st8742039|h2h|LA Clippers",
+   "recorded": "2026-11-15T11:09:47+00:00",
+   "match": "LA Clippers - Charlotte Hornets",
+   "selection": "Victoire LA Clippers",
+   "odds": 1.76,
+   "p": 0.5917,
+   "start": "2026-11-15T21:30:00+00:00",
+   "hash": "0d83093792171d939fe2aaf9617cdc08b3eb6c5201f666da64560c123e54eefb"
+  },
+  {
+   "n": 761,
+   "uid": "st8318318|x|dcN2",
+   "recorded": "2026-11-15T11:09:47+00:00",
+   "match": "France - Turquie",
+   "selection": "Nul ou Turquie (N2)",
+   "odds": 4.6,
+   "p": 0.2237,
+   "start": "2026-11-15T21:45:00+00:00",
+   "hash": "8485fc69bac0e9dc893278a71cf74194f01402b8868edb2a471e7e93b132cafe"
   }
  ],
  "summary": {
-  "updated": "2026-11-15T02:57:57+00:00",
+  "updated": "2026-11-15T11:09:47+00:00",
   "n": 132,
   "wins": 42,
   "roi": -0.3229,
-  "pending": 618
+  "pending": 626
  }
 }
