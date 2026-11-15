@@ -3432,7 +3432,9 @@
    "odds": 2.13,
    "p": 0.5403,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "eedc6b291e395482369753bea1bacc8fba578b73fdcd14dec5c36340862ec9e4"
+   "hash": "eedc6b291e395482369753bea1bacc8fba578b73fdcd14dec5c36340862ec9e4",
+   "status": "lost",
+   "score": "1-4"
   },
   {
    "n": 298,
@@ -3511,7 +3513,9 @@
    "odds": 1.55,
    "p": 0.736,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "733bdd3b60fa96268e712674b1cb3b574868bb87c927dd5be6ca8268c1f9280c"
+   "hash": "733bdd3b60fa96268e712674b1cb3b574868bb87c927dd5be6ca8268c1f9280c",
+   "status": "lost",
+   "score": "1-4"
   },
   {
    "n": 305,
@@ -3656,7 +3660,9 @@
    "odds": 4.2,
    "p": 0.2674,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "8de205064debf059acce768acdc9d68a79f72ab606150fdc5a7f6688e39a166e"
+   "hash": "8de205064debf059acce768acdc9d68a79f72ab606150fdc5a7f6688e39a166e",
+   "status": "lost",
+   "score": "1-4"
   },
   {
    "n": 318,
@@ -3678,7 +3684,9 @@
    "odds": 5.5,
    "p": 0.1982,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "6b1bbebc2f9758ffb789b4147dfb04c979bc728eca2a6917b2fe65903806feec"
+   "hash": "6b1bbebc2f9758ffb789b4147dfb04c979bc728eca2a6917b2fe65903806feec",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 320,
@@ -3965,7 +3973,9 @@
    "odds": 1.98,
    "p": 0.5402,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "9616fc229da1a4bf5b5f06fdecbfdffc9ce671156926b368b34e1f7eb357ff22"
+   "hash": "9616fc229da1a4bf5b5f06fdecbfdffc9ce671156926b368b34e1f7eb357ff22",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 345,
@@ -4024,7 +4034,9 @@
    "odds": 5.2,
    "p": 0.2023,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "3df5480ec2168fd35ecad6037cde0cda91b7a630ea9867a62dfe426603edeae5"
+   "hash": "3df5480ec2168fd35ecad6037cde0cda91b7a630ea9867a62dfe426603edeae5",
+   "status": "won",
+   "score": "1-4"
   },
   {
    "n": 350,
@@ -4123,7 +4135,9 @@
    "odds": 5.1,
    "p": 0.2035,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "d599c3a2fe80191851403d5e53b4e3bbc47b9290a0e9dc64012876b4c06507d3"
+   "hash": "d599c3a2fe80191851403d5e53b4e3bbc47b9290a0e9dc64012876b4c06507d3",
+   "status": "lost",
+   "score": "1-0"
   },
   {
    "n": 359,
@@ -4147,7 +4161,9 @@
    "odds": 1.42,
    "p": 0.736,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "ba5ced926bc3892fe19cb0eddc956f0681d01e6e47d0172e0d7ab2f4c4c5fe7c"
+   "hash": "ba5ced926bc3892fe19cb0eddc956f0681d01e6e47d0172e0d7ab2f4c4c5fe7c",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 361,
@@ -4169,7 +4185,9 @@
    "odds": 3.9,
    "p": 0.2674,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "28fd9162841bac4a5fd1caa4e20008bf5b2b0cf1988ae73158e87606f828b048"
+   "hash": "28fd9162841bac4a5fd1caa4e20008bf5b2b0cf1988ae73158e87606f828b048",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 363,
@@ -4259,7 +4277,9 @@
    "odds": 4.1,
    "p": 0.2659,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "bed5c0bba7193ed4204f770a988ac1ec8626a0e39deb256a0094e448856bf799"
+   "hash": "bed5c0bba7193ed4204f770a988ac1ec8626a0e39deb256a0094e448856bf799",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 371,
@@ -4307,7 +4327,9 @@
    "odds": 3.85,
    "p": 0.2729,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "15f75b9e435f2b7759a96aa9a28743e622d3d91b2fd04f4e96e41d95e0621f21"
+   "hash": "15f75b9e435f2b7759a96aa9a28743e622d3d91b2fd04f4e96e41d95e0621f21",
+   "status": "lost",
+   "score": "1-0"
   },
   {
    "n": 375,
@@ -4568,7 +4590,9 @@
    "odds": 2.22,
    "p": 0.5583,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "04764cae726836a5785fa3d3b543c51d8e002b6cf2e23a1cf0b0702a9be49b23"
+   "hash": "04764cae726836a5785fa3d3b543c51d8e002b6cf2e23a1cf0b0702a9be49b23",
+   "status": "won",
+   "score": "1-0"
   },
   {
    "n": 398,
@@ -4926,7 +4950,9 @@
    "odds": 2.25,
    "p": 0.5,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "424bbead80aa3c6b65a97a66b23e4b3e1d1045efa03d63e0177f8504106eac9d"
+   "hash": "424bbead80aa3c6b65a97a66b23e4b3e1d1045efa03d63e0177f8504106eac9d",
+   "status": "lost",
+   "score": "1-0"
   },
   {
    "n": 430,
@@ -5550,7 +5576,9 @@
    "odds": 1.7,
    "p": 0.62,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "68b3fe78ecf43692b83cfde65c170878abf27789059b666939b4d1087d939248"
+   "hash": "68b3fe78ecf43692b83cfde65c170878abf27789059b666939b4d1087d939248",
+   "status": "won",
+   "score": "2-1"
   },
   {
    "n": 486,
@@ -5770,7 +5798,9 @@
    "odds": 3.55,
    "p": 0.3003,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "c3624dbc5a1225aa241cb8c9984948be2e723c6388428d707b25dea759dc3e51"
+   "hash": "c3624dbc5a1225aa241cb8c9984948be2e723c6388428d707b25dea759dc3e51",
+   "status": "won",
+   "score": "2-1"
   },
   {
    "n": 506,
@@ -6001,7 +6031,9 @@
    "odds": 4.55,
    "p": 0.2293,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "732fdd191897aa28fe68fd3899f9fb3a33093cac6980cf75ecd511a200d00a0b"
+   "hash": "732fdd191897aa28fe68fd3899f9fb3a33093cac6980cf75ecd511a200d00a0b",
+   "status": "lost",
+   "score": "1-4"
   },
   {
    "n": 527,
@@ -7190,7 +7222,9 @@
    "odds": 4.0,
    "p": 0.264,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "bf3efdd0b000e4c1be796a96442d89ab3fe0a2ce596e570e3a4544ee20abdbaf"
+   "hash": "bf3efdd0b000e4c1be796a96442d89ab3fe0a2ce596e570e3a4544ee20abdbaf",
+   "status": "lost",
+   "score": "1-0"
   },
   {
    "n": 634,
@@ -7201,7 +7235,9 @@
    "odds": 1.98,
    "p": 0.5272,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "f2a5b75c21c15fb64834720634c5c054dc298f68faa15342dbe90de221e883c7"
+   "hash": "f2a5b75c21c15fb64834720634c5c054dc298f68faa15342dbe90de221e883c7",
+   "status": "lost",
+   "score": "1-0"
   },
   {
    "n": 635,
@@ -7212,7 +7248,9 @@
    "odds": 1.42,
    "p": 0.7326,
    "start": "2026-11-14T21:45:00+00:00",
-   "hash": "c8c7592d83d7c8ee797f96cc3a1332931a0f7606111271aa23d1751eab0dc099"
+   "hash": "c8c7592d83d7c8ee797f96cc3a1332931a0f7606111271aa23d1751eab0dc099",
+   "status": "lost",
+   "score": "1-0"
   },
   {
    "n": 636,
@@ -8518,10 +8556,10 @@
   }
  ],
  "summary": {
-  "updated": "2026-11-14T22:37:50+00:00",
-  "n": 113,
-  "wins": 38,
-  "roi": -0.3212,
-  "pending": 637
+  "updated": "2026-11-15T02:57:57+00:00",
+  "n": 132,
+  "wins": 42,
+  "roi": -0.3229,
+  "pending": 618
  }
 }
