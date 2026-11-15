@@ -8641,13 +8641,24 @@
    "p": 0.2237,
    "start": "2026-11-15T21:45:00+00:00",
    "hash": "8485fc69bac0e9dc893278a71cf74194f01402b8868edb2a471e7e93b132cafe"
+  },
+  {
+   "n": 762,
+   "uid": "dcee36f9b8a9989972b6d4ddde76c4c7|x|u3.5",
+   "recorded": "2026-11-15T18:04:27+00:00",
+   "match": "Athletic Bilbao - Espanyol",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.32,
+   "p": 0.8405,
+   "start": "2026-11-20T20:00:00+00:00",
+   "hash": "812c89ea5f470e30c4ec90b890542b2ad41d74f0a6a1bd5de3036d5645af12bd"
   }
  ],
  "summary": {
-  "updated": "2026-11-15T11:09:47+00:00",
+  "updated": "2026-11-15T18:04:27+00:00",
   "n": 132,
   "wins": 42,
   "roi": -0.3229,
-  "pending": 626
+  "pending": 627
  }
 }
