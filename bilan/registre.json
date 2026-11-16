@@ -8001,7 +8001,9 @@
    "odds": 4.7,
    "p": 0.2382,
    "start": "2026-11-16T19:00:00+00:00",
-   "hash": "2631f6c7fbabfc485acaa7a8173a3d87bc268563b04a968541c896d276b158bd"
+   "hash": "2631f6c7fbabfc485acaa7a8173a3d87bc268563b04a968541c896d276b158bd",
+   "status": "lost",
+   "score": "3-0"
   },
   {
    "n": 703,
@@ -8012,7 +8014,9 @@
    "odds": 1.76,
    "p": 0.62,
    "start": "2026-11-16T17:00:00+00:00",
-   "hash": "f6cfbd1f99555b64b6d0a1d1f4292302a17126cad2405befc4e055e104e141aa"
+   "hash": "f6cfbd1f99555b64b6d0a1d1f4292302a17126cad2405befc4e055e104e141aa",
+   "status": "won",
+   "score": "2-2"
   },
   {
    "n": 704,
@@ -8399,7 +8403,9 @@
    "odds": 1.8,
    "p": 0.5888,
    "start": "2026-11-16T17:00:00+00:00",
-   "hash": "b7c520fc198465bce694d0132854270b7b89324cd9fa02135162f73ca7501811"
+   "hash": "b7c520fc198465bce694d0132854270b7b89324cd9fa02135162f73ca7501811",
+   "status": "lost",
+   "score": "2-2"
   },
   {
    "n": 739,
@@ -8421,7 +8427,9 @@
    "odds": 5.7,
    "p": 0.1937,
    "start": "2026-11-16T19:00:00+00:00",
-   "hash": "6e500351d46f88a255c6f08baf97d79d95d910280da7d6bc386b12df8df220d0"
+   "hash": "6e500351d46f88a255c6f08baf97d79d95d910280da7d6bc386b12df8df220d0",
+   "status": "lost",
+   "score": "2-1"
   },
   {
    "n": 741,
@@ -8564,7 +8572,9 @@
    "odds": 3.65,
    "p": 0.3107,
    "start": "2026-11-16T19:00:00+00:00",
-   "hash": "01310a74a829a2c983364fb04929dec22a000e7bb3cc8e04598141497f5bd4ca"
+   "hash": "01310a74a829a2c983364fb04929dec22a000e7bb3cc8e04598141497f5bd4ca",
+   "status": "won",
+   "score": "2-1"
   },
   {
    "n": 754,
@@ -8732,13 +8742,112 @@
    "p": 0.6316,
    "start": "2026-11-17T03:00:00+00:00",
    "hash": "c9627574eda64d1d8c406633391894043dc47b4f75fa79a1b8c8a5ba54738717"
+  },
+  {
+   "n": 769,
+   "uid": "f128c19fa7af43e30dbe3c373e7bc27e|x|dcN2",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Inter Milan - Genoa",
+   "selection": "Nul ou Genoa (N2)",
+   "odds": 3.45,
+   "p": 0.4104,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "614592dd3b6293c8b841313d7c78a935f080e6e3441a4279efd1ae813b786198"
+  },
+  {
+   "n": 770,
+   "uid": "f96c1137c9d3f7e2e691275a2988fa1d|x|o3.5",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Le Havre - Strasbourg",
+   "selection": "Plus de 3,5 buts",
+   "odds": 2.3,
+   "p": 0.5433,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "28d87e17ed844a61d7be54301c8e629f23eb51f32dfd2c97ed6bc26931306ae4"
+  },
+  {
+   "n": 771,
+   "uid": "9d23f6ad21946dd258869ebc22236cf0|x|dnb1",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Ipswich Town - Aston Villa",
+   "selection": "Ipswich Town (remboursé si nul)",
+   "odds": 2.32,
+   "p": 0.5211,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "6c77ed3b119c8be09965fc389a0dac937221e3fa5cdfbdf3f38e1fcdf28af39e"
+  },
+  {
+   "n": 772,
+   "uid": "d3d47b94324eb7cde85bd93993437d1c|totals|Over|2.5",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Udinese - Fiorentina",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.66,
+   "p": 0.7008,
+   "start": "2026-11-29T11:30:00+00:00",
+   "hash": "456be66c43d9bf5083c6e845d81b7398818889af738c439eea552666e1f5a072"
+  },
+  {
+   "n": 773,
+   "uid": "st8596027|x|u4.5",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Eintracht Francfort - Hoffenheim",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.32,
+   "p": 0.8774,
+   "start": "2026-11-21T17:30:00+00:00",
+   "hash": "ff7959eef8c40fe2bcdd11b10a88f9d101eb17cb6d46b78c89a4615ee6375485"
+  },
+  {
+   "n": 774,
+   "uid": "f96c1137c9d3f7e2e691275a2988fa1d|totals|Over|2.5",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Le Havre - Strasbourg",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.46,
+   "p": 0.7442,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "a48127b263aefd7c2dc98baf842bdb1e49ad53dfc1a8b6d41dfd14e1df096ee5"
+  },
+  {
+   "n": 775,
+   "uid": "st8586541|totals|Over|2.5",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Rayo Vallecano - Valence",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.94,
+   "p": 0.56,
+   "start": "2026-11-21T18:15:00+00:00",
+   "hash": "4f60d1fb83e1a5692f117c11cb220232fd9255958c0e888f37acbdcd1e3f5d16"
+  },
+  {
+   "n": 776,
+   "uid": "a370db12aaff183a94f8e9a6acb6d4c9|totals|Over|2.5",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Auxerre - Marseille",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.55,
+   "p": 0.6957,
+   "start": "2026-11-29T14:00:00+00:00",
+   "hash": "f2012c71b30e54d15ca1ddf95bff0999f166d100cbc92d07de7bfdee9ea3ebb3"
+  },
+  {
+   "n": 777,
+   "uid": "e7e64568f6af00d395a3fdfc27de8ae3|x|dnb2",
+   "recorded": "2026-11-16T22:20:04+00:00",
+   "match": "Inter Milan - VfB Stuttgart",
+   "selection": "VfB Stuttgart (remboursé si nul)",
+   "odds": 4.6,
+   "p": 0.2243,
+   "start": "2026-11-25T20:00:00+00:00",
+   "hash": "0903c6b1b1ac3882abeebf2f3c08353fdff988c4ef6ff3a4ff756e77095cc5f1"
   }
  ],
  "summary": {
-  "updated": "2026-11-16T11:44:49+00:00",
-  "n": 139,
-  "wins": 46,
-  "roi": -0.3043,
-  "pending": 626
+  "updated": "2026-11-16T22:20:04+00:00",
+  "n": 144,
+  "wins": 48,
+  "roi": -0.2909,
+  "pending": 630
  }
 }
