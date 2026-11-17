@@ -7922,7 +7922,9 @@
    "odds": 3.3,
    "p": 0.3893,
    "start": "2026-11-17T20:45:00+00:00",
-   "hash": "e0932ea679b58dc60c2de0931ac7d9f9c039baa80c5ffe06ed89851ff840eeb0"
+   "hash": "e0932ea679b58dc60c2de0931ac7d9f9c039baa80c5ffe06ed89851ff840eeb0",
+   "status": "lost",
+   "score": "1-0"
   },
   {
    "n": 696,
@@ -8038,7 +8040,9 @@
    "odds": 1.72,
    "p": 0.62,
    "start": "2026-11-17T20:45:00+00:00",
-   "hash": "dbca47ce524c2aacb41309392604599987d7a8237a8bc8e25439d42ac0184e33"
+   "hash": "dbca47ce524c2aacb41309392604599987d7a8237a8bc8e25439d42ac0184e33",
+   "status": "won",
+   "score": "1-0"
   },
   {
    "n": 706,
@@ -9417,13 +9421,57 @@
    "p": 0.3715,
    "start": "2026-11-28T20:00:00+00:00",
    "hash": "6fcd09785b937f494f472ed51b220086f36d5808f9c4495cddfbd64c2e74a3e8"
+  },
+  {
+   "n": 830,
+   "uid": "3fb5e4a792cf34a0459efcb79a11a785|totals|Under|2.5",
+   "recorded": "2026-11-17T23:10:29+00:00",
+   "match": "Real Madrid - PSV Eindhoven",
+   "selection": "Moins de 2,5 buts",
+   "odds": 4.5,
+   "p": 0.32,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "d4e949c2f60dee11481319b0eb97f37c4e68b2742adbdc5299021d84a5b7301d"
+  },
+  {
+   "n": 831,
+   "uid": "st8742057|h2h|Los Angeles Lakers",
+   "recorded": "2026-11-17T23:10:29+00:00",
+   "match": "Los Angeles Lakers - Charlotte Hornets",
+   "selection": "Victoire Los Angeles Lakers",
+   "odds": 1.31,
+   "p": 0.8254,
+   "start": "2026-11-18T05:00:00+00:00",
+   "hash": "b4efae835b123051c2f5d3e846b90454b7e65435f3dc6c96b401e2077a73a423"
+  },
+  {
+   "n": 832,
+   "uid": "69fc06d019491be2aa1bf69b8f8041e3|h2h|Draw",
+   "recorded": "2026-11-17T23:10:29+00:00",
+   "match": "Deportivo La Coruña - Barcelona",
+   "selection": "Match nul",
+   "odds": 5.5,
+   "p": 0.1938,
+   "start": "2026-11-29T15:15:00+00:00",
+   "hash": "05da776640910d5a5185bea472fd4060470c35d0b41b8935f4a894a6b4dc3e9e"
+  },
+  {
+   "n": 833,
+   "uid": "b1af6789fe6db7aab18a2945ce56f035|x|bttsY",
+   "recorded": "2026-11-17T23:10:29+00:00",
+   "match": "Atlético Madrid - Viking FK",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 2.2,
+   "p": 0.4782,
+   "start": "2026-11-25T20:00:00+00:00",
+   "hash": "6dfd0e96dc1f7ad0d7f3bda0316a4297064a9e3ce2b80bc13cd771e001833db0"
   }
  ],
  "summary": {
-  "updated": "2026-11-17T14:44:57+00:00",
-  "n": 146,
-  "wins": 50,
-  "roi": -0.2638,
-  "pending": 680
+  "updated": "2026-11-17T23:10:29+00:00",
+  "n": 148,
+  "wins": 51,
+  "roi": -0.2621,
+  "pending": 682
  }
 }
