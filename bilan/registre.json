@@ -8095,7 +8095,9 @@
    "odds": 3.83,
    "p": 0.3716,
    "start": "2026-11-16T21:45:00+00:00",
-   "hash": "f733948dba4947d3daba4a12cc28dc76aedb9deabd4b16cad29e5da4feabdcf2"
+   "hash": "f733948dba4947d3daba4a12cc28dc76aedb9deabd4b16cad29e5da4feabdcf2",
+   "status": "won",
+   "score": "1-1"
   },
   {
    "n": 711,
@@ -8293,7 +8295,9 @@
    "odds": 1.55,
    "p": 0.74,
    "start": "2026-11-16T21:45:00+00:00",
-   "hash": "c009208e61b920825103e2e3fc2b8def117cf3bfcfbc5e98055248b94997ae8b"
+   "hash": "c009208e61b920825103e2e3fc2b8def117cf3bfcfbc5e98055248b94997ae8b",
+   "status": "won",
+   "score": "1-1"
   },
   {
    "n": 729,
@@ -8844,10 +8848,10 @@
   }
  ],
  "summary": {
-  "updated": "2026-11-16T22:20:04+00:00",
-  "n": 144,
-  "wins": 48,
-  "roi": -0.2909,
-  "pending": 630
+  "updated": "2026-11-17T04:49:41+00:00",
+  "n": 146,
+  "wins": 50,
+  "roi": -0.2638,
+  "pending": 628
  }
 }
