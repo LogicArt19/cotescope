@@ -9547,13 +9547,46 @@
    "p": 0.6671,
    "start": "2026-11-19T01:30:00+00:00",
    "hash": "995a60f175aa3a5119a93b2ef2886e41d4c8abbc476c2009cfbf7e7f1bf0d8e3"
+  },
+  {
+   "n": 840,
+   "uid": "st8787133|h2h|FK Borac Banja Luka",
+   "recorded": "2026-11-18T14:24:47+00:00",
+   "match": "FK Borac Banja Luka - Atalanta Bergame",
+   "selection": "Victoire FK Borac Banja Luka",
+   "odds": 4.75,
+   "p": 0.3504,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "d64fd9763174430ccbacd67377ad97fb3a6266f3774c044589542eb589878c7c"
+  },
+  {
+   "n": 841,
+   "uid": "st8586546|x|u4.5",
+   "recorded": "2026-11-18T14:24:47+00:00",
+   "match": "Deportivo La Corogne - Barcelone",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.45,
+   "p": 0.8774,
+   "start": "2026-11-29T17:15:00+00:00",
+   "hash": "bd73a3435b7ac823faafcd6ab437a0a19e46ff992488ac99b0ddcc0b010f78eb"
+  },
+  {
+   "n": 842,
+   "uid": "st8742065|h2h|New Orleans Pelicans",
+   "recorded": "2026-11-18T14:24:47+00:00",
+   "match": "New Orleans Pelicans - Detroit Pistons",
+   "selection": "Victoire New Orleans Pelicans",
+   "odds": 3.05,
+   "p": 0.3654,
+   "start": "2026-11-19T01:00:00+00:00",
+   "hash": "d75d2d364bf5cb363f263fb3850bb56367871484c79bc8563a4a71cd968a2740"
   }
  ],
  "summary": {
-  "updated": "2026-11-18T04:37:26+00:00",
+  "updated": "2026-11-18T14:24:47+00:00",
   "n": 156,
   "wins": 52,
   "roi": -0.2906,
-  "pending": 680
+  "pending": 683
  }
 }
