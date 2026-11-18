@@ -9580,13 +9580,112 @@
    "p": 0.3654,
    "start": "2026-11-19T01:00:00+00:00",
    "hash": "d75d2d364bf5cb363f263fb3850bb56367871484c79bc8563a4a71cd968a2740"
+  },
+  {
+   "n": 843,
+   "uid": "3b025a029f51fbeb9580a178d0612f50|x|dc1N",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "Hamburger SV - Bayern Munich",
+   "selection": "Hamburger SV ou nul (1N)",
+   "odds": 4.7,
+   "p": 0.3862,
+   "start": "2026-11-28T14:30:00+00:00",
+   "hash": "563d5c66895cf2fd4f65d9d9f011577be6c59bc4a04eeda0f7229f9beb7a328b"
+  },
+  {
+   "n": 844,
+   "uid": "69fc06d019491be2aa1bf69b8f8041e3|x|dnb1",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "Deportivo La Coruña - Barcelona",
+   "selection": "Deportivo La Coruña (remboursé si nul)",
+   "odds": 5.7,
+   "p": 0.2099,
+   "start": "2026-11-29T15:15:00+00:00",
+   "hash": "aa98805044826f12bd03051a57d61defeae02650ac18028998306da6d92abb5b"
+  },
+  {
+   "n": 845,
+   "uid": "98415e21c147d701bd81e70b1af0f3a7|x|dnb1",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "Borussia Dortmund - Bayer Leverkusen",
+   "selection": "Borussia Dortmund (remboursé si nul)",
+   "odds": 1.48,
+   "p": 0.7854,
+   "start": "2026-11-29T18:30:00+00:00",
+   "hash": "ad9d81b7b109bc1c7700f4d520106c61fd454dededdb11ccc27d7abb95a237b8"
+  },
+  {
+   "n": 846,
+   "uid": "cb513fd9869c9aa6ce506bb499bcd48b|h2h|Draw",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "Parma - AS Roma",
+   "selection": "Match nul",
+   "odds": 5.5,
+   "p": 0.1998,
+   "start": "2026-11-21T17:00:00+00:00",
+   "hash": "395169b113991987776dfac42367c9d06c44fd59e2a4776dc1ef138f7656165f"
+  },
+  {
+   "n": 847,
+   "uid": "69fc06d019491be2aa1bf69b8f8041e3|x|dc1N",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "Deportivo La Coruña - Barcelona",
+   "selection": "Deportivo La Coruña ou nul (1N)",
+   "odds": 3.1,
+   "p": 0.3563,
+   "start": "2026-11-29T15:15:00+00:00",
+   "hash": "00273378c109571efdf8d841413b26938d85f453d46e4371f53fba4ff87bf232"
+  },
+  {
+   "n": 848,
+   "uid": "80c92a163a81b69fef76530221e2edd0|x|dnb1",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "Levante - Real Racing Club de Santander",
+   "selection": "Levante (remboursé si nul)",
+   "odds": 1.44,
+   "p": 0.731,
+   "start": "2026-11-27T20:00:00+00:00",
+   "hash": "d76899a5e85a9a8737fc8dde2dab0a381ca441071dc824ef90ee3d2dd03b7118"
+  },
+  {
+   "n": 849,
+   "uid": "2aa9aa95157eb36fed45135c995cdd80|x|dnb1",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "SC Freiburg - RB Leipzig",
+   "selection": "SC Freiburg (remboursé si nul)",
+   "odds": 1.76,
+   "p": 0.5993,
+   "start": "2026-11-29T14:30:00+00:00",
+   "hash": "a75cec7b60c8936c9c47c59ea751b68119102cad9ad62b14062b72d7fb1f3b7f"
+  },
+  {
+   "n": 850,
+   "uid": "st8742069|h2h|Utah Jazz",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "Los Angeles Lakers - Utah Jazz",
+   "selection": "Victoire Utah Jazz",
+   "odds": 4.95,
+   "p": 0.2095,
+   "start": "2026-11-19T03:00:00+00:00",
+   "hash": "49e19ceb48beba5c98b7a97177b50a70294a79a8be7742b1cc0dc33bc1615b4f"
+  },
+  {
+   "n": 851,
+   "uid": "st8787131|x|dnb2",
+   "recorded": "2026-11-18T22:14:16+00:00",
+   "match": "SK Brann - AGF Aarhus",
+   "selection": "AGF Aarhus (remboursé si nul)",
+   "odds": 3.02,
+   "p": 0.338,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "4b7f3b5028b18bd56b1c7346b29e9d150f84ad2f0a8fe68abbd2a1a768e7631f"
   }
  ],
  "summary": {
-  "updated": "2026-11-18T14:24:47+00:00",
+  "updated": "2026-11-18T22:14:16+00:00",
   "n": 156,
   "wins": 52,
   "roi": -0.2906,
-  "pending": 683
+  "pending": 692
  }
 }
