@@ -7900,7 +7900,9 @@
    "odds": 4.25,
    "p": 0.4564,
    "start": "2026-11-17T22:45:00+00:00",
-   "hash": "9a8024797bfbc224028c1044fa8a3e48de7084439c7c0ca8df076c698410113f"
+   "hash": "9a8024797bfbc224028c1044fa8a3e48de7084439c7c0ca8df076c698410113f",
+   "status": "lost",
+   "score": "3-0"
   },
   {
    "n": 694,
@@ -8123,7 +8125,9 @@
    "odds": 4.75,
    "p": 0.286,
    "start": "2026-11-17T21:45:00+00:00",
-   "hash": "720d1453d28d36ff63ba6b388fa40d137b401dfe603d0ae1c1646c62c1250116"
+   "hash": "720d1453d28d36ff63ba6b388fa40d137b401dfe603d0ae1c1646c62c1250116",
+   "status": "lost",
+   "score": "1-1"
   },
   {
    "n": 713,
@@ -8167,7 +8171,9 @@
    "odds": 5.2,
    "p": 0.2382,
    "start": "2026-11-17T21:45:00+00:00",
-   "hash": "8e252c2492456f8c822deeb4cafe73ab2589816ce87503f039de23f2491ae620"
+   "hash": "8e252c2492456f8c822deeb4cafe73ab2589816ce87503f039de23f2491ae620",
+   "status": "lost",
+   "score": "2-3"
   },
   {
    "n": 717,
@@ -8470,7 +8476,9 @@
    "odds": 1.48,
    "p": 0.736,
    "start": "2026-11-17T21:45:00+00:00",
-   "hash": "5adb955e9ee5e7082852c5eb7456277a321334ed6873b8028635ae2d9ee38746"
+   "hash": "5adb955e9ee5e7082852c5eb7456277a321334ed6873b8028635ae2d9ee38746",
+   "status": "lost",
+   "score": "2-3"
   },
   {
    "n": 744,
@@ -8481,7 +8489,9 @@
    "odds": 1.45,
    "p": 0.736,
    "start": "2026-11-17T21:45:00+00:00",
-   "hash": "4013468a9782e7d7d3bd57bffd4d0b85b18fb3a78d5955d5a92fcc7105849f87"
+   "hash": "4013468a9782e7d7d3bd57bffd4d0b85b18fb3a78d5955d5a92fcc7105849f87",
+   "status": "won",
+   "score": "1-1"
   },
   {
    "n": 745,
@@ -8525,7 +8535,9 @@
    "odds": 1.77,
    "p": 0.5914,
    "start": "2026-11-17T21:45:00+00:00",
-   "hash": "abe7ff12566ac4fd398a06f116058be33f4a434a094b2b887cd6c1454dd59322"
+   "hash": "abe7ff12566ac4fd398a06f116058be33f4a434a094b2b887cd6c1454dd59322",
+   "status": "lost",
+   "score": "2-3"
   },
   {
    "n": 749,
@@ -8569,7 +8581,9 @@
    "odds": 1.96,
    "p": 0.5228,
    "start": "2026-11-17T21:45:00+00:00",
-   "hash": "ae0ccb5e584529cd5678da908c14c8b4d9dbdd7e8394c285e04bc2ef4f81132c"
+   "hash": "ae0ccb5e584529cd5678da908c14c8b4d9dbdd7e8394c285e04bc2ef4f81132c",
+   "status": "lost",
+   "score": "1-1"
   },
   {
    "n": 753,
@@ -9134,7 +9148,9 @@
    "odds": 4.3,
    "p": 0.2674,
    "start": "2026-11-17T21:45:00+00:00",
-   "hash": "bd429047dcdeffba6d77a1d9e800c487be520ab977677cbe87628e4f229d6777"
+   "hash": "bd429047dcdeffba6d77a1d9e800c487be520ab977677cbe87628e4f229d6777",
+   "status": "lost",
+   "score": "2-3"
   },
   {
    "n": 804,
@@ -9465,13 +9481,79 @@
    "p": 0.4782,
    "start": "2026-11-25T20:00:00+00:00",
    "hash": "6dfd0e96dc1f7ad0d7f3bda0316a4297064a9e3ce2b80bc13cd771e001833db0"
+  },
+  {
+   "n": 834,
+   "uid": "st8742068|h2h|Golden State Warriors",
+   "recorded": "2026-11-18T04:37:26+00:00",
+   "match": "Dallas Mavericks - Golden State Warriors",
+   "selection": "Victoire Golden State Warriors",
+   "odds": 2.67,
+   "p": 0.5351,
+   "start": "2026-11-19T02:00:00+00:00",
+   "hash": "1e2c65d9940189bcfc0d003feedfa8f117f57726e9ad0c4b2c0d511ae4135960"
+  },
+  {
+   "n": 835,
+   "uid": "st8742059|h2h|Memphis Grizzlies",
+   "recorded": "2026-11-18T04:37:26+00:00",
+   "match": "Cleveland Cavaliers - Memphis Grizzlies",
+   "selection": "Victoire Memphis Grizzlies",
+   "odds": 2.6,
+   "p": 0.5223,
+   "start": "2026-11-19T01:00:00+00:00",
+   "hash": "edf8fff2703484dfc53dafa014f859dcf3a70f453ce3e5acbfd787a7f46080fd"
+  },
+  {
+   "n": 836,
+   "uid": "st8742060|h2h|Indiana Pacers",
+   "recorded": "2026-11-18T04:37:26+00:00",
+   "match": "Indiana Pacers - Houston Rockets",
+   "selection": "Victoire Indiana Pacers",
+   "odds": 2.97,
+   "p": 0.4301,
+   "start": "2026-11-19T01:00:00+00:00",
+   "hash": "5f7283ccb799e92bdd6d0ce3c439c0740cf0dc2456af8fff9e300902642c8d22"
+  },
+  {
+   "n": 837,
+   "uid": "st8742070|h2h|Sacramento Kings",
+   "recorded": "2026-11-18T04:37:26+00:00",
+   "match": "Sacramento Kings - Phoenix Suns",
+   "selection": "Victoire Sacramento Kings",
+   "odds": 2.97,
+   "p": 0.3745,
+   "start": "2026-11-19T04:00:00+00:00",
+   "hash": "4fd0b3c545083b2e55afdc5d58707ac0622e5a4af4ea52b8623560829da22972"
+  },
+  {
+   "n": 838,
+   "uid": "st8742066|h2h|Atlanta Hawks",
+   "recorded": "2026-11-18T04:37:26+00:00",
+   "match": "Oklahoma City Thunder - Atlanta Hawks",
+   "selection": "Victoire Atlanta Hawks",
+   "odds": 3.05,
+   "p": 0.3564,
+   "start": "2026-11-19T02:00:00+00:00",
+   "hash": "35f4bae6090cb5cfe04cb05a314bf8aec8a2373d7c047a624c837bee00275a79"
+  },
+  {
+   "n": 839,
+   "uid": "st8742063|h2h|Brooklyn Nets",
+   "recorded": "2026-11-18T04:37:26+00:00",
+   "match": "Brooklyn Nets - Chicago Bulls",
+   "selection": "Victoire Brooklyn Nets",
+   "odds": 1.6,
+   "p": 0.6671,
+   "start": "2026-11-19T01:30:00+00:00",
+   "hash": "995a60f175aa3a5119a93b2ef2886e41d4c8abbc476c2009cfbf7e7f1bf0d8e3"
   }
  ],
  "summary": {
-  "updated": "2026-11-17T23:10:29+00:00",
-  "n": 148,
-  "wins": 51,
-  "roi": -0.2621,
-  "pending": 682
+  "updated": "2026-11-18T04:37:26+00:00",
+  "n": 156,
+  "wins": 52,
+  "roi": -0.2906,
+  "pending": 680
  }
 }
