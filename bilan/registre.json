@@ -9723,13 +9723,222 @@
    "p": 0.4659,
    "start": "2026-11-28T15:00:00+00:00",
    "hash": "a3a423fdca19dfb73ea61fdb6f51928a1a5aff5abbabd4c8bd1e2d99a87c37ae"
+  },
+  {
+   "n": 856,
+   "uid": "st8787125|h2h|FC Iberia 1999",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "FC Iberia 1999 - CF Getafe",
+   "selection": "Victoire FC Iberia 1999",
+   "odds": 5.45,
+   "p": 0.2305,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "60cc228479d1ac203b260034b5356e4520f738110bc2e91a7ee264672a8702d2"
+  },
+  {
+   "n": 857,
+   "uid": "st8787124|x|u3.5",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Brighton - Universitatea Craiova",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.74,
+   "p": 0.736,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "d0e40023edef5e05fe06897704445d040b501f468dd2d9b3c047845f823ee7a1"
+  },
+  {
+   "n": 858,
+   "uid": "st8787123|x|u4.5",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Ajax - FC Thoune",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.45,
+   "p": 0.8774,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "9d095b22593c9923a4ba0177d9953f0c722c7a0b376e924c3feb04adb0e4583e"
+  },
+  {
+   "n": 859,
+   "uid": "90af957b2f622a5cf805e60b151c54b9|x|u4.5",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Real Madrid - Celta Vigo",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.3,
+   "p": 0.9029,
+   "start": "2026-11-21T20:00:00+00:00",
+   "hash": "63e2f8c2d620fe7ca5da6833dae78e6cbd759054f242a17becdbb7b119f49b24"
+  },
+  {
+   "n": 860,
+   "uid": "st8787131|x|bttsN",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "SK Brann - AGF Aarhus",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.42,
+   "p": 0.4845,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "f0615599ec1d9d7693fbbb7272649385da30b8b561811cceaa7d1c20bb6a9ddd"
+  },
+  {
+   "n": 861,
+   "uid": "c99772cba1418e72f2eded26e4afeb59|x|dcN2",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Real Madrid - Alavés",
+   "selection": "Nul ou Alavés (N2)",
+   "odds": 5.45,
+   "p": 0.2124,
+   "start": "2026-11-28T20:00:00+00:00",
+   "hash": "27d6d185fecb9bcef7146bc0b663ccb56e7ced3cae466cf7a933d2021a536627"
+  },
+  {
+   "n": 862,
+   "uid": "st8787138|x|dcN2",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Sporting Braga - KuPS",
+   "selection": "Nul ou KuPS (N2)",
+   "odds": 5.45,
+   "p": 0.2099,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "7752e919c89c650ff400ee30e81d79414cc9dbeeeb31cd062138b884cc8cb45e"
+  },
+  {
+   "n": 863,
+   "uid": "st8596081|x|dnb1",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "SC Paderborn 07 - Schalke 04",
+   "selection": "SC Paderborn 07 (remboursé si nul)",
+   "odds": 1.53,
+   "p": 0.6992,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "726c92c1f4d0303e89150a2e02f962dbb6e3b487687079ab44f438fcad0e43ba"
+  },
+  {
+   "n": 864,
+   "uid": "b648a7246af1d3a839b0fcd212849a7c|x|u1.5",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Espanyol - Getafe",
+   "selection": "Moins de 1,5 buts",
+   "odds": 2.54,
+   "p": 0.4219,
+   "start": "2026-11-30T20:00:00+00:00",
+   "hash": "0ec2364f3a1d75ac5e2afdda9e6a77386c0785b220b09bbe3d0f9722aaf7a670"
+  },
+  {
+   "n": 865,
+   "uid": "893268e5503c4e58fbf137e4b5db7e93|totals|Over|2.5",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "CA Osasuna - Málaga",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.94,
+   "p": 0.5369,
+   "start": "2026-11-22T17:30:00+00:00",
+   "hash": "75b4ff63ddca29e6d7a38f652fbc0078455e656d02639befa15d2c8751e8dd43"
+  },
+  {
+   "n": 866,
+   "uid": "st8532729|h2h|ESTAC Troyes",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "ESTAC Troyes - Le Havre",
+   "selection": "Victoire ESTAC Troyes",
+   "odds": 2.13,
+   "p": 0.4869,
+   "start": "2026-11-20T22:45:00+00:00",
+   "hash": "1803dc9e29e519272837d4b7cfa2410c4c077c390a86bf83bdd114898b185d97"
+  },
+  {
+   "n": 867,
+   "uid": "st8787137|x|bttsN",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "CSKA Sofia - Trabzonspor",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.18,
+   "p": 0.4859,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "10dae57d63b0dd6a3ade25153ddffe44f4b008f24728d77766b388d061b95a81"
+  },
+  {
+   "n": 868,
+   "uid": "80c92a163a81b69fef76530221e2edd0|x|o3.5",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Levante - Real Racing Club de Santander",
+   "selection": "Plus de 3,5 buts",
+   "odds": 2.13,
+   "p": 0.4862,
+   "start": "2026-11-27T20:00:00+00:00",
+   "hash": "c63fb2fe4fa1df145b86d595e84746e0e3ffa2b73e9b9b5cfc56eda49a6193ec"
+  },
+  {
+   "n": 869,
+   "uid": "st8787130|h2h|Paphos FC",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Paphos FC - FC Midtjylland",
+   "selection": "Victoire Paphos FC",
+   "odds": 2.95,
+   "p": 0.3524,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "ffb4305ddc2be2569eff3ce63053ae17fa36f552c6fe00a08516547d9385b8d5"
+  },
+  {
+   "n": 870,
+   "uid": "st8586543|totals|Over|2.5",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Séville - Betis",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.84,
+   "p": 0.56,
+   "start": "2026-11-21T20:30:00+00:00",
+   "hash": "51f313abf449bc7342b71cb193810019c253b24904c94173d8f560b9287c0887"
+  },
+  {
+   "n": 871,
+   "uid": "893268e5503c4e58fbf137e4b5db7e93|x|bttsY",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "CA Osasuna - Málaga",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.84,
+   "p": 0.559,
+   "start": "2026-11-22T17:30:00+00:00",
+   "hash": "0baeba3d73d3bfd7835e08a77dacb1053dfc7daa48400a3c9cfa46720c293906"
+  },
+  {
+   "n": 872,
+   "uid": "st8787126|x|bttsN",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "FK Jablonec - FC Lugano",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.18,
+   "p": 0.4765,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "f4e50ea4791acb37f0d374d34abdb0a214ba72d22e9026ea7bed39076dc7bd7f"
+  },
+  {
+   "n": 873,
+   "uid": "st8787022|h2h|Draw",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "Torreense - Celtic",
+   "selection": "Match nul",
+   "odds": 3.8,
+   "p": 0.27,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "a70e0486e89c16851cd01c2cc0aeb3a529f6a3d9c4bcf104e5a47b61d8517674"
+  },
+  {
+   "n": 874,
+   "uid": "st8787132|x|bttsN",
+   "recorded": "2026-11-19T22:01:32+00:00",
+   "match": "FC Nordsjælland - Panathinaïkos",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.18,
+   "p": 0.4719,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "fc192b67e7f89b0446f8562400f145989c3c61219948ff2625791026d9b92475"
   }
  ],
  "summary": {
-  "updated": "2026-11-19T13:30:48+00:00",
+  "updated": "2026-11-19T22:01:32+00:00",
   "n": 156,
   "wins": 52,
   "roi": -0.2906,
-  "pending": 696
+  "pending": 715
  }
 }
