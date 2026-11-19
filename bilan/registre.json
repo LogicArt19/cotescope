@@ -9679,13 +9679,57 @@
    "p": 0.338,
    "start": "2026-11-26T20:45:00+00:00",
    "hash": "4b7f3b5028b18bd56b1c7346b29e9d150f84ad2f0a8fe68abbd2a1a768e7631f"
+  },
+  {
+   "n": 852,
+   "uid": "st8742073|h2h|Minnesota Timberwolves",
+   "recorded": "2026-11-19T13:30:48+00:00",
+   "match": "Minnesota Timberwolves - New York Knicks",
+   "selection": "Victoire Minnesota Timberwolves",
+   "odds": 1.93,
+   "p": 0.5824,
+   "start": "2026-11-20T03:00:00+00:00",
+   "hash": "6c1620e4d3efd909d2970ba486f59eafa6b0ed43947fe8621133cffe17fc42cf"
+  },
+  {
+   "n": 853,
+   "uid": "st8742072|h2h|Milwaukee Bucks",
+   "recorded": "2026-11-19T13:30:48+00:00",
+   "match": "Milwaukee Bucks - Portland Trail Blazers",
+   "selection": "Victoire Milwaukee Bucks",
+   "odds": 4.0,
+   "p": 0.2796,
+   "start": "2026-11-20T03:00:00+00:00",
+   "hash": "79914b8a82c012715d305f62bf806a55d92f5854e3388ada22fd8b7e8e7ba76e"
+  },
+  {
+   "n": 854,
+   "uid": "st8742071|h2h|Golden State Warriors",
+   "recorded": "2026-11-19T13:30:48+00:00",
+   "match": "Memphis Grizzlies - Golden State Warriors",
+   "selection": "Victoire Golden State Warriors",
+   "odds": 3.0,
+   "p": 0.3446,
+   "start": "2026-11-20T03:00:00+00:00",
+   "hash": "d0431819508e12cb3fc1efdd9c0ec3f4d7f52f3bd5e266f31be82d953331f06d"
+  },
+  {
+   "n": 855,
+   "uid": "0bc17a3c7d8153e72b94688960cc603a|x|dcN2",
+   "recorded": "2026-11-19T13:30:48+00:00",
+   "match": "Leeds United - Coventry City",
+   "selection": "Nul ou Coventry City (N2)",
+   "odds": 2.19,
+   "p": 0.4659,
+   "start": "2026-11-28T15:00:00+00:00",
+   "hash": "a3a423fdca19dfb73ea61fdb6f51928a1a5aff5abbabd4c8bd1e2d99a87c37ae"
   }
  ],
  "summary": {
-  "updated": "2026-11-19T03:54:31+00:00",
+  "updated": "2026-11-19T13:30:48+00:00",
   "n": 156,
   "wins": 52,
   "roi": -0.2906,
-  "pending": 692
+  "pending": 696
  }
 }
