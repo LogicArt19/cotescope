@@ -10064,13 +10064,46 @@
    "p": 0.3475,
    "start": "2026-11-21T00:30:00+00:00",
    "hash": "7e322710038817761d75ed5a01c31aa6605f55a5d80696bf6408489b9b10713e"
+  },
+  {
+   "n": 887,
+   "uid": "st8739144|h2h|Utah Jazz",
+   "recorded": "2026-11-20T13:18:40+00:00",
+   "match": "Utah Jazz - Phoenix Suns",
+   "selection": "Victoire Utah Jazz",
+   "odds": 2.4,
+   "p": 0.4459,
+   "start": "2026-11-21T02:30:00+00:00",
+   "hash": "2363ed3179cbbe22663db1940e42afb0f1b545154fa01cb6f476bc7a067710a1"
+  },
+  {
+   "n": 888,
+   "uid": "5d838190a8f5932d7fcfbcc26bacdd9c|h2h|VfB Stuttgart",
+   "recorded": "2026-11-20T13:18:40+00:00",
+   "match": "VfB Stuttgart - Eintracht Frankfurt",
+   "selection": "Victoire VfB Stuttgart",
+   "odds": 1.64,
+   "p": 0.6271,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "06a1008084a7aa9be1fc155b728e8504febc12a6b348b502b896a0a90b0352b5"
+  },
+  {
+   "n": 889,
+   "uid": "st8787137|h2h|Draw",
+   "recorded": "2026-11-20T13:18:40+00:00",
+   "match": "CSKA Sofia - Trabzonspor",
+   "selection": "Match nul",
+   "odds": 3.78,
+   "p": 0.27,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "307e858995bbbbac29b7e1383a788d27a4c0d7c0b49f06be4665d36d4112e0d1"
   }
  ],
  "summary": {
-  "updated": "2026-11-20T03:37:59+00:00",
+  "updated": "2026-11-20T13:18:40+00:00",
   "n": 156,
   "wins": 52,
   "roi": -0.2906,
-  "pending": 727
+  "pending": 730
  }
 }
