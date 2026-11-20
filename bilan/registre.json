@@ -10097,13 +10097,101 @@
    "p": 0.27,
    "start": "2026-11-26T23:00:00+00:00",
    "hash": "307e858995bbbbac29b7e1383a788d27a4c0d7c0b49f06be4665d36d4112e0d1"
+  },
+  {
+   "n": 890,
+   "uid": "c979bd4559d2d81a8e2fe8f2d4aec376|x|o3.5",
+   "recorded": "2026-11-20T21:29:04+00:00",
+   "match": "AS Roma - Monza",
+   "selection": "Plus de 3,5 buts",
+   "odds": 1.94,
+   "p": 0.6206,
+   "start": "2026-11-29T17:00:00+00:00",
+   "hash": "5fc290b9f8dcd5f0a09c14a3d081ad3968ff2ea8d895b4a84f27fa31c108248a"
+  },
+  {
+   "n": 891,
+   "uid": "c979bd4559d2d81a8e2fe8f2d4aec376|x|bttsY",
+   "recorded": "2026-11-20T21:29:04+00:00",
+   "match": "AS Roma - Monza",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.74,
+   "p": 0.6634,
+   "start": "2026-11-29T17:00:00+00:00",
+   "hash": "311711d0d451dd760528859b8c22bf135889dff3e98a726dfe40fe768998dfd8"
+  },
+  {
+   "n": 892,
+   "uid": "0ee2cfddf20153779cd2cc3e1f1f879f|x|dc1N",
+   "recorded": "2026-11-20T21:29:04+00:00",
+   "match": "Lille - Bayern Munich",
+   "selection": "Lille ou nul (1N)",
+   "odds": 3.3,
+   "p": 0.3314,
+   "start": "2026-11-25T20:00:00+00:00",
+   "hash": "11b0e53977df3cbf70363a89044c839e3d316361dc364502ec7ae3ccc6b82eec"
+  },
+  {
+   "n": 893,
+   "uid": "0ee2cfddf20153779cd2cc3e1f1f879f|x|dnb1",
+   "recorded": "2026-11-20T21:29:04+00:00",
+   "match": "Lille - Bayern Munich",
+   "selection": "Lille (remboursé si nul)",
+   "odds": 5.9,
+   "p": 0.1848,
+   "start": "2026-11-25T20:00:00+00:00",
+   "hash": "c67d2e646ed0d9b744b72e8ede80f6c594804c6aac3f997262f3c781349abb76"
+  },
+  {
+   "n": 894,
+   "uid": "c979bd4559d2d81a8e2fe8f2d4aec376|totals|Over|2.5",
+   "recorded": "2026-11-20T21:29:04+00:00",
+   "match": "AS Roma - Monza",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.31,
+   "p": 0.8013,
+   "start": "2026-11-29T17:00:00+00:00",
+   "hash": "d73b198e93b5f369b26fabb6de32eb9abb89f8a64ead2e00a26b1dd053bd214f"
+  },
+  {
+   "n": 895,
+   "uid": "cb513fd9869c9aa6ce506bb499bcd48b|x|bttsY",
+   "recorded": "2026-11-20T21:29:04+00:00",
+   "match": "Parma - AS Roma",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.89,
+   "p": 0.5477,
+   "start": "2026-11-21T17:00:00+00:00",
+   "hash": "ed05f67b348566d83c99f5599cd91567536e326c59c162e5c84099cf12ba11f3"
+  },
+  {
+   "n": 896,
+   "uid": "ca93df81e976fbe345a6175bb24e3f19|h2h|Draw",
+   "recorded": "2026-11-20T21:29:04+00:00",
+   "match": "Union Berlin - RB Leipzig",
+   "selection": "Match nul",
+   "odds": 4.65,
+   "p": 0.2235,
+   "start": "2026-11-21T14:30:00+00:00",
+   "hash": "1363b37bd67e43b41925baed69b136969d8ecc29f7267d9b31a3ef9adb339275"
+  },
+  {
+   "n": 897,
+   "uid": "214a79b6e08dbe3f508844936158c038|x|u4.5",
+   "recorded": "2026-11-20T21:29:04+00:00",
+   "match": "Barcelona - Villarreal",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.62,
+   "p": 0.6313,
+   "start": "2026-11-22T13:00:00+00:00",
+   "hash": "163bfd2daf2ceec86ca40d6d55706ed3bf4da408a60712fb173d2668e020cafb"
   }
  ],
  "summary": {
-  "updated": "2026-11-20T13:18:40+00:00",
+  "updated": "2026-11-20T21:29:04+00:00",
   "n": 156,
   "wins": 52,
   "roi": -0.2906,
-  "pending": 730
+  "pending": 738
  }
 }
