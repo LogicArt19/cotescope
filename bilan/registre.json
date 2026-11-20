@@ -9932,13 +9932,145 @@
    "p": 0.4719,
    "start": "2026-11-26T23:00:00+00:00",
    "hash": "fc192b67e7f89b0446f8562400f145989c3c61219948ff2625791026d9b92475"
+  },
+  {
+   "n": 875,
+   "uid": "f45e9062c2f755b977c98d496c22697b|x|u1.5",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Everton - Liverpool",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.13,
+   "p": 0.3359,
+   "start": "2026-11-29T12:00:00+00:00",
+   "hash": "3fe13e5639a9bd1667aeeb4b212772e43581fc83f15695aa062b375f2470c327"
+  },
+  {
+   "n": 876,
+   "uid": "e59809eb38340e3bca323cef070dfd34|x|dnb2",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Napoli - Torino",
+   "selection": "Torino (remboursé si nul)",
+   "odds": 3.95,
+   "p": 0.3221,
+   "start": "2026-11-21T19:45:00+00:00",
+   "hash": "73acb41b0b57ffc0444c8846ae202adcb0c1fcb917dc173ab6acee5c76f0f254"
+  },
+  {
+   "n": 877,
+   "uid": "d20ede55e54ed7b55fdc36ca373727c0|x|u1.5",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Arsenal - Manchester City",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.13,
+   "p": 0.2993,
+   "start": "2026-11-29T16:30:00+00:00",
+   "hash": "ab47a93b3b875611db41201b27b8f3a0e7df088c7fe2bfc39f2b35bfc54d0389"
+  },
+  {
+   "n": 878,
+   "uid": "698f4a7967ead89e10205a68ceb4bda4|x|o4.5",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Werder Bremen - Borussia Monchengladbach",
+   "selection": "Plus de 4,5 buts",
+   "odds": 3.6,
+   "p": 0.3165,
+   "start": "2026-11-27T19:30:00+00:00",
+   "hash": "14c3f777f2cdb2142d101aca221e6f9bf70a4ec6b8d2825467b69ffbf8ed0a19"
+  },
+  {
+   "n": 879,
+   "uid": "st8739070|h2h|Brooklyn Nets",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Brooklyn Nets - Orlando Magic",
+   "selection": "Victoire Brooklyn Nets",
+   "odds": 2.5,
+   "p": 0.4491,
+   "start": "2026-11-21T00:30:00+00:00",
+   "hash": "957510c314882e9f33685e5d57f45e1ff4c372de078d24f4c4d411e94c0e4ef7"
+  },
+  {
+   "n": 880,
+   "uid": "f45e9062c2f755b977c98d496c22697b|x|u3.5",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Everton - Liverpool",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.39,
+   "p": 0.8037,
+   "start": "2026-11-29T12:00:00+00:00",
+   "hash": "d08341cd335e50839b9805c9db18a473bdc99548f95bc594effd7b13d7a2ea7c"
+  },
+  {
+   "n": 881,
+   "uid": "st8739142|h2h|Chicago Bulls",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Chicago Bulls - Washington Wizards",
+   "selection": "Victoire Chicago Bulls",
+   "odds": 1.58,
+   "p": 0.6957,
+   "start": "2026-11-21T01:00:00+00:00",
+   "hash": "12aaeaf4a0ffc59d5c2a9540b3b597bef1649091b367c3cef7cda9ee2cf56a12"
+  },
+  {
+   "n": 882,
+   "uid": "d20ede55e54ed7b55fdc36ca373727c0|x|u3.5",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Arsenal - Manchester City",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.39,
+   "p": 0.7698,
+   "start": "2026-11-29T16:30:00+00:00",
+   "hash": "f2953a9c3e27f6217a260ec5e5721086fc2ca6e8a7473cf30f1906ede23c645d"
+  },
+  {
+   "n": 883,
+   "uid": "st8739141|h2h|Atlanta Hawks",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Atlanta Hawks - Charlotte Hornets",
+   "selection": "Victoire Atlanta Hawks",
+   "odds": 1.4,
+   "p": 0.7492,
+   "start": "2026-11-21T00:00:00+00:00",
+   "hash": "5631b54cb362e6dd21dcca42541fc757fb248420029e3d9a0594ff5aeb2a8760"
+  },
+  {
+   "n": 884,
+   "uid": "ca93df81e976fbe345a6175bb24e3f19|x|dc1N",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Union Berlin - RB Leipzig",
+   "selection": "Union Berlin ou nul (1N)",
+   "odds": 2.32,
+   "p": 0.4428,
+   "start": "2026-11-21T14:30:00+00:00",
+   "hash": "5a60eaf2f268d02411ca725249495a9a794efffdb64fc54924b50d7b4d0d0e23"
+  },
+  {
+   "n": 885,
+   "uid": "cb513fd9869c9aa6ce506bb499bcd48b|x|dc1N",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Parma - AS Roma",
+   "selection": "Parma ou nul (1N)",
+   "odds": 3.0,
+   "p": 0.3417,
+   "start": "2026-11-21T17:00:00+00:00",
+   "hash": "0fbfb6216f8afb17bc6f2f841f2fff47f9ac6600b9a2178999b38d6e91895950"
+  },
+  {
+   "n": 886,
+   "uid": "st8739071|h2h|Indiana Pacers",
+   "recorded": "2026-11-20T03:37:59+00:00",
+   "match": "Cleveland Cavaliers - Indiana Pacers",
+   "selection": "Victoire Indiana Pacers",
+   "odds": 2.97,
+   "p": 0.3475,
+   "start": "2026-11-21T00:30:00+00:00",
+   "hash": "7e322710038817761d75ed5a01c31aa6605f55a5d80696bf6408489b9b10713e"
   }
  ],
  "summary": {
-  "updated": "2026-11-19T22:01:32+00:00",
+  "updated": "2026-11-20T03:37:59+00:00",
   "n": 156,
   "wins": 52,
   "roi": -0.2906,
-  "pending": 715
+  "pending": 727
  }
 }
