@@ -990,7 +990,9 @@
    "odds": 1.7,
    "p": 0.8775,
    "start": "2026-11-20T19:30:00+00:00",
-   "hash": "b5c52042c5ed1cd2e211a1f8cc7a18a0d1e7e8aa818a96a4f99a515a6a22d3aa"
+   "hash": "b5c52042c5ed1cd2e211a1f8cc7a18a0d1e7e8aa818a96a4f99a515a6a22d3aa",
+   "status": "won",
+   "score": "1-1"
   },
   {
    "n": 78,
@@ -1056,7 +1058,9 @@
    "odds": 1.74,
    "p": 0.7539,
    "start": "2026-11-20T19:30:00+00:00",
-   "hash": "f40e3f4c8300d432340bf23e39dd4422318e62dfcba4065d2d262c023303c7af"
+   "hash": "f40e3f4c8300d432340bf23e39dd4422318e62dfcba4065d2d262c023303c7af",
+   "status": "lost",
+   "score": "1-1"
   },
   {
    "n": 84,
@@ -1905,7 +1909,9 @@
    "odds": 4.2,
    "p": 0.2458,
    "start": "2026-11-20T20:00:00+00:00",
-   "hash": "68d541e59bc8104d2f94b4074f89d1ce1d668b1ce25dbc229650460d3a691563"
+   "hash": "68d541e59bc8104d2f94b4074f89d1ce1d668b1ce25dbc229650460d3a691563",
+   "status": "lost",
+   "score": "0-1"
   },
   {
    "n": 161,
@@ -1916,7 +1922,9 @@
    "odds": 1.94,
    "p": 0.5316,
    "start": "2026-11-20T20:00:00+00:00",
-   "hash": "d4b9918cbce687e635b253334b504ee0182de47d003505f964c3c90ab35fc30a"
+   "hash": "d4b9918cbce687e635b253334b504ee0182de47d003505f964c3c90ab35fc30a",
+   "status": "won",
+   "score": "0-1"
   },
   {
    "n": 162,
@@ -2235,7 +2243,9 @@
    "odds": 2.45,
    "p": 0.736,
    "start": "2026-11-20T19:30:00+00:00",
-   "hash": "ff74f3377dee7ad5d9f412f4149e65a054914d3656ed8e0071d315e8980ad202"
+   "hash": "ff74f3377dee7ad5d9f412f4149e65a054914d3656ed8e0071d315e8980ad202",
+   "status": "won",
+   "score": "1-1"
   },
   {
    "n": 191,
@@ -2345,7 +2355,9 @@
    "odds": 5.1,
    "p": 0.23,
    "start": "2026-11-20T20:00:00+00:00",
-   "hash": "f7faca5a65ef861cfac2ee5357229c49243fd0ae1156a3cabd1d197d10ba01c5"
+   "hash": "f7faca5a65ef861cfac2ee5357229c49243fd0ae1156a3cabd1d197d10ba01c5",
+   "status": "won",
+   "score": "0-1"
   },
   {
    "n": 201,
@@ -4783,7 +4795,9 @@
    "odds": 2.47,
    "p": 0.4742,
    "start": "2026-11-20T20:00:00+00:00",
-   "hash": "d3de025d69eeb158c39003e4046d6fef296ee6158a5ed79ea3d234706e267eb6"
+   "hash": "d3de025d69eeb158c39003e4046d6fef296ee6158a5ed79ea3d234706e267eb6",
+   "status": "won",
+   "score": "0-1"
   },
   {
    "n": 415,
@@ -6277,7 +6291,9 @@
    "odds": 3.1,
    "p": 0.3869,
    "start": "2026-11-20T20:00:00+00:00",
-   "hash": "441b03e6131cb21fd0802b1a61c06b2a0f02a9f26e6b323690b35a16255650b5"
+   "hash": "441b03e6131cb21fd0802b1a61c06b2a0f02a9f26e6b323690b35a16255650b5",
+   "status": "won",
+   "score": "0-1"
   },
   {
    "n": 549,
@@ -6497,7 +6513,9 @@
    "odds": 1.74,
    "p": 0.6075,
    "start": "2026-11-20T20:00:00+00:00",
-   "hash": "8fb52913fa0dd950770c75c4f99b24ee57fd6dd7f9113b1c00ed577406b57705"
+   "hash": "8fb52913fa0dd950770c75c4f99b24ee57fd6dd7f9113b1c00ed577406b57705",
+   "status": "won",
+   "score": "0-1"
   },
   {
    "n": 569,
@@ -8697,7 +8715,9 @@
    "odds": 1.32,
    "p": 0.8405,
    "start": "2026-11-20T20:00:00+00:00",
-   "hash": "812c89ea5f470e30c4ec90b890542b2ad41d74f0a6a1bd5de3036d5645af12bd"
+   "hash": "812c89ea5f470e30c4ec90b890542b2ad41d74f0a6a1bd5de3036d5645af12bd",
+   "status": "won",
+   "score": "0-1"
   },
   {
    "n": 763,
@@ -9843,7 +9863,9 @@
    "odds": 2.13,
    "p": 0.4869,
    "start": "2026-11-20T22:45:00+00:00",
-   "hash": "1803dc9e29e519272837d4b7cfa2410c4c077c390a86bf83bdd114898b185d97"
+   "hash": "1803dc9e29e519272837d4b7cfa2410c4c077c390a86bf83bdd114898b185d97",
+   "status": "won",
+   "score": "3-1"
   },
   {
    "n": 867,
@@ -10185,13 +10207,46 @@
    "p": 0.6313,
    "start": "2026-11-22T13:00:00+00:00",
    "hash": "163bfd2daf2ceec86ca40d6d55706ed3bf4da408a60712fb173d2668e020cafb"
+  },
+  {
+   "n": 898,
+   "uid": "st8742078|h2h|Memphis Grizzlies",
+   "recorded": "2026-11-21T02:38:28+00:00",
+   "match": "Minnesota Timberwolves - Memphis Grizzlies",
+   "selection": "Victoire Memphis Grizzlies",
+   "odds": 2.62,
+   "p": 0.4301,
+   "start": "2026-11-22T02:00:00+00:00",
+   "hash": "8c8a496375f836a1ba392d3c7188140b440c099ffb287995001aaa854524cc8b"
+  },
+  {
+   "n": 899,
+   "uid": "st8522207|totals|Over|2.5",
+   "recorded": "2026-11-21T02:38:28+00:00",
+   "match": "Lazio Rome - Lecce",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.55,
+   "p": 0.679,
+   "start": "2026-11-21T17:00:00+00:00",
+   "hash": "951965a3631cf48ad4586f7d308f9f7b0066ba65947e1050234ebf427a95b207"
+  },
+  {
+   "n": 900,
+   "uid": "5faf836ce6c0fd72af5d1fe258c63bc6|h2h|Draw",
+   "recorded": "2026-11-21T02:38:28+00:00",
+   "match": "AC Milan - Frosinone",
+   "selection": "Match nul",
+   "odds": 4.7,
+   "p": 0.2225,
+   "start": "2026-11-22T17:00:00+00:00",
+   "hash": "1eeffde3324c5fce161433240c7e9f3157341f281ff4a608b8102570ed258287"
   }
  ],
  "summary": {
-  "updated": "2026-11-20T21:29:04+00:00",
-  "n": 156,
-  "wins": 52,
-  "roi": -0.2906,
-  "pending": 738
+  "updated": "2026-11-21T02:38:28+00:00",
+  "n": 167,
+  "wins": 61,
+  "roi": -0.2059,
+  "pending": 730
  }
 }
