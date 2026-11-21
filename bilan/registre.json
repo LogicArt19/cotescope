@@ -10240,13 +10240,123 @@
    "p": 0.2225,
    "start": "2026-11-22T17:00:00+00:00",
    "hash": "1eeffde3324c5fce161433240c7e9f3157341f281ff4a608b8102570ed258287"
+  },
+  {
+   "n": 901,
+   "uid": "st9032401|h2h|Ben Shelton",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Carlos Alcaraz - Ben Shelton",
+   "selection": "Victoire Ben Shelton",
+   "odds": 4.8,
+   "p": 0.42,
+   "start": "2026-11-21T13:30:00+00:00",
+   "hash": "7f3d320bf97ab075beefc57f571f5085f8fd0c0060d0eedb24cddd1220a9a37c"
+  },
+  {
+   "n": 902,
+   "uid": "st8742080|h2h|Sacramento Kings",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Sacramento Kings - Boston Celtics",
+   "selection": "Victoire Sacramento Kings",
+   "odds": 5.75,
+   "p": 0.2382,
+   "start": "2026-11-22T03:00:00+00:00",
+   "hash": "e2282b1c62b5fc15d375e464a915b9ca4a834ac091239c534f2bb118ab63c3f6"
+  },
+  {
+   "n": 903,
+   "uid": "09bb0ba9a9025d64fed410375c0c8f80|x|u1.5",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Sunderland - Tottenham Hotspur",
+   "selection": "Moins de 1,5 buts",
+   "odds": 3.35,
+   "p": 0.4018,
+   "start": "2026-11-29T14:05:00+00:00",
+   "hash": "14092fd6d1f9f29ba1d2595481578f1e8ace7987e56ccf2d8d2bab6bbf327780"
+  },
+  {
+   "n": 904,
+   "uid": "214a79b6e08dbe3f508844936158c038|totals|Under|2.5",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Barcelona - Villarreal",
+   "selection": "Moins de 2,5 buts",
+   "odds": 4.75,
+   "p": 0.2404,
+   "start": "2026-11-22T13:00:00+00:00",
+   "hash": "5245cdfb00c69b55d36e01da422c379be8c0bfdd83fde68cf1df8f1b14bbefb4"
+  },
+  {
+   "n": 905,
+   "uid": "st8742075|h2h|Milwaukee Bucks",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Philadelphie 76ers - Milwaukee Bucks",
+   "selection": "Victoire Milwaukee Bucks",
+   "odds": 5.35,
+   "p": 0.2095,
+   "start": "2026-11-21T19:00:00+00:00",
+   "hash": "672411494bac1aa788f7b04bed744a3b226f39903e8e650bc78c70681176d211"
+  },
+  {
+   "n": 906,
+   "uid": "0bc17a3c7d8153e72b94688960cc603a|x|u1.5",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Leeds United - Coventry City",
+   "selection": "Moins de 1,5 buts",
+   "odds": 3.8,
+   "p": 0.2915,
+   "start": "2026-11-28T15:00:00+00:00",
+   "hash": "b3692a2db81399b868147e2f124144adecad040a512fe21133f75e1d8434d556"
+  },
+  {
+   "n": 907,
+   "uid": "d0128b7d64e40ca3f1ae1b288b47117a|x|dc1N",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Eintracht Frankfurt - TSG Hoffenheim",
+   "selection": "Eintracht Frankfurt ou nul (1N)",
+   "odds": 1.42,
+   "p": 0.7228,
+   "start": "2026-11-21T14:30:00+00:00",
+   "hash": "da97bc91c6deeeaec1b63fce1cade38571e1241ff9d07001c84a3c78e250bae3"
+  },
+  {
+   "n": 908,
+   "uid": "0bc17a3c7d8153e72b94688960cc603a|x|u3.5",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Leeds United - Coventry City",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.35,
+   "p": 0.7619,
+   "start": "2026-11-28T15:00:00+00:00",
+   "hash": "7545e6ecb73fefb1c1a10ef6d6cca291720f4d552da1a5f097ff3df6c950a135"
+  },
+  {
+   "n": 909,
+   "uid": "st9032448|h2h|Alexander Zverev",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Alexander Zverev - Daniil Medvedev",
+   "selection": "Victoire Alexander Zverev",
+   "odds": 1.52,
+   "p": 0.681,
+   "start": "2026-11-21T19:30:00+00:00",
+   "hash": "28bbff4e8644d45c97da4c33273e86926ebe7c716d0bd42a118989b87458c9bd"
+  },
+  {
+   "n": 910,
+   "uid": "st8596027|h2h|Draw",
+   "recorded": "2026-11-21T11:22:28+00:00",
+   "match": "Eintracht Francfort - Hoffenheim",
+   "selection": "Match nul",
+   "odds": 3.9,
+   "p": 0.2622,
+   "start": "2026-11-21T14:30:00+00:00",
+   "hash": "588d22a63791494ee50713c1bfa5e055eb2adb05a98ce70c68753f3e0245ba94"
   }
  ],
  "summary": {
-  "updated": "2026-11-21T02:38:28+00:00",
+  "updated": "2026-11-21T11:22:28+00:00",
   "n": 167,
   "wins": 61,
   "roi": -0.2059,
-  "pending": 730
+  "pending": 740
  }
 }
