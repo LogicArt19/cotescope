@@ -11094,13 +11094,156 @@
    "p": 0.5704,
    "start": "2026-12-02T19:30:00+00:00",
    "hash": "4bb2de3102a8bf513a33bf9f853cc5a68f0a203fafe8b2d20db28c0a8e020ed2"
+  },
+  {
+   "n": 951,
+   "uid": "st8742084|h2h|Chicago Bulls",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Chicago Bulls - Denver Nuggets",
+   "selection": "Victoire Chicago Bulls",
+   "odds": 3.68,
+   "p": 0.4586,
+   "start": "2026-11-23T00:00:00+00:00",
+   "hash": "9f6644d4185c62f8c5aecd7834065e4b10d7868c0da734309c21d604845e3004"
+  },
+  {
+   "n": 952,
+   "uid": "st9038860|h2h|Alexander Zverev",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Alexander Zverev - Carlos Alcaraz",
+   "selection": "Victoire Alexander Zverev",
+   "odds": 2.68,
+   "p": 0.544,
+   "start": "2026-11-22T17:00:00+00:00",
+   "hash": "c1267940270c3723988d26bacecb2104834fbc2037d5db2814007cac7ae87fc1"
+  },
+  {
+   "n": 953,
+   "uid": "st8742087|h2h|Golden State Warriors",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Golden State Warriors - Boston Celtics",
+   "selection": "Victoire Golden State Warriors",
+   "odds": 3.92,
+   "p": 0.3654,
+   "start": "2026-11-23T01:30:00+00:00",
+   "hash": "3d19a6d30538cb7e456a27889cd4c9953f30373f0bbcd9e6c5b6f9a46f1838f3"
+  },
+  {
+   "n": 954,
+   "uid": "5f5235df01a384e23ff224101ff175e1|h2h|Brentford",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Brentford - Arsenal",
+   "selection": "Victoire Brentford",
+   "odds": 4.13,
+   "p": 0.3006,
+   "start": "2026-12-02T20:15:00+00:00",
+   "hash": "8d88b8702f9fb3cdc4cfaec8da4a482cf4e72e393081e26931cd5a4d45c62fb5"
+  },
+  {
+   "n": 955,
+   "uid": "4bd9a6fe4abb6774b3e8700b3dbe8d00|totals|Under|2.5",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Hull City - Nottingham Forest",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.84,
+   "p": 0.6209,
+   "start": "2026-12-02T19:30:00+00:00",
+   "hash": "44982fdffe55835d332aab4665ee76153920b3bbe10642d9550263d93008c1f8"
+  },
+  {
+   "n": 956,
+   "uid": "8e6ee05b6ac28dc2357f72b9f5a0643e|totals|Over|2.5",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Lorient - Rennes",
+   "selection": "Plus de 2,5 buts",
+   "odds": 2.03,
+   "p": 0.5439,
+   "start": "2026-11-22T16:15:00+00:00",
+   "hash": "bbcb7bf50695122aaf2e32785c5617927b9c3c13e42afe6296e03cbe81f5e8e8"
+  },
+  {
+   "n": 957,
+   "uid": "st8596036|h2h|Augsbourg",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Hoffenheim - Augsbourg",
+   "selection": "Victoire Augsbourg",
+   "odds": 3.9,
+   "p": 0.2811,
+   "start": "2026-11-29T16:30:00+00:00",
+   "hash": "e5e387ba1ebb6a193a2700777e0b93277a7091aa0c176b9e061442f84ea343cf"
+  },
+  {
+   "n": 958,
+   "uid": "st8742081|h2h|Atlanta Hawks",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Atlanta Hawks - Detroit Pistons",
+   "selection": "Victoire Atlanta Hawks",
+   "odds": 2.05,
+   "p": 0.516,
+   "start": "2026-11-22T20:30:00+00:00",
+   "hash": "7fff34d32b3ff4c7c763dd7e8e1467fddb550a98f3473f58626b9c49bbbad253"
+  },
+  {
+   "n": 959,
+   "uid": "st8522204|h2h|Bologne",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Bologne - Udinese",
+   "selection": "Victoire Bologne",
+   "odds": 1.69,
+   "p": 0.6044,
+   "start": "2026-11-22T16:00:00+00:00",
+   "hash": "c07fadefd29d1bafbed36c745c558592fde55e84130beda6a5d3e71ec2fdef44"
+  },
+  {
+   "n": 960,
+   "uid": "9e5d4a91e379ddffa179b02bf9e09530|x|u3.5",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Paris FC - Angers",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.66,
+   "p": 0.64,
+   "start": "2026-11-22T14:00:00+00:00",
+   "hash": "3d16f74703d57d9e6aeb340fd2906872045c785651b6a38fcb0e3fa14d48b5d9"
+  },
+  {
+   "n": 961,
+   "uid": "aa77e2a08a1a003b0bbb62a5f8e8ae42|x|dnb1",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Brentford - Everton",
+   "selection": "Brentford (remboursé si nul)",
+   "odds": 1.55,
+   "p": 0.6774,
+   "start": "2026-11-23T20:00:00+00:00",
+   "hash": "d77e26cb104a1d3077b63a624bc88953599762d5b344a38cfeac73ab2b453855"
+  },
+  {
+   "n": 962,
+   "uid": "st8742085|h2h|Utah Jazz",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Utah Jazz - Dallas Mavericks",
+   "selection": "Victoire Utah Jazz",
+   "odds": 1.95,
+   "p": 0.5382,
+   "start": "2026-11-23T00:00:00+00:00",
+   "hash": "14c3026eb08322674f5b8b234ac4027ab0adecf89db0fd0db8ea4028d1536c9a"
+  },
+  {
+   "n": 963,
+   "uid": "st8742083|h2h|Washington Wizards",
+   "recorded": "2026-11-22T07:11:52+00:00",
+   "match": "Washington Wizards - Orlando Magic",
+   "selection": "Victoire Washington Wizards",
+   "odds": 2.73,
+   "p": 0.3836,
+   "start": "2026-11-23T00:00:00+00:00",
+   "hash": "9e19338103bb474ec73929035c3bb4c9b1a42c344c2291fb5c899641cda0bbf5"
   }
  ],
  "summary": {
-  "updated": "2026-11-21T23:31:42+00:00",
+  "updated": "2026-11-22T07:11:52+00:00",
   "n": 314,
   "wins": 126,
   "roi": -0.0563,
-  "pending": 628
+  "pending": 641
  }
 }
