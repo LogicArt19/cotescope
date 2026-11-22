@@ -970,7 +970,9 @@
    "odds": 2.42,
    "p": 0.6372,
    "start": "2026-11-22T13:00:00+00:00",
-   "hash": "0fecd06bca767b227a2a033060b3581264ba1c06f668635033d2db295c8d1c6b"
+   "hash": "0fecd06bca767b227a2a033060b3581264ba1c06f668635033d2db295c8d1c6b",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 76,
@@ -1020,7 +1022,9 @@
    "odds": 1.66,
    "p": 0.8774,
    "start": "2026-11-22T13:00:00+00:00",
-   "hash": "1f8f0ce33f0b1946e655718711ce723352257bf1f34d4ef3d88011ba593bfae3"
+   "hash": "1f8f0ce33f0b1946e655718711ce723352257bf1f34d4ef3d88011ba593bfae3",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 80,
@@ -1216,7 +1220,9 @@
    "odds": 3.05,
    "p": 0.3818,
    "start": "2026-11-22T11:30:00+00:00",
-   "hash": "8ae9a64e759449fc4c25c1cf5c6e7f610164d172f1b32e5fba4a8a42afbc0e7e"
+   "hash": "8ae9a64e759449fc4c25c1cf5c6e7f610164d172f1b32e5fba4a8a42afbc0e7e",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 96,
@@ -1336,7 +1342,9 @@
    "odds": 4.7,
    "p": 0.2336,
    "start": "2026-11-22T11:30:00+00:00",
-   "hash": "ba9cd3f8d3c6308d67cd92c548a4ce1a929fb722f530ca29d76b68186c0de467"
+   "hash": "ba9cd3f8d3c6308d67cd92c548a4ce1a929fb722f530ca29d76b68186c0de467",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 106,
@@ -1432,7 +1440,9 @@
    "odds": 1.84,
    "p": 0.6003,
    "start": "2026-11-22T11:30:00+00:00",
-   "hash": "9ac50595e4a76e7437f3501f9d7d55656ebc64dcc15d932ba3014847e6e5b84b"
+   "hash": "9ac50595e4a76e7437f3501f9d7d55656ebc64dcc15d932ba3014847e6e5b84b",
+   "status": "won",
+   "score": "4-0"
   },
   {
    "n": 114,
@@ -1502,7 +1512,9 @@
    "odds": 4.05,
    "p": 0.267,
    "start": "2026-11-22T13:00:00+00:00",
-   "hash": "056246287629a4d5b5604f125614940f41fb6c1526d0b514e73d1ddb28ef61d3"
+   "hash": "056246287629a4d5b5604f125614940f41fb6c1526d0b514e73d1ddb28ef61d3",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 120,
@@ -2358,7 +2370,9 @@
    "odds": 2.2,
    "p": 0.736,
    "start": "2026-11-22T13:00:00+00:00",
-   "hash": "abe3f4efbae2302b516ef3dfe23e3ef1603a7d63834d64fd1937c46c3ec013d7"
+   "hash": "abe3f4efbae2302b516ef3dfe23e3ef1603a7d63834d64fd1937c46c3ec013d7",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 192,
@@ -2441,7 +2455,9 @@
    "odds": 2.23,
    "p": 0.5267,
    "start": "2026-11-22T11:30:00+00:00",
-   "hash": "3ec67be34498ee318d9f74ccdf3b5fc39bbe48ede1c512b49d657d760da887cf"
+   "hash": "3ec67be34498ee318d9f74ccdf3b5fc39bbe48ede1c512b49d657d760da887cf",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 199,
@@ -2498,7 +2514,9 @@
    "odds": 5.9,
    "p": 0.1934,
    "start": "2026-11-22T11:30:00+00:00",
-   "hash": "b50d929e2ffbffcd30d3c6c2e71fddbfc944e362c76dedcdb37ed458803a0759"
+   "hash": "b50d929e2ffbffcd30d3c6c2e71fddbfc944e362c76dedcdb37ed458803a0759",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 204,
@@ -2633,7 +2651,9 @@
    "odds": 1.44,
    "p": 0.7381,
    "start": "2026-11-22T11:30:00+00:00",
-   "hash": "e139eba2500cc1b734719afade35db9089a5c93f262e0015ec8ec0519fb95203"
+   "hash": "e139eba2500cc1b734719afade35db9089a5c93f262e0015ec8ec0519fb95203",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 215,
@@ -6968,7 +6988,9 @@
    "odds": 2.42,
    "p": 0.4223,
    "start": "2026-11-22T13:00:00+00:00",
-   "hash": "4ff9d58db9040f3d0c1e2b661af98b19b09b6fafa657b4f5f6e2ab404e3abf9d"
+   "hash": "4ff9d58db9040f3d0c1e2b661af98b19b09b6fafa657b4f5f6e2ab404e3abf9d",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 586,
@@ -9316,7 +9338,9 @@
    "odds": 3.7,
    "p": 0.3248,
    "start": "2026-11-22T11:30:00+00:00",
-   "hash": "731775298b4d30924f295e5b3d92dfdb43c88c4cd9e9a5ffeb7489f2e01316ef"
+   "hash": "731775298b4d30924f295e5b3d92dfdb43c88c4cd9e9a5ffeb7489f2e01316ef",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 792,
@@ -10502,7 +10526,9 @@
    "odds": 1.62,
    "p": 0.6313,
    "start": "2026-11-22T13:00:00+00:00",
-   "hash": "163bfd2daf2ceec86ca40d6d55706ed3bf4da408a60712fb173d2668e020cafb"
+   "hash": "163bfd2daf2ceec86ca40d6d55706ed3bf4da408a60712fb173d2668e020cafb",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 898,
@@ -10581,7 +10607,9 @@
    "odds": 4.75,
    "p": 0.2404,
    "start": "2026-11-22T13:00:00+00:00",
-   "hash": "5245cdfb00c69b55d36e01da422c379be8c0bfdd83fde68cf1df8f1b14bbefb4"
+   "hash": "5245cdfb00c69b55d36e01da422c379be8c0bfdd83fde68cf1df8f1b14bbefb4",
+   "status": "lost",
+   "score": "3-2"
   },
   {
    "n": 905,
@@ -11237,13 +11265,277 @@
    "p": 0.3836,
    "start": "2026-11-23T00:00:00+00:00",
    "hash": "9e19338103bb474ec73929035c3bb4c9b1a42c344c2291fb5c899641cda0bbf5"
+  },
+  {
+   "n": 964,
+   "uid": "5f5235df01a384e23ff224101ff175e1|x|u1.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Brentford - Arsenal",
+   "selection": "Moins de 1,5 buts",
+   "odds": 3.6,
+   "p": 0.389,
+   "start": "2026-12-02T20:15:00+00:00",
+   "hash": "6ca0634286c747fbad8fadf60bddb2faf459b8e2ce52defacf08ba6706045763"
+  },
+  {
+   "n": 965,
+   "uid": "4bd9a6fe4abb6774b3e8700b3dbe8d00|x|u1.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Hull City - Nottingham Forest",
+   "selection": "Moins de 1,5 buts",
+   "odds": 3.6,
+   "p": 0.3526,
+   "start": "2026-12-02T19:30:00+00:00",
+   "hash": "a469b6e38fd28faf559fa876d9a01b2a94b5587f7eada4e0d904defe345f977a"
+  },
+  {
+   "n": 966,
+   "uid": "9629fcc970336d106d144eaa25cec853|totals|Under|2.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Liverpool - Sunderland",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.23,
+   "p": 0.5445,
+   "start": "2026-12-02T19:30:00+00:00",
+   "hash": "ca832c8c0d3d82a7b02ea6c11ed09281a1d2b3c187e87e3dd822ce4f7339f811"
+  },
+  {
+   "n": 967,
+   "uid": "9629fcc970336d106d144eaa25cec853|x|u1.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Liverpool - Sunderland",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.3,
+   "p": 0.2879,
+   "start": "2026-12-02T19:30:00+00:00",
+   "hash": "59ae949b133899e9db297208e15cf0081d28594a16b2f9f97b40659abcb5105f"
+  },
+  {
+   "n": 968,
+   "uid": "71c08940a73e9f42d503449f052a1bdf|x|o3.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Toulouse - Rennes",
+   "selection": "Plus de 3,5 buts",
+   "odds": 2.15,
+   "p": 0.5201,
+   "start": "2026-11-29T16:15:00+00:00",
+   "hash": "5c5a5c08c6f38fd7601fd9d6751e4ca5eb26862d067a9687d9f13b7b304a1b61"
+  },
+  {
+   "n": 969,
+   "uid": "9629fcc970336d106d144eaa25cec853|x|u3.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Liverpool - Sunderland",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.47,
+   "p": 0.7582,
+   "start": "2026-12-02T19:30:00+00:00",
+   "hash": "6119aa5107dec0bdd6df5414b5dfc6690685f9edb79ab5e9558b004794536904"
+  },
+  {
+   "n": 970,
+   "uid": "5f5235df01a384e23ff224101ff175e1|x|u3.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Brentford - Arsenal",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.31,
+   "p": 0.8454,
+   "start": "2026-12-02T20:15:00+00:00",
+   "hash": "b414b7f8015e3d37f61c661d7467d61940241e9de70ad954746a4e916ecbf4c7"
+  },
+  {
+   "n": 971,
+   "uid": "71c08940a73e9f42d503449f052a1bdf|totals|Over|2.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Toulouse - Rennes",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.51,
+   "p": 0.726,
+   "start": "2026-11-29T16:15:00+00:00",
+   "hash": "31fe4c6ac335212c4e3969fd3de045b501f7ae87e9985d2da7dd52db19fc9096"
+  },
+  {
+   "n": 972,
+   "uid": "836ad618789e171f7357649ce8e62b49|x|o4.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Chelsea - Crystal Palace",
+   "selection": "Plus de 4,5 buts",
+   "odds": 3.6,
+   "p": 0.301,
+   "start": "2026-12-02T19:30:00+00:00",
+   "hash": "0d74e039690e7ab61d7c523e9fae784dcc3c31848c01cbfcd6d6e61234e13560"
+  },
+  {
+   "n": 973,
+   "uid": "aa77e2a08a1a003b0bbb62a5f8e8ae42|h2h|Brentford",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Brentford - Everton",
+   "selection": "Victoire Brentford",
+   "odds": 2.23,
+   "p": 0.4924,
+   "start": "2026-11-23T20:00:00+00:00",
+   "hash": "c3a7d11aa62db0fab3913bd83f9a96cca10b9104b15d39377abf7194cf4b636c"
+  },
+  {
+   "n": 974,
+   "uid": "st8742082|h2h|Oklahoma City Thunder",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Miami Heat - Oklahoma City Thunder",
+   "selection": "Victoire Oklahoma City Thunder",
+   "odds": 2.31,
+   "p": 0.4681,
+   "start": "2026-11-22T23:00:00+00:00",
+   "hash": "686ca66a6b0afa64303894da0be6602cd58865dabc7e4d5164845384aa7788fd"
+  },
+  {
+   "n": 975,
+   "uid": "836ad618789e171f7357649ce8e62b49|x|o3.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Chelsea - Crystal Palace",
+   "selection": "Plus de 3,5 buts",
+   "odds": 2.13,
+   "p": 0.493,
+   "start": "2026-12-02T19:30:00+00:00",
+   "hash": "662b2e2ca84e795a4774d6e1278070ec6a4789749da66db016e75f31c030935f"
+  },
+  {
+   "n": 976,
+   "uid": "8e6ee05b6ac28dc2357f72b9f5a0643e|x|bttsY",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Lorient - Rennes",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.89,
+   "p": 0.5693,
+   "start": "2026-11-22T16:15:00+00:00",
+   "hash": "6a45ee749da76ceb24b861f835c8dfbf0ed8dce08f263fb864c4b18fafb51874"
+  },
+  {
+   "n": 977,
+   "uid": "e422af92d1fc06c0a330838c1c2f2e08|totals|Under|2.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Galatasaray - Aston Villa",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.8,
+   "p": 0.38,
+   "start": "2026-11-24T17:45:00+00:00",
+   "hash": "59dfda4ac547c2dd4f1cf271ef58fdf82ee2c01937badda31165b6c6dcc837ba"
+  },
+  {
+   "n": 978,
+   "uid": "40d95e660c301c2d8a5a7a6317017b65|x|u1.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Nottingham Forest - Chelsea",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.13,
+   "p": 0.255,
+   "start": "2026-11-27T20:00:00+00:00",
+   "hash": "692f6afcd018019ad47ef84d53f027d8375aeb74cca19dc385287a36fc78b5ef"
+  },
+  {
+   "n": 979,
+   "uid": "st8787122|totals|Under|2.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Kairat Almaty - Mjallby Aif",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.84,
+   "p": 0.56,
+   "start": "2026-11-26T18:30:00+00:00",
+   "hash": "56691f746227cb426b348bf92878492c4f8cff9af21d466cdc4795d28bc6e083"
+  },
+  {
+   "n": 980,
+   "uid": "st8522214|h2h|Juventus",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Côme - Juventus",
+   "selection": "Victoire Juventus",
+   "odds": 3.1,
+   "p": 0.336,
+   "start": "2026-11-29T19:45:00+00:00",
+   "hash": "20346f9383bc63b1adbc242955530a8ab41c428fd9aa164e4d7cf93bcc36f491"
+  },
+  {
+   "n": 981,
+   "uid": "c979bd4559d2d81a8e2fe8f2d4aec376|x|dcN2",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "AS Roma - Monza",
+   "selection": "Nul ou Monza (N2)",
+   "odds": 4.15,
+   "p": 0.2493,
+   "start": "2026-11-29T17:00:00+00:00",
+   "hash": "c5e546f089397401f8aab44612046868a6aa26e06107f501275e61a5d63e3d65"
+  },
+  {
+   "n": 982,
+   "uid": "9629fcc970336d106d144eaa25cec853|h2h|Draw",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Liverpool - Sunderland",
+   "selection": "Match nul",
+   "odds": 4.3,
+   "p": 0.2388,
+   "start": "2026-12-02T19:30:00+00:00",
+   "hash": "c1a4f516ef9728c4936502e13ae7399d6d672204d66d44c07f33250e56f78285"
+  },
+  {
+   "n": 983,
+   "uid": "f45e9062c2f755b977c98d496c22697b|h2h|Draw",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Everton - Liverpool",
+   "selection": "Match nul",
+   "odds": 3.45,
+   "p": 0.2968,
+   "start": "2026-11-29T12:00:00+00:00",
+   "hash": "ed35b0940516412b03fa7408dcd217ff8ee038926d6d9c9a041357a9a377c179"
+  },
+  {
+   "n": 984,
+   "uid": "8e6ee05b6ac28dc2357f72b9f5a0643e|x|o1.5",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Lorient - Rennes",
+   "selection": "Plus de 1,5 buts",
+   "odds": 1.32,
+   "p": 0.7785,
+   "start": "2026-11-22T16:15:00+00:00",
+   "hash": "58f219c1603924d12724774c071acb3df6152e187e7c7642caa7dadf761b5a0c"
+  },
+  {
+   "n": 985,
+   "uid": "09bb0ba9a9025d64fed410375c0c8f80|h2h|Draw",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Sunderland - Tottenham Hotspur",
+   "selection": "Match nul",
+   "odds": 3.23,
+   "p": 0.3184,
+   "start": "2026-11-29T14:05:00+00:00",
+   "hash": "29608740226889bd3a569b2d7184e2a9ed2b55670bb45626b3c4e024ccd7ebb4"
+  },
+  {
+   "n": 986,
+   "uid": "st8786672|h2h|Draw",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Slavia Prague - Villarreal CF",
+   "selection": "Match nul",
+   "odds": 3.8,
+   "p": 0.27,
+   "start": "2026-11-25T20:45:00+00:00",
+   "hash": "850dd9309b3e8a3fb3c1df076e362868afb5aa19703297f564e84ce32a7379f1"
+  },
+  {
+   "n": 987,
+   "uid": "aa77e2a08a1a003b0bbb62a5f8e8ae42|x|dc1N",
+   "recorded": "2026-11-22T15:32:21+00:00",
+   "match": "Brentford - Everton",
+   "selection": "Brentford ou nul (1N)",
+   "odds": 1.31,
+   "p": 0.7616,
+   "start": "2026-11-23T20:00:00+00:00",
+   "hash": "dc52a77648a40c09d931add59ef4d9d1bffacfc239a3056b9db8d790939027f0"
   }
  ],
  "summary": {
-  "updated": "2026-11-22T07:11:52+00:00",
-  "n": 314,
-  "wins": 126,
-  "roi": -0.0563,
-  "pending": 641
+  "updated": "2026-11-22T15:32:21+00:00",
+  "n": 328,
+  "wins": 127,
+  "roi": -0.091,
+  "pending": 651
  }
 }
