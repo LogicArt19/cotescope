@@ -12305,13 +12305,134 @@
    "p": 0.27,
    "start": "2026-11-24T17:45:00+00:00",
    "hash": "4983ba672917c61dbf223179840d660b5449bc943596e430965b2c343ebb7d72"
+  },
+  {
+   "n": 1044,
+   "uid": "st8742093|h2h|Chicago Bulls",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Chicago Bulls - Cleveland Cavaliers",
+   "selection": "Victoire Chicago Bulls",
+   "odds": 3.47,
+   "p": 0.5,
+   "start": "2026-11-24T03:00:00+00:00",
+   "hash": "d55c8b943d2e44201736eca577e017c8fe1d8ede73902c23769df93f2e2f3317"
+  },
+  {
+   "n": 1045,
+   "uid": "st8742096|h2h|Utah Jazz",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Los Angeles Lakers - Utah Jazz",
+   "selection": "Victoire Utah Jazz",
+   "odds": 5.9,
+   "p": 0.2716,
+   "start": "2026-11-24T05:00:00+00:00",
+   "hash": "6c488f9edc13d885cea251d34a1434bc2e30256c8b18dbf54d584ef0c7f864bf"
+  },
+  {
+   "n": 1046,
+   "uid": "dce7c3c907eb304c1884dc9f87ecda2f|h2h|Málaga",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Sevilla - Málaga",
+   "selection": "Victoire Málaga",
+   "odds": 6.0,
+   "p": 0.1948,
+   "start": "2026-12-07T20:00:00+00:00",
+   "hash": "0f81885fe7cd0899b6fadc18a56c70b0c43b2b03502b7cb28547759fff365e94"
+  },
+  {
+   "n": 1047,
+   "uid": "188e30796d25595e117480df1cfb19b8|x|dnb2",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Rayo Vallecano - Levante",
+   "selection": "Levante (remboursé si nul)",
+   "odds": 2.78,
+   "p": 0.4203,
+   "start": "2026-12-05T15:15:00+00:00",
+   "hash": "563d0bcdadd76b4b5f13f9ea9db7beaff0dd24e8aaaf5b06ef8578b9d34433d3"
+  },
+  {
+   "n": 1048,
+   "uid": "b8a455b28ca30fd95640228161c7c5c5|x|dnb2",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Barcelona - Atlético Madrid",
+   "selection": "Atlético Madrid (remboursé si nul)",
+   "odds": 4.6,
+   "p": 0.2525,
+   "start": "2026-12-02T20:30:00+00:00",
+   "hash": "52bf4b091b659dc4b23133b862cc4462aaf0ea819ac4bdae74fa1cc825768241"
+  },
+  {
+   "n": 1049,
+   "uid": "dce7c3c907eb304c1884dc9f87ecda2f|x|dnb2",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Sevilla - Málaga",
+   "selection": "Málaga (remboursé si nul)",
+   "odds": 4.6,
+   "p": 0.2532,
+   "start": "2026-12-07T20:00:00+00:00",
+   "hash": "8e5fdf0498ddaf4f1a616b7fcf9966b452ba1dd72a958db7aeaad7e28bd43980"
+  },
+  {
+   "n": 1050,
+   "uid": "st8532502|totals|Under|2.5",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Nice - ESTAC Troyes",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.13,
+   "p": 0.5274,
+   "start": "2026-11-28T21:45:00+00:00",
+   "hash": "62cdd03d2ca9c1db3a30febd738e91ad46230213ea31abe7fb9dd663b0f964c0"
+  },
+  {
+   "n": 1051,
+   "uid": "st8742090|h2h|Indiana Pacers",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Indiana Pacers - Oklahoma City Thunder",
+   "selection": "Victoire Indiana Pacers",
+   "odds": 2.62,
+   "p": 0.4239,
+   "start": "2026-11-24T03:30:00+00:00",
+   "hash": "a48711fc93d866de0be571b34956236a172f874ef80db5b2bfa8aae3d0a700e2"
+  },
+  {
+   "n": 1052,
+   "uid": "st8742097|h2h|Sacramento Kings",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Sacramento Kings - San Antonio Spurs",
+   "selection": "Victoire Sacramento Kings",
+   "odds": 4.47,
+   "p": 0.2457,
+   "start": "2026-11-24T05:00:00+00:00",
+   "hash": "034fffb46adb7116a38c0a174bf1264e3bd06bda9a71b23a702f33be13924305"
+  },
+  {
+   "n": 1053,
+   "uid": "af3432ca724da03d38f0ff4e62045e4c|h2h|Draw",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Frosinone - Parma",
+   "selection": "Match nul",
+   "odds": 4.7,
+   "p": 0.2267,
+   "start": "2026-11-28T14:00:00+00:00",
+   "hash": "26b550caa103823678370ef8636ab9d5e939a4446ff86b97c92a07179ac43ef7"
+  },
+  {
+   "n": 1054,
+   "uid": "afae1c9d986e4ab2200dc9bd44b6b6c4|x|u3.5",
+   "recorded": "2026-11-23T13:07:20+00:00",
+   "match": "Levante - Elche CF",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.44,
+   "p": 0.7193,
+   "start": "2026-11-23T20:00:00+00:00",
+   "hash": "76e2eb2a0d64284bf421249d50dd070b89ba7f3e676399cf8fd323abae41627c"
   }
  ],
  "summary": {
-  "updated": "2026-11-23T03:01:29+00:00",
+  "updated": "2026-11-23T13:07:20+00:00",
   "n": 407,
   "wins": 163,
   "roi": -0.0909,
-  "pending": 627
+  "pending": 638
  }
 }
