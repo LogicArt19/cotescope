@@ -1401,7 +1401,9 @@
    "odds": 1.55,
    "p": 0.6862,
    "start": "2026-11-23T19:45:00+00:00",
-   "hash": "354fefccaf4dec5a4e9224f25612f0d623e432edbf19945dbe52bd7e9cb1df14"
+   "hash": "354fefccaf4dec5a4e9224f25612f0d623e432edbf19945dbe52bd7e9cb1df14",
+   "status": "won",
+   "score": "3-0"
   },
   {
    "n": 109,
@@ -1490,7 +1492,9 @@
    "odds": 2.2,
    "p": 0.4867,
    "start": "2026-11-23T19:45:00+00:00",
-   "hash": "6d9bb38e1b1f88a4da3548ee6e27b17e195010c832ddc3365ea2fde2aea01c26"
+   "hash": "6d9bb38e1b1f88a4da3548ee6e27b17e195010c832ddc3365ea2fde2aea01c26",
+   "status": "lost",
+   "score": "3-0"
   },
   {
    "n": 116,
@@ -1514,7 +1518,9 @@
    "odds": 4.13,
    "p": 0.2609,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "6823de4543f4d02e192d57aae858cfbdf3b46895aabfd2aeb327cbd9fc6c628e"
+   "hash": "6823de4543f4d02e192d57aae858cfbdf3b46895aabfd2aeb327cbd9fc6c628e",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 118,
@@ -1798,7 +1804,9 @@
    "odds": 1.47,
    "p": 0.6942,
    "start": "2026-11-23T19:45:00+00:00",
-   "hash": "ca4b59b506bb42decc25580b6417d812dc56a2885e03945208acf6fd8c875760"
+   "hash": "ca4b59b506bb42decc25580b6417d812dc56a2885e03945208acf6fd8c875760",
+   "status": "lost",
+   "score": "3-0"
   },
   {
    "n": 140,
@@ -2037,7 +2045,9 @@
    "odds": 2.03,
    "p": 0.51,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "0bb70056785b4f311947f89722e3416b7e136e9f8ed489a01af484b3a8e834c3"
+   "hash": "0bb70056785b4f311947f89722e3416b7e136e9f8ed489a01af484b3a8e834c3",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 159,
@@ -2551,7 +2561,9 @@
    "odds": 3.85,
    "p": 0.2944,
    "start": "2026-11-23T19:45:00+00:00",
-   "hash": "ac1cf33b2b64b38dbec97e60a55ea1356869a3f6eb83fa8e8f49248abb639380"
+   "hash": "ac1cf33b2b64b38dbec97e60a55ea1356869a3f6eb83fa8e8f49248abb639380",
+   "status": "lost",
+   "score": "3-0"
   },
   {
    "n": 203,
@@ -2796,7 +2808,9 @@
    "odds": 2.13,
    "p": 0.4866,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "4dba9a75afa734f30257005fbb8c2a374a3c863ff7a9df3a1a83ce1eb6a4cca8"
+   "hash": "4dba9a75afa734f30257005fbb8c2a374a3c863ff7a9df3a1a83ce1eb6a4cca8",
+   "status": "won",
+   "score": "4-0"
   },
   {
    "n": 222,
@@ -2846,7 +2860,9 @@
    "odds": 3.2,
    "p": 0.3194,
    "start": "2026-11-23T19:45:00+00:00",
-   "hash": "4ee768c6c08133a37ee04e85ab8a3bf721957a5827c495e56fb89c7618e0ab7d"
+   "hash": "4ee768c6c08133a37ee04e85ab8a3bf721957a5827c495e56fb89c7618e0ab7d",
+   "status": "won",
+   "score": "3-0"
   },
   {
    "n": 226,
@@ -5583,7 +5599,9 @@
    "odds": 1.39,
    "p": 0.7832,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "51c5d09ef6a8ac7926f2b344ded119615ef2b291c6e4ab6366343c914fb7ffdd"
+   "hash": "51c5d09ef6a8ac7926f2b344ded119615ef2b291c6e4ab6366343c914fb7ffdd",
+   "status": "lost",
+   "score": "4-0"
   },
   {
    "n": 461,
@@ -6440,7 +6458,9 @@
    "odds": 2.22,
    "p": 0.4623,
    "start": "2026-11-23T19:45:00+00:00",
-   "hash": "eb592e9e44ced4dba9825a02d11c31af14d86ab20447816280cde8eeb945031d"
+   "hash": "eb592e9e44ced4dba9825a02d11c31af14d86ab20447816280cde8eeb945031d",
+   "status": "won",
+   "score": "3-0"
   },
   {
    "n": 530,
@@ -6882,7 +6902,9 @@
    "odds": 2.13,
    "p": 0.5001,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "9e481f40fb47cede96e55e455ca590615aec58f94491e5c02923d9d74ea75ec9"
+   "hash": "9e481f40fb47cede96e55e455ca590615aec58f94491e5c02923d9d74ea75ec9",
+   "status": "won",
+   "score": "1-1"
   },
   {
    "n": 566,
@@ -6991,7 +7013,9 @@
    "odds": 4.13,
    "p": 0.2535,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "f237f53edc0c649887c5801596789725a83c511ea3a0bc72930d0053a2da2eb7"
+   "hash": "f237f53edc0c649887c5801596789725a83c511ea3a0bc72930d0053a2da2eb7",
+   "status": "lost",
+   "score": "1-1"
   },
   {
    "n": 575,
@@ -7271,7 +7295,9 @@
    "odds": 4.0,
    "p": 0.2657,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "36d81c0ab219542af3cc22bcff6630e2fbfcbd72ec5d8a64e64161fc1724e952"
+   "hash": "36d81c0ab219542af3cc22bcff6630e2fbfcbd72ec5d8a64e64161fc1724e952",
+   "status": "won",
+   "score": "1-1"
   },
   {
    "n": 599,
@@ -11398,7 +11424,9 @@
    "odds": 1.55,
    "p": 0.6774,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "d77e26cb104a1d3077b63a624bc88953599762d5b344a38cfeac73ab2b453855"
+   "hash": "d77e26cb104a1d3077b63a624bc88953599762d5b344a38cfeac73ab2b453855",
+   "status": "won",
+   "score": "4-0"
   },
   {
    "n": 962,
@@ -11530,7 +11558,9 @@
    "odds": 2.23,
    "p": 0.4924,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "c3a7d11aa62db0fab3913bd83f9a96cca10b9104b15d39377abf7194cf4b636c"
+   "hash": "c3a7d11aa62db0fab3913bd83f9a96cca10b9104b15d39377abf7194cf4b636c",
+   "status": "won",
+   "score": "4-0"
   },
   {
    "n": 974,
@@ -11688,7 +11718,9 @@
    "odds": 1.31,
    "p": 0.7616,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "dc52a77648a40c09d931add59ef4d9d1bffacfc239a3056b9db8d790939027f0"
+   "hash": "dc52a77648a40c09d931add59ef4d9d1bffacfc239a3056b9db8d790939027f0",
+   "status": "won",
+   "score": "4-0"
   },
   {
    "n": 988,
@@ -12425,14 +12457,522 @@
    "odds": 1.44,
    "p": 0.7193,
    "start": "2026-11-23T20:00:00+00:00",
-   "hash": "76e2eb2a0d64284bf421249d50dd070b89ba7f3e676399cf8fd323abae41627c"
+   "hash": "76e2eb2a0d64284bf421249d50dd070b89ba7f3e676399cf8fd323abae41627c",
+   "status": "won",
+   "score": "1-1"
+  },
+  {
+   "n": 1055,
+   "uid": "st8787021|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Lyon - Lillestrom SK",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.75,
+   "p": 0.4204,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "cb3b9bc00d7dca3a79f99d7b4b868b7431733c7a28e247fab8862811effa1d62"
+  },
+  {
+   "n": 1056,
+   "uid": "st8522223|h2h|Bologne",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Bologne - AS Roma",
+   "selection": "Victoire Bologne",
+   "odds": 3.65,
+   "p": 0.3985,
+   "start": "2026-12-04T21:45:00+00:00",
+   "hash": "b512bea0ee9159853a30149d960e188ea8e42f813ab488b06666ab7dec620bcf"
+  },
+  {
+   "n": 1057,
+   "uid": "12002f6f804a122db48271ff05be03c0|totals|Under|2.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Paris Saint Germain - Lorient",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.4,
+   "p": 0.5922,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "30878554054d81ac650c9f8cf4419c63c8d2bf5ba40696b176c1f88d5e832967"
+  },
+  {
+   "n": 1058,
+   "uid": "12002f6f804a122db48271ff05be03c0|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Paris Saint Germain - Lorient",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.3,
+   "p": 0.3276,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "a063ff010e727c16cd005b5853ed9e45fdf71152d2ed9c5ee7e568a4e6cdc717"
+  },
+  {
+   "n": 1059,
+   "uid": "st8596081|totals|Under|2.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "SC Paderborn 07 - Schalke 04",
+   "selection": "Moins de 2,5 buts",
+   "odds": 1.94,
+   "p": 0.7061,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "e07b1faabc78908d2377da4a75c8bb91ab91c79eb8c4445fef71a9840a042d63"
+  },
+  {
+   "n": 1060,
+   "uid": "f96c1137c9d3f7e2e691275a2988fa1d|x|o4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Le Havre - Strasbourg",
+   "selection": "Plus de 4,5 buts",
+   "odds": 3.7,
+   "p": 0.3404,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "fec09ecb55328338c71e054c4339fd631d613e6157015f1314de791566b6ac90"
+  },
+  {
+   "n": 1061,
+   "uid": "st8787138|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Sporting Braga - KuPS",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.75,
+   "p": 0.2674,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "1150fba569d3bc3fd7e109c75ff6b3c70ec61ffb451c03cddd6b80bef15b0459"
+  },
+  {
+   "n": 1062,
+   "uid": "st8787124|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Brighton - Universitatea Craiova",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.75,
+   "p": 0.2674,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "ee929c42056618894c8aa47ab89d99f70429047746d473ad9626d6fba46a9229"
+  },
+  {
+   "n": 1063,
+   "uid": "st8786672|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Slavia Prague - Villarreal CF",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.7,
+   "p": 0.2674,
+   "start": "2026-11-25T20:45:00+00:00",
+   "hash": "2ced643b6b0ce0ca25bc471ee4465e800c5448997e1ee3ce8c2e258fa4dcfe1f"
+  },
+  {
+   "n": 1064,
+   "uid": "st8787021|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Lyon - Lillestrom SK",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.3,
+   "p": 0.952,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "8e567f84ad647a69b90f4b97618f33bcf22aa8f633bebd0f78c6c2f0dd3cf941"
+  },
+  {
+   "n": 1065,
+   "uid": "st8786674|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "FC Bruges - Liverpool",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.43,
+   "p": 0.8774,
+   "start": "2026-11-25T23:00:00+00:00",
+   "hash": "5c27f2e1457cdbd092f288f1bcf6bb2ff79dec5e600c1389958e5c3badb81b92"
+  },
+  {
+   "n": 1066,
+   "uid": "aea973c122c91837c15e066c757c747f|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "RB Leipzig - RC Lens",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.41,
+   "p": 0.8774,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "966bcb58438e089daa1fca946e1b33be8e1a623cb4adc65fe90dd78634913178"
+  },
+  {
+   "n": 1067,
+   "uid": "st8786679|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Sporting Portugal - Manchester United",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.6,
+   "p": 0.2674,
+   "start": "2026-11-25T23:00:00+00:00",
+   "hash": "67fc1c1a6f53f0b9c5009f9ef1024347fb010a8fe07c5e275fd8024ce5deac23"
+  },
+  {
+   "n": 1068,
+   "uid": "st8596081|x|u3.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "SC Paderborn 07 - Schalke 04",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.35,
+   "p": 0.8762,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "1a19009af6a642de14ba9edddd6ae8af317601f139a6096e72d1105b1337f130"
+  },
+  {
+   "n": 1069,
+   "uid": "st8786667|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Manchester City - Naples",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.39,
+   "p": 0.8774,
+   "start": "2026-11-24T23:00:00+00:00",
+   "hash": "6ff1b398b68f22aba2bcda6f4cbb879535621a4de179ccb20923aa91a851a21a"
+  },
+  {
+   "n": 1070,
+   "uid": "st8787008|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "FC Salzbourg - Ararat Armenia",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.38,
+   "p": 0.8774,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "4e8902c9099081371471a14ce005821565c633de9cab63afbe5901638a1695e3"
+  },
+  {
+   "n": 1071,
+   "uid": "st8787018|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Juventus - Omonia Nicosie",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.5,
+   "p": 0.2674,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "6f8af5ab3706ef7b381c2bd4da89965fde4ca155c6bf9818d48a07c2dafd02ac"
+  },
+  {
+   "n": 1072,
+   "uid": "st8787024|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Hoffenheim - SK Sturm Graz",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.5,
+   "p": 0.2674,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "c7315ec59b024fc94b30b9a0acb76456cfca7292787e61383b57f63d6af60cc2"
+  },
+  {
+   "n": 1073,
+   "uid": "8e93849b4c1ccbf1c207836d5c470150|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "ŠK Slovan Bratislava - Real Betis",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.35,
+   "p": 0.8774,
+   "start": "2026-11-24T20:00:00+00:00",
+   "hash": "45017592a6e5abd6da7105497b5919988d712289309822c939f7cdcbdbdd8336"
+  },
+  {
+   "n": 1074,
+   "uid": "st8522220|totals|Over|2.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Torino - Lazio Rome",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.84,
+   "p": 0.6086,
+   "start": "2026-11-28T19:00:00+00:00",
+   "hash": "deaf83cd77e7e89daee1190a7290fe37f254ceb60ed5eb4a175aeb0b6aeeafac"
+  },
+  {
+   "n": 1075,
+   "uid": "st8596087|h2h|Draw",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Augsbourg - Cologne",
+   "selection": "Match nul",
+   "odds": 3.9,
+   "p": 0.2887,
+   "start": "2026-12-05T17:30:00+00:00",
+   "hash": "529ca7e888daec3428d517c8670a9342be23097bed80feceec144ddb5f3f9d78"
+  },
+  {
+   "n": 1076,
+   "uid": "st8596083|h2h|Draw",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Leipzig - Mayence",
+   "selection": "Match nul",
+   "odds": 4.3,
+   "p": 0.2622,
+   "start": "2026-12-05T17:30:00+00:00",
+   "hash": "3e1892a6ce78f6615e5036be951df54cd5886f3e9030ccce2eecf24a851f32be"
+  },
+  {
+   "n": 1077,
+   "uid": "st8787007|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Besiktas - Hapoel Beer Sheva",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.32,
+   "p": 0.8774,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "1e7757f34704e7e21d07c4cce08f3c4c2bf0be206fb39581429426bb65976ccc"
+  },
+  {
+   "n": 1078,
+   "uid": "st8596085|h2h|Fribourg",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Fribourg - Hoffenheim",
+   "selection": "Victoire Fribourg",
+   "odds": 1.96,
+   "p": 0.5618,
+   "start": "2026-12-05T17:30:00+00:00",
+   "hash": "34ef1c6bed798dc17a9f30a30d558fee77b73ed9db0bceabc2649e33ab6ed2ed"
+  },
+  {
+   "n": 1079,
+   "uid": "st8787013|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Union Saint-Gilloise - Lech Poznań",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.3,
+   "p": 0.2674,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "94a036aa72d982f2c2c5a7978655abb5ed49d33be808e884f67d200ec3d2bee0"
+  },
+  {
+   "n": 1080,
+   "uid": "st8787009|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Viktoria Plzen - Benfica",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.3,
+   "p": 0.2674,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "2450ae0f9dbb0c06bfa6f9be524e4a937b4022713a011492dc294ccb55b4e601"
+  },
+  {
+   "n": 1081,
+   "uid": "st8787010|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Dinamo Zagreb - Bayer Leverkusen",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.3,
+   "p": 0.2674,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "d1f28fc3d827c06fdd6296736967b787ca527c373834b6899c3fcedf031c1847"
+  },
+  {
+   "n": 1082,
+   "uid": "st8787124|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Brighton - Universitatea Craiova",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.3,
+   "p": 0.8774,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "fd5edab0b3f9790d5a79a1c4e96da2f2f6be3b235c57b3374f2c742cde9bd360"
+  },
+  {
+   "n": 1083,
+   "uid": "st8596086|h2h|Draw",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Eintracht Francfort - Werder Brême",
+   "selection": "Match nul",
+   "odds": 3.78,
+   "p": 0.2887,
+   "start": "2026-12-05T20:30:00+00:00",
+   "hash": "753418decbf8394dd199d9059d94f49711370090083093297fd92b1d871aa16a"
+  },
+  {
+   "n": 1084,
+   "uid": "ca8aa566e27e1d05b47e8151b2066f9a|h2h|Lyon",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Lyon - AS Monaco",
+   "selection": "Victoire Lyon",
+   "odds": 2.38,
+   "p": 0.4527,
+   "start": "2026-11-29T19:45:00+00:00",
+   "hash": "1a0b0674eecc790020b8c4ee9e3c7855d7903f5b390f0ceed794db0d74afe7ca"
+  },
+  {
+   "n": 1085,
+   "uid": "st8787139|h2h|Draw",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Fribourg - Twente",
+   "selection": "Match nul",
+   "odds": 3.95,
+   "p": 0.27,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "d3c7bed2aed1274adc0d4a6cf1749b6f2d13e6cc9af6e27c932c2772ca72cd9d"
+  },
+  {
+   "n": 1086,
+   "uid": "st8787011|h2h|Olympiakós Le Pirée",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Olympiakós Le Pirée - Milan AC",
+   "selection": "Victoire Olympiakós Le Pirée",
+   "odds": 2.5,
+   "p": 0.4218,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "9ad7e4516f60a023934c764798b5dc990ce3a135a09ea499bf342100a7276855"
+  },
+  {
+   "n": 1087,
+   "uid": "st8787135|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Inter Escaldes - FC Copenhague",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "dce779c7fd9cd4b8e84ed2623180923cd26a8780523b0272434b096be226ad2f"
+  },
+  {
+   "n": 1088,
+   "uid": "st8787017|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Ferencvaros TC - NK Celje",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "43cb4ee85cb0c3832f710bf4d7df81408f00681303a3be0af4c0422073c5e9d5"
+  },
+  {
+   "n": 1089,
+   "uid": "st8787128|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Heart of Midlothian - Monaco",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "7bc0c41a7217cd2822beccf7d611280e1ef01cddb0d289d291287526c2d8a140"
+  },
+  {
+   "n": 1090,
+   "uid": "st8787022|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Torreense - Celtic",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "94400c4af4c410ecbc43a831c8748e17164fea00362ad5f8477fb6c9c62bfe97"
+  },
+  {
+   "n": 1091,
+   "uid": "st8596040|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Cologne - SpVgg 07 Elversberg",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "7c68851a4841528ca4ad3d34176b7066000412bc3e7e3e27f1fd4bf0bec60b64"
+  },
+  {
+   "n": 1092,
+   "uid": "st8787016|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Crystal Palace - Real Sociedad",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "69c98cf64e7d86b3307cb3e17699f946376b88a277c6df94dd98c12ae5dd1962"
+  },
+  {
+   "n": 1093,
+   "uid": "st8787139|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Fribourg - Twente",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "119e033b48861c43109cd93033d0b026e9065c4ca0cb475ecf579c0d408a3341"
+  },
+  {
+   "n": 1094,
+   "uid": "st8787131|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "SK Brann - AGF Aarhus",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "7ab1c8722b92928674bbb139613c4c1504187777b0d27941467fe92d58c3a234"
+  },
+  {
+   "n": 1095,
+   "uid": "st8787130|x|u1.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Paphos FC - FC Midtjylland",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.0,
+   "p": 0.2674,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "ed291d27310a6129ba31dd05682303b0597d61b0e1efb99d0f8d2c8eb44444b3"
+  },
+  {
+   "n": 1096,
+   "uid": "c99772cba1418e72f2eded26e4afeb59|x|u4.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Real Madrid - Alavés",
+   "selection": "Moins de 4,5 buts",
+   "odds": 1.35,
+   "p": 0.7753,
+   "start": "2026-11-28T20:00:00+00:00",
+   "hash": "41c5d185078edabedc5446b3b3ed4dba37a2651037a9caeaba8d4ed4d1660112"
+  },
+  {
+   "n": 1097,
+   "uid": "st8787129|x|u3.5",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Egnatia - Lincoln Red Imps",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.42,
+   "p": 0.736,
+   "start": "2026-11-26T20:45:00+00:00",
+   "hash": "6764e02ae20b7cd84a77789fe758429efd793d04f1bf91967a9413247ad1232b"
+  },
+  {
+   "n": 1098,
+   "uid": "12002f6f804a122db48271ff05be03c0|x|bttsN",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Paris Saint Germain - Lorient",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 1.74,
+   "p": 0.5897,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "e5ab67f7a080f1ac30218a33c8d595cfbcdbbc6fa9d749b727cee9152de73665"
+  },
+  {
+   "n": 1099,
+   "uid": "st8586546|x|dc1N",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Deportivo La Corogne - Barcelone",
+   "selection": "Deportivo La Corogne ou nul (1N)",
+   "odds": 3.65,
+   "p": 0.2851,
+   "start": "2026-11-29T17:15:00+00:00",
+   "hash": "38c080fc8c0feec0e05141a040769adc7d5a2fa1e8a5e5ea9046dbfe111629b0"
+  },
+  {
+   "n": 1100,
+   "uid": "st8522214|x|bttsN",
+   "recorded": "2026-11-24T01:11:33+00:00",
+   "match": "Côme - Juventus",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 2.13,
+   "p": 0.4796,
+   "start": "2026-11-29T21:45:00+00:00",
+   "hash": "20b81b3a98333130618a2157c11f0586a522a63c677308c942e342680eae6890"
   }
  ],
  "summary": {
-  "updated": "2026-11-23T13:07:20+00:00",
-  "n": 407,
-  "wins": 163,
-  "roi": -0.0909,
-  "pending": 638
+  "updated": "2026-11-24T01:11:33+00:00",
+  "n": 424,
+  "wins": 173,
+  "roi": -0.076,
+  "pending": 667
  }
 }
