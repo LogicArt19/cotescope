@@ -14951,13 +14951,189 @@
    "p": 0.32,
    "start": "2026-11-25T20:00:00+00:00",
    "hash": "7ba877f26b9c0167ec6b958a7ba18ae1176f012d97bd2814901a0486634a113b"
+  },
+  {
+   "n": 1274,
+   "uid": "14007bc0605bce3bd164b132254ba24c|h2h|AS Roma",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Paris Saint Germain - AS Roma",
+   "selection": "Victoire AS Roma",
+   "odds": 5.8,
+   "p": 0.3093,
+   "start": "2026-11-25T20:00:00+00:00",
+   "hash": "912832b83fb38c248fcdd45571d1d1a28d28d1fcf41d5f43bc29bf6e60af5c3f"
+  },
+  {
+   "n": 1275,
+   "uid": "st8522215|x|u1.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Frosinone - Parme",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.75,
+   "p": 0.2674,
+   "start": "2026-11-28T14:00:00+00:00",
+   "hash": "dd8c974ea640f707a45bbf5f0825183c8f430a97ba45816432ca7e790f4a067a"
+  },
+  {
+   "n": 1276,
+   "uid": "11e1b8546651036ec5c70eb8e91bb622|x|o4.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Frosinone - Inter Milan",
+   "selection": "Plus de 4,5 buts",
+   "odds": 2.3,
+   "p": 0.4942,
+   "start": "2026-12-05T17:00:00+00:00",
+   "hash": "c1f3f6f8de32f4d5606e1f02ba751decbde058afec9213489b6be3cb3ad9c194"
+  },
+  {
+   "n": 1277,
+   "uid": "2d7a5b011f0c4376e6b5ecf66eb23c38|x|u3.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Toulouse - Paris Saint Germain",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.66,
+   "p": 0.659,
+   "start": "2026-12-04T19:45:00+00:00",
+   "hash": "e34be2ed67e64dedc7d65ef586534633c04d306b6fbe8fa807ad43ec5b697afb"
+  },
+  {
+   "n": 1278,
+   "uid": "2d7cee4a6e6a6632dd46f252c9e379f2|x|u3.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "AS Monaco - Angers",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.55,
+   "p": 0.6975,
+   "start": "2026-12-05T19:45:00+00:00",
+   "hash": "89ef3b059d496c194dc6d8e4d71748193c12f999682a1ad565df0fabdff420d3"
+  },
+  {
+   "n": 1279,
+   "uid": "11e1b8546651036ec5c70eb8e91bb622|x|o3.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Frosinone - Inter Milan",
+   "selection": "Plus de 3,5 buts",
+   "odds": 1.55,
+   "p": 0.6807,
+   "start": "2026-12-05T17:00:00+00:00",
+   "hash": "f14dba8d89caa043b6c5457c08a67def99b4ff48370d3910d2a1bc88b61dad7e"
+  },
+  {
+   "n": 1280,
+   "uid": "11e1b8546651036ec5c70eb8e91bb622|x|bttsY",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Frosinone - Inter Milan",
+   "selection": "Les 2 équipes marquent : Oui",
+   "odds": 1.31,
+   "p": 0.8042,
+   "start": "2026-12-05T17:00:00+00:00",
+   "hash": "0f8673657a7c432dcd81c386aeff9f94803b920084a3800301cebbbf820ba878"
+  },
+  {
+   "n": 1281,
+   "uid": "33d92dabbd2606dfe9d31058f7b20cc8|x|u3.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Málaga - Athletic Bilbao",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.32,
+   "p": 0.8034,
+   "start": "2026-11-28T15:15:00+00:00",
+   "hash": "91215b3bbcd574c516ce3834ab350c0560d2889885119a88decc881010acd278"
+  },
+  {
+   "n": 1282,
+   "uid": "st8522220|x|dnb2",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Torino - Lazio Rome",
+   "selection": "Lazio Rome (remboursé si nul)",
+   "odds": 1.42,
+   "p": 0.7387,
+   "start": "2026-11-28T17:00:00+00:00",
+   "hash": "eb28091c0983ec20ed93130a43d952219015894667b1ff59da456d72922e89b3"
+  },
+  {
+   "n": 1283,
+   "uid": "162927041eba2297840966c6f7955053|totals|Over|2.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "RC Lens - Le Havre",
+   "selection": "Plus de 2,5 buts",
+   "odds": 1.46,
+   "p": 0.712,
+   "start": "2026-12-05T19:45:00+00:00",
+   "hash": "792d8357a71eb16da4d5dabccc5132394c05b8e6a0658fef44b04a027e163792"
+  },
+  {
+   "n": 1284,
+   "uid": "2d7cee4a6e6a6632dd46f252c9e379f2|totals|Under|2.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "AS Monaco - Angers",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.2,
+   "p": 0.4754,
+   "start": "2026-12-05T19:45:00+00:00",
+   "hash": "e1797ed6a13463f7b4ae0576b427c9613aaddd1bfeb4a8398d3cf8334287a0d3"
+  },
+  {
+   "n": 1285,
+   "uid": "b648a7246af1d3a839b0fcd212849a7c|x|dnb1",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Espanyol - Getafe",
+   "selection": "Espanyol (remboursé si nul)",
+   "odds": 1.37,
+   "p": 0.7625,
+   "start": "2026-11-30T20:00:00+00:00",
+   "hash": "83f766f858771602eaf240d9aeaeaff629cdc48bc1da5a7e10cd348e2ca50366"
+  },
+  {
+   "n": 1286,
+   "uid": "2d7cee4a6e6a6632dd46f252c9e379f2|x|u1.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "AS Monaco - Angers",
+   "selection": "Moins de 1,5 buts",
+   "odds": 4.4,
+   "p": 0.2354,
+   "start": "2026-12-05T19:45:00+00:00",
+   "hash": "19e5ef64a04844fb570c2fafbf455156d13c0a8171f867d0711b7b5e450699f9"
+  },
+  {
+   "n": 1287,
+   "uid": "2d7a5b011f0c4376e6b5ecf66eb23c38|x|u1.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Toulouse - Paris Saint Germain",
+   "selection": "Moins de 1,5 buts",
+   "odds": 5.0,
+   "p": 0.2071,
+   "start": "2026-12-04T19:45:00+00:00",
+   "hash": "1d5974f833103ad03fa712acd34dce8a3417dedd82a7daded33b96bdb02b3ff6"
+  },
+  {
+   "n": 1288,
+   "uid": "2d7a5b011f0c4376e6b5ecf66eb23c38|totals|Under|2.5",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "Toulouse - Paris Saint Germain",
+   "selection": "Moins de 2,5 buts",
+   "odds": 2.35,
+   "p": 0.435,
+   "start": "2026-12-04T19:45:00+00:00",
+   "hash": "75819f124106a3f4bcd12428e0a42a166f90b56a4df02004abc817464a332571"
+  },
+  {
+   "n": 1289,
+   "uid": "98dc79e39433bb4c59bf9753e35a5cdf|h2h|Augsburg",
+   "recorded": "2026-11-25T15:55:06+00:00",
+   "match": "TSG Hoffenheim - Augsburg",
+   "selection": "Victoire Augsburg",
+   "odds": 3.83,
+   "p": 0.2667,
+   "start": "2026-11-29T16:30:00+00:00",
+   "hash": "03c8a942262f73841e3b537355cdf9ceaf08edf600962838f7896abcf0424351"
   }
  ],
  "summary": {
-  "updated": "2026-11-25T04:31:59+00:00",
+  "updated": "2026-11-25T15:55:06+00:00",
   "n": 465,
   "wins": 193,
   "roi": -0.0589,
-  "pending": 799
+  "pending": 815
  }
 }
