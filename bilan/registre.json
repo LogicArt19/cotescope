@@ -15674,13 +15674,189 @@
    "p": 0.4038,
    "start": "2026-12-09T23:00:00+00:00",
    "hash": "13fb918e277c999b8e36fdf45d1c68e22cf77f85381d3da8190335aa03c38ef3"
+  },
+  {
+   "n": 1331,
+   "uid": "st8739162|h2h|Utah Jazz",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Utah Jazz - Denver Nuggets",
+   "selection": "Victoire Utah Jazz",
+   "odds": 4.12,
+   "p": 0.4777,
+   "start": "2026-11-28T04:30:00+00:00",
+   "hash": "d800ab87d660dcf86070958c453e08065545eb251cc470555f95320a804db0a1"
+  },
+  {
+   "n": 1332,
+   "uid": "st8786697|h2h|Lille",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Stuttgart - Lille",
+   "selection": "Victoire Lille",
+   "odds": 4.0,
+   "p": 0.3931,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "03f04360827f58ba0e286d90bb2cc7730a5d4ecc7d841655ea48faabbc40b13a"
+  },
+  {
+   "n": 1333,
+   "uid": "st8786696|h2h|Bodo/Glimt",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Lens - Bodo/Glimt",
+   "selection": "Victoire Bodo/Glimt",
+   "odds": 2.53,
+   "p": 0.5973,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "bc772304bb4a1455ba16872cb8260fe815954a969433e8602683d93c0d992652"
+  },
+  {
+   "n": 1334,
+   "uid": "st8786693|h2h|LASK Linz",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "LASK Linz - Fenerbahçe",
+   "selection": "Victoire LASK Linz",
+   "odds": 3.43,
+   "p": 0.4171,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "99390d4439002a0aca8046279e40026ebc5c3f8807dc6f1b11bd5c2191317094"
+  },
+  {
+   "n": 1335,
+   "uid": "st8786695|h2h|PSV Eindhoven",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "PSV Eindhoven - Atlético Madrid",
+   "selection": "Victoire PSV Eindhoven",
+   "odds": 3.5,
+   "p": 0.3917,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "a1af7b613f06451eaf0a029217a742ad51dfeb24f6063693e03d9ce203afefeb"
+  },
+  {
+   "n": 1336,
+   "uid": "st8786695|x|u3.5",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "PSV Eindhoven - Atlético Madrid",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.68,
+   "p": 0.736,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "b3f84c6bf64a3faebe9f5ddf97888d910ccc63b6f8f6eea0df20cad85935f070"
+  },
+  {
+   "n": 1337,
+   "uid": "st8786697|x|u3.5",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Stuttgart - Lille",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.66,
+   "p": 0.736,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "f5a6c2c7c1d8225133f7032c2af42916a91233a3e00584c0be8112c1d9b2dbe6"
+  },
+  {
+   "n": 1338,
+   "uid": "st8786696|x|u3.5",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Lens - Bodo/Glimt",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.66,
+   "p": 0.736,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "453a00edb80cb4a10854e2689396f365f9d976392d5043db8ebfa288f9edb099"
+  },
+  {
+   "n": 1339,
+   "uid": "st8786690|x|u3.5",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Slovan Bratislava - Shakhtar Donetsk",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.6,
+   "p": 0.736,
+   "start": "2026-12-09T20:45:00+00:00",
+   "hash": "dbc1d7bea65d96a230eae9197a23a5f1010cf249f0c4888ba70f0df5b4b86256"
+  },
+  {
+   "n": 1340,
+   "uid": "st8786693|x|u3.5",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "LASK Linz - Fenerbahçe",
+   "selection": "Moins de 3,5 buts",
+   "odds": 1.56,
+   "p": 0.736,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "fd9033386e0e1a693eeb45e07dd626651d66f36f5c19c4e0448cd12c9e316983"
+  },
+  {
+   "n": 1341,
+   "uid": "st8787021|x|bttsN",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Lyon - Lillestrom SK",
+   "selection": "Les 2 équipes marquent : Non",
+   "odds": 1.74,
+   "p": 0.6438,
+   "start": "2026-11-26T23:00:00+00:00",
+   "hash": "ee24bacf48a50d23be9c2bd2967b8eb572de1fdac187a459bb9c8f3a28e943ec"
+  },
+  {
+   "n": 1342,
+   "uid": "st8786697|h2h|Draw",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Stuttgart - Lille",
+   "selection": "Match nul",
+   "odds": 4.0,
+   "p": 0.27,
+   "start": "2026-12-09T23:00:00+00:00",
+   "hash": "ef8842e1db65d06e7442cb671d6003eee29981364e8b7ed2358808c4207fc3d1"
+  },
+  {
+   "n": 1343,
+   "uid": "33d92dabbd2606dfe9d31058f7b20cc8|h2h|Málaga",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Málaga - Athletic Bilbao",
+   "selection": "Victoire Málaga",
+   "odds": 4.55,
+   "p": 0.2394,
+   "start": "2026-11-28T15:15:00+00:00",
+   "hash": "3e41de547f15707329193cbc45029cc991b342fc7c589671a4dc1e61cda8ca00"
+  },
+  {
+   "n": 1344,
+   "uid": "09bb0ba9a9025d64fed410375c0c8f80|h2h|Sunderland",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Sunderland - Tottenham Hotspur",
+   "selection": "Victoire Sunderland",
+   "odds": 3.6,
+   "p": 0.2972,
+   "start": "2026-11-29T14:05:00+00:00",
+   "hash": "cc648daad84a14fbecf8895b01e059e1e42f6056ce128a2fe4134ccb1234bd3a"
+  },
+  {
+   "n": 1345,
+   "uid": "st8786690|h2h|Draw",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Slovan Bratislava - Shakhtar Donetsk",
+   "selection": "Match nul",
+   "odds": 3.9,
+   "p": 0.27,
+   "start": "2026-12-09T20:45:00+00:00",
+   "hash": "afec3e18c6b62c120d71053cd764db18409cf3cf9605427b0c2cbef3ce83400c"
+  },
+  {
+   "n": 1346,
+   "uid": "f518a80f5839eb0ed1dbb7a3a786b5ce|h2h|Troyes",
+   "recorded": "2026-11-26T19:51:31+00:00",
+   "match": "Troyes - Lyon",
+   "selection": "Victoire Troyes",
+   "odds": 3.73,
+   "p": 0.2783,
+   "start": "2026-12-06T14:00:00+00:00",
+   "hash": "2910d9d7c97e1a3753dcf49b090d715fbe9d6166c9fe990f691f12aadfb9e606"
   }
  ],
  "summary": {
-  "updated": "2026-11-26T09:51:03+00:00",
+  "updated": "2026-11-26T19:51:31+00:00",
   "n": 513,
   "wins": 214,
   "roi": -0.0299,
-  "pending": 808
+  "pending": 824
  }
 }
