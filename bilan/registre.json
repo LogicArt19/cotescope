@@ -16548,13 +16548,68 @@
    "p": 0.27,
    "start": "2026-12-09T23:00:00+00:00",
    "hash": "667b904f808a7c5c3bc4b2e3e005635fbb0a7ee392e24fcf43d92ab3fbf3e20c"
+  },
+  {
+   "n": 1385,
+   "uid": "5d838190a8f5932d7fcfbcc26bacdd9c|x|dnb1",
+   "recorded": "2026-11-27T12:44:26+00:00",
+   "match": "VfB Stuttgart - Eintracht Frankfurt",
+   "selection": "VfB Stuttgart (remboursé si nul)",
+   "odds": 1.36,
+   "p": 0.7637,
+   "start": "2026-11-28T17:30:00+00:00",
+   "hash": "3a0dc6168ee631eebfc613ab6118c7140f0df0b24f862e787add3522412a6541"
+  },
+  {
+   "n": 1386,
+   "uid": "2aa9aa95157eb36fed45135c995cdd80|x|o4.5",
+   "recorded": "2026-11-27T12:44:26+00:00",
+   "match": "SC Freiburg - RB Leipzig",
+   "selection": "Plus de 4,5 buts",
+   "odds": 3.6,
+   "p": 0.2861,
+   "start": "2026-11-29T14:30:00+00:00",
+   "hash": "59b18903ca4e1ee47079ef37b9ef1b9c00c819753ac3595a036cc2dc237bb9fc"
+  },
+  {
+   "n": 1387,
+   "uid": "f1d2a6064d1452074570bbc656d36a20|x|dnb1",
+   "recorded": "2026-11-27T12:44:26+00:00",
+   "match": "Lecce - Atalanta BC",
+   "selection": "Lecce (remboursé si nul)",
+   "odds": 2.55,
+   "p": 0.4,
+   "start": "2026-11-30T17:30:00+00:00",
+   "hash": "956072d80bc160c27ed09517a3897718f2389473c12a0f300f3865f0ad8364c8"
+  },
+  {
+   "n": 1388,
+   "uid": "st8532502|h2h|Draw",
+   "recorded": "2026-11-27T12:44:26+00:00",
+   "match": "Nice - ESTAC Troyes",
+   "selection": "Match nul",
+   "odds": 4.3,
+   "p": 0.2382,
+   "start": "2026-11-28T22:45:00+00:00",
+   "hash": "4d41761fca363366de93d0af62b260d6b97471d27916f7e1ce961bddc027a573"
+  },
+  {
+   "n": 1389,
+   "uid": "e9a1243fbfbc6f58d0e0522eb07ea9a1|h2h|Draw",
+   "recorded": "2026-11-27T12:44:26+00:00",
+   "match": "Nice - Troyes",
+   "selection": "Match nul",
+   "odds": 4.3,
+   "p": 0.2382,
+   "start": "2026-11-28T19:45:00+00:00",
+   "hash": "f3fcad132999edb0d3e8d95c85bfe9a64e622671d99d7fafcf8e98cca88fd25c"
   }
  ],
  "summary": {
-  "updated": "2026-11-27T03:06:52+00:00",
+  "updated": "2026-11-27T12:44:26+00:00",
   "n": 653,
   "wins": 265,
   "roi": -0.0604,
-  "pending": 722
+  "pending": 727
  }
 }
